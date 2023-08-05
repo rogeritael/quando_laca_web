@@ -12,8 +12,8 @@ export const SearchComponent = styled.div`
         border-radius: 8px;
         color: #768192; //--highlight-color
         font-size: 0.875rem;
-        width: 100%;
-        max-width: 290px;
+        /* width: 100%; */
+        width: 350px;
 
 
         &::placeholder {
