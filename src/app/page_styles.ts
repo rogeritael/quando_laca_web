@@ -21,6 +21,15 @@ export const PageContainer = styled.section`
             border-left: 1px solid var(--bg-secondary);
             padding: 20px;
             height: 100vh;
+
+            .logo_container {
+                margin-left: auto;
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+                padding: 40px 0;
+                margin-bottom: 24px;
+            }
         }
 
         .main {

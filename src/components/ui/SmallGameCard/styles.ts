@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import clock from '@/assets/icons/clock.svg'
 
 export const CardContainer = styled.article`
     background-color: var(--bg-secondary);
@@ -7,12 +8,12 @@ export const CardContainer = styled.article`
     align-items: center;
     gap: 12px;
     max-width: 270px;
-    border-radius: 16px;
+    border-radius: 12px;
 
     figure {
         width: 46px;
         height: 56px;
-        border-radius: 12px;
+        border-radius: 8px;
         overflow: hidden;
 
         img {
@@ -31,7 +32,10 @@ export const CardContainer = styled.article`
 
         p {
             font-size: 10px;
-            color: #fff;    
+            color: var(--highlight);
+            position: relative;
+            display: flex;
+            gap: 4px;
         }
     }
 

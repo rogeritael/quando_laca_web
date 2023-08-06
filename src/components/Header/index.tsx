@@ -15,10 +15,6 @@ export function Header(className : HeaderProps){
         <HeaderComponent>
             <Search />
             <CategoryList />
-            <div className="logo_container">
-                <Logo />
-                <Image src={bell} alt="notificações" />
-            </div>
         </HeaderComponent>
     )
 }
