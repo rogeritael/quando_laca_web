@@ -3,10 +3,11 @@ import styled from "styled-components";
 export const TitleComponent = styled.h1`
     font-weight: normal;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     color: #fff;
     font-size: 1rem;
-    margin-left: 16px;
+    margin: 0 16px;
 
     a {
         font-size: 0.75rem;

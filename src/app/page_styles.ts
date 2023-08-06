@@ -35,7 +35,12 @@ export const PageContainer = styled.section`
         .main {
             /* background-color: blue; */
             grid-area: main;
-
+            
+            .featured {
+                margin-top: 50px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     }
 `;

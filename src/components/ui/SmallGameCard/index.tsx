@@ -7,22 +7,27 @@ import exemplo from '@/assets/jogo_exemplo.png';
 interface SmallGameCardProps {
     nome: string;
     data_lancamento: string;
+    v2?: boolean;
 }
 
-export function SmallGameCard({ nome, data_lancamento } : SmallGameCardProps){
+export function SmallGameCard({ nome, data_lancamento, v2 } : SmallGameCardProps){
     return(
-        <CardContainer>
+        <CardContainer v2={v2}>
             <figure>
                 <Image src={exemplo} alt="menu do jogo" />
             </figure>
             <div className="game_info">
                 <h2>{nome}</h2>
                 <p>
-                    <Image src={clock} alt="menu do jogo" />
+                    {!v2 && (
+                        <Image src={clock} alt="menu do jogo" />
+                    )}
                     {data_lancamento}
                 </p>
             </div>
-            <Image className="options" src={menu} alt="menu do jogo" />
+            {!v2 && (
+                <Image className="options" src={menu} alt="menu do jogo" />
+            )}   
         </CardContainer>
     )
 }

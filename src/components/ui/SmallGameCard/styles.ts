@@ -1,13 +1,17 @@
 import styled from "styled-components";
 import clock from '@/assets/icons/clock.svg'
 
-export const CardContainer = styled.article`
+interface CardContainerProps {
+    v2?: boolean;
+}
+
+export const CardContainer = styled.article<CardContainerProps>`
     background-color: var(--bg-secondary);
-    padding: 14px;
+    padding: ${(props) => props.v2 ? '4px' : '14px' };
     display: flex;
     align-items: center;
     gap: 12px;
-    max-width: 270px;
+    max-width: ${(props) => props.v2 ? '100%' : ' 270px' };
     border-radius: 12px;
 
     figure {

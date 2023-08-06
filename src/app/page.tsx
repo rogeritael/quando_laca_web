@@ -9,6 +9,7 @@ import { Logo } from '@/components/ui/Logo'
 import Image from 'next/image'
 import bell from '@/assets/icons/bell.svg';
 import { TrailersContainer } from '@/components/TrailersContainer'
+import { PopularGames } from '@/components/PopularGames'
 
 export default function Home() {
   return (
@@ -18,7 +19,10 @@ export default function Home() {
 
         <div className="main">
           <Header />
-          <TrailersContainer />
+          <div className="featured">
+            <TrailersContainer />
+            <PopularGames />
+          </div>
         </div>
         
         <div className="library">

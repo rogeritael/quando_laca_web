@@ -7,7 +7,7 @@ interface TrailersContainerProps {
 }
 export function TrailersContainer(props : TrailersContainerProps){
     return(
-        <>
+        <div>
             <Title />
             <TrailersContainerSection>
                 <Trailer />
@@ -15,6 +15,6 @@ export function TrailersContainer(props : TrailersContainerProps){
                 <Trailer />
                 <Trailer />
             </TrailersContainerSection>
-        </>
+        </div>
     )
 }
