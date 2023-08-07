@@ -9,6 +9,20 @@ export const TitleComponent = styled.h1`
     font-size: 1rem;
     margin: 0 16px;
 
+    .controllers {
+        display: flex;
+        gap: 24px;
+        margin-right: -16px;
+
+        img {
+            cursor: pointer;
+
+            &:first-child {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
     a {
         font-size: 0.75rem;
         text-decoration: none;

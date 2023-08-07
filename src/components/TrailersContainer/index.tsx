@@ -8,7 +8,7 @@ interface TrailersContainerProps {
 export function TrailersContainer(props : TrailersContainerProps){
     return(
         <div>
-            <Title />
+            <Title content="Últimos Trailers" />
             <TrailersContainerSection>
                 <Trailer />
                 <Trailer />

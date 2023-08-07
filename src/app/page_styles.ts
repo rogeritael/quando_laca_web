@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const PageContainer = styled.section`
-    
 
     .main_content {
         height: 100vh;
@@ -11,9 +10,12 @@ export const PageContainer = styled.section`
         grid-template-areas:
         "side main main library";
 
-        .sidemenu {
+        aside {
+            width: 80px;
             grid-area: side;
-            background-color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
         }
 
         .library {
@@ -21,6 +23,9 @@ export const PageContainer = styled.section`
             border-left: 1px solid var(--bg-secondary);
             padding: 20px;
             height: 100vh;
+            position: fixed;
+            top: 0;
+            right: 16px;
 
             .logo_container {
                 margin-left: auto;
@@ -28,13 +33,14 @@ export const PageContainer = styled.section`
                 justify-content: center;
                 gap: 8px;
                 padding: 40px 0;
-                margin-bottom: 24px;
+                margin-bottom: 18px;
             }
         }
 
         .main {
             /* background-color: blue; */
             grid-area: main;
+            transition: filter 0.3s ease;
             
             .featured {
                 margin-top: 50px;

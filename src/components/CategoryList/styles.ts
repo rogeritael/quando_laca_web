@@ -9,9 +9,18 @@ export const CategoryListContainer = styled.div`
     overflow: hidden;
 
     .slider {
-        display: flex;
-        align-items: center;
-        gap: 14px;
+        max-width: 1100px;
+        overflow: hidden;
+        margin: 0 12px;
+
+        .rail {
+            position: relative;
+            transition: 300ms;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            width: fit-content;
+        }
     }
 
     .controller {
@@ -25,6 +34,7 @@ export const CategoryListContainer = styled.div`
         img {
             transform: rotate(180deg);
             cursor: pointer;
+            background-color: var(--bg);
         }
         
         &::after {
@@ -35,6 +45,8 @@ export const CategoryListContainer = styled.div`
             top: 0;
             left: 20px;
             background: linear-gradient(270deg, rgba(9, 8, 15, 0.00) 0%, #09080F 100%);
+            z-index: 2;
+            pointer-events: none;
         }
     }
 

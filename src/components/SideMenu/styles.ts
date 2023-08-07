@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const SideMenuContainer = styled.aside`
-    width: 100%;
     height: 100%;
     border-right: 0.025px solid var(--bg-secondary);
     height: 100vh;

@@ -32,6 +32,7 @@ export const CardContainer = styled.article<CardContainerProps>`
             font-size: 14px;
             color: #fff;
             margin-bottom: 8px;
+            font-weight: normal;
         }
 
         p {

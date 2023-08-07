@@ -10,12 +10,14 @@ import Image from 'next/image'
 import bell from '@/assets/icons/bell.svg';
 import { TrailersContainer } from '@/components/TrailersContainer'
 import { PopularGames } from '@/components/PopularGames'
+import { GameList } from '@/components/GameList'
+import { Game } from '@/components/Game'
 
 export default function Home() {
   return (
     <PageContainer>
-      <div className="main_content ">
-        <SideMenu className="sidemenu" />
+      <div className="main_content">
+        <SideMenu />
 
         <div className="main">
           <Header />
@@ -23,6 +25,29 @@ export default function Home() {
             <TrailersContainer />
             <PopularGames />
           </div>
+          <GameList title='Adicionados recentemente' >
+            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
+            <Game name='Resident Evil 4 Remake' image='' isPopular={true} platforms={['PS4', 'PS5']} />
+            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
+            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
+            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
+            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
+            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
+            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
+            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
+          </GameList>
+          <GameList title='Chegando e Breve'>
+            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
+            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
+            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
+            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
+            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
+            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
+            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
+            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
+            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
+            <Game name='Resident Evil 4 Remake' image='' isPopular={true} platforms={['PS4', 'PS5']} />
+          </GameList>
         </div>
         
         <div className="library">

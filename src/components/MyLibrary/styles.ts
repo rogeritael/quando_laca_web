@@ -4,7 +4,7 @@ export const LibraryComponent = styled.div`
     h1 {
         color: #fff;
         font-weight: normal;
-        margin-bottom: 24px;
+        margin-bottom: 16px;
         font-size: 1rem;
     }
 
@@ -20,9 +20,6 @@ export const LibraryComponent = styled.div`
             color: var(--highlight);
             font-size: 0.75rem;
             text-align: center;
-        }
-
-        img {
         }
     }
     
