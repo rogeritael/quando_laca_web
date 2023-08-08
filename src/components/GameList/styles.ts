@@ -32,7 +32,7 @@ export const GameListContainer = styled.section`
             padding: 16px;
             width: fit-content;
             gap: 26px;
-            transition: 300ms;
+            transition: 800ms;
         }
     }
 `;
