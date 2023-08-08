@@ -11,6 +11,7 @@ import { PopularGames } from "@/components/PopularGames";
 import { Search } from './../../components/ui/Search/index';
 import { PageContainer } from "./styles";
 // import bell from '@/assets/icons/bell.svg'
+import { GameHeader } from './../../components/GameHeader/index';
 
 interface AboutProps {
 
@@ -28,9 +29,7 @@ export default function About(props : AboutProps){
                     </div>
                 </div>
 
-                <div className="game_header">
-
-                </div>
+                <GameHeader />
                 <div className="galery_slider">
 
                 </div>
