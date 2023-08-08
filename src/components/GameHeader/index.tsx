@@ -27,7 +27,6 @@ export function GameHeader(props : GameHeaderProps){
                     <button>Favoritar</button>
                 </div>
             </div>
-            <p>Testes</p>
         </GameHeaderContainer>
     )
 }

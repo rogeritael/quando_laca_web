@@ -12,6 +12,7 @@ import { Search } from './../../components/ui/Search/index';
 import { PageContainer } from "./styles";
 // import bell from '@/assets/icons/bell.svg'
 import { GameHeader } from './../../components/GameHeader/index';
+import { Galery } from "@/components/Galery";
 
 interface AboutProps {
 
@@ -30,9 +31,8 @@ export default function About(props : AboutProps){
                 </div>
 
                 <GameHeader />
-                <div className="galery_slider">
-
-                </div>
+                <Galery />
+                
                 <div className="game_description">
 
                 </div>

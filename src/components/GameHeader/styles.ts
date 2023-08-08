@@ -35,9 +35,9 @@ export const GameHeaderContainer = styled.div`
 
         .buttons {
             button {
-                font-size: 1rem;
-                padding: 1rem 3rem;
-                border-radius: 8px;
+                font-size: 0.725rem;
+                padding: 0.725rem calc(0.725rem * 3);
+                border-radius: 4px;
 
                 &:first-child {
                     margin-right: 24px;
@@ -45,5 +45,4 @@ export const GameHeaderContainer = styled.div`
             }
         }
     }
-
 `
