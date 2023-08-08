@@ -9,23 +9,27 @@ import Image from "next/image";
 import bell from '@/assets/icons/bell.svg';
 import { PopularGames } from "@/components/PopularGames";
 import { Search } from './../../components/ui/Search/index';
+import { PageContainer } from "./styles";
+// import bell from '@/assets/icons/bell.svg'
 
 interface AboutProps {
 
 }
 export default function About(props : AboutProps){
     return(
-        <div>
-            <div className="side">
-
-            </div>
-            <div className="main">
+        <PageContainer>
+            <SideMenu className="side" />
+            <div className="game_section">
                 <div className="header">
                     <Search />
-                    <Logo />
+                    <div className="logo_container">
+                        <Logo />
+                        <Image src={bell} alt="notificações" />
+                    </div>
                 </div>
+
                 <div className="game_header">
-                    
+
                 </div>
                 <div className="galery_slider">
 
@@ -33,10 +37,11 @@ export default function About(props : AboutProps){
                 <div className="game_description">
 
                 </div>
-            </div>
-            <div className="related_games">
+                <div className="related_games">
 
+                </div>
             </div>
-        </div>
+            
+        </PageContainer>
     )
 }
