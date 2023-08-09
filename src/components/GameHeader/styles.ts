@@ -14,8 +14,8 @@ export const GameHeaderContainer = styled.div`
         }
     
         .game_image {
-            width: 220px;
-            height: 320px;
+            width: 190px;
+            height: 280px;
             border-radius: 8px;
             overflow: hidden;
             position: absolute;
@@ -32,6 +32,11 @@ export const GameHeaderContainer = styled.div`
 
         display: flex;
         justify-content: space-between;
+
+        p {
+            margin-top: 14px;
+            color: var(--highlight);
+        }
 
         .buttons {
             button {

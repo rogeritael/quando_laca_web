@@ -1,0 +1,77 @@
+[33mcommit 0adb49537114d74f8386967fc56bdcede145fc40[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Roger Rosa <rogeritael.contato@gmail.com>
+Date:   Tue Aug 8 18:29:48 2023 -0300
+
+    galeria de imagens
+
+[33mcommit 06d05043a4ca60dbb0953d08209c7cb28f81d2f7[m
+Author: Roger Rosa <rogeritael.contato@gmail.com>
+Date:   Tue Aug 8 13:29:06 2023 -0300
+
+    capa de jogo
+
+[33mcommit 58e143e0aae5c8b4fa02253717403bbe8d194600[m
+Author: Roger Rosa <rogeritael.contato@gmail.com>
+Date:   Tue Aug 8 13:04:48 2023 -0300
+
+    criação da página de jogo
+
+[33mcommit 06a0db646cd0fb5d7d7a1e1029aff1f4138cd6a5[m
+Author: Roger Rosa <rogeritael.contato@gmail.com>
+Date:   Tue Aug 8 12:48:14 2023 -0300
+
+    página de pesquisa
+
+[33mcommit f4927518f16472a7e0779aa1aa54d68e46a8ad1c[m
+Author: Roger Rosa <rogeritael.contato@gmail.com>
+Date:   Mon Aug 7 19:33:14 2023 -0300
+
+    criação do carrossel de categoria e de jogos
+
+[33mcommit cebd7f3f646ad161b91d370e6da7c2e7c0b203f9[m
+Author: Roger Rosa <rogeritael.contato@gmail.com>
+Date:   Sun Aug 6 15:37:07 2023 -0300
+
+    criação da versão 2 dos cards de jogos
+
+[33mcommit c4ffad6a01fa9bf1ef1d7519f3f0b7f1520ff16e[m
+Author: Roger Rosa <rogeritael.contato@gmail.com>
+Date:   Sun Aug 6 00:25:47 2023 -0300
+
+    seção de trailers
+
+[33mcommit efd71a86673a54b3df09938f5b9934f48790ab0a[m
+Author: Roger Rosa <rogeritael.contato@gmail.com>
+Date:   Sat Aug 5 21:57:54 2023 -0300
+
+    adicionando header na home
+
+[33mcommit c95e3deef871f9e802a731f595ae0a6b2db85383[m
+Author: Roger Rosa <rogeritael.contato@gmail.com>
+Date:   Sat Aug 5 20:23:17 2023 -0300
+
+    criação do componente de visualização da biblioteca de jogos adicionados aos favoritos
+
+[33mcommit acacc1e53682349aafbcc66d52b4f34a21840826[m
+Author: Roger Rosa <rogeritael.contato@gmail.com>
+Date:   Sat Aug 5 19:42:59 2023 -0300
+
+    criação do side menu
+
+[33mcommit cc6c7a80059b0aef69290e6bb0ad4f2922d890cc[m
+Author: Roger Rosa <rogeritael.contato@gmail.com>
+Date:   Sat Aug 5 18:06:09 2023 -0300
+
+    configuração inicial e criação dos componentes de search e slider de categorias
+
+[33mcommit 0c30197d89ca998f4a7f4139dd6883b0e9c3dcc4[m
+Author: Roger Rosa <rogeritael.contato@gmail.com>
+Date:   Sat Aug 5 18:04:30 2023 -0300
+
+    primeiro comit
+
+[33mcommit bbb88d0458dcc765ee61cb9e48469aba16d9b0a9[m
+Author: Roger Rosa <rogeritael.contato@gmail.com>
+Date:   Wed Aug 2 09:24:33 2023 -0300
+
+    Initial commit from Create Next App

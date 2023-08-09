@@ -8,7 +8,7 @@ interface SideMenuProps {
 }
 export function SideMenu(props : SideMenuProps){
     return(
-        <SideMenuContainer>
+        <SideMenuContainer className="side">
                 <a href="" className="active">
                     <Image src={categoryIcon} alt="ver todos os jogos" />
                 </a>

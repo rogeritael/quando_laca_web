@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
 export const GaleryContainer = styled.div`
-    width: fit-content;
+    max-width: 1440px;
+    width: calc(100vw - 100px);
     position: relative;
-    margin-top: 16px;
+    margin-top: 60px;
     
     .carousel {
-        max-width: 900px;
+        max-width: 1440px;
+        /* width: calc(100vw - 90px); */
+        width: 100%;
         overflow: hidden;
         padding: 16px;
         
@@ -16,7 +19,7 @@ export const GaleryContainer = styled.div`
             gap: 14px;
         }
     
-        &::before, &::after {
+        /* &::before, &::after {
             content: '';
             width: 80px;
             height: 100%;
@@ -35,6 +38,6 @@ export const GaleryContainer = styled.div`
             top: 0;
             right: 0;
             transform: rotate(180deg);
-        }
+        } */
     }
 `

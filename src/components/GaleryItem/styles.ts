@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const GaleryItemComponent = styled.figure`
-    width: 310px;
-    height: 180px;
+    width: 380px;
+    height: 210px;
 
     img {
         object-fit: cover;

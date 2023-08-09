@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { GameHeaderContainer } from "./styles";
 
-import cover from '@/assets/cover_exemplo.png'
+import cover from '@/assets/jogo_exemplo.png'
 import game from '@/assets/jogo_exemplo.png'
 
 interface GameHeaderProps {
@@ -23,8 +23,8 @@ export function GameHeader(props : GameHeaderProps){
                     <p>Chega dia 22 de Novembro de 2023</p>
                 </div>
                 <div className="buttons">
-                    <button>Comprar</button>
-                    <button>Favoritar</button>
+                    {/* <button>Comprar</button>
+                    <button>Favoritar</button> */}
                 </div>
             </div>
         </GameHeaderContainer>

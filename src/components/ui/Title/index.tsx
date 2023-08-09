@@ -5,10 +5,11 @@ import arrow from '@/assets/icons/arrow.svg'
 interface TitleProps {
     content: string;
     controllers?: boolean;
+    disableLink?: boolean;
     onNext?: () => void;
     onPrev?: () => void;
 }
-export function Title({ content, controllers, onNext, onPrev } : TitleProps){
+export function Title({ content, controllers, disableLink, onNext, onPrev } : TitleProps){
     return(
         <TitleComponent>
             {content}
@@ -19,7 +20,7 @@ export function Title({ content, controllers, onNext, onPrev } : TitleProps){
                     <Image onClick={onPrev} src={arrow} alt="voltar carrossel de jogos" />
                 </div>
             :
-                <a href="">ver mais</a>
+                !disableLink && (<a href="">ver mais</a>)
             }
         </TitleComponent>
     )
