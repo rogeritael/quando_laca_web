@@ -10,6 +10,7 @@ import { Galery } from "@/components/Galery";
 import { Title } from "@/components/ui/Title";
 
 import { description } from "./description";
+import { GaleryModal } from "@/components/GaleryModal";
 
 
 interface AboutProps {
@@ -18,6 +19,7 @@ interface AboutProps {
 export default function About(props : AboutProps){
     return(
         <PageContainer>
+            <GaleryModal />
             <SideMenu />
             <div className="game_section">
                 <div className="header">

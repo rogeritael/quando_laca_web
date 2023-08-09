@@ -33,16 +33,15 @@ export const PageContainer = styled.section`
 
         .info_section {
             display: grid;
-            margin-top: 48px;
             grid-template-columns: 2fr 1fr;
             grid-template-areas: "left right";
+            margin-top: 24px;
 
             .left {
                 grid-area: left;
                 padding: 16px;
                 
                 .description {
-                    margin-top: 48px;
 
                     h1 {
                         margin-left: 0;
@@ -60,13 +59,12 @@ export const PageContainer = styled.section`
             }
 
             .info {
-                margin-top: 64px;
-                padding: 0 16px;
+                padding: 16px;
                 grid-area: right;
 
                 h1 {
                     margin-left: 0;
-                    margin-bottom: 24px;
+                    margin-bottom: 14px;
                 }
 
                 .info_box {

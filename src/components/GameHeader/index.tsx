@@ -7,6 +7,7 @@ import game from '@/assets/jogo_exemplo.png'
 interface GameHeaderProps {
 
 }
+
 export function GameHeader(props : GameHeaderProps){
     return(
         <GameHeaderContainer>
@@ -20,7 +21,7 @@ export function GameHeader(props : GameHeaderProps){
             <div className="info_container">
                 <div className="titles">
                     <h2>FIFA 2023</h2>
-                    <p>Chega dia 22 de Novembro de 2023</p>
+                    <p>Faltam 14 dias</p>
                 </div>
                 <div className="buttons">
                     {/* <button>Comprar</button>

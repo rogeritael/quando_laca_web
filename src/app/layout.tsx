@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Quando Lança | Descubra novos jogos em lançamento',
+  title: 'Quando Lança | Confira os principais lançamentos de jogos de 2023',
   description: 'Fique por dentro de novos lançamentos de jogos, adicione-os a sua lista de espera e seja notificado quando o jogo for lançado',
 }
 
