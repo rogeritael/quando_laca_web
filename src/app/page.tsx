@@ -12,10 +12,12 @@ import { TrailersContainer } from '@/components/TrailersContainer'
 import { PopularGames } from '@/components/PopularGames'
 import { GameList } from '@/components/GameList'
 import { Game } from '@/components/Game'
+import { ConfirmModal } from '@/components/ui/ConfirmModal'
 
 export default function Home() {
   return (
     <PageContainer>
+      <ConfirmModal />
       <div className="main_content">
         <SideMenu />
 
