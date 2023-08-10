@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
-export const ButtonComponent = styled.button`
+interface DeleteButtonProps {
+    isVisible: boolean;
+}
+
+export const ButtonComponent = styled.button<DeleteButtonProps>`
     position: absolute;
     right: 24px;
-    display: flex;
+    display: ${(props) => props.isVisible ? 'flex' : 'none'};
     justify-content: center;
     align-items: center;
     gap: 4px;

@@ -1,6 +1,11 @@
 import styled from "styled-components";
+import css from "styled-jsx/css";
 
-export const ToastComponent = styled.div`
+interface ToastProps {
+    isVisible: boolean;
+}
+
+export const ToastComponent = styled.div<ToastProps>`
     padding: 8px;
     max-width: 300px;
     width: 100%;
@@ -11,6 +16,8 @@ export const ToastComponent = styled.div`
     border-radius: 4px;
     bottom: 24px;
     left: 2%;
+    display: ${(props) => props.isVisible ? 'block' : 'none' };
+
 
     h3 {
         font-size: 12px;

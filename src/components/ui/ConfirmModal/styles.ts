@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const ModalContainer = styled.div`
+interface ConfirmModalProps {
+    isVisible: boolean;
+}
+
+export const ModalContainer = styled.div<ConfirmModalProps>`
     background-color: var(--bg-secondary);
     padding: 24px 36px;
     color: #fff;
@@ -11,6 +15,7 @@ export const ModalContainer = styled.div`
     z-index: 3;
     border-radius: 16px;
     box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.50);
+    display: ${(props) => props.isVisible ? 'block' : 'none'};
 
     h2, p {
         max-width: 300px;

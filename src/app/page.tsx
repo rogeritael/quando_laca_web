@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <PageContainer>
       <ConfirmModal />
-      <Toast />
+      <Toast isVisible={false} />
       <div className="main_content">
         <SideMenu />
 

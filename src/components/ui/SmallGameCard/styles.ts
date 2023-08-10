@@ -47,5 +47,7 @@ export const CardContainer = styled.article<CardContainerProps>`
 
     .options {
         margin-left: auto;
+        height: 40px;
+        cursor: pointer;
     }
 `;

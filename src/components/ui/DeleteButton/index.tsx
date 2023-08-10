@@ -3,11 +3,12 @@ import { ButtonComponent } from "./styles";
 import bin from '@/assets/icons/bin.svg'
 
 interface DeleteButtonProps {
-
+    isVisible: boolean;
 }
-export function DeleteButton(props : DeleteButtonProps){
+
+export function DeleteButton({ isVisible } : DeleteButtonProps){
     return(
-        <ButtonComponent>
+        <ButtonComponent isVisible={isVisible}>
             Remover
             <Image src={bin} alt="icone de lixeira" />
         </ButtonComponent>

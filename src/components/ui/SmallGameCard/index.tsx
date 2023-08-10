@@ -4,6 +4,7 @@ import menu from '@/assets/icons/cardMenu.svg';
 import clock from '@/assets/icons/clock.svg';
 import exemplo from '@/assets/jogo_exemplo.png';
 import { DeleteButton } from "../DeleteButton";
+import { useState } from 'react';
 
 interface SmallGameCardProps {
     nome: string;
@@ -12,10 +13,16 @@ interface SmallGameCardProps {
 }
 
 export function SmallGameCard({ nome, data_lancamento, v2 } : SmallGameCardProps){
+    const [isDeleteButtonOpen, setIsDeleteButtonOpen] = useState(false)
+
+    function handleOpenCloseMenu(){
+        isDeleteButtonOpen ? setIsDeleteButtonOpen(false) : setIsDeleteButtonOpen(true) 
+    }
+
     return(
         <CardContainer v2={v2}>
             {!v2 && (
-                <DeleteButton />
+                <DeleteButton isVisible={isDeleteButtonOpen} />
             )}
             <figure>
                 <Image src={exemplo} alt="menu do jogo" />
@@ -30,7 +37,7 @@ export function SmallGameCard({ nome, data_lancamento, v2 } : SmallGameCardProps
                 </p>
             </div>
             {!v2 && (
-                <Image className="options" src={menu} alt="menu do jogo" />
+                <Image className="options" src={menu} alt="menu do jogo" onClick={() => handleOpenCloseMenu()} />
             )}   
         </CardContainer>
     )
