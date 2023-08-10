@@ -13,11 +13,13 @@ import { PopularGames } from '@/components/PopularGames'
 import { GameList } from '@/components/GameList'
 import { Game } from '@/components/Game'
 import { ConfirmModal } from '@/components/ui/ConfirmModal'
+import { Toast } from '@/components/ui/Toast'
 
 export default function Home() {
   return (
     <PageContainer>
       <ConfirmModal />
+      <Toast />
       <div className="main_content">
         <SideMenu />
 
