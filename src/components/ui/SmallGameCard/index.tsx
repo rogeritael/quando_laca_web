@@ -3,6 +3,7 @@ import { CardContainer } from "./styles";
 import menu from '@/assets/icons/cardMenu.svg';
 import clock from '@/assets/icons/clock.svg';
 import exemplo from '@/assets/jogo_exemplo.png';
+import { DeleteButton } from "../DeleteButton";
 
 interface SmallGameCardProps {
     nome: string;
@@ -13,6 +14,9 @@ interface SmallGameCardProps {
 export function SmallGameCard({ nome, data_lancamento, v2 } : SmallGameCardProps){
     return(
         <CardContainer v2={v2}>
+            {!v2 && (
+                <DeleteButton />
+            )}
             <figure>
                 <Image src={exemplo} alt="menu do jogo" />
             </figure>

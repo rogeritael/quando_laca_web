@@ -19,7 +19,7 @@ interface AboutProps {
 export default function About(props : AboutProps){
     return(
         <PageContainer>
-            <GaleryModal />
+            {/* <GaleryModal /> */}
             <SideMenu />
             <div className="game_section">
                 <div className="header">

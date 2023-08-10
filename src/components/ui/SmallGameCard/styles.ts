@@ -10,6 +10,7 @@ export const CardContainer = styled.article<CardContainerProps>`
     padding: ${(props) => props.v2 ? '4px' : '14px' };
     display: flex;
     align-items: center;
+    position: relative;
     gap: 12px;
     max-width: ${(props) => props.v2 ? '100%' : ' 270px' };
     border-radius: 12px;
