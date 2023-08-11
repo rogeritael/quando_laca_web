@@ -16,7 +16,7 @@ export function Game({ name, image, platforms, isPopular } : GameProps){
         <Link href='/About'>
             <GameComponent>
                 <figure>
-                    <Image src={exemplo} alt="capa do jogo" />
+                    <Image width={100} height={200} src={image} alt="capa do jogo" />
                 </figure>
                 <div className="about">
                     <ul>

@@ -14,6 +14,7 @@ import { GameList } from '@/components/GameList'
 import { Game } from '@/components/Game'
 import { ConfirmModal } from '@/components/ui/ConfirmModal'
 import { Toast } from '@/components/ui/Toast'
+import { gameList as games } from '@/mocks/games'
 
 export default function Home() {
   return (
@@ -30,27 +31,14 @@ export default function Home() {
             <PopularGames />
           </div>
           <GameList title='Adicionados recentemente' >
-            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-            <Game name='Resident Evil 4 Remake' image='' isPopular={true} platforms={['PS4', 'PS5']} />
-            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
+            {games.map((game) => (
+              <Game key={game.name} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
+            ))}
           </GameList>
           <GameList title='Chegando e Breve'>
-            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-            <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-            <Game name='Resident Evil 4 Remake' image='' isPopular={true} platforms={['PS4', 'PS5']} />
+            {games.map((game) => (
+              <Game key={game.name} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
+            ))}
           </GameList>
         </div>
         
