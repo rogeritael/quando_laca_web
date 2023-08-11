@@ -4,6 +4,8 @@ import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
+import StyledComponentsRegistry from '@/lib/registry'
+
 export const metadata: Metadata = {
   title: 'Quando Lança | Confira os principais lançamentos de jogos de 2023',
   description: 'Fique por dentro de novos lançamentos de jogos, adicione-os a sua lista de espera e seja notificado quando o jogo for lançado',
@@ -16,7 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <StyledComponentsRegistry>
+          {children}
+        </StyledComponentsRegistry>
+      </body>
     </html>
   )
 }
