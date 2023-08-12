@@ -5,7 +5,7 @@ const nextConfig = {
         styledComponents: true
     },
     images: {
-        domains: ['images.igdb.com'],
+        domains: ['images.igdb.com', 'youtu.be'],
     },
     
 }

@@ -11,25 +11,21 @@ import imagem_teste6 from '@/assets/galery(exc)/a6.jpg';
 import imagem_teste7 from '@/assets/galery(exc)/a7.jpg';
 import imagem_teste8 from '@/assets/galery(exc)/a8.jpg';
 import imagem_teste9 from '@/assets/galery(exc)/a9.jpg';
-const images = [imagem_teste1,imagem_teste2,imagem_teste3,imagem_teste1]
-interface GaleryProps {
+// const images = [imagem_teste1,imagem_teste2,imagem_teste3,imagem_teste1]
 
+interface GaleryProps {
+    images: string[]
 }
-export function Galery(props : GaleryProps){
+
+export function Galery({ images } : GaleryProps){
     return(
         <GaleryContainer>
             <Title content="Galeria" controllers={true}/>
             <div className="carousel">
                 <div className="rail">
-                    <GaleryItem image_url={imagem_teste1} />
-                    <GaleryItem image_url={imagem_teste2} />
-                    <GaleryItem image_url={imagem_teste3} />
-                    <GaleryItem image_url={imagem_teste4} />
-                    <GaleryItem image_url={imagem_teste5} />
-                    <GaleryItem image_url={imagem_teste6} />
-                    <GaleryItem image_url={imagem_teste7} />
-                    <GaleryItem image_url={imagem_teste8} />
-                    <GaleryItem image_url={imagem_teste9} />
+                    {images.map((image) => (
+                        <GaleryItem key={image} image_url={image} />
+                    ))}
                 </div>
             </div>
         </GaleryContainer>

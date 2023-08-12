@@ -11,7 +11,7 @@ interface GaleryItemProps {
 export function GaleryItem({ image_url } : GaleryItemProps){
     return(
         <GaleryItemComponent>
-            <Image src={image_url} alt="imagem da galeria do jogo"/>
+            <Image width={400} height={250} src={image_url} alt="imagem da galeria do jogo"/>
         </GaleryItemComponent>
     )
 }

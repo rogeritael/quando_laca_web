@@ -8,16 +8,35 @@ import { PageContainer } from "./styles";
 import { GameHeader } from './../../components/GameHeader/index';
 import { Galery } from "@/components/Galery";
 import { Title } from "@/components/ui/Title";
-
-import { description } from "./description";
+import { gameList as games } from "@/mocks/games";
 import { GaleryModal } from "@/components/GaleryModal";
+import { useState, useEffect } from 'react';
+import { GameProps } from "@/mocks/games";
+import { useGames } from "@/hooks/useGames";
+import { formatDate } from "@/utils/formatDate";
+import { countdown } from "@/utils/countdown";
 
 
 interface AboutProps {
 
 }
+
 export default function About(props : AboutProps){
-    return(
+    const [selectedGame, setSelectedGame] = useState<GameProps>()
+    const { findById } = useGames()
+
+    useEffect(() => {
+
+        (async () => {
+            const game = await findById('Quake II')
+            if(game)
+                setSelectedGame(game)
+        })()
+        
+    }, [])
+
+     return(
+        selectedGame && (    
         <PageContainer>
             {/* <GaleryModal /> */}
             <SideMenu />
@@ -30,16 +49,14 @@ export default function About(props : AboutProps){
                     </div>
                 </div>
                 <GameHeader />
-                <Galery />
+                <Galery images={selectedGame?.images} />
                 
                 <div className="info_section">
                     <div className="left">
                         <div className="description">
                             <Title content="Resumo" disableLink/>
                             <p>
-                                <span>{description[0]}</span>
-                                <br/><br/>
-                                <span>{description[0]}</span>
+                                {selectedGame?.description}
                             </p>
                         </div>
                     </div>
@@ -49,19 +66,21 @@ export default function About(props : AboutProps){
                         <ul className="info_box">
                             <li>
                                 <p>Plataformas</p>
-                                <span>Xbox Series S/X • PS5</span>
+                                <span>{selectedGame?.platforms}</span>
                             </li>
                             <li>
                                 <p>Data de lançamento</p>
-                                <span>05 de Maio de 2023</span>
+                                <span>{formatDate(selectedGame?.releaseDate)}</span>
                             </li>
                             <li>
                                 <p>Desenvolvedora</p>
-                                <span>Avalanche Software</span>
+                                <span>{selectedGame?.developer}</span>
                             </li>
                             <li>
                                 <p>Gêneros</p>
-                                <span>Esporte • Survivor-Horror • aventura</span>
+                                {selectedGame?.category.map((category) => (
+                                    <span key={category.id}>{category.name} •</span>
+                                ))}
                             </li>
                         </ul>
                     </div>
@@ -69,5 +88,6 @@ export default function About(props : AboutProps){
             </div>
             
         </PageContainer>
+        )
     )
 }

@@ -3,7 +3,7 @@ interface Category {
     name: string;
 }
 
-interface GameProps {
+export interface GameProps {
     name: string;
     releaseDate: Date;
     description: string;
@@ -37,7 +37,7 @@ export const gameList: GameProps[] = [
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6x5r.png",
         price: 100,
         images: ['https://images.igdb.com/igdb/image/upload/t_original/scnvhl.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/scnvhm.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/scnvhn.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/scnvho.jpg'],
-        developer: "",
+        developer: "Nightdive Studios",
         platforms: ['PC'],
         releaseDate: new Date(2023, 8, 10),
         category: [
