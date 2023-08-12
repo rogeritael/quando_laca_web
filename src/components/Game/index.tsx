@@ -9,11 +9,12 @@ interface GameProps {
     image: string;
     platforms: string[];
     isPopular: boolean;
+    id: string;
 }
 
-export function Game({ name, image, platforms, isPopular } : GameProps){
+export function Game({ name, image, platforms, isPopular, id } : GameProps){
     return(
-        <Link href='/About'>
+        <Link href={`/About?id=${id}`}>
             <GameComponent>
                 <figure>
                     <Image width={100} height={200} src={image} alt="capa do jogo" />

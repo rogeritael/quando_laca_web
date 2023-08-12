@@ -13,6 +13,7 @@ export interface GameProps {
     platforms: string[];
     image: string;
     category: Category[];
+    id: string
 }
 
 const category: Category[] = [
@@ -32,6 +33,7 @@ const category: Category[] = [
 
 export const gameList: GameProps[] = [
     {
+        id: "2#rCpbW!5Ap7",
         name: "Quake II",
         description: "You are humanity's last hope to stop the Strogg, a hostile alien race waging war against Earth. Play this military sci-fi FPS, now upgraded for modern platforms with improved visuals, new campaign content, online multiplayer/co-op, and more.",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6x5r.png",
@@ -46,6 +48,7 @@ export const gameList: GameProps[] = [
         ],
     },
     {
+        id: "DO03659zYIH*",
         name: "Stray Gods: The Roleplaying Musical",
         description: "Murder. Gods. Romance. Band practice? Unravel the mystery of the Last Muse’s death in an interactive roleplaying musical where Greek gods live hidden among us. Use your newfound powers of musical persuasion to choose how this wry and moving saga will unfold. How will the curtain fall?",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co4kld.png",
@@ -60,6 +63,7 @@ export const gameList: GameProps[] = [
         ],
     },
     {
+        id: "KLlR!N076600",
         name: "Sengoku Dynasty",
         description: "Experience an epic adventure in Feudal Japan and build your own village in a beautiful ocean-side valley in this cross-genre game. Protect your settlement from the dangers of war-torn Japan and rise from simple peasant to man of legend.",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co5kww.png",
@@ -74,6 +78,7 @@ export const gameList: GameProps[] = [
         ],
     },
     {
+        id: "7LoRA4R1R%5K",
         name: "Atlas Fallen",
         description: "Rise from the dust and glide the sands of a timeless land, filled with ancient dangers, mysteries and fragments of the past. Hunt legendary monsters with powerful sand-infused weapons and abilities in spectacular, super-powered combat.",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co546f.png",
@@ -88,6 +93,7 @@ export const gameList: GameProps[] = [
         ],
     },
     {
+        id: "lO47T*w1aMRv",
         name: "Shadow Gambit: The Cursed Crew",
         description: "Welcome to the Lost Caribbean! In this stealth strategy game, join a ghost ship with a living soul and assemble a cursed pirate crew. Embrace magical powers to defy the menacing army of the Inquisition, who stands between you and the mysterious treasure of the legendary Captain Mordechai.",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co67is.png",
@@ -102,6 +108,7 @@ export const gameList: GameProps[] = [
         ],
     },
     {
+        id: "17bPc!1Ar2n4",
         name: "Ride 5",
         description: "Rev up your engine and get ready to hit the track with RIDE 5. An adrenaline-filled gaming experience that is so authentic it will make you feel like you're truly racing at break-neck speed. Find your favorite bikes and check out new ones in the ultimate motorcycle game! Race on over 35 tracks and collect more than 200 motorcycles from world-renowned manufacturers, each element is designed to feel like you're riding a real bike.",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6e0o.png",
@@ -116,6 +123,7 @@ export const gameList: GameProps[] = [
         ],
     },
     {
+        id: "0ye9&FgB568E",
         name: "Red Dead Redemption",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6wrn.png",
         releaseDate: new Date(2023, 8, 17),
@@ -130,6 +138,7 @@ export const gameList: GameProps[] = [
         images: ['https://youtu.be/t5Nwgd_T1-4', 'https://images.igdb.com/igdb/image/upload/t_original/scnuf2.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/scnuf3.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/scnuf4.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/scnuf5.jpg'],
     },
     {
+        id: "tC96mKVDO*3B",
         name: "En Garde!",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6slv.png",
         releaseDate: new Date(2023, 8, 16),
@@ -143,6 +152,7 @@ export const gameList: GameProps[] = [
         images: ['https://youtu.be/r9uhIcMsIPk', 'https://images.igdb.com/igdb/image/upload/t_original/scnebb.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/scnebc.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/scnebd.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/scnebe.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/ar2ecu.jpg'],
     },
     {
+        id: "aWQ&1H^63*vl",
         name: "Dungeons & Dragons Online: Vecna Unleashed",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6vrx.png",
         releaseDate: new Date(2023, 8, 17),
@@ -158,6 +168,7 @@ export const gameList: GameProps[] = [
         images: ['https://youtu.be/j1pON9gdtjg'],
     },
     {
+        id: "Y3TDz5$z3j9s",
         name: "Dark Tree",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co660r.png",
         releaseDate: new Date(2023, 9, 30),
@@ -171,6 +182,7 @@ export const gameList: GameProps[] = [
         images: ['https://youtu.be/dtQGuiBVVkU', 'https://images.igdb.com/igdb/image/upload/t_original/scjyv1.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/scjyv3.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/scjyv4.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/scjyv5.jpg','https://images.igdb.com/igdb/image/upload/t_original/scjyv6.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/scjyv1.jpg'],
     },
     {
+        id: "P03Kx*1#uhEt",
         name: "EA Sports FC 24",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6qqa.png",
         releaseDate: new Date(2023, 9, 29),
@@ -184,6 +196,7 @@ export const gameList: GameProps[] = [
         images: ['https://youtu.be/-vL01jbgENE', 'https://youtu.be/XhP3Xh4LMA8', 'https://images.igdb.com/igdb/image/upload/t_original/scnbfr.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/scnbfs.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/scnbft.jpg'],
     },
     {
+        id: "bT1FXe@s2a5^",
         name: "Cyberpunk 2077: Phantom Liberty",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6m1m.png",
         releaseDate: new Date(2023, 9, 26),
@@ -199,6 +212,7 @@ export const gameList: GameProps[] = [
         images: ['https://youtu.be/PbVKBoDuhZ0', 'https://youtu.be/gdvPG4sUbr8', 'https://youtu.be/0vO3yJGATP4', 'https://youtu.be/EfyQo9PJd9c', 'https://images.igdb.com/igdb/image/upload/t_original/scin4p.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/ar2cnt.jpg'],
     },
     {
+        id: "jqy*6!KK422F",
         name: "Payday 3",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6m2i.png",
         releaseDate: new Date(2023, 9, 21),
@@ -212,6 +226,7 @@ export const gameList: GameProps[] = [
         images: ['https://youtu.be/15PGyhJIvB4', 'https://youtu.be/_p5mip1Msbk', 'https://youtu.be/UIZGW3mty8I', 'https://youtu.be/NA_tSDsKe-k', 'https://images.igdb.com/igdb/image/upload/t_original/scked8.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/scked9.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/sckeda.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/sckedc.jpg'],
     },
     {
+        id: "55vh4&Rgpj7E",
         name: "Combat Spec Ops",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6rf0.png",
         releaseDate: new Date(2023, 9, 15),
@@ -225,6 +240,7 @@ export const gameList: GameProps[] = [
         images: ['https://youtu.be/480qPyxykwY', 'https://images.igdb.com/igdb/image/upload/t_original/scncos.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/scncot.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/ar2f0b.jpg'],
     },
     {
+        id: "3%WkXC4yT2g8",
         name: "Mortal Kombat 1",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6i4r.png",
         releaseDate: new Date(2023, 9, 19),
@@ -239,6 +255,7 @@ export const gameList: GameProps[] = [
         images: ['https://youtu.be/UZ6eFEjFfJ0', 'https://youtu.be/_sLJ-xyjMQo', 'https://youtu.be/eT-3vhCl6N4', 'https://youtu.be/M39CVZt6uu0', 'https://images.igdb.com/igdb/image/upload/t_original/scmlie.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/scmlid.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/ar2bhx.jpg','https://images.igdb.com/igdb/image/upload/t_original/ar2bhv.jpg'],
     },
     {
+        id: "$s26seOcN75C",
         name: "Lies of P",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6lxr.png",
         releaseDate: new Date(2023, 9, 19),
@@ -252,6 +269,7 @@ export const gameList: GameProps[] = [
         images: ['https://youtu.be/qKceAv6N8iE', 'https://youtu.be/qKceAv6N8iE', 'https://youtu.be/BID72hSKasc', 'https://youtu.be/PKP18vFW83A', 'https://youtu.be/7mru_M370uU', 'https://youtu.be/6yDx7Px6yMU','https://youtu.be/cK1zg_yGlOA','https://images.igdb.com/igdb/image/upload/t_original/sc9oaa.jpg', 'https://images.igdb.com/igdb/image/upload/t_original/sc9oa8.jpg','https://images.igdb.com/igdb/image/upload/t_original/sc9oa9.jpg','https://images.igdb.com/igdb/image/upload/t_original/sc9oab.jpg'],
     },
     {
+        id: "#aR$Y6Qq2m06",
         name: "The Crew: Motorfest",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6pe2.png",
         releaseDate: new Date(2023, 7, 21),
@@ -265,6 +283,7 @@ export const gameList: GameProps[] = [
         images: ['', '', '', '', ''],
     },
     {
+        id: "1*HxByTl07&p",
         name: "Harvest Moon: The Winds of Anthos",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6vi3.png",
         releaseDate: new Date(2023, 9, 12),
@@ -280,6 +299,7 @@ export const gameList: GameProps[] = [
         images: ['', '', '', '', ''],
     },
     {
+        id: "Lb$PJ74j1#qP",
         name: "Blood Red",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6ru3.png",
         releaseDate: new Date(2023, 9, 12),
@@ -293,6 +313,7 @@ export const gameList: GameProps[] = [
         images: ['', '', '', '', ''],
     },
     {
+        id: "&$127Bz0%6l$",
         name: "Fae Farm",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6qig.png",
         releaseDate: new Date(2023, 9, 8),
@@ -306,6 +327,7 @@ export const gameList: GameProps[] = [
         images: ['', '', '', '', ''],
     },
     {
+        id: "80!!8@FU4$l#",
         name: "NBA 2K24",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6pzf.png",
         releaseDate: new Date(2023, 9, 8),
@@ -319,6 +341,7 @@ export const gameList: GameProps[] = [
         images: ['', '', '', '', ''],
     },
     {
+        id: "P75*$70@kSy2",
         name: "Final Fantasy VII: Ever Crisis",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6x3j.png",
         releaseDate: new Date(2023, 9, 7),
@@ -336,6 +359,7 @@ export const gameList: GameProps[] = [
         images: ['', '', '', '', ''],
     },
     {
+        id: "04ob8CS#o8WC",
         name: "Tenebris Pictura",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6rzj.png",
         releaseDate: new Date(2023, 8, 31),
@@ -349,6 +373,7 @@ export const gameList: GameProps[] = [
         images: ['', '', '', '', ''],
     },
     {
+        id: "*0drD9P@127F",
         name: "Armored Core VI: Fires of Rubicon",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6ffo.png",
         releaseDate: new Date(2023, 8, 25),
@@ -362,6 +387,7 @@ export const gameList: GameProps[] = [
         images: ['', '', '', '', ''],
     },
     {
+        id: "Iy7l1pBrf3V*",
         name: "Blasphemous II",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6ej3.png",
         releaseDate: new Date(2023, 8, 24),
@@ -375,6 +401,7 @@ export const gameList: GameProps[] = [
         images: ['', '', '', '', ''],
     },
     {
+        id: "DT#309SXX1qj",
         name: "Immortals of Aveum",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6dtk.png",
         releaseDate: new Date(2023, 8, 22),
@@ -388,6 +415,7 @@ export const gameList: GameProps[] = [
         images: ['', '', '', '', ''],
     },
     {
+        id: "hD#J5l6S65Js",
         name: "Quasimorph",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6rg8.png",
         releaseDate: new Date(2023, 8, 17),
@@ -401,6 +429,7 @@ export const gameList: GameProps[] = [
         images: ['', '', '', '', ''],
     },
     {
+        id: "Ge69*wUur*e2",
         name: "Gord",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2ygw.png",
         releaseDate: new Date(2023, 8, 17),

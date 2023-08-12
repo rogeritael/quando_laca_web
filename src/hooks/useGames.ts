@@ -9,7 +9,7 @@ export function useGames(){
     }
 
     async function findById(id : string){
-        const game = games.find((game) => game.name == id)
+        const game = games.find((game) => game.id == id)
         
         
         return game;

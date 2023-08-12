@@ -13,6 +13,7 @@ import { GaleryModal } from "@/components/GaleryModal";
 import { useState, useEffect } from 'react';
 import { GameProps } from "@/mocks/games";
 import { useGames } from "@/hooks/useGames";
+import { useRouter } from "next/router";
 import { formatDate } from "@/utils/formatDate";
 import { countdown } from "@/utils/countdown";
 
@@ -28,9 +29,15 @@ export default function About(props : AboutProps){
     useEffect(() => {
 
         (async () => {
-            const game = await findById('Quake II')
-            if(game)
-                setSelectedGame(game)
+            const url = window.location.href;
+            const id = url.split('id=')[1];
+
+            if(typeof id === 'string'){
+                const game = await findById(id)
+
+                if(game)
+                    setSelectedGame(game)
+            }
         })()
         
     }, [])

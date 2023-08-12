@@ -32,12 +32,12 @@ export default function Home() {
           </div>
           <GameList title='Adicionados recentemente' >
             {games.map((game) => (
-              <Game key={game.name} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
+              <Game key={game.id} id={game.id} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
             ))}
           </GameList>
           <GameList title='Chegando e Breve'>
             {games.map((game) => (
-              <Game key={game.name} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
+              <Game key={game.id} id={game.id} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
             ))}
           </GameList>
         </div>
