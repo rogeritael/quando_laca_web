@@ -4,11 +4,12 @@ export const PopularGamesContainer = styled.div`
     background-color: var(--bg-secondary);
     margin: 16px;
     margin-left: 0;
-    border-radius: 16px;
-    height: 320px;
+    border-radius: 8px;
+    height: calc(155px * 2 + 16px); //tamanho do trailer * 2 + gap entre trailers
     padding: 0 16px;
     display: grid;
     grid-template-rows: repeat(4, 1fr);
+    align-items: center;
 
     //estilizando os cards dentro do container
     article {

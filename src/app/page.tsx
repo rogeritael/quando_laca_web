@@ -1,9 +1,7 @@
 'use client'
 import { Header } from '@/components/Header'
-import { ImageList } from '@/components/ImageList'
 import { PageContainer } from './page_styles'
 import { SideMenu } from '@/components/SideMenu'
-import { SmallGameCard } from '@/components/ui/SmallGameCard'
 import { MyLibrary } from '@/components/MyLibrary'
 import { Logo } from '@/components/ui/Logo'
 import Image from 'next/image'
@@ -19,7 +17,6 @@ import { useEffect, useState } from 'react'
 import { gamesService } from '@/services/gameService'
 import { GameProps } from './../mocks/games';
 import { TrailerModal } from '@/components/ui/TrailerModal'
-import { trailers } from '@/mocks/trailers'
 
 export default function Home() {
   const [popularGames, setPopularGames] = useState<GameProps[]>([])
