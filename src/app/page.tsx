@@ -52,12 +52,22 @@ export default function Home() {
             <TrailersContainer setIsModalOpen={setIstrailerModalOpen} setTrailerUrl={setTrailerUrl}/>
             <PopularGames games={popularGames}/>
           </div>
+          <GameList title='Próximos Lançamentos' >
+            {games.map((game) => (
+              <Game key={game.id} id={game.id} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
+            ))}
+          </GameList>
           <GameList title='Adicionados recentemente' >
             {games.map((game) => (
               <Game key={game.id} id={game.id} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
             ))}
           </GameList>
           <GameList title='Chegando e Breve'>
+            {upcomingGames.map((game) => (
+              <Game key={game.id} id={game.id} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
+            ))}
+          </GameList>
+          <GameList title='Recém Lançados'>
             {upcomingGames.map((game) => (
               <Game key={game.id} id={game.id} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
             ))}

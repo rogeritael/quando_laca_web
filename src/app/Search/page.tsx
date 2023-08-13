@@ -22,7 +22,7 @@ export default function Search(props : AboutProps){
                 <div className="main">
                     <Header />
                     {/* <h2 className="search_term">Resident Evil 4 Remake</h2> */}
-                    <GameList title='Resultados da pesquisa' >
+                    {/* <GameList title='Resultados da pesquisa' >
                         <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
                         <Game name='Resident Evil 4 Remake' image='' isPopular={true} platforms={['PS4', 'PS5']} />
                         <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
@@ -36,7 +36,7 @@ export default function Search(props : AboutProps){
                     <div className="featured">
                         <PopularGames />
                         <PopularGames />
-                    </div>
+                    </div> */}
                 </div>
                 
                 <div className="library">
