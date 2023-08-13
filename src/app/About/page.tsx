@@ -12,7 +12,7 @@ import { gameList as games } from "@/mocks/games";
 import { GaleryModal } from "@/components/GaleryModal";
 import { useState, useEffect } from 'react';
 import { GameProps } from "@/mocks/games";
-import { useGames } from "@/hooks/useGames";
+import { gamesService } from "@/services/gameService";
 import { useRouter } from "next/router";
 import { formatDate } from "@/utils/formatDate";
 import { countdown } from "@/utils/countdown";
@@ -24,7 +24,7 @@ interface AboutProps {
 
 export default function About(props : AboutProps){
     const [selectedGame, setSelectedGame] = useState<GameProps>()
-    const { findById } = useGames()
+    // const { findById } = useGames()
 
     useEffect(() => {
 
@@ -33,7 +33,7 @@ export default function About(props : AboutProps){
             const id = url.split('id=')[1];
 
             if(typeof id === 'string'){
-                const game = await findById(id)
+                const game = await gamesService().findById(id)
 
                 if(game)
                     setSelectedGame(game)
@@ -55,7 +55,7 @@ export default function About(props : AboutProps){
                         <Image src={bell} alt="notificações" />
                     </div>
                 </div>
-                <GameHeader />
+                <GameHeader name={selectedGame.name} image={selectedGame.image} countdown={countdown(selectedGame.releaseDate)} />
                 <Galery images={selectedGame?.images} />
                 
                 <div className="info_section">

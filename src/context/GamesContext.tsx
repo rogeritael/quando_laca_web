@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
-import { useGames } from "@/hooks/useGames";
+import { useGames } from "@/services/gameService";
 
 interface ContextProps {
 

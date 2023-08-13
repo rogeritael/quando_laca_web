@@ -5,23 +5,25 @@ import cover from '@/assets/jogo_exemplo.png'
 import game from '@/assets/jogo_exemplo.png'
 
 interface GameHeaderProps {
-
+    image: string; 
+    name: string;
+    countdown: string;
 }
 
-export function GameHeader(props : GameHeaderProps){
+export function GameHeader({ image, name, countdown } : GameHeaderProps){
     return(
         <GameHeaderContainer>
             <figure className="cover">
-                <Image src={cover} alt="capa do jogo" />
+                <Image width={200} height={300} src={image} alt="capa do jogo" />
                 <figure className="game_image">
-                    <Image src={game} alt="capa do jogo" />
+                    <Image width={200} height={300} src={image} alt="capa do jogo" />
                 </figure>
             </figure>
             
             <div className="info_container">
                 <div className="titles">
-                    <h2>FIFA 2023</h2>
-                    <p>Faltam 14 dias</p>
+                    <h2>{name}</h2>
+                    <p>{countdown}</p>
                 </div>
                 <div className="buttons">
                     {/* <button>Comprar</button>

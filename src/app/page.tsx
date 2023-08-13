@@ -15,9 +15,25 @@ import { Game } from '@/components/Game'
 import { ConfirmModal } from '@/components/ui/ConfirmModal'
 import { Toast } from '@/components/ui/Toast'
 import { gameList as games } from '@/mocks/games'
+import { useEffect, useState } from 'react'
+import { gamesService } from '@/services/gameService'
 
 export default function Home() {
+  const [popularGames, setPopularGames] = useState<any>(null)
+
+  useEffect(() => {
+      
+    (async() => {
+    
+      const games = await gamesService().findAll();
+      setPopularGames(games.popular)
+    
+    })()
+
+  },[])
+
   return (
+    popularGames && (
     <PageContainer>
       <ConfirmModal />
       <Toast isVisible={false} />
@@ -28,7 +44,7 @@ export default function Home() {
           <Header />
           <div className="featured">
             <TrailersContainer />
-            <PopularGames />
+            <PopularGames games={popularGames}/>
           </div>
           <GameList title='Adicionados recentemente' >
             {games.map((game) => (
@@ -51,5 +67,6 @@ export default function Home() {
         </div>
       </div>
     </PageContainer>
+    )
   )
 }

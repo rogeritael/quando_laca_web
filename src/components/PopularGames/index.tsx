@@ -1,19 +1,20 @@
 import { SmallGameCard } from "../ui/SmallGameCard";
 import { Title } from "../ui/Title";
 import { PopularGamesContainer } from "./styles";
+import { GameProps } from "@/mocks/games";
 
 interface PopularGamesProps {
-
+    games: GameProps[]
 }
-export function PopularGames(props : PopularGamesProps){
+
+export function PopularGames({ games } : PopularGamesProps){
     return(
         <div>
             <Title content="Populares" />
             <PopularGamesContainer>
-                <SmallGameCard v2={true} data_lancamento="PS5 • Xbox Series S/X" nome="Resident Evil 4" />
-                <SmallGameCard v2={true} data_lancamento="PS5 • Xbox Series S/X" nome="Resident Evil 4" />
-                <SmallGameCard v2={true} data_lancamento="PS5 • Xbox Series S/X" nome="Resident Evil 4" />
-                <SmallGameCard v2={true} data_lancamento="PS5 • Xbox Series S/X" nome="Resident Evil 4" />
+                {games.map((game, index) => (
+                    <SmallGameCard key={game.id} id={game.id} v2={true} image={game.image} release_date={game.releaseDate} name={game.name} />
+                ))}
             </PopularGamesContainer>
         </div>
     )

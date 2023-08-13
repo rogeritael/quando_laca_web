@@ -7,7 +7,7 @@ export interface GameProps {
     name: string;
     releaseDate: Date;
     description: string;
-    developer?: string;
+    developer: string;
     price: number;
     images: string[];
     platforms: string[];
