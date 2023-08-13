@@ -38,7 +38,7 @@ export function CategoryList(props : CategoryListProps){
 
     return(
         <CategoryListContainer>
-            <span className="controller left-controller" onClick={() => before()}>
+            <span className="controller left-controller" onClick={() => next()}>
                 <Image src={arrow} alt="seta voltar slider" />
             </span>
             <div className="slider" ref={carouselRef}>
@@ -55,7 +55,7 @@ export function CategoryList(props : CategoryListProps){
                     <Category label="terror" />
                 </div>
             </div>
-            <span className="controller right-controller" onClick={() => next()}>
+            <span className="controller right-controller" onClick={() => before()}>
                 <Image src={arrow} alt="seta avançar slider" />
             </span>
         </CategoryListContainer>

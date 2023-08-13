@@ -21,7 +21,7 @@ export function Game({ name, image, platforms, isPopular, id } : GameProps){
                 </figure>
                 <div className="about">
                     <ul>
-                        {platforms.map((platform) => (
+                        {platforms.map((platform, index) => index < 2 &&(
                             <li key={platform}>{platform}</li>
                         ))}
                     </ul>

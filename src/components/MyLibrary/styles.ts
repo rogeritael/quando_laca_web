@@ -4,7 +4,7 @@ export const LibraryComponent = styled.div`
     h1 {
         color: #fff;
         font-weight: normal;
-        margin-bottom: 16px;
+        /* margin-bottom: 12px; */
         font-size: 1rem;
     }
 
@@ -24,9 +24,8 @@ export const LibraryComponent = styled.div`
     }
     
 
-    .games_container {
-        display: flex;
+    /* .games_container {
+       display: flex;
         flex-direction: column;
-        gap: 12px;
-    }
+    } */
 `;
