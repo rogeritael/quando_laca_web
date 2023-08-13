@@ -12,7 +12,7 @@ export function PopularGames({ games } : PopularGamesProps){
         <div>
             <Title content="Populares" />
             <PopularGamesContainer>
-                {games.map((game, index) => (
+                {games.map((game, index) => index < 4 && (
                     <SmallGameCard key={game.id} id={game.id} v2={true} image={game.image} release_date={game.releaseDate} name={game.name} />
                 ))}
             </PopularGamesContainer>
