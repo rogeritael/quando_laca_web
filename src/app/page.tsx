@@ -17,9 +17,16 @@ import { Toast } from '@/components/ui/Toast'
 import { gameList as games } from '@/mocks/games'
 import { useEffect, useState } from 'react'
 import { gamesService } from '@/services/gameService'
+import { GameProps } from './../mocks/games';
+import { TrailerModal } from '@/components/ui/TrailerModal'
+import { trailers } from '@/mocks/trailers'
 
 export default function Home() {
-  const [popularGames, setPopularGames] = useState<any>(null)
+  const [popularGames, setPopularGames] = useState<GameProps[]>([])
+  const [upcomingGames, setUpcomingGames] = useState<GameProps[]>([])
+  const [isTrailerModalOpen, setIstrailerModalOpen] = useState(false);
+  const [trailerUrl, setTrailerUrl] = useState('')
+
 
   useEffect(() => {
       
@@ -27,6 +34,7 @@ export default function Home() {
     
       const games = await gamesService().findAll();
       setPopularGames(games.popular)
+      setUpcomingGames(games.upcomingGames)
     
     })()
 
@@ -35,6 +43,7 @@ export default function Home() {
   return (
     popularGames && (
     <PageContainer>
+      <TrailerModal videoUrl={trailerUrl} isOpen={isTrailerModalOpen} setIsOpen={setIstrailerModalOpen} />
       <ConfirmModal />
       <Toast isVisible={false} />
       <div className="main_content">
@@ -43,7 +52,7 @@ export default function Home() {
         <div className="main">
           <Header />
           <div className="featured">
-            <TrailersContainer />
+            <TrailersContainer setIsModalOpen={setIstrailerModalOpen} setTrailerUrl={setTrailerUrl}/>
             <PopularGames games={popularGames}/>
           </div>
           <GameList title='Adicionados recentemente' >
@@ -52,7 +61,7 @@ export default function Home() {
             ))}
           </GameList>
           <GameList title='Chegando e Breve'>
-            {games.map((game) => (
+            {upcomingGames.map((game) => (
               <Game key={game.id} id={game.id} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
             ))}
           </GameList>

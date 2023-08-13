@@ -7,6 +7,7 @@ import { DeleteButton } from "../DeleteButton";
 import { useState } from 'react';
 import { formatDate } from "@/utils/formatDate";
 import Link from "next/link";
+import { countdown } from '@/utils/countdown';
 
 interface SmallGameCardProps {
     name: string;
@@ -35,10 +36,14 @@ export function SmallGameCard({ id, image, name, release_date, v2 } : SmallGameC
             <div className="game_info">
                 <h2>{name}</h2>
                 <p>
-                    {!v2 && (
+                    {!v2 ? (
+                        <>
                         <Image src={clock} alt="menu do jogo" />
+                        {countdown(release_date)}
+                        </>
+                    ) : (
+                        formatDate(release_date)    
                     )}
-                    {/* {formatDate(release_date)} */}
                 </p>
             </div>
             {!v2 && (

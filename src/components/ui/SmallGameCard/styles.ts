@@ -12,6 +12,7 @@ export const CardContainer = styled.article<CardContainerProps>`
     align-items: center;
     position: relative;
     gap: 12px;
+    width: 100%;
     max-width: ${(props) => props.v2 ? '100%' : ' 270px' };
     border-radius: 12px;
 
