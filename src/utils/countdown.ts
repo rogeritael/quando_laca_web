@@ -1,6 +1,9 @@
 export function countdown(targetDate: Date) {
     const currentDate = new Date();
-    const timeDiff = targetDate.getTime() - currentDate.getTime();
+    const targetDateTime = new Date(targetDate).getTime(); // Convertendo a data alvo para milissegundos
+    const currentTime = currentDate.getTime();
+
+    const timeDiff = targetDateTime - currentTime;
     const daysDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
 
     if (daysDiff > 0) {

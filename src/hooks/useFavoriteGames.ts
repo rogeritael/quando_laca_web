@@ -32,12 +32,12 @@ export function useFavoriteGames(){
         setGameList(storedGames);
     }
 
-    function removeFromList(game: GameProps){
+    function removeFromList(id: string){
         const storedGames = findAll();
-        const updatedGames = storedGames.filter((storedGame) => storedGame.id !== game.id);
+        const updatedGames = storedGames.filter((storedGame) => storedGame.id !== id);
         localStorage.setItem('favorites', JSON.stringify(updatedGames));
         setGameList(updatedGames);
     }
 
-    return { findAll, addToList, removeFromList }
+    return { findAll, addToList, removeFromList, gameList, setGameList }
 }

@@ -3,6 +3,9 @@ import { SmallGameCard } from "../ui/SmallGameCard";
 import { LibraryComponent } from "./styles";
 import arrow from '@/assets/icons/arrow_v2.svg';
 
+import { useContext } from 'react';
+import { Context } from "@/context/UserContext";
+
 //excluir
 import { gameList as games } from "@/mocks/games";
 
@@ -10,13 +13,15 @@ interface MyLibraryProps {
 
 }
 export function MyLibrary(props : MyLibraryProps){
+    const { gameList } = useContext(Context)
+
     return(
         <LibraryComponent>
             <h1>Biblioteca</h1>
             <div className="games_container">
-                <SmallGameCard key={games[1].id} name={games[1].name} release_date={games[1].releaseDate} id={games[1].id} image={games[1].image} />
-                <SmallGameCard key={games[5].id} name={games[5].name} release_date={games[5].releaseDate} id={games[5].id} image={games[5].image} />
-                <SmallGameCard key={games[8].id} name={games[8].name} release_date={games[8].releaseDate} id={games[8].id} image={games[8].image} />
+                {gameList.map((game) => (
+                    <SmallGameCard key={game.id} name={game.name} release_date={game.releaseDate} id={game.id} image={game.image} />
+                ))}
             </div>
             <a href="">
                 <p>Ver biblioteca completa</p>
