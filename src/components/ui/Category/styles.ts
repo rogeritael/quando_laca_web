@@ -10,4 +10,9 @@ export const CategoryComponent = styled.button`
     height: fit-content;
     width: max-content;
     cursor: pointer;
+    transition: 200ms;
+    
+    &:hover {
+        background-color: var(--highlight);
+    }
 `;

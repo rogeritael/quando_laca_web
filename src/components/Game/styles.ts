@@ -10,11 +10,24 @@ export const GameComponent = styled.article`
         border-radius: 4px;
         overflow: hidden;
         margin-bottom: 14px;
+        position: relative;
+        transition: 500ms;
 
         img {
             object-fit: cover;
             height: 100%;
             width: 100%;
+        }
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0;
+            background-color: #fff;
+            opacity: 0.1;
+            display: none;
         }
     }
 
@@ -56,4 +69,9 @@ export const GameComponent = styled.article`
         }
     }
 
+    &:hover {
+        figure::after {
+            display: block;
+        }
+    }
 `;
