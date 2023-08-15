@@ -23,7 +23,7 @@ export function MyLibrary(props : MyLibraryProps){
                     <SmallGameCard key={game.id} name={game.name} release_date={game.releaseDate} id={game.id} image={game.image} />
                 ))}
             </div>
-            <a href="">
+            <a href="/Library">
                 <p>Ver biblioteca completa</p>
                 <Image src={arrow} alt="seta ver todos os jogos adicionados aos favoritos" />
             </a>

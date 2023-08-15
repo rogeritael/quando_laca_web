@@ -22,6 +22,7 @@ export const PageContainer = styled.section`
             grid-area: library;
             border-left: 1px solid var(--bg-secondary);
             padding: 20px;
+            padding-top: 0;
             height: 100vh;
             position: fixed;
             top: 0;
@@ -32,8 +33,8 @@ export const PageContainer = styled.section`
                 display: flex;
                 justify-content: center;
                 gap: 8px;
-                padding: 40px 0;
-                margin-bottom: 18px;
+                padding: 38px 0;
+                margin-bottom: 38px;
             }
         }
 

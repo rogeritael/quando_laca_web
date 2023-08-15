@@ -9,11 +9,36 @@ import { MyLibrary } from "@/components/MyLibrary";
 import Image from "next/image";
 import bell from '@/assets/icons/bell.svg';
 import { PopularGames } from "@/components/PopularGames";
+import { useEffect } from 'react';
+import { findGame } from "@/utils/findGame";
+import { useState } from 'react';
+import { GameProps } from './../../mocks/games';
+import { gameList as games } from "./../../mocks/games";
+
 
 interface AboutProps {
 
 }
 export default function Search(props : AboutProps){
+    const [searchResults, setSearchresults] = useState<GameProps[]>([])
+    const [searchTerm, setSearchTerm] = useState('')
+
+    useEffect(() => {
+
+            (async () => {
+                const url = window.location.href;
+                const term = url.split('term=')[1];
+    
+                if(typeof term === 'string'){
+                    setSearchTerm(term)
+                    const results = findGame(term)
+                    setSearchresults(results)
+                }
+            })()
+            
+    }, [window.location.href])
+        
+
     return(
         <PageContainer>
             <div className="main_content">
@@ -21,22 +46,17 @@ export default function Search(props : AboutProps){
 
                 <div className="main">
                     <Header />
-                    {/* <h2 className="search_term">Resident Evil 4 Remake</h2> */}
-                    {/* <GameList title='Resultados da pesquisa' >
-                        <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-                        <Game name='Resident Evil 4 Remake' image='' isPopular={true} platforms={['PS4', 'PS5']} />
-                        <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-                        <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-                        <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-                        <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-                        <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-                        <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
-                        <Game name='Resident Evil 4 Remake' image='' isPopular={false} platforms={['PS4', 'PS5']} />
+                    <h2 className="search_term">{searchTerm}</h2>
+                    <GameList title='Resultados da pesquisa' >
+                        {searchResults.map((result) => (
+                            <Game key={result.id} id={result.id} name={result.name} image={result.image} isPopular={false} platforms={result.platforms} />
+                        ))}
                     </GameList>
+
                     <div className="featured">
-                        <PopularGames />
-                        <PopularGames />
-                    </div> */}
+                        <PopularGames games={games} />
+                        <PopularGames games={games} />
+                    </div>
                 </div>
                 
                 <div className="library">

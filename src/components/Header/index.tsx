@@ -10,7 +10,8 @@ import bell from '@/assets/icons/bell.svg';
 interface HeaderProps {
     className?: string;
 }
-export function Header(className : HeaderProps){
+
+export function Header( className : HeaderProps){
     return(
         <HeaderComponent>
             <Search />
