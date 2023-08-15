@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import clock from '@/assets/icons/clock.svg'
 
 interface CardContainerProps {
@@ -15,6 +15,7 @@ export const CardContainer = styled.article<CardContainerProps>`
     width: 100%;
     max-width: ${(props) => props.v2 ? '100%' : ' 270px' };
     border-radius: 12px;
+    transition: 300ms;
 
     figure {
         width: 46px;
@@ -50,5 +51,9 @@ export const CardContainer = styled.article<CardContainerProps>`
         margin-left: auto;
         height: 40px;
         cursor: pointer;
+    }
+
+    &:hover {
+        background-color: var(--bg-secondary-lighten);
     }
 `;

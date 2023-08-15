@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { TrailerComponent } from "./styles";
-import exemplo from '@/assets/trailer_exemplo.png'
+import player from '@/assets/icons/player.svg'
 
 interface TrailerProps {
     cover: string;
@@ -20,6 +20,7 @@ export function Trailer({ cover, videoUrl, setTrailerUrl, setIsModalOpen } : Tra
     return(
         <TrailerComponent onClick={() => handleClick()}>
             <Image width={400} height={400} src={cover} alt="trailer do game" />
+            <Image src={player} alt="ícone de player" className="player_icon" />
         </TrailerComponent>
     )
 }

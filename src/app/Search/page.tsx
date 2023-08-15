@@ -11,32 +11,31 @@ import bell from '@/assets/icons/bell.svg';
 import { PopularGames } from "@/components/PopularGames";
 import { useEffect } from 'react';
 import { findGame } from "@/utils/findGame";
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { GameProps } from './../../mocks/games';
 import { gameList as games } from "./../../mocks/games";
-
+import { Context } from "@/context/UserContext";
 
 interface AboutProps {
 
 }
+
 export default function Search(props : AboutProps){
     const [searchResults, setSearchresults] = useState<GameProps[]>([])
-    const [searchTerm, setSearchTerm] = useState('')
+    const { searchTerm, setSearchTerm } = useContext(Context);
 
     useEffect(() => {
 
-            (async () => {
-                const url = window.location.href;
-                const term = url.split('term=')[1];
-    
-                if(typeof term === 'string'){
-                    setSearchTerm(term)
-                    const results = findGame(term)
-                    setSearchresults(results)
-                }
-            })()
+        const url = window.location.href;
+        const term = url.split('term=')[1];
+
+        if(typeof term === 'string'){
+            setSearchTerm(term)
+            const results = findGame(term)
+            setSearchresults(results)
+        }
             
-    }, [window.location.href])
+    }, [setSearchTerm])
         
 
     return(
@@ -47,11 +46,16 @@ export default function Search(props : AboutProps){
                 <div className="main">
                     <Header />
                     <h2 className="search_term">{searchTerm}</h2>
-                    <GameList title='Resultados da pesquisa' >
-                        {searchResults.map((result) => (
-                            <Game key={result.id} id={result.id} name={result.name} image={result.image} isPopular={false} platforms={result.platforms} />
-                        ))}
-                    </GameList>
+                    { searchResults.length > 0 ? (
+                        <GameList title='Resultados da pesquisa' >
+                            {searchResults.map((result) => (
+                                <Game key={result.id} id={result.id} name={result.name} image={result.image} isPopular={false} platforms={result.platforms} />
+                            ))}
+                        </GameList>
+                    ) : (
+                        <p>Nenhum resultado encontrado :c </p>
+                    )}
+                    
 
                     <div className="featured">
                         <PopularGames games={games} />
@@ -67,6 +71,6 @@ export default function Search(props : AboutProps){
                     <MyLibrary />
                 </div>
             </div>
-            </PageContainer>
+        </PageContainer>
     )
 }
