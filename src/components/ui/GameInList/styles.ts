@@ -40,6 +40,8 @@ export const GameListContainer = styled.article`
 
     .buttons {
         margin-left: auto;
+        display: flex;
+        align-items: center;
 
         button {
             font-weight: bold;
@@ -49,10 +51,28 @@ export const GameListContainer = styled.article`
             border-radius: 4px;
             padding: 11px;
             cursor: pointer;
+            position: relative;
         
             &:last-child {
                 padding: 12px 80px;
                 margin-left: 8px;
+            }
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                inset: 0;
+                background-color: #fff;
+                opacity: 0.02;
+                display: none;
+            }
+
+            &:hover {
+                &::after {
+                    display: block;
+                }
             }
         }
     }

@@ -8,6 +8,9 @@ import arrow from '@/assets/icons/arrow_v2.svg'
 import { SideMenu } from "@/components/SideMenu";
 import { Header } from "@/components/Header";
 import { GameInList } from "@/components/ui/GameInList";
+import { Logo } from "@/components/ui/Logo";
+import bell from '@/assets/icons/bell.svg';
+import { Search } from "@/components/ui/Search";
 
 interface LibraryProps {
 
@@ -20,16 +23,21 @@ export default function Library(props : LibraryProps){
             <SideMenu />
             
             <div className="main">
-                <Header />
+                <div className="header_container">
+                    <Header />
 
-                <Link href="/">
+                    <div className="logo_container">
+                        <Logo />
+                        <Image src={bell} alt="notificações" />
+                    </div>
+                </div>
+
+                {/* <Link href="/" className="back_link">
                     <Image src={arrow} alt="ícone voltar para a home" />
                     <p>voltar</p>
-                </Link>
+                </Link> */}
                 
-                <div>
-                    <h1>Meus Jogos favoritos</h1>
-                </div>
+                <h1 className="page_title">Meus Jogos favoritos</h1>
 
                 <div className="games_container">
                     {gameList.map((game) => (

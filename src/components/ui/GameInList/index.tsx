@@ -2,6 +2,7 @@ import Image from "next/image";
 import { GameListContainer } from "./styles";
 import { countdown } from "@/utils/countdown";
 import { AiOutlineDelete } from 'react-icons/ai';
+import Link from "next/link";
 
 interface GameInListProps {
     name: string;
@@ -24,7 +25,11 @@ export function GameInList({ name, id, image, developer, release_date } : GameIn
                 <button>
                     <AiOutlineDelete />
                 </button>
-                <button>Ver Mais</button>
+                <Link href={`/About?id=${id}`}>
+                    <button>
+                        Ver Mais
+                    </button>
+                </Link>
             </div>
         </GameListContainer>
     )
