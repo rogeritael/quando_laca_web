@@ -13,7 +13,7 @@ interface HeaderProps {
 
 export function Header( className : HeaderProps){
     return(
-        <HeaderComponent>
+        <HeaderComponent className="header">
             <Search />
             <CategoryList />
         </HeaderComponent>

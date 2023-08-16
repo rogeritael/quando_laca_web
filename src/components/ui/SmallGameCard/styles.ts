@@ -18,10 +18,11 @@ export const CardContainer = styled.article<CardContainerProps>`
     transition: 300ms;
 
     figure {
-        width: 46px;
         height: 56px;
+        width: 46px;
         border-radius: 8px;
         overflow: hidden;
+        margin-left: ${(props) => props.v2 ? '16px' : '0' };
 
         img {
             width: 100%;
