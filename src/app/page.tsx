@@ -41,8 +41,8 @@ export default function Home() {
     popularGames && (
     <PageContainer>
       <TrailerModal videoUrl={trailerUrl} isOpen={isTrailerModalOpen} setIsOpen={setIstrailerModalOpen} />
-      <ConfirmModal />
-      <Toast isVisible={false} />
+      {/* <ConfirmModal /> */}
+      <Toast isVisible={true} />
       <div className="main_content">
         <SideMenu />
 

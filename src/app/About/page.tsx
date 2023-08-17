@@ -24,6 +24,7 @@ import { getVideoId } from "@/utils/getVideoId";
 import { Context } from "@/context/UserContext";
 import { isGameAlreadyAdded } from './../../utils/isGameFavorited';
 import { TrailerModal } from "@/components/ui/TrailerModal";
+import { ConfirmModal } from "@/components/ui/ConfirmModal";
 
 interface AboutProps {
 
@@ -33,7 +34,8 @@ export default function About(props : AboutProps){
     const [selectedGame, setSelectedGame] = useState<GameProps>()
     const [backgroundImage, setBackgroudImage] = useState('')
     const { addToList, removeFromList, gameList } = useContext(Context);
-    const [isGaleryModalOpen, setIsGaleryModalOpen] = useState(false)
+    const [isGaleryModalOpen, setIsGaleryModalOpen] = useState(false);
+    const [isConfirmModalVisible, setIsConfirmModalVisible] = useState(false);
     // const { findById } = useGames()
 
     
@@ -63,10 +65,11 @@ export default function About(props : AboutProps){
 
     function handleSetList(){
         if(selectedGame){
-            isGameAlreadyAdded({gameId: selectedGame.id, gameList: gameList}) ?
-                removeFromList(selectedGame.id)
-            :
+            if(isGameAlreadyAdded({gameId: selectedGame.id, gameList: gameList})) {
+                setIsConfirmModalVisible(true)
+            } else {
                 addToList(selectedGame)
+            }
         }
 
     }
@@ -74,7 +77,7 @@ export default function About(props : AboutProps){
      return(
         selectedGame && (    
         <PageContainer>
-            {/* <Galery images={selectedGame.images} /> */}
+            <ConfirmModal gameId={selectedGame.id} isConfirmModalVisible={isConfirmModalVisible} setIsConfirmModalVisible={setIsConfirmModalVisible} />
             <GaleryModal images={selectedGame.images} isGaleryModalOpen={isGaleryModalOpen} setIsGaleryModalOpen={setIsGaleryModalOpen}/>
             <SideMenu />
             <div className="game_section">
