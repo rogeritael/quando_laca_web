@@ -10,7 +10,7 @@ import { Galery } from "@/components/Galery";
 import { Title } from "@/components/ui/Title";
 import { gameList as games } from "@/mocks/games";
 import { GaleryModal } from "@/components/GaleryModal";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { GameProps } from "@/mocks/games";
 import { gamesService } from "@/services/gameService";
 import { useRouter } from "next/router";
@@ -21,7 +21,8 @@ import { GameGalery } from "@/components/GameGalery";
 import Link from "next/link";
 import { isAVideoLink } from "@/utils/isAVideoLink";
 import { getVideoId } from "@/utils/getVideoId";
-
+import { Context } from "@/context/UserContext";
+import { isGameAlreadyAdded } from './../../utils/isGameFavorited';
 
 interface AboutProps {
 
@@ -30,6 +31,7 @@ interface AboutProps {
 export default function About(props : AboutProps){
     const [selectedGame, setSelectedGame] = useState<GameProps>()
     const [backgroundImage, setBackgroudImage] = useState('')
+    const { addToList, removeFromList, gameList } = useContext(Context);
     // const { findById } = useGames()
 
     useEffect(() => {
@@ -54,6 +56,16 @@ export default function About(props : AboutProps){
         })()
         
     }, [])
+
+    function handleSetList(){
+        if(selectedGame){
+            isGameAlreadyAdded({gameId: selectedGame.id, gameList: gameList}) ?
+                removeFromList(selectedGame.id)
+            :
+                addToList(selectedGame)
+        }
+
+    }
 
      return(
         selectedGame && (    
@@ -87,7 +99,13 @@ export default function About(props : AboutProps){
                     </div>
                     <p className="description">{selectedGame.description}</p>
                     <div className="buttons_container">
-                        <button>Adicionar a Lista</button>
+                        <button onClick={() => handleSetList()}>
+                            {isGameAlreadyAdded({gameId: selectedGame.id, gameList: gameList}) ?
+                                'Remover da Lista'
+                                :
+                                'Adicionar a Lista'
+                            }
+                        </button>
                         <Link href="/">Comprar Jogo</Link>
                     </div>
                 </div>
