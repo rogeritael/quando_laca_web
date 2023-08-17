@@ -6,6 +6,7 @@ export const PageContainer = styled.section`
     grid-template-columns: 80px 1fr;
     grid-template-areas:
         "side main";
+    position: relative;
 
 
     .side {

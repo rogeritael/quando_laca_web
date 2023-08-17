@@ -23,6 +23,7 @@ import { isAVideoLink } from "@/utils/isAVideoLink";
 import { getVideoId } from "@/utils/getVideoId";
 import { Context } from "@/context/UserContext";
 import { isGameAlreadyAdded } from './../../utils/isGameFavorited';
+import { TrailerModal } from "@/components/ui/TrailerModal";
 
 interface AboutProps {
 
@@ -32,7 +33,10 @@ export default function About(props : AboutProps){
     const [selectedGame, setSelectedGame] = useState<GameProps>()
     const [backgroundImage, setBackgroudImage] = useState('')
     const { addToList, removeFromList, gameList } = useContext(Context);
+    const [isGaleryModalOpen, setIsGaleryModalOpen] = useState(false)
     // const { findById } = useGames()
+
+    
 
     useEffect(() => {
 
@@ -70,17 +74,10 @@ export default function About(props : AboutProps){
      return(
         selectedGame && (    
         <PageContainer>
+            {/* <Galery images={selectedGame.images} /> */}
+            <GaleryModal images={selectedGame.images} isGaleryModalOpen={isGaleryModalOpen} setIsGaleryModalOpen={setIsGaleryModalOpen}/>
             <SideMenu />
-            
             <div className="game_section">
-                {/* <div className="header">
-                    <Search />
-                    <div className="logo_container">
-                        <Logo />
-                        <Image src={bell} alt="notificações" />
-                    </div>
-                </div> */}
-
                 <figure className="background_image">
                     <span className="image_mask"/>
                     <Image width={1200} height={1200} src={backgroundImage} alt="imagem de fundo do jogo"/>
@@ -110,13 +107,14 @@ export default function About(props : AboutProps){
                     </div>
                 </div>
                 <div className="image_galery">
+
                     {selectedGame.images.map((image, index) => (
                         
                         <figure key={index}>
                             {isAVideoLink(image) ? (
-                                <Image width={270} height={150} src={image} alt="imagem da galeria do jogo"/>
+                                <Image onClick={() => setIsGaleryModalOpen(true)} width={270} height={150} src={image} alt="imagem da galeria do jogo"/>
                             ):(
-                                <iframe
+                                <iframe onClick={() => setIsGaleryModalOpen(true)}
                                     width="640"
                                     height="360"
                                     src={`https://www.youtube.com/embed/${getVideoId(image)}?controls=0mo`}

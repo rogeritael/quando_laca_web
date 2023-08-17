@@ -3,8 +3,10 @@ import styled from "styled-components";
 export const GaleryContainer = styled.div`
     max-width: 1440px;
     width: calc(100vw - 100px);
-    position: relative;
+    position: absolute;
     margin-top: 60px;
+
+    background-color: var(--bg);
     
     .carousel {
         max-width: 1440px;

@@ -50,7 +50,7 @@ export const GaleryModalContainer = styled.div`
                 display: flex;
                 align-items: center;
 
-                img {
+                img, iframe {
                     width: 620px;
                     height: 350px;
                     object-fit: cover;
@@ -97,7 +97,7 @@ export const GaleryModalContainer = styled.div`
                 align-items: center;
                 gap: 16px;
 
-                img {
+                img, iframe {
                     width: 100px;
                     height: 56px;
                 }
