@@ -29,6 +29,7 @@ interface AboutProps {
 
 export default function About(props : AboutProps){
     const [selectedGame, setSelectedGame] = useState<GameProps>()
+    const [backgroundImage, setBackgroudImage] = useState('')
     // const { findById } = useGames()
 
     useEffect(() => {
@@ -40,9 +41,16 @@ export default function About(props : AboutProps){
             if(typeof id === 'string'){
                 const game = await gamesService().findById(id)
 
-                if(game)
+                if(game) {
                     setSelectedGame(game)
+
+                    game.images.map((image) => (
+                        backgroundImage === '' &&
+                            !isAVideoLink(image) && setBackgroudImage(image)
+                    ))
+                }
             }
+
         })()
         
     }, [])
@@ -63,7 +71,7 @@ export default function About(props : AboutProps){
 
                 <figure className="background_image">
                     <span className="image_mask"/>
-                    <Image width={1200} height={1200} src={selectedGame.images[2]} alt="imagem de fundo do jogo"/>
+                    <Image width={1200} height={1200} src={backgroundImage} alt="imagem de fundo do jogo"/>
                 </figure>
 
                 <div className="game_infos">
@@ -93,7 +101,7 @@ export default function About(props : AboutProps){
                                 <iframe
                                     width="640"
                                     height="360"
-                                    src={`https://www.youtube.com/embed/${getVideoId(image)}`}
+                                    src={`https://www.youtube.com/embed/${getVideoId(image)}?controls=0mo`}
                                     title="Trailer do jogo"
                                     allowFullScreen
                                 ></iframe>
