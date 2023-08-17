@@ -16,6 +16,11 @@ import { gamesService } from "@/services/gameService";
 import { useRouter } from "next/router";
 import { formatDate } from "@/utils/formatDate";
 import { countdown } from "@/utils/countdown";
+import { GameButtons } from "@/components/GameButtons";
+import { GameGalery } from "@/components/GameGalery";
+import Link from "next/link";
+import { isAVideoLink } from "@/utils/isAVideoLink";
+import { getVideoId } from "@/utils/getVideoId";
 
 
 interface AboutProps {
@@ -45,52 +50,58 @@ export default function About(props : AboutProps){
      return(
         selectedGame && (    
         <PageContainer>
-            {/* <GaleryModal /> */}
             <SideMenu />
+            
             <div className="game_section">
-                <div className="header">
+                {/* <div className="header">
                     <Search />
                     <div className="logo_container">
                         <Logo />
                         <Image src={bell} alt="notificações" />
                     </div>
+                </div> */}
+
+                <figure className="background_image">
+                    <span className="image_mask"/>
+                    <Image width={1200} height={1200} src={selectedGame.images[2]} alt="imagem de fundo do jogo"/>
+                </figure>
+
+                <div className="game_infos">
+                    <h1 className="title">{selectedGame.name}</h1>
+                    <div className="info_list">
+                        <p>{selectedGame.developer}</p>
+                        <p className="categories">
+                            {selectedGame.category.map((category, index) => (
+                                <span key={index}>{category.name}</span>
+                            ))}
+                        </p>
+                        <p className="countdown">{countdown(selectedGame.releaseDate)}</p>
+                    </div>
+                    <p className="description">{selectedGame.description}</p>
+                    <div className="buttons_container">
+                        <button>Adicionar a Lista</button>
+                        <Link href="/">Comprar Jogo</Link>
+                    </div>
                 </div>
-                <GameHeader name={selectedGame.name} image={selectedGame.image} countdown={countdown(selectedGame.releaseDate)} />
-                <Galery images={selectedGame?.images} />
-                
-                <div className="info_section">
-                    <div className="left">
-                        <div className="description">
-                            <Title content="Resumo" disableLink/>
-                            <p>
-                                {selectedGame?.description}
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div className="info">
-                        <Title content="Informações" disableLink/>
-                        <ul className="info_box">
-                            <li>
-                                <p>Plataformas</p>
-                                <span>{selectedGame?.platforms}</span>
-                            </li>
-                            <li>
-                                <p>Data de lançamento</p>
-                                <span>{formatDate(selectedGame?.releaseDate)}</span>
-                            </li>
-                            <li>
-                                <p>Desenvolvedora</p>
-                                <span>{selectedGame?.developer}</span>
-                            </li>
-                            <li>
-                                <p>Gêneros</p>
-                                {selectedGame?.category.map((category) => (
-                                    <span key={category.id}>{category.name} •</span>
-                                ))}
-                            </li>
-                        </ul>
-                    </div>
+                <div className="image_galery">
+                    {selectedGame.images.map((image, index) => (
+                        
+                        <figure key={index}>
+                            {isAVideoLink(image) ? (
+                                <Image width={270} height={150} src={image} alt="imagem da galeria do jogo"/>
+                            ):(
+                                <iframe
+                                    width="640"
+                                    height="360"
+                                    src={`https://www.youtube.com/embed/${getVideoId(image)}`}
+                                    title="Trailer do jogo"
+                                    allowFullScreen
+                                ></iframe>
+                            )
+                            }
+                        </figure>
+                        
+                    ))}
                 </div>
             </div>
             
