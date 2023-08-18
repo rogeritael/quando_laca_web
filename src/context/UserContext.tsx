@@ -2,6 +2,7 @@
 import React, { createContext, useEffect, useState } from "react";
 import { GameProps } from "@/mocks/games";
 import { useFavoriteGames } from "@/hooks/useFavoriteGames";
+import { useFlashMessage } from "@/hooks/useFlashMessage";
 
 interface ContextProps {
     gameList: GameProps[];

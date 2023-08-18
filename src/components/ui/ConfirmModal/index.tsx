@@ -1,5 +1,6 @@
 import { useFavoriteGames } from "@/hooks/useFavoriteGames";
 import { ModalContainer } from "./styles";
+import { useFlashMessage } from "@/hooks/useFlashMessage";
 
 interface ConfirmModalProps {
     isConfirmModalVisible: boolean,
@@ -9,10 +10,12 @@ interface ConfirmModalProps {
 
 export function ConfirmModal({ gameId, isConfirmModalVisible, setIsConfirmModalVisible } : ConfirmModalProps){
     const { removeFromList } = useFavoriteGames();
+    const { setFlashMessage } = useFlashMessage();
 
     function handleConfirm(){
         removeFromList(gameId);
         setIsConfirmModalVisible(false);
+        setFlashMessage({type:'type', message:'message'})
     }
     
     return(

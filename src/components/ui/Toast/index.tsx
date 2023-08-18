@@ -7,7 +7,7 @@ interface ToastProps {
 }
 
 export function Toast({ isVisible } : ToastProps){
-    const [isToastVisible, setIsToastVisible] = useState(true)
+    const [isToastVisible, setIsToastVisible] = useState(false)
     const [message, setMessage] = useState('')
 
     useEffect(() => {
@@ -26,7 +26,7 @@ export function Toast({ isVisible } : ToastProps){
 
     return(
         isToastVisible &&
-        <ToastComponent isVisible={isVisible}>
+        <ToastComponent isVisible={isToastVisible}>
             <h3>Removido com sucesso!</h3>
             <p>notificações <span>desativadas.</span></p>
             <span className="progress_bar"></span>

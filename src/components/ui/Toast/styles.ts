@@ -1,5 +1,37 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import css from "styled-jsx/css";
+
+const entry = keyframes`
+    0% {
+        opacity: 0;
+        margin-bottom: -20px;
+    }
+    100% {
+        opacity: 1;
+        margin-bottom: 0;
+    }
+`
+
+const leave = keyframes`
+    0% {
+        opacity: 1;
+        margin-bottom: 0;
+    }
+    100% {
+        opacity: 0;
+        margin-bottom: -20px;
+    }
+`
+
+
+const barAnimation = keyframes`
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+`
 
 interface ToastProps {
     isVisible: boolean;
@@ -17,6 +49,7 @@ export const ToastComponent = styled.div<ToastProps>`
     bottom: 24px;
     left: 2%;
     display: ${(props) => props.isVisible ? 'block' : 'none' };
+    animation: ${entry} 300ms, ${leave} 300ms 2700ms;
 
 
     h3 {
@@ -44,13 +77,14 @@ export const ToastComponent = styled.div<ToastProps>`
 
         &::after {
             content: '';
-            width: 90%;
+            width: 100%;
             height: 100%;
             position: absolute;
             left: 0;
             top: 0;
             background-color: #fff;
             border-radius: 4px;
+            animation: ${barAnimation} 3000ms 300ms;
         }
     }
 `;

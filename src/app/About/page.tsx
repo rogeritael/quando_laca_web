@@ -25,6 +25,7 @@ import { Context } from "@/context/UserContext";
 import { isGameAlreadyAdded } from './../../utils/isGameFavorited';
 import { TrailerModal } from "@/components/ui/TrailerModal";
 import { ConfirmModal } from "@/components/ui/ConfirmModal";
+import { Toast } from "@/components/ui/Toast";
 
 interface AboutProps {
 
@@ -77,6 +78,7 @@ export default function About(props : AboutProps){
      return(
         selectedGame && (    
         <PageContainer>
+            <Toast isVisible={false}/>
             <ConfirmModal gameId={selectedGame.id} isConfirmModalVisible={isConfirmModalVisible} setIsConfirmModalVisible={setIsConfirmModalVisible} />
             <GaleryModal images={selectedGame.images} isGaleryModalOpen={isGaleryModalOpen} setIsGaleryModalOpen={setIsGaleryModalOpen}/>
             <SideMenu />
