@@ -5,11 +5,11 @@ import { useFlashMessage } from "@/hooks/useFlashMessage";
 interface ConfirmModalProps {
     isConfirmModalVisible: boolean,
     setIsConfirmModalVisible: (param: boolean) => void;
+    removeFromList: (id: string) => void;
     gameId: string;
 }
 
-export function ConfirmModal({ gameId, isConfirmModalVisible, setIsConfirmModalVisible } : ConfirmModalProps){
-    const { removeFromList } = useFavoriteGames();
+export function ConfirmModal({ gameId, removeFromList, isConfirmModalVisible, setIsConfirmModalVisible } : ConfirmModalProps){
     const { setFlashMessage } = useFlashMessage();
 
     function handleConfirm(){
@@ -30,7 +30,7 @@ export function ConfirmModal({ gameId, isConfirmModalVisible, setIsConfirmModalV
                     <button onClick={() => handleConfirm()}>Deletar</button>
                 </div>
             </div>
-            <span className="background"></span>
+            <span className="background" onClick={() => setIsConfirmModalVisible(false)}></span>
         </ModalContainer>
     )
 }

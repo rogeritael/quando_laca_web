@@ -103,10 +103,11 @@ export const PageContainer = styled.section`
             button {
                 border: 2px solid #fff;
                 overflow: hidden;
+                position: relative;
 
                 &::before {
                     content: '';
-                    max-width: 205px;
+                    width: 100%;
                     height: 100%;
                     position: absolute;
                     inset: 0;
