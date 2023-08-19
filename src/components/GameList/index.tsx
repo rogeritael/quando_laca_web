@@ -3,11 +3,12 @@ import { Title } from "../ui/Title";
 import { GameListContainer } from "./styles";
 
 interface GameListProps {
-    title: string,
-    children: React.ReactNode
+    title: string;
+    children: React.ReactNode;
+    url: string;
 }
 
-export function GameList({ children, title } : GameListProps){
+export function GameList({ children, title, url } : GameListProps){
     const [railPosition, setRailPosition] = useState(0);
     const [carouselWidth, setCarouselWidth] = useState(0);
     const carouselRef = useRef<HTMLDivElement>(null);
@@ -37,7 +38,7 @@ export function GameList({ children, title } : GameListProps){
 
     return(
         <GameListContainer>
-            <Title content={title} controllers={true} onNext={next} onPrev={before} />
+            <Title content={title} controllers={true} onNext={next} onPrev={before} url={url} />
             <div className="carousel" ref={carouselRef}>
                 <div className="rail" style={{ transform: `translateX(${railPosition}px)`}} ref={railRef}>
                     {children}

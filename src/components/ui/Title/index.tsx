@@ -8,8 +8,9 @@ interface TitleProps {
     disableLink?: boolean;
     onNext?: () => void;
     onPrev?: () => void;
+    url: string;
 }
-export function Title({ content, controllers, disableLink, onNext, onPrev } : TitleProps){
+export function Title({ content, controllers, disableLink, onNext, onPrev, url } : TitleProps){
     return(
         <TitleComponent>
             {content}
@@ -20,7 +21,7 @@ export function Title({ content, controllers, disableLink, onNext, onPrev } : Ti
                     <Image onClick={onPrev} src={arrow} alt="voltar carrossel de jogos" />
                 </div>
             :
-                !disableLink && (<a href="">ver mais</a>)
+                !disableLink && (<a href={url}>ver mais</a>)
             }
         </TitleComponent>
     )
