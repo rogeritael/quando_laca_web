@@ -7,9 +7,10 @@ interface CardContainerProps {
 
 export const CardContainer = styled.article<CardContainerProps>`
     background-color: var(--bg-secondary);
-    padding: ${(props) => props.v2 ? '4px' : '14px' };
+    padding: ${(props) => props.v2 ? '4px' : '14px 0 14px 14px' };
     display: flex;
     align-items: center;
+    height: 100%;
     position: relative;
     gap: 12px;
     width: 100%;

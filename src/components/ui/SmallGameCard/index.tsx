@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { CardContainer } from "./styles";
-import menu from '@/assets/icons/cardMenu.svg';
+import menu from '@/assets/icons/Menu.svg';
 import clock from '@/assets/icons/clock.svg';
 import exemplo from '@/assets/jogo_exemplo.png';
 import { DeleteButton } from "../DeleteButton";
@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { formatDate } from "@/utils/formatDate";
 import Link from "next/link";
 import { countdown } from '@/utils/countdown';
+import { useRouter } from 'next/navigation';
 
 interface SmallGameCardProps {
     name: string;
@@ -18,22 +19,26 @@ interface SmallGameCardProps {
 }
 
 export function SmallGameCard({ id, image, name, release_date, v2 } : SmallGameCardProps){
-    const [isDeleteButtonOpen, setIsDeleteButtonOpen] = useState(false)
+    const [isDeleteButtonOpen, setIsDeleteButtonOpen] = useState(false);
+    const router = useRouter();
 
     function handleOpenCloseMenu(){
         isDeleteButtonOpen ? setIsDeleteButtonOpen(false) : setIsDeleteButtonOpen(true) 
     }
 
+    function handleRedirect(){
+        router.push(`/About?id=${id}`)
+    }
+
     return(
-        <Link href={`/About?id=${id}`}>
         <CardContainer v2={v2}>
             {!v2 && (
                 <DeleteButton isVisible={isDeleteButtonOpen} />
             )}
-            <figure>
+            <figure onClick={() => handleRedirect()}>
                 <Image width={200} height={200} src={image} alt="menu do jogo" />
             </figure>
-            <div className="game_info">
+            <div className="game_info" onClick={() => handleRedirect()}>
                 <h2>{name}</h2>
                 <p>
                     {!v2 ? (
@@ -50,6 +55,5 @@ export function SmallGameCard({ id, image, name, release_date, v2 } : SmallGameC
                 <Image className="options" src={menu} alt="menu do jogo" onClick={() => handleOpenCloseMenu()} />
             )}   
         </CardContainer>
-        </Link>
     )
 }
