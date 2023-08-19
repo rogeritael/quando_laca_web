@@ -1,3 +1,4 @@
+'use client'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -6,6 +7,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 import StyledComponentsRegistry from '@/lib/registry'
 import { UserProvider } from '@/context/UserContext'
+import { Toast } from '@/components/ui/Toast'
+import { ConfirmModal } from '@/components/ui/ConfirmModal'
 
 export const metadata: Metadata = {
   title: 'Quando Lança | Confira os principais lançamentos de jogos de 2023',
@@ -22,6 +25,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <UserProvider>
         <StyledComponentsRegistry>
+          <Toast />
           {children}
         </StyledComponentsRegistry>
         </UserProvider>

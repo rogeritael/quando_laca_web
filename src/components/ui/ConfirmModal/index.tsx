@@ -15,7 +15,7 @@ export function ConfirmModal({ gameId, removeFromList, isConfirmModalVisible, se
     function handleConfirm(){
         removeFromList(gameId);
         setIsConfirmModalVisible(false);
-        setFlashMessage({type:'type', message:'message'})
+        setFlashMessage({type:'error', message:'O jogo foi removido da sua lista. Você não receberá novas notificações.'})
     }
     
     return(

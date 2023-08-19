@@ -10,9 +10,10 @@ interface GameInListProps {
     image: string;
     developer: string;
     release_date: Date;
+    removeGame: (id: string) => void;
 }
 
-export function GameInList({ name, id, image, developer, release_date } : GameInListProps){
+export function GameInList({ name, id, image, developer, release_date, removeGame } : GameInListProps){
     return(
         <GameListContainer>
             <Image width={200} height={300} src={image} alt={`imagem do jogo ${name}`}></Image>
@@ -22,7 +23,7 @@ export function GameInList({ name, id, image, developer, release_date } : GameIn
                 <p>{countdown(release_date)}</p>
             </div>
             <div className="buttons">
-                <button>
+                <button onClick={() => removeGame(id)}>
                     <AiOutlineDelete />
                 </button>
                 <Link href={`/About?id=${id}`}>

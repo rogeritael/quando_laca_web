@@ -28,6 +28,8 @@ export const ModalContainer = styled.div<ConfirmModalProps>`
     width: 100vw;
     height: 100vh;
     position: relative;
+    position: absolute;
+    inset: 0;
     display: ${(props) => props.isConfirmModalVisible ? 'block' : 'none'};;
 
     .modal {

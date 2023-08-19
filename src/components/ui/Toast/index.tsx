@@ -3,12 +3,12 @@ import { ToastComponent } from "./styles";
 import bus from "@/utils/bus";
 
 interface ToastProps {
-    isVisible: boolean;
 }
 
-export function Toast({ isVisible } : ToastProps){
+export function Toast(props: ToastProps){
     const [isToastVisible, setIsToastVisible] = useState(false)
     const [message, setMessage] = useState('')
+    const [type, setType] = useState('')
 
     useEffect(() => {
 
@@ -16,6 +16,7 @@ export function Toast({ isVisible } : ToastProps){
         bus.addListener('flash_message', ({ message, type }) => {
             setIsToastVisible(true)
             setMessage(message)
+            setType(type)
 
             setTimeout(() => {
                 setIsToastVisible(false)
@@ -27,8 +28,8 @@ export function Toast({ isVisible } : ToastProps){
     return(
         isToastVisible &&
         <ToastComponent isVisible={isToastVisible}>
-            <h3>Removido com sucesso!</h3>
-            <p>notificações <span>desativadas.</span></p>
+            <h3>{type === 'success' ? 'Adicionado a Lista' : 'Removido com sucesso'}!</h3>
+            <p>{message}</p>
             <span className="progress_bar"></span>
         </ToastComponent>
     )

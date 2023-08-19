@@ -6,6 +6,7 @@ export const LibraryContainer = styled.section`
     grid-template-columns: 80px 1fr;
     grid-template-areas:
     "side main";
+    position: relative;
 
     .side {
         grid-area: side;

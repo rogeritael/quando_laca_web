@@ -27,6 +27,7 @@ import { TrailerModal } from "@/components/ui/TrailerModal";
 import { ConfirmModal } from "@/components/ui/ConfirmModal";
 import { Toast } from "@/components/ui/Toast";
 import { Carousel } from "@/components/ui/Carousel";
+import { useFlashMessage } from "@/hooks/useFlashMessage";
 
 interface AboutProps {
 
@@ -38,6 +39,7 @@ export default function About(props : AboutProps){
     const [backgroundImage, setBackgroudImage] = useState('')
     const [isGaleryModalOpen, setIsGaleryModalOpen] = useState(false);
     const [isConfirmModalVisible, setIsConfirmModalVisible] = useState(false);
+    const { setFlashMessage } = useFlashMessage();
 
     
 
@@ -70,6 +72,7 @@ export default function About(props : AboutProps){
                 setIsConfirmModalVisible(true)
             } else {
                 addToList(selectedGame)
+                setFlashMessage({type:'success', message: `${selectedGame.name} foi adicionado aos seus favoritos`})
             }
         }
 
@@ -78,7 +81,7 @@ export default function About(props : AboutProps){
      return(
         selectedGame && (
         <PageContainer>
-            <Toast isVisible={false}/>
+            {/* <Toast /> */}
             <ConfirmModal gameId={selectedGame.id} removeFromList={removeFromList} isConfirmModalVisible={isConfirmModalVisible} setIsConfirmModalVisible={setIsConfirmModalVisible} />
             <GaleryModal images={selectedGame.images} isGaleryModalOpen={isGaleryModalOpen} setIsGaleryModalOpen={setIsGaleryModalOpen}/>
             <SideMenu />

@@ -3,7 +3,7 @@ import { LibraryContainer } from "./styles";
 import { Context } from "@/context/UserContext";
 import Image from "next/image";
 import Link from "next/link";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import arrow from '@/assets/icons/arrow_v2.svg'
 import { SideMenu } from "@/components/SideMenu";
 import { Header } from "@/components/Header";
@@ -11,15 +11,24 @@ import { GameInList } from "@/components/ui/GameInList";
 import { Logo } from "@/components/ui/Logo";
 import bell from '@/assets/icons/bell.svg';
 import { Search } from "@/components/ui/Search";
+import { ConfirmModal } from "@/components/ui/ConfirmModal";
 
 interface LibraryProps {
 
 }
 export default function Library(props : LibraryProps){
-    const { gameList } = useContext(Context);
+    const { gameList, removeFromList } = useContext(Context);
+    const [gameId, setGameId] = useState('')
+    const [isConfirmModalVisible, setIsConfirmModalVisible] = useState(false)
+
+    function handleRemoveFromList(id: string){
+        setGameId(id);
+        setIsConfirmModalVisible(true)
+    }
 
     return(
         <LibraryContainer>
+            <ConfirmModal gameId={gameId} isConfirmModalVisible={isConfirmModalVisible} setIsConfirmModalVisible={setIsConfirmModalVisible} removeFromList={removeFromList}/>
             <SideMenu />
             
             <div className="main">
@@ -48,6 +57,7 @@ export default function Library(props : LibraryProps){
                             developer={game.developer}
                             image={game.image}
                             release_date={game.releaseDate}
+                            removeGame={handleRemoveFromList}
                         />
                     ))}
                 </div>
