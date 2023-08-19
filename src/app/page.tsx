@@ -13,16 +13,18 @@ import { Game } from '@/components/Game'
 import { ConfirmModal } from '@/components/ui/ConfirmModal'
 import { Toast } from '@/components/ui/Toast'
 import { gameList as games } from '@/mocks/games'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import { gamesService } from '@/services/gameService'
 import { GameProps } from './../mocks/games';
 import { TrailerModal } from '@/components/ui/TrailerModal'
+import { Context } from '@/context/UserContext'
 
 export default function Home() {
   const [popularGames, setPopularGames] = useState<GameProps[]>([])
   const [upcomingGames, setUpcomingGames] = useState<GameProps[]>([])
   const [isTrailerModalOpen, setIstrailerModalOpen] = useState(false);
   const [trailerUrl, setTrailerUrl] = useState('')
+  const { setIsLoading } = useContext(Context)
 
 
   useEffect(() => {
@@ -32,7 +34,7 @@ export default function Home() {
       const games = await gamesService().findAll();
       setPopularGames(games.popular)
       setUpcomingGames(games.upcomingGames)
-    
+      // setIsLoading(false)
     })()
 
   },[])
@@ -42,7 +44,7 @@ export default function Home() {
     <PageContainer>
       <TrailerModal videoUrl={trailerUrl} isOpen={isTrailerModalOpen} setIsOpen={setIstrailerModalOpen} />
       {/* <ConfirmModal /> */}
-      <Toast isVisible={true} />
+      <Toast />
       <div className="main_content">
         <SideMenu />
 
