@@ -26,6 +26,7 @@ import { isGameAlreadyAdded } from './../../utils/isGameFavorited';
 import { TrailerModal } from "@/components/ui/TrailerModal";
 import { ConfirmModal } from "@/components/ui/ConfirmModal";
 import { Toast } from "@/components/ui/Toast";
+import { Carousel } from "@/components/ui/Carousel";
 
 interface AboutProps {
 
@@ -75,7 +76,7 @@ export default function About(props : AboutProps){
     }
 
      return(
-        selectedGame && (    
+        selectedGame && (
         <PageContainer>
             <Toast isVisible={false}/>
             <ConfirmModal gameId={selectedGame.id} removeFromList={removeFromList} isConfirmModalVisible={isConfirmModalVisible} setIsConfirmModalVisible={setIsConfirmModalVisible} />
@@ -111,6 +112,7 @@ export default function About(props : AboutProps){
                     </div>
                 </div>
                 <div className="image_galery">
+                    <Carousel>
 
                     {selectedGame.images.map((image, index) => (
                         
@@ -130,6 +132,7 @@ export default function About(props : AboutProps){
                         </figure>
                         
                     ))}
+                    </Carousel>
                 </div>
             </div>
             

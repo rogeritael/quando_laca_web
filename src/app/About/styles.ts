@@ -123,7 +123,7 @@ export const PageContainer = styled.section`
         gap: 16px;
         position: absolute;
         bottom: 24px;
-        left: 50%;
+        right: 0;
 
         figure {
             width: 270px;
