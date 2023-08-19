@@ -130,6 +130,7 @@ export const PageContainer = styled.section`
             height: 150px;
             overflow: hidden;
             cursor: pointer;
+            margin-top: 14px;
 
             img, iframe {
                 width: 100%;

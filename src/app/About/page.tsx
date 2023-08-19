@@ -115,7 +115,7 @@ export default function About(props : AboutProps){
                     </div>
                 </div>
                 <div className="image_galery">
-                    <Carousel>
+                    <Carousel title="" maxWidth="800px">
 
                     {selectedGame.images.map((image, index) => (
                         

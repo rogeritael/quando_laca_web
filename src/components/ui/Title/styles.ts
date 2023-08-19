@@ -13,6 +13,7 @@ export const TitleComponent = styled.h1`
         display: flex;
         gap: 24px;
         margin-right: -16px;
+        margin-left: auto;
 
         img {
             cursor: pointer;
