@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const SliderContainer = styled.div`
+interface SliderProps {
+    maxWidth: string;
+}
+
+export const SliderContainer = styled.div<SliderProps>`
 
     .carousel_header {
         display: flex;
@@ -30,7 +34,7 @@ export const SliderContainer = styled.div`
 
     .carousel {
         display: flex;
-        max-width: 800px;
+        max-width: ${props => props.maxWidth};
         overflow: hidden;
         position: relative;
         .rail {

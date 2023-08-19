@@ -8,7 +8,7 @@ interface TitleProps {
     disableLink?: boolean;
     onNext?: () => void;
     onPrev?: () => void;
-    url: string;
+    url?: string;
 }
 export function Title({ content, controllers, disableLink, onNext, onPrev, url } : TitleProps){
     return(

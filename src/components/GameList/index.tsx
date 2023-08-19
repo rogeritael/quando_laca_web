@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Title } from "../ui/Title";
 import { GameListContainer } from "./styles";
+import { Carousel } from "../ui/Carousel";
 
 interface GameListProps {
     title: string;
@@ -38,12 +39,9 @@ export function GameList({ children, title, url } : GameListProps){
 
     return(
         <GameListContainer>
-            <Title content={title} controllers={true} onNext={next} onPrev={before} url={url} />
-            <div className="carousel" ref={carouselRef}>
-                <div className="rail" style={{ transform: `translateX(${railPosition}px)`}} ref={railRef}>
-                    {children}
-                </div>
-            </div>
+            <Carousel title={title} maxWidth="100%">
+                {children}
+            </Carousel>
         </GameListContainer>
     )
 }
