@@ -38,7 +38,7 @@ export const CardContainer = styled.article<CardContainerProps>`
             color: #fff;
             margin-bottom: 8px;
             font-weight: normal;
-            max-width: ${(props) => props.v2 ? '100%' : '150px' };;
+            max-width: ${(props) => props.v2 ? '100%' : '130px' };;
         }
 
         p {
