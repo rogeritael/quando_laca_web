@@ -19,7 +19,7 @@ export function MyLibrary(props : MyLibraryProps){
         <LibraryComponent>
             <h1>Biblioteca</h1>
             <div className="games_container">
-                {gameList.map((game) => (
+                {gameList.map((game, index) => index < 3 && (
                     <SmallGameCard key={game.id} name={game.name} release_date={game.releaseDate} id={game.id} image={game.image} />
                 ))}
             </div>

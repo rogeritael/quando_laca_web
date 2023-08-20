@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
 export const LibraryComponent = styled.div`
+    display: flex;
+    flex-direction: column;
+
     h1 {
         color: #fff;
         font-weight: normal;
-        /* margin-bottom: 12px; */
+        margin-bottom: 20px;
         font-size: 1rem;
     }
 
@@ -24,8 +27,9 @@ export const LibraryComponent = styled.div`
     }
     
 
-    /* .games_container {
-       display: flex;
+    .games_container {
+        display: flex;
+        gap: 14px;
         flex-direction: column;
-    } */
+    }
 `;
