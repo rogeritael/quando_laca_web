@@ -58,8 +58,8 @@ export default function Search(props : AboutProps){
                     
 
                     <div className="featured">
-                        <PopularGames games={games} />
-                        <PopularGames games={games} />
+                        <PopularGames url="/Search?term=populares" games={games} />
+                        <PopularGames url="/Search?term=populares" games={games} />
                     </div>
                 </div>
                 

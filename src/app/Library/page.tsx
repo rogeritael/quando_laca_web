@@ -17,18 +17,15 @@ interface LibraryProps {
 
 }
 export default function Library(props : LibraryProps){
-    const { gameList, removeFromList } = useContext(Context);
-    const [gameId, setGameId] = useState('')
-    const [isConfirmModalVisible, setIsConfirmModalVisible] = useState(false)
+    const { gameList, removeFromList, setGameIdToRemoveFromList, setIsConfirmModalVisible } = useContext(Context);
 
     function handleRemoveFromList(id: string){
-        setGameId(id);
+        setGameIdToRemoveFromList(id);
         setIsConfirmModalVisible(true)
     }
 
     return(
         <LibraryContainer>
-            <ConfirmModal gameId={gameId} isConfirmModalVisible={isConfirmModalVisible} setIsConfirmModalVisible={setIsConfirmModalVisible} removeFromList={removeFromList}/>
             <SideMenu />
             
             <div className="main">

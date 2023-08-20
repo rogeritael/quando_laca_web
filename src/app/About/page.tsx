@@ -34,11 +34,11 @@ interface AboutProps {
 }
 
 export default function About(props : AboutProps){
-    const { addToList, removeFromList, gameList } = useContext(Context);
+    const { addToList, removeFromList, gameList, setGameIdToRemoveFromList, setIsConfirmModalVisible } = useContext(Context);
     const [selectedGame, setSelectedGame] = useState<GameProps>()
     const [backgroundImage, setBackgroudImage] = useState('')
     const [isGaleryModalOpen, setIsGaleryModalOpen] = useState(false);
-    const [isConfirmModalVisible, setIsConfirmModalVisible] = useState(false);
+    // const [isConfirmModalVisible, setIsConfirmModalVisible] = useState(false);
     const { setFlashMessage } = useFlashMessage();
 
     
@@ -69,6 +69,7 @@ export default function About(props : AboutProps){
     function handleSetList(){
         if(selectedGame){
             if(isGameAlreadyAdded({gameId: selectedGame.id, gameList: gameList})) {
+                setGameIdToRemoveFromList(selectedGame.id)
                 setIsConfirmModalVisible(true)
             } else {
                 addToList(selectedGame)
@@ -82,7 +83,6 @@ export default function About(props : AboutProps){
         selectedGame && (
         <PageContainer>
             {/* <Toast /> */}
-            <ConfirmModal gameId={selectedGame.id} removeFromList={removeFromList} isConfirmModalVisible={isConfirmModalVisible} setIsConfirmModalVisible={setIsConfirmModalVisible} />
             <GaleryModal images={selectedGame.images} isGaleryModalOpen={isGaleryModalOpen} setIsGaleryModalOpen={setIsGaleryModalOpen}/>
             <SideMenu />
             <div className="game_section">

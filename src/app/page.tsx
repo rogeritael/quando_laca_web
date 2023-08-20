@@ -24,7 +24,9 @@ export default function Home() {
   const [upcomingGames, setUpcomingGames] = useState<GameProps[]>([])
   const [isTrailerModalOpen, setIstrailerModalOpen] = useState(false);
   const [trailerUrl, setTrailerUrl] = useState('')
-  const { setIsLoading } = useContext(Context)
+  const [isConfirmModalVisible, setIsConfirmModalVisible] = useState(false)
+  const [gameIdToRemove, setGameIdToRemove] = useState('')
+  const { setIsLoading, removeFromList } = useContext(Context)
 
 
   useEffect(() => {
@@ -43,7 +45,7 @@ export default function Home() {
     popularGames && (
     <PageContainer>
       <TrailerModal videoUrl={trailerUrl} isOpen={isTrailerModalOpen} setIsOpen={setIstrailerModalOpen} />
-      {/* <ConfirmModal /> */}
+      <ConfirmModal />
       <Toast />
       <div className="main_content">
         <SideMenu />
@@ -81,7 +83,7 @@ export default function Home() {
                 <Logo />
                 <Image src={bell} alt="notificações" />
           </div>
-          <MyLibrary />
+          <MyLibrary  />
         </div>
       </div>
     </PageContainer>

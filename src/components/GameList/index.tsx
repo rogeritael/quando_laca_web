@@ -6,7 +6,7 @@ import { Carousel } from "../ui/Carousel";
 interface GameListProps {
     title: string;
     children: React.ReactNode;
-    url: string;
+    url?: string;
 }
 
 export function GameList({ children, title, url } : GameListProps){

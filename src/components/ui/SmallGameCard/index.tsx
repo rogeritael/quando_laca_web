@@ -33,7 +33,7 @@ export function SmallGameCard({ id, image, name, release_date, v2 } : SmallGameC
     return(
         <CardContainer v2={v2}>
             {!v2 && (
-                <DeleteButton isVisible={isDeleteButtonOpen} />
+                <DeleteButton gameId={id} isVisible={isDeleteButtonOpen} />
             )}
             <figure onClick={() => handleRedirect()}>
                 <Image width={200} height={200} src={image} alt="menu do jogo" />
