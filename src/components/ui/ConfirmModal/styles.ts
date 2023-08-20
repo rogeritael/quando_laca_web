@@ -100,6 +100,12 @@ export const ModalContainer = styled.div<ConfirmModalProps>`
                     opacity: 0.1;
                 }
 
+                &:hover {
+                    &::before {
+                        opacity: 0.2;
+                    }
+                }
+
                 &:first-child {
                     border: none;
                     font-weight: normal;

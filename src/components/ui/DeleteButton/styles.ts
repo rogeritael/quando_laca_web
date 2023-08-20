@@ -1,4 +1,15 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const entry = keyframes`
+    0% {
+        opacity: 0;
+        right: 14px;
+    }
+    100% {
+        opacity: 1;
+        right: 24px;
+    }
+`
 
 interface DeleteButtonProps {
     isVisible: boolean;
@@ -17,4 +28,6 @@ export const ButtonComponent = styled.button<DeleteButtonProps>`
     z-index: 2;
     cursor: pointer;
     box-shadow: 12px -1px 24px 0px rgba(255, 255, 255, 0.13);
+
+    animation: ${entry} 200ms;
 `;

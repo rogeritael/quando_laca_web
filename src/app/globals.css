@@ -28,3 +28,17 @@ body {
 
 ::selection { background: #fff; color: var(--bg); }
 ::-moz-selection { background: #fff; color: var(--bg); }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  /* background-color: var(--bg-secondary); */
+  background-color: #fff;
+  border-radius: 20px;
+}

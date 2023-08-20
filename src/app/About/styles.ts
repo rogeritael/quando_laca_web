@@ -8,7 +8,6 @@ export const PageContainer = styled.section`
         "side main";
     position: relative;
 
-
     .side {
         grid-area: side;
         width: 80px;
@@ -49,6 +48,8 @@ export const PageContainer = styled.section`
         position: absolute;
         top: 48px;
         left: 48px;
+        padding-bottom: 400px;
+        max-height: calc(100vh - 300px);
 
         .info_list, .description {
             margin-top: 30px;
@@ -80,6 +81,9 @@ export const PageContainer = styled.section`
 
         .description {
             max-width: 600px;
+            overflow-y: auto;
+            max-height: 150px;
+            padding-bottom: 24px;
         }
 
         .buttons_container {
@@ -98,6 +102,26 @@ export const PageContainer = styled.section`
 
             a {
                 font-weight: normal;
+                position: relative;
+                text-align: center;
+
+                &::after {
+                    content: '';
+                    width: 80%;
+                    height: 2px;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 0;
+                    background-color: #fff;
+                    margin: 0 auto;
+                    opacity: 0;
+                    transition: 300ms;
+                }
+
+                &:hover {
+                    opacity: 0.9;
+                }
             }
 
             button {
@@ -113,6 +137,12 @@ export const PageContainer = styled.section`
                     inset: 0;
                     background-color: #fff;
                     opacity: 0.1;
+                }
+
+                &:hover {
+                    &::before {
+                        opacity: 0.2;
+                    }
                 }
             }
         }

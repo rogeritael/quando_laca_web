@@ -6,15 +6,18 @@ export const SearchComponent = styled.div`
     align-items: center;
 
     input {
-        background-color: #11121B; //--bg-seconday
+        background-color: var(--bg-secondary); //--bg-seconday
         padding: 18px 16px;
         padding-left: 56px;
         border-radius: 8px;
         color: #768192; //--highlight-color
         font-size: 0.875rem;
-        /* width: 100%; */
         width: 350px;
+        transition: 200ms;
 
+        &:hover, &:focus {
+            background-color: var(--bg-secondary-lighten);
+        }
 
         &::placeholder {
             font-size: 0.875rem;
