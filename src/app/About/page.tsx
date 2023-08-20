@@ -18,12 +18,19 @@ interface AboutProps {
 
 }
 
+interface MediaProps {
+    type: 'image' | 'video'
+    image: string;
+    link?: string;
+}
+
 export default function About(props : AboutProps){
     const { addToList, removeFromList, gameList, setGameIdToRemoveFromList, setIsConfirmModalVisible } = useContext(Context);
     const [selectedGame, setSelectedGame] = useState<GameProps>()
     const [backgroundImage, setBackgroudImage] = useState('')
     const [isGaleryModalOpen, setIsGaleryModalOpen] = useState(false);
     const [initialIndex, setInitialIndex] = useState(0);
+    const [mediaType, setMediaType] = useState<'image'|'video'>('image')
     const { setFlashMessage } = useFlashMessage();
 
     
@@ -64,8 +71,9 @@ export default function About(props : AboutProps){
 
     }
 
-    function handleOpenModal(index: number){
+    function handleOpenModal(index: number, media: MediaProps){
         setInitialIndex(index)
+        setMediaType(media.type)
         setIsGaleryModalOpen(true)
     }
 
@@ -73,7 +81,7 @@ export default function About(props : AboutProps){
         selectedGame && (
         <PageContainer>
             {/* <Toast /> */}
-            <GaleryModal initialIndex={initialIndex} media={selectedGame.media} isGaleryModalOpen={isGaleryModalOpen} setIsGaleryModalOpen={setIsGaleryModalOpen}/>
+            <GaleryModal mediaType={mediaType} initialIndex={initialIndex} media={selectedGame.media} isGaleryModalOpen={isGaleryModalOpen} setIsGaleryModalOpen={setIsGaleryModalOpen}/>
             <SideMenu />
             <div className="game_section">
                 <figure className="background_image">
@@ -111,11 +119,11 @@ export default function About(props : AboutProps){
                         
                         <figure key={index}>
                             {media.type === 'image' ? (
-                                <Image onClick={() => handleOpenModal(index)} width={270} height={150} src={media.image} alt="imagem da galeria do jogo"/>
+                                <Image onClick={() => handleOpenModal(index, media)} width={270} height={150} src={media.image} alt="imagem da galeria do jogo"/>
                             ):(
                                 media.link && (
                                 <>
-                                    <Image onClick={() => handleOpenModal(index)} width={270} height={150} src={media.image} alt="imagem da galeria do jogo"/>
+                                    <Image onClick={() => handleOpenModal(index, media)} width={270} height={150} src={media.image} alt="imagem da galeria do jogo"/>
                                     <Image className="player" src={player} alt="icone de player"/>
                                 </>
                                 )

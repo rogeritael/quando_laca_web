@@ -16,22 +16,25 @@ interface GaleryModalProps {
     initialIndex: number;
     isGaleryModalOpen: boolean;
     setIsGaleryModalOpen: (param: boolean) => void;
+    mediaType: 'image' | 'video';
 }
 
-export function GaleryModal({ media, isGaleryModalOpen, setIsGaleryModalOpen, initialIndex } : GaleryModalProps){
-    const [mainImage, setMainImage] = useState(media[0].image);
-    const [type, setType] = useState<'image'|'video'>('image')
+export function GaleryModal({ media, isGaleryModalOpen, setIsGaleryModalOpen, initialIndex, mediaType } : GaleryModalProps){
+    const [mainImage, setMainImage] = useState('');
+    const [type, setType] = useState<'image'|'video'>()
     
     useEffect(() => {
-        setMainImage(media[initialIndex].image)
-    }, [initialIndex, media])
+        const selectedImage = media[initialIndex].link ?? media[initialIndex].image;
+
+        setMainImage(selectedImage)
+        setType(mediaType)
+    }, [initialIndex, media, mediaType])
 
     function handleSetMedia(media: MediaProps){
         if(media.type === 'image') {
             setMainImage(media.image)
             setType('image')
-        } else if (media.type === 'video'){
-            media.link &&
+        } else if (media.type === 'video' && media.link){
              setMainImage(media.link)
              setType('video')
         }

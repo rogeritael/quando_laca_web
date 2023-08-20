@@ -224,6 +224,7 @@ export const PageContainer = styled.section`
                 width: 32px;
                 height: 32px;
                 object-fit: contain;
+                pointer-events: none;
             }
         }
     
