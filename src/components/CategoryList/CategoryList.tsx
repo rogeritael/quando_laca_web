@@ -24,7 +24,8 @@ export function CategoryList(props : CategoryListProps){
     if (railRef.current) {
         const maxRailPosition = -railRef.current.offsetWidth + carouselWidth;
         if (railPosition > maxRailPosition) {
-            setRailPosition(railPosition - carouselWidth);
+            const newPosition = Math.max(railPosition - carouselWidth, maxRailPosition);
+            setRailPosition(newPosition);
         }
     }
   };
@@ -32,7 +33,9 @@ export function CategoryList(props : CategoryListProps){
   // Função para mover o rail para a direita
   const next = () => {
     if (railRef.current && railPosition < 0) {
-    setRailPosition(railPosition + carouselWidth);
+        const maxRailPosition = 0;
+        const newPosition = Math.min(railPosition + carouselWidth, maxRailPosition);
+        setRailPosition(newPosition);
     }
   };
 

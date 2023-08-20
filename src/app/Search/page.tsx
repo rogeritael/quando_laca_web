@@ -53,13 +53,13 @@ export default function Search(props : AboutProps){
                             ))}
                         </GameList>
                     ) : (
-                        <p>Nenhum resultado encontrado :c </p>
+                        <p className="result_paragraph">Nenhum resultado encontrado :c </p>
                     )}
                     
 
                     <div className="featured">
                         <PopularGames url="/Search?term=populares" games={games} />
-                        <PopularGames url="/Search?term=populares" games={games} />
+                        <PopularGames title="recém lançados" url="/Search?term=recem_lancados" games={games} />
                     </div>
                 </div>
                 

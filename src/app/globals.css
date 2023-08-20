@@ -25,3 +25,6 @@ body {
   overflow-x: hidden;
   background-color: #09080F;
 }
+
+::selection { background: #fff; color: var(--bg); }
+::-moz-selection { background: #fff; color: var(--bg); }

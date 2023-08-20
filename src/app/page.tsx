@@ -51,24 +51,24 @@ export default function Home() {
           <Header />
           <div className="featured">
             <TrailersContainer setIsModalOpen={setIstrailerModalOpen} setTrailerUrl={setTrailerUrl}/>
-            <PopularGames games={popularGames} url="/Search?id=populares"/>
+            <PopularGames games={popularGames} url="/Search?term=populares"/>
           </div>
-          <GameList title='Próximos Lançamentos' url="/Search?id=proximos_lancamentos">
+          <GameList title='Próximos Lançamentos' url="/Search?term=proximos_lancamentos">
             {games.map((game) => (
               <Game key={game.id} id={game.id} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
             ))}
           </GameList>
-          <GameList title='Adicionados recentemente' url="/Search?id=adicionados_recentemente">
+          <GameList title='Adicionados recentemente' url="/Search?term=adicionados_recentemente">
             {games.map((game) => (
               <Game key={game.id} id={game.id} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
             ))}
           </GameList>
-          <GameList title='Chegando e Breve' url="/Search?id=chegando_em_breve">
+          <GameList title='Chegando e Breve' url="/Search?term=chegando_em_breve">
             {upcomingGames.map((game) => (
               <Game key={game.id} id={game.id} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
             ))}
           </GameList>
-          <GameList title='Recém Lançados' url="/Search?id=recem_lancados">
+          <GameList title='Recém Lançados' url="/Search?term=recem_lancados">
             {upcomingGames.map((game) => (
               <Game key={game.id} id={game.id} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
             ))}

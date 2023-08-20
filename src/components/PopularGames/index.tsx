@@ -6,12 +6,13 @@ import { GameProps } from "@/mocks/games";
 interface PopularGamesProps {
     games: GameProps[];
     url: string;
+    title?: string;
 }
 
-export function PopularGames({ games, url } : PopularGamesProps){
+export function PopularGames({ games, url, title } : PopularGamesProps){
     return(
         <div>
-            <Title content="Populares" url={url} />
+            <Title content={title ? title : 'populares'} url={url} />
             <PopularGamesContainer>
                 {games.map((game, index) => index < 4 && (
                     <SmallGameCard key={game.id} id={game.id} v2={true} image={game.image} release_date={game.releaseDate} name={game.name} />

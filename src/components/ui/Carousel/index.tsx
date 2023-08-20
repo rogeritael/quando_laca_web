@@ -24,11 +24,11 @@ export function Carousel({ children, maxWidth, title } : CarouselProps){
 
    // Função para mover o rail para a esquerda
   const before = () => {
-        if (railRef.current) {
-            const maxRailPosition = -railRef.current.offsetWidth + carouselWidth;
-            if (railPosition > maxRailPosition) {
-                const newPosition = Math.max(railPosition - carouselWidth, maxRailPosition);
-                setRailPosition(newPosition);
+    if (railRef.current) {
+        const maxRailPosition = -railRef.current.offsetWidth + carouselWidth;
+        if (railPosition > maxRailPosition) {
+            const newPosition = Math.max(railPosition - carouselWidth, maxRailPosition);
+            setRailPosition(newPosition);
         }
     }
   };

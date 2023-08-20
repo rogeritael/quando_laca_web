@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
 export const PageContainer = styled.section`
-.main_content {
+    color: #fff;
+
+    .main_content {
         height: 100vh;
         display: grid;
         grid-template-columns: 80px 1fr 1fr 300px;
@@ -37,9 +39,13 @@ export const PageContainer = styled.section`
         }
 
         .main {
-            /* background-color: blue; */
             grid-area: main;
             transition: filter 0.3s ease;
+
+            .result_paragraph {
+                padding: 16px;
+                color: var(--highlight);
+            }
 
             .search_term {
                 color: #fff;
