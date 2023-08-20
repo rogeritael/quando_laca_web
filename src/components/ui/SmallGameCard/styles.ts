@@ -5,6 +5,13 @@ interface CardContainerProps {
     v2?: boolean;
 }
 
+const entry = keyframes`
+    from {
+        margin-bottom: -50px;
+        opacity: 0;
+    }
+`
+
 export const CardContainer = styled.article<CardContainerProps>`
     background-color: var(--bg-secondary);
     padding: ${(props) => props.v2 ? '4px' : '14px 0 14px 14px' };
@@ -18,6 +25,7 @@ export const CardContainer = styled.article<CardContainerProps>`
     border-radius: 12px;
     transition: 300ms;
     cursor: pointer;
+    animation: ${entry} 1000ms ease-in-out;
 
     figure {
         height: 56px;

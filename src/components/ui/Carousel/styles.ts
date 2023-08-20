@@ -1,10 +1,18 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 interface SliderProps {
     maxWidth: string;
 }
 
+const entry = keyframes`
+    from {
+        margin-left: 400px;
+        opacity: 0;
+    }
+`
+
 export const SliderContainer = styled.div<SliderProps>`
+    animation: ${entry} 1000ms ease-in-out;
 
     .carousel_header {
         display: flex;

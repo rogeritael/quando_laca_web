@@ -1,4 +1,10 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const entry = keyframes`
+    from {
+        margin-left: 200px;
+    }
+`
 
 export const CategoryListContainer = styled.div`
     position: relative;
@@ -7,6 +13,7 @@ export const CategoryListContainer = styled.div`
     align-items: center;
     padding: 8px;
     overflow: hidden;
+    animation: ${entry} 2000ms ease-in-out;
 
     .slider {
         max-width: 1100px;

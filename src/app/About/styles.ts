@@ -1,4 +1,43 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const buttonEntry = keyframes`
+    from {
+        opacity: 0;
+        margin-bottom: -20px;
+    }
+    to {
+        filter: blur(0);
+        opacity: 1;
+    }
+`
+const entry = keyframes`
+    from {
+        filter: blur(2px);
+        opacity: 0;
+    }
+`;
+
+const slideUp = keyframes`
+    from {
+        top: 24px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+`;
+
+const slideLeft = keyframes`
+    from {
+        opacity: 0;
+        left: -48px;
+    }
+    to {
+        opacity: 1;
+        left: 0;
+    }
+`;
 
 export const PageContainer = styled.section`
     color: #fff;
@@ -19,8 +58,6 @@ export const PageContainer = styled.section`
     .game_section {
         grid-area: main;
         position: relative;
-
-        
     }
 
     //=====================================
@@ -50,6 +87,7 @@ export const PageContainer = styled.section`
         left: 48px;
         padding-bottom: 400px;
         max-height: calc(100vh - 300px);
+        animation: ${entry} 1000ms ease-in-out;
 
         .info_list, .description {
             margin-top: 30px;
@@ -57,11 +95,15 @@ export const PageContainer = styled.section`
 
         .title {
             font-size: 48px;
+            position: relative;
+            animation: ${slideLeft} 1000ms ease-in-out;
         }
 
         .info_list {
             display: flex;
             gap: 20px;
+            position: relative;
+            animation: ${slideUp} 1000ms ease-in-out;
             /* color: var(--bg-secn); */
         }
 
@@ -84,11 +126,16 @@ export const PageContainer = styled.section`
             overflow-y: auto;
             max-height: 150px;
             padding-bottom: 24px;
+            position: relative;
+            opacity: 0;
+            animation: ${slideUp} 1000ms 500ms ease-in-out forwards;
         }
 
         .buttons_container {
             position: relative;
             margin-top: 48px;
+            opacity: 0;
+            animation: ${buttonEntry} 1500ms 1000ms ease-in-out forwards;
 
             button, a {
                 font-size: 14px;

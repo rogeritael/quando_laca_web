@@ -1,5 +1,18 @@
 import styled, { keyframes } from "styled-components";
 
+const entry = keyframes`
+    from {
+        opacity: 0;
+    }
+`;
+
+const player = keyframes`
+    from {
+        opacity: 0;
+        scale: 1.2;
+    }
+`;
+
 export const TrailerComponent = styled.article`
     width: 255px;
     height: 155px;
@@ -7,6 +20,7 @@ export const TrailerComponent = styled.article`
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    animation: ${entry} 1000ms ease-in-out;
 
     img {
         width: 100%;
@@ -22,6 +36,7 @@ export const TrailerComponent = styled.article`
         top: 50%;
         transform: translate(-50%, -50%);
         transition: 300ms;
+        animation: ${player} 1000ms ease-in-out;
     }
 
     &:hover {
