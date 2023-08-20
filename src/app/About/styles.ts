@@ -208,12 +208,25 @@ export const PageContainer = styled.section`
             overflow: hidden;
             cursor: pointer;
             margin-top: 14px;
+            position: relative;
 
-            img, iframe {
+            img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
+        
+            .player {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                width: 32px;
+                height: 32px;
+                object-fit: contain;
+            }
         }
+    
+        
     }
 `;

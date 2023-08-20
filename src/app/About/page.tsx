@@ -1,32 +1,17 @@
 'use client'
 import { SideMenu } from "@/components/SideMenu";
-import { Logo } from "@/components/ui/Logo";
 import Image from "next/image";
-import bell from '@/assets/icons/bell.svg';
-import { Search } from './../../components/ui/Search/index';
 import { PageContainer } from "./styles";
-import { GameHeader } from './../../components/GameHeader/index';
-import { Galery } from "@/components/Galery";
-import { Title } from "@/components/ui/Title";
-import { gameList as games } from "@/mocks/games";
 import { GaleryModal } from "@/components/GaleryModal";
 import { useState, useEffect, useContext } from 'react';
 import { GameProps } from "@/mocks/games";
 import { gamesService } from "@/services/gameService";
-import { useRouter } from "next/router";
-import { formatDate } from "@/utils/formatDate";
 import { countdown } from "@/utils/countdown";
-import { GameButtons } from "@/components/GameButtons";
-import { GameGalery } from "@/components/GameGalery";
 import Link from "next/link";
-import { isAVideoLink } from "@/utils/isAVideoLink";
-import { getVideoId } from "@/utils/getVideoId";
 import { Context } from "@/context/UserContext";
 import { isGameAlreadyAdded } from './../../utils/isGameFavorited';
-import { TrailerModal } from "@/components/ui/TrailerModal";
-import { ConfirmModal } from "@/components/ui/ConfirmModal";
-import { Toast } from "@/components/ui/Toast";
 import { Carousel } from "@/components/ui/Carousel";
+import player from '@/assets/icons/player.svg'
 import { useFlashMessage } from "@/hooks/useFlashMessage";
 
 interface AboutProps {
@@ -38,7 +23,7 @@ export default function About(props : AboutProps){
     const [selectedGame, setSelectedGame] = useState<GameProps>()
     const [backgroundImage, setBackgroudImage] = useState('')
     const [isGaleryModalOpen, setIsGaleryModalOpen] = useState(false);
-    // const [isConfirmModalVisible, setIsConfirmModalVisible] = useState(false);
+    const [initialIndex, setInitialIndex] = useState(0);
     const { setFlashMessage } = useFlashMessage();
 
     
@@ -55,9 +40,9 @@ export default function About(props : AboutProps){
                 if(game) {
                     setSelectedGame(game)
 
-                    game.images.map((image) => (
+                    game.media.map((media) => (
                         backgroundImage === '' &&
-                            !isAVideoLink(image) && setBackgroudImage(image)
+                            media.type === 'image' && setBackgroudImage(media.image)
                     ))
                 }
             }
@@ -79,11 +64,16 @@ export default function About(props : AboutProps){
 
     }
 
-     return(
+    function handleOpenModal(index: number){
+        setInitialIndex(index)
+        setIsGaleryModalOpen(true)
+    }
+
+    return(
         selectedGame && (
         <PageContainer>
             {/* <Toast /> */}
-            <GaleryModal images={selectedGame.images} isGaleryModalOpen={isGaleryModalOpen} setIsGaleryModalOpen={setIsGaleryModalOpen}/>
+            <GaleryModal initialIndex={initialIndex} media={selectedGame.media} isGaleryModalOpen={isGaleryModalOpen} setIsGaleryModalOpen={setIsGaleryModalOpen}/>
             <SideMenu />
             <div className="game_section">
                 <figure className="background_image">
@@ -117,19 +107,18 @@ export default function About(props : AboutProps){
                 <div className="image_galery">
                     <Carousel title="" maxWidth="800px">
 
-                    {selectedGame.images.map((image, index) => (
+                    {selectedGame.media.map((media, index) => (
                         
                         <figure key={index}>
-                            {isAVideoLink(image) ? (
-                                <Image onClick={() => setIsGaleryModalOpen(true)} width={270} height={150} src={image} alt="imagem da galeria do jogo"/>
+                            {media.type === 'image' ? (
+                                <Image onClick={() => handleOpenModal(index)} width={270} height={150} src={media.image} alt="imagem da galeria do jogo"/>
                             ):(
-                                <iframe onClick={() => setIsGaleryModalOpen(true)}
-                                    width="640"
-                                    height="360"
-                                    src={`https://www.youtube.com/embed/${getVideoId(image)}?controls=0mo`}
-                                    title="Trailer do jogo"
-                                    allowFullScreen
-                                ></iframe>
+                                media.link && (
+                                <>
+                                    <Image onClick={() => handleOpenModal(index)} width={270} height={150} src={media.image} alt="imagem da galeria do jogo"/>
+                                    <Image className="player" src={player} alt="icone de player"/>
+                                </>
+                                )
                             )
                             }
                         </figure>

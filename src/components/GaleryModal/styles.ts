@@ -1,4 +1,12 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+
+const displayEntry = keyframes`
+    from {
+        opacity: 0;
+        scale: 0.9;
+    }
+`
 
 export const GaleryModalContainer = styled.div`
     width: 100%;
@@ -44,19 +52,21 @@ export const GaleryModalContainer = styled.div`
         .display {
             max-width: 620px;
             overflow: hidden;
+            width: max-content;
+            display: flex;
+            align-items: center;
+            animation: ${displayEntry} 500ms ease-in-out;
 
-            .display_rail {
-                width: max-content;
-                display: flex;
-                align-items: center;
+            img, iframe {
+                width: 620px;
+                height: 350px;
+                object-fit: cover;
 
-                img, iframe {
-                    width: 620px;
-                    height: 350px;
-                    object-fit: cover;
-                    
+                &.animate {
+                    animation: ${displayEntry} 500ms ease-in-out;
                 }
             }
+            
         }
 
         .galery_carousel {
