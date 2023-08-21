@@ -21,7 +21,9 @@ import { Context } from '@/context/UserContext'
 
 export default function Home() {
   const [popularGames, setPopularGames] = useState<GameProps[]>([])
-  const [upcomingGames, setUpcomingGames] = useState<GameProps[]>([])
+  const [comingSoonGames, setComingSoonGames] = useState<GameProps[]>([])
+  const [justReleasedGames, setJustReleasedGames] = useState<GameProps[]>([])
+  const [nextReleases, setNextReleases] = useState<GameProps[]>([])
   const [isTrailerModalOpen, setIstrailerModalOpen] = useState(false);
   const [trailerUrl, setTrailerUrl] = useState('')
 
@@ -29,11 +31,11 @@ export default function Home() {
   useEffect(() => {
       
     (async() => {
-    
       const games = await gamesService().findAll();
       setPopularGames(games.popular)
-      setUpcomingGames(games.upcomingGames)
-      // setIsLoading(false)
+      setJustReleasedGames(games.justReleased)
+      setNextReleases(games.nextReleases)
+      setComingSoonGames(games.upcomingGames)
     })()
 
   },[])
@@ -54,22 +56,17 @@ export default function Home() {
             <PopularGames games={popularGames} url="/Search?term=populares"/>
           </div>
           <GameList title='Próximos Lançamentos' url="/Search?term=proximos_lancamentos">
-            {games.map((game) => (
-              <Game key={game.id} id={game.id} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
-            ))}
-          </GameList>
-          <GameList title='Adicionados recentemente' url="/Search?term=adicionados_recentemente">
-            {games.map((game) => (
+            {nextReleases.map((game) => (
               <Game key={game.id} id={game.id} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
             ))}
           </GameList>
           <GameList title='Chegando e Breve' url="/Search?term=chegando_em_breve">
-            {upcomingGames.map((game) => (
+            {comingSoonGames.map((game) => (
               <Game key={game.id} id={game.id} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
             ))}
           </GameList>
           <GameList title='Recém Lançados' url="/Search?term=recem_lancados">
-            {upcomingGames.map((game) => (
+            {justReleasedGames.map((game) => (
               <Game key={game.id} id={game.id} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
             ))}
           </GameList>
