@@ -1,6 +1,21 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-export const GameListContainer = styled.article`
+const entry = keyframes`
+    from {
+        opacity: 0;
+        bottom: -24px;
+    }
+    to {
+        opacity: 1;
+        bottom: 0;
+    }
+`;
+
+interface GameProps {
+    animationDelay: number;
+}
+
+export const GameListContainer = styled.article<GameProps>`
     color: #fff;
     display: flex;
     align-items: center;
@@ -8,8 +23,11 @@ export const GameListContainer = styled.article`
     margin: 14px;
     margin-bottom: 24px;
     padding: 14px;
-    /* padding-bottom: 14px; */
     border-bottom: 1px solid var(--bg-secondary);
+    opacity: 0;
+    animation: ${entry} 500ms ease-in-out forwards;
+    animation-delay: ${props => `${props.animationDelay}ms`};
+    position: relative;
     
     img {
         width: 65px;

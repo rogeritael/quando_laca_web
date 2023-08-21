@@ -37,16 +37,10 @@ export default function Library(props : LibraryProps){
                         <Image src={bell} alt="notificações" />
                     </div>
                 </div>
-
-                {/* <Link href="/" className="back_link">
-                    <Image src={arrow} alt="ícone voltar para a home" />
-                    <p>voltar</p>
-                </Link> */}
-                
                 <h1 className="page_title">Meus Jogos favoritos</h1>
 
                 <div className="games_container">
-                    {gameList.map((game) => (
+                    {gameList.map((game, index) => (
                         <GameInList
                             key={game.id}
                             id={game.id}
@@ -55,6 +49,7 @@ export default function Library(props : LibraryProps){
                             image={game.image}
                             release_date={game.releaseDate}
                             removeGame={handleRemoveFromList}
+                            animationDelay={index == 0 ? 0 : index * 200}
                         />
                     ))}
                 </div>

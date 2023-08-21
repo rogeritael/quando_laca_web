@@ -24,25 +24,15 @@ export const LibraryContainer = styled.section`
     .header_container {
         width: 100%;
         justify-content: space-between;
+
+        & * {
+            animation: none !important;
+        }
     }
 
     .logo_container {
         margin-right: 14px;
     }
-
-    /* .back_link {
-        margin-left: 20px;
-        margin-top: 24px;
-        display: flex;
-        align-items: center;
-        color: var(--highlight);
-
-        img {
-            transform: rotate(180deg);
-            margin-right: 4px;
-            margin-top: 2px;
-        }
-    } */
 
     .page_title {
         color: #fff;
@@ -50,5 +40,6 @@ export const LibraryContainer = styled.section`
         text-align: center;
         font-weight: normal;
         margin-top: 40px;
+        animation: none;
     }
 `;

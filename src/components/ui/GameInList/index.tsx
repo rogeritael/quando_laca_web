@@ -11,11 +11,12 @@ interface GameInListProps {
     developer: string;
     release_date: Date;
     removeGame: (id: string) => void;
+    animationDelay: number;
 }
 
-export function GameInList({ name, id, image, developer, release_date, removeGame } : GameInListProps){
+export function GameInList({ name, id, image, developer, release_date, removeGame, animationDelay } : GameInListProps){
     return(
-        <GameListContainer>
+        <GameListContainer animationDelay={animationDelay}>
             <Image width={200} height={300} src={image} alt={`imagem do jogo ${name}`}></Image>
             <div className="infos">
                 <h2>{name}</h2>
