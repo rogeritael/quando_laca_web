@@ -28,6 +28,9 @@ export default function Home() {
   const [trailerUrl, setTrailerUrl] = useState('')
 
 
+  const [testLoading, setTestLoading] = useState(true)
+
+
   useEffect(() => {
       
     (async() => {
@@ -38,10 +41,14 @@ export default function Home() {
       setComingSoonGames(games.upcomingGames)
     })()
 
+    setTimeout(() => {
+      setTestLoading(false)
+    }, 1000)
+
   },[])
 
   return (
-    popularGames && (
+    !testLoading && (
     <PageContainer>
       <TrailerModal videoUrl={trailerUrl} isOpen={isTrailerModalOpen} setIsOpen={setIstrailerModalOpen} />
       <ConfirmModal />
