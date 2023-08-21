@@ -44,7 +44,7 @@ export function SmallGameCard({ id, image, name, release_date, v2 } : SmallGameC
                     {!v2 ? (
                         <>
                         <Image src={clock} alt="menu do jogo" />
-                        {countdown(release_date)}
+                        {countdown(release_date) }
                         </>
                     ) : (
                         formatDate(release_date)    

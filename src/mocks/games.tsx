@@ -111,7 +111,6 @@ export const gameList: GameProps[] = [
         price: 100,
         media: [
             { type: 'video', image: trailerCover, link: 'https://youtu.be/_hFePdmcci0'},
-            { type: 'video', image: trailerCover, link: 'https://youtu.be/_hFePdmcci0'},
             { type: 'image', image: 'https://images.igdb.com/igdb/image/upload/t_original/scii4f.jpg'},
             { type: 'image', image: 'https://images.igdb.com/igdb/image/upload/t_original/scii4g.jpg'},
             { type: 'image', image: 'https://images.igdb.com/igdb/image/upload/t_original/scii4i.jpg'},
@@ -191,7 +190,7 @@ export const gameList: GameProps[] = [
         id: "tC96mKVDO*3B",
         name: "En Garde!",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6slv.png",
-        releaseDate: new Date(2023, 8, 16),
+        releaseDate: new Date(2023, 4-1, 5),
         developer: "Fireplace Games",
         category: [
             {id: category[0].id, name: category[0].name}, //Adventure, Hack and slash/Beat 'em up, Indie
@@ -336,7 +335,7 @@ export const gameList: GameProps[] = [
         id: "3%WkXC4yT2g8",
         name: "Mortal Kombat 1",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6i4r.png",
-        releaseDate: new Date(2023, 9, 19),
+        releaseDate: new Date(2023, 9-1, 14),
         developer: "NetherRealm Studios",
         category: [
             {id: category[0].id, name: category[0].name}, //Adventure, Fighting
