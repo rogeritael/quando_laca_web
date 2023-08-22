@@ -13,7 +13,7 @@ interface TrailersContainerProps {
 export function TrailersContainer({ setTrailerUrl, setIsModalOpen } : TrailersContainerProps){
     return(
         <div>
-            <Title content="Últimos Trailers" url="/Search?id=ultimos_trailers"/>
+            <Title content="Últimos Trailers" url="/Search?term=ultimos_trailers"/>
             <TrailersContainerSection>
                 {trailers.map((trailer, index) => (
                     <Trailer key={index} cover={trailer.cover} videoUrl={trailer.video_url} setTrailerUrl={setTrailerUrl} setIsModalOpen={setIsModalOpen}  />

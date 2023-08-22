@@ -27,23 +27,28 @@ export default function Search(props : AboutProps){
     const { findJustReleased, findPopularGames } = gamesService()
     const [isLoading, setIsLoading] = useState(true)
 
+    const [ justReleased, setJustReleased] = useState<GameProps[]>([])
+    const [ popularGames, setPopularGames] = useState<GameProps[]>([])
+
     useEffect(() => {
         
         const fetchData = async () => {
             const url = window.location.href;
             const term = url.split('term=')[1];
-    
+
+            const popular = await findPopularGames()
+            setPopularGames(popular)
+            const just_released_games = await findJustReleased()
+            setJustReleased(just_released_games)
+            
             if(term === 'populares'){
-                const result = await findPopularGames()
-                setSearchresults(result)
+                setSearchresults(popularGames)
 
             } else if(term === 'recem_lancados'){
-                const result = await findJustReleased()
-                setSearchresults(result)
+                setSearchresults(justReleased)
 
             } else if(term === 'ultimos_trailers'){
-                alert('ultimos trailer')
-    
+                
             } else {
                 if(typeof term === 'string'){
                     setSearchTerm(term) 
@@ -79,8 +84,8 @@ export default function Search(props : AboutProps){
                     
 
                     <div className="featured">
-                        <PopularGames url="/Search?term=populares" games={games} />
-                        <PopularGames title="recém lançados" url="/Search?term=recem_lancados" games={games} />
+                        <PopularGames url="/Search?term=populares" games={popularGames} />
+                        <PopularGames title="recém lançados" url="/Search?term=recem_lancados" games={justReleased} />
                     </div>
                 </div>
                 
