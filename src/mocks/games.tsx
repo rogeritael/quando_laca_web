@@ -54,7 +54,7 @@ export const gameList: GameProps[] = [
         ],
         developer: "Nightdive Studios",
         platforms: ['PC'],
-        releaseDate: new Date(2023, 8, 10),
+        releaseDate: new Date(2023, 8-1, 10),
         category: [
             {id: category[0].id, name: category[0].name},
             {id: category[2].id, name: category[2].name},
@@ -76,7 +76,7 @@ export const gameList: GameProps[] = [
         ],
         developer: "Summerfall Studios",
         platforms: [' Xbox One', 'PlayStation 4', 'PlayStation 5', 'PC (Microsoft Windows)', 'Nintendo Switch', 'Xbox Series X|S'],
-        releaseDate: new Date(2023, 8, 10),
+        releaseDate: new Date(2023, 8-1, 10),
         category: [
             {id: category[0].id, name: category[0].name}, //Adventure, Music, Role-playing (RPG)
             {id: category[2].id, name: category[2].name},
@@ -97,7 +97,7 @@ export const gameList: GameProps[] = [
         ],
         developer: "Superkami",
         platforms: ['PC (Microsoft Windows)'],
-        releaseDate: new Date(2023, 8, 10),
+        releaseDate: new Date(2023, 8-1, 10),
         category: [
             {id: category[0].id, name: category[0].name}, //Adventure, Simulator
             {id: category[2].id, name: category[2].name},
@@ -117,7 +117,7 @@ export const gameList: GameProps[] = [
         ],
         developer: "Deck13 Interactive",
         platforms: ['PlayStation 5', 'PC (Microsoft Windows)', 'Xbox Series X|S'],
-        releaseDate: new Date(2023, 8, 10),
+        releaseDate: new Date(2023, 8-1, 10),
         category: [
             {id: category[0].id, name: category[0].name}, //Adventure, Role-playing (RPG)
             {id: category[2].id, name: category[2].name},
@@ -138,7 +138,7 @@ export const gameList: GameProps[] = [
         ],
         developer: "Mimimi Games",
         platforms: [' PlayStation 5', 'PC (Microsoft Windows)', 'Xbox Series X|S'],
-        releaseDate: new Date(2023, 8, 17),
+        releaseDate: new Date(2023, 8-1, 17),
         category: [
             {id: category[0].id, name: category[0].name}, //Indie, Role-playing (RPG), Strategy, Tactical
             {id: category[2].id, name: category[2].name},
@@ -159,7 +159,7 @@ export const gameList: GameProps[] = [
         ],
         developer: "Milestone",
         platforms: ['PlayStation 5', 'PC (Microsoft Windows)', 'Xbox Series X|S'],
-        releaseDate: new Date(2023, 8, 24),
+        releaseDate: new Date(2023, 8-1, 24),
         category: [
             {id: category[0].id, name: category[0].name}, //Racing, Simulator, Sport
             {id: category[2].id, name: category[2].name},
@@ -169,7 +169,7 @@ export const gameList: GameProps[] = [
         id: "0ye9&FgB568E",
         name: "Red Dead Redemption",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6wrn.png",
-        releaseDate: new Date(2023, 8, 17),
+        releaseDate: new Date(2023, 8-1, 17),
         developer: "Double Eleven",
         category: [
             {id: category[0].id, name: category[0].name}, //Adventure, Role-playing (RPG), Shooter
@@ -211,7 +211,7 @@ export const gameList: GameProps[] = [
         id: "aWQ&1H^63*vl",
         name: "Dungeons & Dragons Online: Vecna Unleashed",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6vrx.png",
-        releaseDate: new Date(2023, 8, 17),
+        releaseDate: new Date(2023, 8-1, 17),
         developer: "Standing Stone Games",
         category: [
             {id: category[0].id, name: category[0].name}, //PC (Microsoft Windows)
@@ -228,7 +228,7 @@ export const gameList: GameProps[] = [
         id: "Y3TDz5$z3j9s",
         name: "Dark Tree",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co660r.png",
-        releaseDate: new Date(2023, 9, 30),
+        releaseDate: new Date(2023, 9-1, 30),
         developer: "A17 Studio",
         category: [
             {id: category[0].id, name: category[0].name}, //Adventure, Indie, Role-playing (RPG)
@@ -250,7 +250,7 @@ export const gameList: GameProps[] = [
         id: "P03Kx*1#uhEt",
         name: "EA Sports FC 24",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6qqa.png",
-        releaseDate: new Date(2023, 9, 29),
+        releaseDate: new Date(2023, 9-1, 29),
         developer: "EA Canada",
         category: [
             {id: category[0].id, name: category[0].name}, //Simulator, Sport
@@ -270,7 +270,7 @@ export const gameList: GameProps[] = [
         id: "bT1FXe@s2a5^",
         name: "Cyberpunk 2077: Phantom Liberty",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6m1m.png",
-        releaseDate: new Date(2023, 9, 26),
+        releaseDate: new Date(2023, 9-1, 26),
         developer: "CD Projekt RED",
         category: [
             {id: category[0].id, name: category[0].name}, //Adventure, Role-playing (RPG), Shooter
@@ -293,7 +293,7 @@ export const gameList: GameProps[] = [
         id: "jqy*6!KK422F",
         name: "Payday 3",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6m2i.png",
-        releaseDate: new Date(2023, 9, 21),
+        releaseDate: new Date(2023, 9-1, 21),
         developer: "Starbreeze Studios",
         category: [
             {id: category[0].id, name: category[0].name}, //Role-playing (RPG), Shooter
@@ -316,7 +316,7 @@ export const gameList: GameProps[] = [
         id: "55vh4&Rgpj7E",
         name: "Combat Spec Ops",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6rf0.png",
-        releaseDate: new Date(2023, 9, 15),
+        releaseDate: new Date(2023, 9-1, 15),
         developer: "Megacrush Interactive Inc",
         category: [
             {id: category[0].id, name: category[0].name}, //Shooter, Tactical
@@ -359,7 +359,7 @@ export const gameList: GameProps[] = [
         id: "$s26seOcN75C",
         name: "Lies of P",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6lxr.png",
-        releaseDate: new Date(2023, 9, 19),
+        releaseDate: new Date(2023, 9-1, 19),
         developer: "Round8 Studio",
         category: [
             {id: category[0].id, name: category[0].name}, //Role-playing (RPG)
@@ -385,7 +385,7 @@ export const gameList: GameProps[] = [
         id: "#aR$Y6Qq2m06",
         name: "The Crew: Motorfest",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6pe2.png",
-        releaseDate: new Date(2023, 7, 21),
+        releaseDate: new Date(2023, 7-1, 21),
         developer: "Ivory Tower",
         category: [
             {id: category[0].id, name: category[0].name}, //Adventure, Racing
@@ -401,7 +401,7 @@ export const gameList: GameProps[] = [
         id: "1*HxByTl07&p",
         name: "Harvest Moon: The Winds of Anthos",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6vi3.png",
-        releaseDate: new Date(2023, 9, 12),
+        releaseDate: new Date(2023, 9-1, 12),
         developer: "Natsume",
         category: [
             {id: category[0].id, name: category[0].name}, //Adventure, Role-playing (RPG), Simulator
@@ -419,7 +419,7 @@ export const gameList: GameProps[] = [
         id: "Lb$PJ74j1#qP",
         name: "Blood Red",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6ru3.png",
-        releaseDate: new Date(2023, 9, 12),
+        releaseDate: new Date(2023, 9-1, 12),
         developer: "Reptilian Games",
         category: [
             {id: category[0].id, name: category[0].name}, //Adventure, Indie
@@ -435,7 +435,7 @@ export const gameList: GameProps[] = [
         id: "&$127Bz0%6l$",
         name: "Fae Farm",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6qig.png",
-        releaseDate: new Date(2023, 9, 8),
+        releaseDate: new Date(2023, 9-1, 8),
         developer: "Phoenix Labs",
         category: [
             {id: category[0].id, name: category[0].name}, //Adventure, Role-playing (RPG), Simulator
@@ -451,7 +451,7 @@ export const gameList: GameProps[] = [
         id: "80!!8@FU4$l#",
         name: "NBA 2K24",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6pzf.png",
-        releaseDate: new Date(2023, 9, 8),
+        releaseDate: new Date(2023, 9-1, 8),
         developer: "Visual Concepts",
         category: [
             {id: category[0].id, name: category[0].name}, //Simulator, Sport
@@ -467,7 +467,7 @@ export const gameList: GameProps[] = [
         id: "P75*$70@kSy2",
         name: "Final Fantasy VII: Ever Crisis",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6x3j.png",
-        releaseDate: new Date(2023, 9, 7),
+        releaseDate: new Date(2023, 9-1, 7),
         developer: "Square Enix",
         category: [
             {id: category[0].id, name: category[0].name}, //Adventure, Role-playing (RPG)
@@ -487,7 +487,7 @@ export const gameList: GameProps[] = [
         id: "04ob8CS#o8WC",
         name: "Tenebris Pictura",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6rzj.png",
-        releaseDate: new Date(2023, 8, 31),
+        releaseDate: new Date(2023, 8-1, 31),
         developer: "Pentadimensional Games, SL",
         category: [
             {id: category[0].id, name: category[0].name}, //Adventure, Hack and slash/Beat 'em up
@@ -503,7 +503,7 @@ export const gameList: GameProps[] = [
         id: "*0drD9P@127F",
         name: "Armored Core VI: Fires of Rubicon",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6ffo.png",
-        releaseDate: new Date(2023, 8, 25),
+        releaseDate: new Date(2023, 8-1, 25),
         developer: "FromSoftware",
         category: [
             {id: category[0].id, name: category[0].name}, //Adventure
@@ -519,7 +519,7 @@ export const gameList: GameProps[] = [
         id: "Iy7l1pBrf3V*",
         name: "Blasphemous II",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6ej3.png",
-        releaseDate: new Date(2023, 8, 24),
+        releaseDate: new Date(2023, 8-1, 24),
         developer: "The Game Kitchen",
         category: [
             {id: category[0].id, name: category[0].name}, //Adventure, Hack and slash/Beat 'em up, Indie, Platform, Role-playing (RPG)
@@ -535,7 +535,7 @@ export const gameList: GameProps[] = [
         id: "DT#309SXX1qj",
         name: "Immortals of Aveum",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6dtk.png",
-        releaseDate: new Date(2023, 8, 22),
+        releaseDate: new Date(2023, 8-1, 22),
         developer: "Ascendant Studios",
         category: [
             {id: category[0].id, name: category[0].name}, //Adventure, Shooter
@@ -551,7 +551,7 @@ export const gameList: GameProps[] = [
         id: "hD#J5l6S65Js",
         name: "Quasimorph",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6rg8.png",
-        releaseDate: new Date(2023, 8, 17),
+        releaseDate: new Date(2023, 8-1, 17),
         developer: "MgnmScrptmDvs",
         category: [
             {id: category[0].id, name: category[0].name}, //Indie, Role-playing (RPG), Simulator, Strategy
@@ -567,7 +567,7 @@ export const gameList: GameProps[] = [
         id: "Ge69*wUur*e2",
         name: "Gord",
         image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2ygw.png",
-        releaseDate: new Date(2023, 8, 17),
+        releaseDate: new Date(2023, 8-1, 17),
         developer: "Covenant.dev",
         category: [
             {id: category[0].id, name: category[0].name}, //Adventure, Indie, Role-playing (RPG), Simulator, Strategy
