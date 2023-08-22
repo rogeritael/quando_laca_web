@@ -199,7 +199,7 @@ export const gameList: GameProps[] = [
         description: "En Garde! is a swashbuckler action game! Battle graceless guards and nefarious noblemen in fast-paced fights full of spectacle. Use the environment, your wit and your blade to teach them all a lesson!",
         price: 100,
         media: [
-            {type: 'video', image: trailerCover, link: 'https://youtu.be/r9uhIcMsIPk', },
+            {type: 'video', image: 'https://i.ytimg.com/vi/_Es06tQ67Pw/hq720.jpg?sqp=-oaymwEnCOgCEMoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGhACGAYgATgB&rs=AOn4CLD4WyuuHYJPmIKRfvl-jUbmI-_8UQ', link: 'https://youtu.be/r9uhIcMsIPk', },
             {type: 'image', image: 'https://images.igdb.com/igdb/image/upload/t_original/scnebb.jpg', },
             {type: 'image', image: 'https://images.igdb.com/igdb/image/upload/t_original/scnebc.jpg', },
             {type: 'image', image: 'https://images.igdb.com/igdb/image/upload/t_original/scnebd.jpg', },

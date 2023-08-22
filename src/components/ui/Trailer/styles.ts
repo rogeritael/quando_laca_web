@@ -4,6 +4,9 @@ const entry = keyframes`
     from {
         opacity: 0;
     }
+    to {
+        opacity: 1;
+    }
 `;
 
 const player = keyframes`
@@ -13,14 +16,20 @@ const player = keyframes`
     }
 `;
 
-export const TrailerComponent = styled.article`
+interface TrailerProps {
+    animationDelay: number;
+}
+
+export const TrailerComponent = styled.article<TrailerProps>`
     width: 255px;
     height: 155px;
     border-radius: 4px;
     overflow: hidden;
     position: relative;
     cursor: pointer;
-    animation: ${entry} 1000ms ease-in-out;
+    opacity: 0;
+    animation: ${entry} 1000ms ease-in-out forwards;
+    animation-delay: ${props => `${props.animationDelay}ms`};
 
     img {
         width: 100%;

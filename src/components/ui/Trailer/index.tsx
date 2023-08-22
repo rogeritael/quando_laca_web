@@ -7,10 +7,11 @@ interface TrailerProps {
     videoUrl: string;
     setTrailerUrl: (param: string) => void;
     setIsModalOpen: (param: boolean) => void;
+    animationDelay: number;
 }
 
 
-export function Trailer({ cover, videoUrl, setTrailerUrl, setIsModalOpen } : TrailerProps){
+export function Trailer({ cover, videoUrl, setTrailerUrl, setIsModalOpen, animationDelay } : TrailerProps){
 
     function handleClick(){
         setTrailerUrl(videoUrl)
@@ -18,7 +19,7 @@ export function Trailer({ cover, videoUrl, setTrailerUrl, setIsModalOpen } : Tra
     }
 
     return(
-        <TrailerComponent onClick={() => handleClick()}>
+        <TrailerComponent onClick={() => handleClick()} animationDelay={animationDelay}>
             <Image width={400} height={400} src={cover} alt="trailer do game" />
             <Image src={player} alt="ícone de player" className="player_icon" />
         </TrailerComponent>

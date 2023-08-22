@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 
 const entry = keyframes`
     from {
-        margin-left: 200px;
+        opacity: 0;
     }
 `
 
