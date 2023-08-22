@@ -51,10 +51,10 @@ export default function Search(props : AboutProps){
             setJustReleased(just_released_games)
             
             if(term === 'populares'){
-                setSearchResults(popularGames)
+                setSearchResults(popular)
 
             } else if(term === 'recem_lancados'){
-                setSearchResults(justReleased)
+                setSearchResults(just_released_games)
 
             } else if(term === 'ultimos_trailers'){
                 setTrailerResults(trailers)
