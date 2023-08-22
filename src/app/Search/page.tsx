@@ -16,17 +16,25 @@ import { GameProps } from './../../mocks/games';
 import { gameList as games } from "./../../mocks/games";
 import { Context } from "@/context/UserContext";
 import { gamesService } from "@/services/gameService";
-import { TrailerProps } from "@/mocks/trailers";
+import { TrailerProps, trailers } from "@/mocks/trailers";
+import { Trailer } from "@/components/ui/Trailer";
+import { Carousel } from "@/components/ui/Carousel";
 
 interface AboutProps {
 
 }
 
 export default function Search(props : AboutProps){
-    const [searchResults, setSearchresults] = useState<GameProps[]>([])
+    const [searchResults, setSearchResults] = useState<GameProps[]>([])
+    const [trailerResults, setTrailerResults] = useState<TrailerProps[]>([])
     const { searchTerm, setSearchTerm } = useContext(Context);
     const { findJustReleased, findPopularGames } = gamesService()
     const [isLoading, setIsLoading] = useState(true)
+    
+    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [trailerUrl, setTrailerUrl] = useState('')
+
+    
 
     const [ justReleased, setJustReleased] = useState<GameProps[]>([])
     const [ popularGames, setPopularGames] = useState<GameProps[]>([])
@@ -43,18 +51,18 @@ export default function Search(props : AboutProps){
             setJustReleased(just_released_games)
             
             if(term === 'populares'){
-                setSearchresults(popularGames)
+                setSearchResults(popularGames)
 
             } else if(term === 'recem_lancados'){
-                setSearchresults(justReleased)
+                setSearchResults(justReleased)
 
             } else if(term === 'ultimos_trailers'){
-                
+                setTrailerResults(trailers)
             } else {
                 if(typeof term === 'string'){
                     setSearchTerm(term) 
                     const results = findGame(term)
-                    setSearchresults(results)
+                    setSearchResults(results)
                 }
             }
         }
@@ -73,13 +81,23 @@ export default function Search(props : AboutProps){
                 <div className="main">
                     <Header />
                     <h2 className="search_term">{searchTerm}</h2>
-                    { searchResults.length > 0 ? (
+                    { searchResults.length > 0 && 
                         <GameList title='Resultados da pesquisa' >
                             {searchResults.map((result) => (
                                 <Game key={result.id} id={result.id} name={result.name} image={result.image} isPopular={false} platforms={result.platforms} />
                             ))}
                         </GameList>
-                    ) : (
+                    }
+
+                    { trailerResults.length > 0 && 
+                        <Carousel maxWidth="100%" title="" >
+                            {trailerResults.map((result, index) => (
+                                <Trailer videoUrl={trailerUrl} setIsModalOpen={setIsModalOpen} setTrailerUrl={setTrailerUrl} cover={result.cover} key={index}/>
+                            ))}
+                        </Carousel>
+                    }
+
+                    {searchResults.length <= 0 && trailerResults.length <= 0 && (
                         <p className="result_paragraph">Nenhum resultado encontrado :c </p>
                     )}
                     
