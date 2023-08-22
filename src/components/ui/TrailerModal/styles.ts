@@ -4,7 +4,7 @@ interface ModalProps {
     isOpen: boolean;
 }
 
-const fade = keyframes`
+const scale = keyframes`
     0%{
         opacity: 0;
         scale: 0.8;
@@ -12,6 +12,12 @@ const fade = keyframes`
     100% {
         opacity: 1;
         scale: 1;
+    }
+`
+
+const fade = keyframes`
+    from {
+        opacity: 0;
     }
 `
 
@@ -23,6 +29,7 @@ export const ModalContainer = styled.section<ModalProps>`
     display: ${props => props.isOpen ? 'grid' : 'none'};
     place-items: center;
     z-index: 1;
+    animation: ${fade} 200ms;
 
     .background {
         width: 100%;
@@ -35,6 +42,5 @@ export const ModalContainer = styled.section<ModalProps>`
 
     iframe {
         z-index: 2;
-        animation: ${fade} 400ms;
     }
 `

@@ -19,6 +19,7 @@ import { gamesService } from "@/services/gameService";
 import { TrailerProps, trailers } from "@/mocks/trailers";
 import { Trailer } from "@/components/ui/Trailer";
 import { Carousel } from "@/components/ui/Carousel";
+import { TrailerModal } from "@/components/ui/TrailerModal";
 
 interface AboutProps {
 
@@ -31,7 +32,7 @@ export default function Search(props : AboutProps){
     const { findJustReleased, findPopularGames } = gamesService()
     const [isLoading, setIsLoading] = useState(true)
     
-    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [isTrailerModalOpen, setIstrailerModalOpen] = useState(false)
     const [trailerUrl, setTrailerUrl] = useState('')
 
     
@@ -66,6 +67,7 @@ export default function Search(props : AboutProps){
                 }
             }
         }
+        
         fetchData()
         setIsLoading(false)
 
@@ -75,6 +77,7 @@ export default function Search(props : AboutProps){
     return(
         !isLoading &&
         <PageContainer>
+            <TrailerModal videoUrl={trailerUrl} isOpen={isTrailerModalOpen} setIsOpen={setIstrailerModalOpen} />
             <div className="main_content">
                 <SideMenu />
 
@@ -92,7 +95,7 @@ export default function Search(props : AboutProps){
                     { trailerResults.length > 0 && 
                         <Carousel maxWidth="100%" title="" >
                             {trailerResults.map((result, index) => (
-                                <Trailer videoUrl={trailerUrl} setIsModalOpen={setIsModalOpen} setTrailerUrl={setTrailerUrl} cover={result.cover} key={index}/>
+                                <Trailer videoUrl={result.video_url} setIsModalOpen={setIstrailerModalOpen} setTrailerUrl={setTrailerUrl} cover={result.cover} key={index}/>
                             ))}
                         </Carousel>
                     }

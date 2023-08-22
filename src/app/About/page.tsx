@@ -31,13 +31,14 @@ export default function About(props : AboutProps){
     const [isGaleryModalOpen, setIsGaleryModalOpen] = useState(false);
     const [initialIndex, setInitialIndex] = useState(0);
     const [mediaType, setMediaType] = useState<'image'|'video'>('image')
+    const [isLoading, setIsLoading] = useState(true)
     const { setFlashMessage } = useFlashMessage();
 
     
 
     useEffect(() => {
 
-        (async () => {
+        const fetchData = async() => {
             const url = window.location.href;
             const id = url.split('id=')[1];
 
@@ -54,7 +55,10 @@ export default function About(props : AboutProps){
                 }
             }
 
-        })()
+        }
+
+        fetchData()
+        setIsLoading(false)
         
     }, [])
 
@@ -78,9 +82,9 @@ export default function About(props : AboutProps){
     }
 
     return(
-        selectedGame && (
+        selectedGame && !isLoading && (
         <PageContainer>
-            {/* <Toast /> */}
+
             <GaleryModal mediaType={mediaType} initialIndex={initialIndex} media={selectedGame.media} isGaleryModalOpen={isGaleryModalOpen} setIsGaleryModalOpen={setIsGaleryModalOpen}/>
             <SideMenu />
             <div className="game_section">

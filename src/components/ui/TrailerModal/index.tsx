@@ -12,6 +12,7 @@ export function TrailerModal({ videoUrl, isOpen, setIsOpen } : TrailerModalProps
     const embedUrl = `https://www.youtube.com/embed/${getVideoId(videoUrl)}`;
     const videoRef = useRef<HTMLIFrameElement | null>(null);
 
+
     function handleCloseModal(){
         setIsOpen(false)
     }
