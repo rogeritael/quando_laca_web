@@ -15,6 +15,7 @@ import { useState, useContext } from 'react';
 import { GameProps } from './../../mocks/games';
 import { gameList as games } from "./../../mocks/games";
 import { Context } from "@/context/UserContext";
+import { gamesService } from "@/services/gameService";
 
 interface AboutProps {
 
@@ -23,22 +24,42 @@ interface AboutProps {
 export default function Search(props : AboutProps){
     const [searchResults, setSearchresults] = useState<GameProps[]>([])
     const { searchTerm, setSearchTerm } = useContext(Context);
+    const { findJustReleased, findPopularGames } = gamesService()
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
+        
+        const fetchData = async () => {
+            const url = window.location.href;
+            const term = url.split('term=')[1];
+    
+            if(term === 'populares'){
+                const result = await findPopularGames()
+                setSearchresults(result)
 
-        const url = window.location.href;
-        const term = url.split('term=')[1];
+            } else if(term === 'recem_lancados'){
+                const result = await findJustReleased()
+                setSearchresults(result)
 
-        if(typeof term === 'string'){
-            setSearchTerm(term)
-            const results = findGame(term)
-            setSearchresults(results)
+            } else if(term === 'ultimos_trailers'){
+                alert('ultimos trailer')
+    
+            } else {
+                if(typeof term === 'string'){
+                    setSearchTerm(term) 
+                    const results = findGame(term)
+                    setSearchresults(results)
+                }
+            }
         }
-            
+        fetchData()
+        setIsLoading(false)
+
     }, [setSearchTerm])
         
 
     return(
+        !isLoading &&
         <PageContainer>
             <div className="main_content">
                 <SideMenu />

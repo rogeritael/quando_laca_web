@@ -8,7 +8,7 @@ export function gamesService(){
 
     async function findAll(){
         
-        const popular = games.filter(game => popular_games.includes(game.id));
+        const popular = await findPopularGames();
         const upcomingGames = await findComingSoon()
         const justReleasedGames = await findJustReleased()
         const nextReleases = await findNextReleases()
@@ -25,7 +25,9 @@ export function gamesService(){
     }
 
     async function findPopularGames(){
-
+        const popularGames = games.filter(game => popular_games.includes(game.id));
+    
+        return popularGames;
     }
 
     async function findById(id : string){
@@ -66,5 +68,5 @@ export function gamesService(){
         return justReleasedGames
     }
 
-    return { findAll, findById }
+    return { findAll, findById, findJustReleased, findPopularGames }
 }
