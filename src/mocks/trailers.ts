@@ -1,3 +1,9 @@
+export interface TrailerProps {
+    cover: string;
+    video_url: string;
+    game_id: string;
+}
+
 export const trailers = [
 {
     cover: 'https://i.ytimg.com/vi/Rr0v0lGde2o/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDzMgHICltkKy0JT-6WgMExvFjIzw',

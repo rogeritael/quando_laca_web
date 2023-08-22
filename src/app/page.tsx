@@ -26,29 +26,28 @@ export default function Home() {
   const [nextReleases, setNextReleases] = useState<GameProps[]>([])
   const [isTrailerModalOpen, setIstrailerModalOpen] = useState(false);
   const [trailerUrl, setTrailerUrl] = useState('')
-
-
-  const [testLoading, setTestLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true)
 
 
   useEffect(() => {
       
-    (async() => {
+    const fetchData = async () => {
       const games = await gamesService().findAll();
+
       setPopularGames(games.popular)
       setJustReleasedGames(games.justReleased)
       setNextReleases(games.nextReleases)
       setComingSoonGames(games.upcomingGames)
-    })()
+    }
+    
+    fetchData()
 
-    setTimeout(() => {
-      setTestLoading(false)
-    }, 1000)
+    setIsLoading(false)
 
   },[])
 
   return (
-    !testLoading && (
+    !isLoading && (
     <PageContainer>
       <TrailerModal videoUrl={trailerUrl} isOpen={isTrailerModalOpen} setIsOpen={setIstrailerModalOpen} />
       <ConfirmModal />

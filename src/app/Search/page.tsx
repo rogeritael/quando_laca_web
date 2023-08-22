@@ -16,6 +16,7 @@ import { GameProps } from './../../mocks/games';
 import { gameList as games } from "./../../mocks/games";
 import { Context } from "@/context/UserContext";
 import { gamesService } from "@/services/gameService";
+import { TrailerProps } from "@/mocks/trailers";
 
 interface AboutProps {
 
