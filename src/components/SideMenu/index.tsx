@@ -13,7 +13,8 @@ interface SideMenuProps {
 }
 
 export function SideMenu(props : SideMenuProps){
-    const [activeLink, setActiveLink] = useState<'home'|'library'|'search'|''>()
+    const [activeLink, setActiveLink] = useState<'home'|'library'|'search'|''>('')
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
     
@@ -40,11 +41,14 @@ export function SideMenu(props : SideMenuProps){
                     break;
             }
         }
+
         fetchData()
+        setIsLoading(false)
 
     }, [])
 
     return(
+        !isLoading &&
         <SideMenuContainer className="side">
             <Link href="/" className={activeLink === 'home' ? 'active' : ''}>
                 <Image src={categoryIcon} alt="ver todos os jogos" />

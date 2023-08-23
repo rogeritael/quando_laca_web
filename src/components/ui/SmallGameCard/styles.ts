@@ -42,12 +42,14 @@ export const CardContainer = styled.article<CardContainerProps>`
     }
 
     .game_info {
+        padding: 8px 0;
+
         h2 {
             font-size: 14px;
             color: #fff;
             margin-bottom: 8px;
             font-weight: normal;
-            max-width: ${(props) => props.v2 ? '100%' : '130px' };;
+            width: ${(props) => props.v2 ? '100%' : '130px' };
         }
 
         p {

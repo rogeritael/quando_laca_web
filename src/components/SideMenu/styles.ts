@@ -15,9 +15,11 @@ export const SideMenuContainer = styled.aside`
         width: 100%;
         display: flex;
         justify-content: center;
+        position: relative;
 
         &.active {
             background-color: var(--bg-secondary);
+            transition: 500ms;
         }
     }
 `;
