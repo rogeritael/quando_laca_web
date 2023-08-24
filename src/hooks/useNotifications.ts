@@ -37,14 +37,7 @@ export function useNotifications(){
 
     useEffect(() => {
 
-        const fetchData = async() => {
-            // const storedNotifications = localStorage.getItem('notifications');
-            const storedNotifications = await notificationsMock
-            // storedNotifications && setUserNotifications(JSON.parse(storedNotifications));
-            storedNotifications && setUserNotifications(storedNotifications);
-        }
-        fetchData()
-        
+        findAllNotifications()
 
     }, [])
 

@@ -3,6 +3,7 @@ import React, { createContext, useEffect, useState } from "react";
 import { GameProps } from "@/mocks/games";
 import { useFavoriteGames } from "@/hooks/useFavoriteGames";
 import { useFlashMessage } from "@/hooks/useFlashMessage";
+import { NotificationProps, useNotifications } from "@/hooks/useNotifications";
 
 interface ContextProps {
     gameList: GameProps[];
@@ -22,12 +23,20 @@ interface ContextProps {
 
     searchTerm: string;
     setSearchTerm: (term: string) => void;
+
+    userNotifications: NotificationProps[];
+    findAllNotifications: () => void;
+    markAllAsRead: () => void;
+    isNotificationsVisible: boolean;
+    setIsNotificationVisible: (param: boolean) => void;
 }
 
 export const Context = createContext({} as ContextProps);
 
 export function UserProvider({children}: {children: React.ReactNode}){
     const { findAll, addToList, removeFromList, gameList, setGameList } = useFavoriteGames();
+    const { userNotifications, findAllNotifications, markAllAsRead } = useNotifications();
+    const [isNotificationsVisible, setIsNotificationVisible] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
     
     const [isConfirmModalVisible, setIsConfirmModalVisible] = useState(false)
@@ -44,7 +53,8 @@ export function UserProvider({children}: {children: React.ReactNode}){
             searchTerm, setSearchTerm,
             isLoading, setIsLoading,
             isConfirmModalVisible, setIsConfirmModalVisible,
-            gameIdToRemoveFromList, setGameIdToRemoveFromList
+            gameIdToRemoveFromList, setGameIdToRemoveFromList,
+            userNotifications, findAllNotifications, markAllAsRead, isNotificationsVisible, setIsNotificationVisible
         }}>
             {children}
         </Context.Provider>

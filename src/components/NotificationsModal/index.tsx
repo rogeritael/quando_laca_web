@@ -3,7 +3,9 @@ import { Notification } from "../ui/Notification";
 import { NotificationsContainer } from "./styles";
 
 import { gameList as games } from "@/mocks/games";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { formatDate } from "@/utils/formatDate";
+import { Context } from "@/context/UserContext";
 
 interface NotificationsModalProps {
 
@@ -44,10 +46,8 @@ const  formattedNotifications = [
 ]
 
 export function NotificationsModal(props : NotificationsModalProps){
-    const { userNotifications } = useNotifications();
     const [notifications, setNotifications] = useState(formattedNotifications)
-    const [isLoading, setIsLoading] = useState(true);
-    const [ prevDate, setPrevDate ] = useState<Date>()
+    const { userNotifications } = useContext(Context) 
 
     useEffect(() => {
         
@@ -66,22 +66,24 @@ export function NotificationsModal(props : NotificationsModalProps){
                 </figure>
             </div>
             <div className="notifications_box">
-                {/* <span className="date">
-                    Hoje, 28 de Maio
-                </span> 
-                <Notification image={games[0].image} title="Resident Evil 4 Remake" description="Resident Evil 4 Remake lançou hoje!" isRead={false} /> 
-                <Notification image={games[0].image} title="Star Wars: Jedi Survivor" description="Faltam dois dias para o lançamento de Star-wars Jedi Survivor!" isRead={false} /> */}
+ 
+                {
+                    userNotifications.map((notification, index) => (
+                        <Notification key={index} image={notification.image} title="Resident Evil 4 Remake" description="Resident Evil 4 Remake lançou hoje!" isRead={false} /> 
+                    ))
+                }
+                
             
-                {notifications.map((group) => (
+                {/* {notifications.map((group) => (
                     <>
                     <span className="date">
-                        Hoje, {group.date.toDateString()}
+                        Hoje, {formatDate(group.date)}
                     </span>
                     {group.notifications.map((notifications) => (
                         <Notification key={notifications.title} image={notifications.image} title={notifications.title} description={notifications.description} isRead={notifications.isRead} /> 
                     ))}
                     </> 
-                ))}
+                ))} */}
             </div>
         </NotificationsContainer>
     )
