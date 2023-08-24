@@ -10,6 +10,7 @@ import { UserProvider } from '@/context/UserContext'
 import { Toast } from '@/components/ui/Toast'
 import { ConfirmModal } from '@/components/ui/ConfirmModal'
 import { Loading } from '@/components/ui/Loading'
+import { NotificationsModal } from '@/components/NotificationsModal'
 
 export const metadata: Metadata = {
   title: 'Quando Lança | Confira os principais lançamentos de jogos de 2023',
@@ -30,6 +31,7 @@ export default function RootLayout({
           <ConfirmModal />
           <Loading />
           <Toast />
+          <NotificationsModal />
           {children}
         </StyledComponentsRegistry>
         </UserProvider>

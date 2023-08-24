@@ -12,11 +12,13 @@ export function Notification({ image, title, description, isRead } : Notificatio
     return(
         <NotificationContainer>
             <figure className="notification_image">
-                <Image src={image} alt="imagem da notificação"/>
+                <Image width={40} height={40} src={image} alt="imagem da notificação"/>
                 
                 {!isRead && (
-                    <figure className="alert"></figure>
-                )}
+                    <span className="alert">
+                        <span className="pulse"></span>
+                    </span>
+                 )}
 
             </figure>
             <div className="info_container">
