@@ -4,8 +4,9 @@ import { NotificationsContainer } from "./styles";
 
 import { gameList as games } from "@/mocks/games";
 import React, { useContext, useEffect, useState, useRef } from "react";
-import { formatDate } from "@/utils/formatDate";
+import { formatDate, formatDateMinified } from "@/utils/formatDate";
 import { Context } from "@/context/UserContext";
+import { formatNotificationDate1 } from "@/utils/formatNotificationDate1";
 
 interface NotificationsModalProps {
 
@@ -83,7 +84,7 @@ export function NotificationsModal(props : NotificationsModalProps){
                 {userNotifications.map((notifications) => (
                     <>
                     <span className="date">
-                        Hoje, {notifications.created_at.toDateString()}
+                        {formatDate(notifications.created_at)}
                     </span>
                     <Notification key={notifications.title} image={notifications.image} title={notifications.title} description={notifications.description} isRead={notifications.isRead} /> 
                     </> 

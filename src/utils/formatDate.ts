@@ -22,3 +22,12 @@ export function formatDate(date: Date){
   const formattedDate = `${day} de ${month} de ${year}`;
   return formattedDate;
 }
+
+export function formatDateMinified(date: Date){
+  // const date = new Date(dataStr);
+  const day = date.getDate();
+  const month = months[date.toString().split(" ")[1]];
+
+  const formattedDate = `${day} de ${month}`;
+  return formattedDate;
+}
