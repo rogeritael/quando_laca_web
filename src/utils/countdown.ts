@@ -14,3 +14,14 @@ export function countdown(targetDate: Date) {
         return 'lançado hoje!';
     }
 }
+
+export function countdownInNumber(targetDate: Date) {
+    const currentDate = new Date();
+    const targetDateTime = new Date(targetDate).getTime(); // Convertendo a data alvo para milissegundos
+    const currentTime = currentDate.getTime();
+
+    const timeDiff = targetDateTime - currentTime;
+    const daysDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+    return daysDiff;
+}
