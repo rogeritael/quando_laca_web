@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useFavoriteGames } from "./useFavoriteGames";
 import { countdown, countdownInNumber } from "@/utils/countdown";
 import { formatDate } from "@/utils/formatDate";
+import { Context } from "@/context/UserContext";
 
 export interface NotificationProps {
     image: string;
@@ -42,7 +43,7 @@ export function useNotifications(){
             const notification = await createNotification(game);
         })
 
-        const updatedNotificationsJSON = localStorage.getItem('favorites')
+        const updatedNotificationsJSON = localStorage.getItem('notifications')
         const updatedNotifications: NotificationProps[] = updatedNotificationsJSON ? JSON.parse(updatedNotificationsJSON) : [];
         setUserNotifications(updatedNotifications)
         
@@ -57,7 +58,7 @@ export function useNotifications(){
         if(countdownInNumber(releaseDate) > 0 && countdownInNumber(releaseDate) <= 30){
             
             title = `Pré-Lançamento de ${game.name} 🚀`
-            description = `Fique preparado! ${game.name} está prestes a ser lançado. Marque na sua agenda o dia ${game.releaseDate}.`
+            description = `Fique preparado! ${game.name} está prestes a ser lançado. Marque na sua agenda o dia ${formatDate(new Date(game.releaseDate))}.`
 
         } else if (countdownInNumber(releaseDate) === 0){
 

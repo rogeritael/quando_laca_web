@@ -58,6 +58,11 @@ export const NotificationContainer = styled.div`
             background-color: var(--bg);
             padding: 12px 14px;
             border-radius: 0 8px 8px 8px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--bg-secondary-lighten);
+            }
 
             h2 {
                 font-size: 14px;
