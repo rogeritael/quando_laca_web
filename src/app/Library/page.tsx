@@ -12,6 +12,7 @@ import { Logo } from "@/components/ui/Logo";
 import bell from '@/assets/icons/bell.svg';
 import { Search } from "@/components/ui/Search";
 import { ConfirmModal } from "@/components/ui/ConfirmModal";
+import { Bell } from "@/components/ui/bell";
 
 interface LibraryProps {
 
@@ -34,7 +35,7 @@ export default function Library(props : LibraryProps){
 
                     <div className="logo_container">
                         <Logo />
-                        <Image src={bell} alt="notificações" />
+                        <Bell />
                     </div>
                 </div>
                 <h1 className="page_title">Meus Jogos favoritos</h1>

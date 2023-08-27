@@ -18,20 +18,17 @@ export const LibraryContainer = styled.section`
 
     .header_container, .logo_container {
         display: flex;
-        align-items: center;
+        /* align-items: center; */
     }
 
     .header_container {
         width: 100%;
         justify-content: space-between;
-
-        & * {
-            animation: none !important;
-        }
     }
 
     .logo_container {
-        margin-right: 14px;
+        margin-right: 44px;
+        margin-top: 38px;
     }
 
     .page_title {

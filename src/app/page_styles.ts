@@ -35,11 +35,6 @@ export const PageContainer = styled.section`
                 gap: 8px;
                 padding: 38px 0;
                 margin-bottom: 38px;
-
-                .bell_container {
-                    /* dsadsa */
-                }
-                
             }
         }
 

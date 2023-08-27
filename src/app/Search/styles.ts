@@ -33,8 +33,9 @@ export const PageContainer = styled.section`
                 display: flex;
                 justify-content: center;
                 gap: 8px;
-                padding: 40px 0;
-                margin-bottom: 18px;
+                margin-top: 18px;
+                /* padding: 40px 0; */
+                margin-bottom: 68px;
             }
         }
 

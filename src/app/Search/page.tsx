@@ -20,6 +20,7 @@ import { TrailerProps, trailers } from "@/mocks/trailers";
 import { Trailer } from "@/components/ui/Trailer";
 import { Carousel } from "@/components/ui/Carousel";
 import { TrailerModal } from "@/components/ui/TrailerModal";
+import { Bell } from "@/components/ui/bell";
 
 interface AboutProps {
 
@@ -95,7 +96,7 @@ export default function Search(props : AboutProps){
                     { trailerResults.length > 0 && 
                         <Carousel maxWidth="100%" title="" >
                             {trailerResults.map((result, index) => (
-                                <Trailer videoUrl={result.video_url} setIsModalOpen={setIstrailerModalOpen} setTrailerUrl={setTrailerUrl} cover={result.cover} key={index}/>
+                                <Trailer animationDelay={0} videoUrl={result.video_url} setIsModalOpen={setIstrailerModalOpen} setTrailerUrl={setTrailerUrl} cover={result.cover} key={index}/>
                             ))}
                         </Carousel>
                     }
@@ -113,8 +114,8 @@ export default function Search(props : AboutProps){
                 
                 <div className="library">
                     <div className="logo_container">
-                            <Logo />
-                            <Image src={bell} alt="notificações" />
+                        <Logo />
+                        <Bell />
                     </div>
                     <MyLibrary />
                 </div>
