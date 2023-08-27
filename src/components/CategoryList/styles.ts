@@ -65,4 +65,13 @@ export const CategoryListContainer = styled.div`
         transform: rotate(180deg);     
         right: 0px;
     }
+
+    @media (max-width: 800px){
+        max-width: 100vw;
+        width: 100%;
+
+        .slider .rail {
+            gap: 8px;
+        }
+    }
 `;

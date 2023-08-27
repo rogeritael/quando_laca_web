@@ -6,9 +6,9 @@ import arrow from "@/assets/icons/arrow.svg";
 import { useState, useRef, useEffect } from 'react';
 
 interface CategoryListProps {
-
+    className?: string;
 }
-export function CategoryList(props : CategoryListProps){
+export function CategoryList({ className }: CategoryListProps){
     const [railPosition, setRailPosition] = useState(0);
     const [carouselWidth, setCarouselWidth] = useState(0);
     const carouselRef = useRef<HTMLDivElement>(null);
@@ -40,7 +40,7 @@ export function CategoryList(props : CategoryListProps){
   };
 
     return(
-        <CategoryListContainer>
+        <CategoryListContainer className={className}>
             <span className="controller left-controller" onClick={() => next()}>
                 <Image src={arrow} alt="seta voltar slider" />
             </span>

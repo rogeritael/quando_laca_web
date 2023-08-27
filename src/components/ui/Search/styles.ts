@@ -10,9 +10,9 @@ export const SearchComponent = styled.div`
         padding: 18px 16px;
         padding-left: 56px;
         border-radius: 8px;
-        color: #768192; //--highlight-color
+        color: var(--highlight); //--highlight-color
         font-size: 0.875rem;
-        width: 350px;
+        width: 100%;
         transition: 200ms;
 
         &:hover, &:focus {
@@ -21,7 +21,7 @@ export const SearchComponent = styled.div`
 
         &::placeholder {
             font-size: 0.875rem;
-            color: #768192
+            color: var(--highlight)
         }
     }
 

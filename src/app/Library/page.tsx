@@ -13,6 +13,8 @@ import bell from '@/assets/icons/bell.svg';
 import { Search } from "@/components/ui/Search";
 import { ConfirmModal } from "@/components/ui/ConfirmModal";
 import { Bell } from "@/components/ui/bell";
+import { MobileHeader } from "@/components/MobileHeader";
+import { CategoryList } from "@/components/CategoryList/CategoryList";
 
 interface LibraryProps {
 
@@ -30,6 +32,8 @@ export default function Library(props : LibraryProps){
             <SideMenu />
             
             <div className="main">
+                <MobileHeader />
+                <CategoryList className="category_list_mobile"/>
                 <div className="header_container">
                     <Header />
 

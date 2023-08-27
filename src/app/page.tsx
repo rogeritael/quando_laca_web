@@ -19,6 +19,7 @@ import { GameProps } from './../mocks/games';
 import { TrailerModal } from '@/components/ui/TrailerModal'
 import { Context } from '@/context/UserContext'
 import { Bell } from '@/components/ui/bell'
+import { MobileHeader } from '@/components/MobileHeader'
 
 export default function Home() {
   const [popularGames, setPopularGames] = useState<GameProps[]>([])
@@ -63,6 +64,7 @@ export default function Home() {
 
         <div className="main">
           <Header />
+          {/* <MobileHeader /> */}
           <div className="featured">
             <TrailersContainer setIsModalOpen={setIstrailerModalOpen} setTrailerUrl={setTrailerUrl}/>
             <PopularGames games={popularGames} url="/Search?term=populares"/>

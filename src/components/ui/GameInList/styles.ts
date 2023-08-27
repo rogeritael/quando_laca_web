@@ -28,6 +28,8 @@ export const GameListContainer = styled.article<GameProps>`
     animation: ${entry} 500ms ease-in-out forwards;
     animation-delay: ${props => `${props.animationDelay}ms`};
     position: relative;
+    max-width: 100vw;
+    /* width: 100%; */
     
     img {
         width: 65px;
@@ -92,6 +94,12 @@ export const GameListContainer = styled.article<GameProps>`
                     display: block;
                 }
             }
+        }
+    }
+
+    @media (max-width: 800px){
+        .buttons {
+            display: none;
         }
     }
 `;

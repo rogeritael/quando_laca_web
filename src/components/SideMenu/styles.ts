@@ -9,7 +9,9 @@ export const SideMenuContainer = styled.aside`
     align-items: center;
     justify-content: center;
     gap: 20px;
-
+    z-index: 1;
+    background-color: var(--bg);
+    
     a {
         padding: 12px;
         width: 100%;
@@ -20,6 +22,21 @@ export const SideMenuContainer = styled.aside`
         &.active {
             background-color: var(--bg-secondary);
             transition: 500ms;
+        }
+    }
+
+    @media (max-width: 800px){
+        flex-direction: row;
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        bottom: 0;
+        left: 0;
+        border-top: 1px solid var(--bg-secondary);
+
+        a {
+            height: 100%;
+            align-items: center;
         }
     }
 `;

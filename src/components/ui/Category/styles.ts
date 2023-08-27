@@ -15,4 +15,8 @@ export const CategoryComponent = styled.button`
     &:hover {
         background-color: var(--highlight);
     }
+
+    @media (max-width: 800px){
+        font-size: 12px;
+    }
 `;

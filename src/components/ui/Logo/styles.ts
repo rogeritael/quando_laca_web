@@ -9,4 +9,8 @@ export const LogoComponent = styled.p`
     span {
         font-weight: bold;
     }
+
+    @media (max-width: 800px){
+        font-size: 14px;
+    }
 `;
