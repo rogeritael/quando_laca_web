@@ -21,8 +21,7 @@ interface NotificationsGroupProps {
 
 export function useNotifications(){
     const [userNotifications, setUserNotifications] = useState<NotificationProps[]>([]);
-    const { gameList } = useFavoriteGames()
-    const teste = []
+    const [areThereUnread, setAreThereUnred] = useState(true)
 
     useEffect(() => {
         const fetchData = async() => {
@@ -85,8 +84,7 @@ export function useNotifications(){
         const updatedNotifications = [...storedNotifications, newNotification]
 
         localStorage.setItem('notifications', JSON.stringify(updatedNotifications))
-        console.log(userNotifications)
-        setUserNotifications(prevNotifications => [...prevNotifications, newNotification]);
+        setAreThereUnred(true)
     }
 
     function findAllNotifications(){
@@ -111,5 +109,5 @@ export function useNotifications(){
         setUserNotifications(updatedNotifications)
     }
 
-    return { userNotifications, findAllNotifications, markAllAsRead, generateNotifications }
+    return { userNotifications, findAllNotifications, markAllAsRead, generateNotifications, areThereUnread, setAreThereUnred }
 }

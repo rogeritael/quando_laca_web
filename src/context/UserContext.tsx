@@ -26,6 +26,8 @@ interface ContextProps {
 
     isNotificationsVisible: boolean;
     setIsNotificationsVisible: (param: boolean) => void;
+    areThereUnread: boolean;
+    setAreThereUnred: (param: boolean) => void;
     findAllNotifications: () => void;
     generateNotifications: () => void;
     markAllAsRead: () => void;
@@ -36,7 +38,7 @@ export const Context = createContext({} as ContextProps);
 
 export function UserProvider({children}: {children: React.ReactNode}){
     const { findAll, addToList, removeFromList, gameList, setGameList } = useFavoriteGames();
-    const { userNotifications, findAllNotifications, markAllAsRead, generateNotifications } = useNotifications();
+    const { userNotifications, findAllNotifications, markAllAsRead, generateNotifications, areThereUnread, setAreThereUnred } = useNotifications();
     const [isNotificationsVisible, setIsNotificationsVisible] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     
@@ -55,7 +57,8 @@ export function UserProvider({children}: {children: React.ReactNode}){
             isLoading, setIsLoading,
             isConfirmModalVisible, setIsConfirmModalVisible,
             gameIdToRemoveFromList, setGameIdToRemoveFromList,
-            userNotifications, findAllNotifications, isNotificationsVisible, setIsNotificationsVisible, markAllAsRead, generateNotifications
+            userNotifications, findAllNotifications, isNotificationsVisible, setIsNotificationsVisible, markAllAsRead, generateNotifications,
+            areThereUnread, setAreThereUnred
         }}>
             {children}
         </Context.Provider>

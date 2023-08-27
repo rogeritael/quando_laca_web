@@ -27,7 +27,8 @@ export default function Home() {
   const [isTrailerModalOpen, setIstrailerModalOpen] = useState(false);
   const [trailerUrl, setTrailerUrl] = useState('')
   const [isLoading, setIsLoading] = useState(true)
-  const { isNotificationsVisible, setIsNotificationsVisible } = useContext(Context)
+  const { isNotificationsVisible, setIsNotificationsVisible, areThereUnread } = useContext(Context)
+
 
 
   useEffect(() => {
@@ -86,7 +87,15 @@ export default function Home() {
         <div className="library">
           <div className="logo_container">
                 <Logo />
-                <Image className='bell' src={bell} alt="notificações" onClick={() => handleModal()} />
+                  <figure className="bell_container">
+                    {areThereUnread &&
+                      <>
+                        <span className='pulsing_alert' />
+                        <span className='pulsing_alert_pulse' />
+                      </>
+                    }
+                    <Image className='bell' src={bell} alt="notificações" onClick={() => handleModal()} />
+                  </figure>
           </div>
           <MyLibrary  />
         </div>
