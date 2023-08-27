@@ -18,6 +18,7 @@ import { gamesService } from '@/services/gameService'
 import { GameProps } from './../mocks/games';
 import { TrailerModal } from '@/components/ui/TrailerModal'
 import { Context } from '@/context/UserContext'
+import { Bell } from '@/components/ui/bell'
 
 export default function Home() {
   const [popularGames, setPopularGames] = useState<GameProps[]>([])
@@ -50,10 +51,6 @@ export default function Home() {
     setIsLoading(false)
 
   },[])
-
-  function handleModal(){
-      isNotificationsVisible === true ? setIsNotificationsVisible(false) : setIsNotificationsVisible(true);
-  }
 
   return (
     !isLoading && (
@@ -90,15 +87,7 @@ export default function Home() {
         <div className="library">
           <div className="logo_container">
                 <Logo />
-                  <figure className="bell_container">
-                    {areThereUnread &&
-                      <>
-                        <span className='pulsing_alert' />
-                        <span className='pulsing_alert_pulse' />
-                      </>
-                    }
-                    <Image className='bell' src={bell} alt="notificações" onClick={() => handleModal()} />
-                  </figure>
+                <Bell />
           </div>
           <MyLibrary  />
         </div>
