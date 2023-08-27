@@ -27,6 +27,7 @@ export default function Home() {
   const [isTrailerModalOpen, setIstrailerModalOpen] = useState(false);
   const [trailerUrl, setTrailerUrl] = useState('')
   const [isLoading, setIsLoading] = useState(true)
+  const { isNotificationsVisible, setIsNotificationsVisible } = useContext(Context)
 
 
   useEffect(() => {
@@ -45,6 +46,10 @@ export default function Home() {
     setIsLoading(false)
 
   },[])
+
+  function handleModal(){
+      isNotificationsVisible === true ? setIsNotificationsVisible(false) : setIsNotificationsVisible(true);
+  }
 
   return (
     !isLoading && (
@@ -81,7 +86,7 @@ export default function Home() {
         <div className="library">
           <div className="logo_container">
                 <Logo />
-                <Image src={bell} alt="notificações" />
+                <Image className='bell' src={bell} alt="notificações" onClick={() => handleModal()} />
           </div>
           <MyLibrary  />
         </div>

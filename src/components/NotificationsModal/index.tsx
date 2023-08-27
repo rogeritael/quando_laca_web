@@ -33,48 +33,52 @@ export function NotificationsModal(props : NotificationsModalProps){
     const modalRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
-                setIsNotificationsVisible(false);
-            }
-          };
+        // const handleClickOutside = (event: MouseEvent) => {
+        //     if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+        //         setIsNotificationsVisible(false);
+        //     }
+        //   };
       
-          document.addEventListener('mousedown', handleClickOutside);
+        //   document.addEventListener('mousedown', handleClickOutside);
       
-          return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-          };
+        //   return () => {
+        //     document.removeEventListener('mousedown', handleClickOutside);
+        //   };
     }, [])
 
     return(
         isNotificationsVisible &&
         <NotificationsContainer ref={modalRef}>
-            <div className="notifications_header">
-                <h2 className="title">
-                    Minhas notificações
-                </h2>
-                <figure className="new_notifications">
-                    <figure>
-                        4+
-                    </figure>
-                </figure>
-            </div>
-            <div className="notifications_box">
-            
-                {userNotifications.map((notifications) => (
-                    <>
-                    <span className="date">
-                        {formatDate(new Date(notifications.created_at))}
-                    </span>
-                    <Notification key={notifications.title} image={notifications.image} title={notifications.title} description={notifications.description} isRead={notifications.isRead} /> 
-                    </> 
-                ))}
-                {/* sinalizando 1 mes a 15 dias
-                lembrando 15 dias a 7 dias
-                avisando 3 dias a 2 dias
-                hoje
-                relembrando -depois que lançou  */}
+            <span className="background" onClick={() => setIsNotificationsVisible(false)} />
 
+            <div className="notification_box">
+                <div className="notifications_header">
+                    <h2 className="title">
+                        Minhas notificações
+                    </h2>
+                    <figure className="new_notifications">
+                        <figure>
+                            4+
+                        </figure>
+                    </figure>
+                </div>
+                <div className="notifications_box">
+                
+                    {userNotifications.map((notifications) => (
+                        <>
+                        <span className="date">
+                            {formatDate(new Date(notifications.created_at))}
+                        </span>
+                        <Notification key={notifications.title} image={notifications.image} title={notifications.title} description={notifications.description} isRead={notifications.isRead} /> 
+                        </> 
+                    ))}
+                    {/* sinalizando 1 mes a 15 dias
+                    lembrando 15 dias a 7 dias
+                    avisando 3 dias a 2 dias
+                    hoje
+                    relembrando -depois que lançou  */}
+
+                </div>
             </div>
         </NotificationsContainer>
     )

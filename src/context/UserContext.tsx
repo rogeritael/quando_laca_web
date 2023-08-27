@@ -36,7 +36,7 @@ export const Context = createContext({} as ContextProps);
 export function UserProvider({children}: {children: React.ReactNode}){
     const { findAll, addToList, removeFromList, gameList, setGameList } = useFavoriteGames();
     const { userNotifications, findAllNotifications } = useNotifications();
-    const [isNotificationsVisible, setIsNotificationsVisible] = useState(true);
+    const [isNotificationsVisible, setIsNotificationsVisible] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     
     const [isConfirmModalVisible, setIsConfirmModalVisible] = useState(false)
