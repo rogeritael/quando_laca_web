@@ -27,7 +27,7 @@ export default function Home() {
   const [isTrailerModalOpen, setIstrailerModalOpen] = useState(false);
   const [trailerUrl, setTrailerUrl] = useState('')
   const [isLoading, setIsLoading] = useState(true)
-  const { isNotificationsVisible, setIsNotificationsVisible, areThereUnread } = useContext(Context)
+  const { findAllNotifications, isNotificationsVisible, setIsNotificationsVisible, areThereUnread, generateNotifications } = useContext(Context)
 
 
 
@@ -40,8 +40,11 @@ export default function Home() {
       setJustReleasedGames(games.justReleased)
       setNextReleases(games.nextReleases)
       setComingSoonGames(games.upcomingGames)
+
+      //notifications
+      await generateNotifications();
+      await findAllNotifications();
     }
-    
     fetchData()
 
     setIsLoading(false)

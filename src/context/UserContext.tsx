@@ -26,6 +26,7 @@ interface ContextProps {
 
     isNotificationsVisible: boolean;
     setIsNotificationsVisible: (param: boolean) => void;
+    setUserNotifications: (notifications: NotificationProps[]) => void;
     areThereUnread: boolean;
     setAreThereUnred: (param: boolean) => void;
     findAllNotifications: () => void;
@@ -59,7 +60,7 @@ export function UserProvider({children}: {children: React.ReactNode}){
             isConfirmModalVisible, setIsConfirmModalVisible,
             gameIdToRemoveFromList, setGameIdToRemoveFromList,
             userNotifications, findAllNotifications, isNotificationsVisible, setIsNotificationsVisible, markAllAsRead, generateNotifications,
-            areThereUnread, setAreThereUnred, createNotification
+            areThereUnread, setAreThereUnred, createNotification, setUserNotifications
         }}>
             {children}
         </Context.Provider>

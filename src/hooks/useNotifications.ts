@@ -23,21 +23,11 @@ export function useNotifications(){
     const [userNotifications, setUserNotifications] = useState<NotificationProps[]>([]);
     const [areThereUnread, setAreThereUnred] = useState(false)
 
-    useEffect(() => {
-        const fetchData = async() => {
-            await generateNotifications()
-            const notifications = await findAllNotifications()
-            // setUserNotifications(notifications)
-
-        }
-        fetchData()
-    }, [])
-
     async function generateNotifications(){
         const storedGamesJSON = localStorage.getItem('favorites')
         const storedGames: GameProps[] = storedGamesJSON ? JSON.parse(storedGamesJSON) : [];
 
-       storedGames.map(async(game) => {
+        storedGames.map(async(game) => {
             await createNotification(game);
         })
     }
@@ -89,13 +79,13 @@ export function useNotifications(){
         setAreThereUnred(true)
     }
 
-    function findAllNotifications(){
+    async function findAllNotifications(){
 
         const storedNotificationsJSON = localStorage.getItem('notifications');
         const storedNotifications: NotificationProps[] = storedNotificationsJSON ? JSON.parse(storedNotificationsJSON) : [];
-
+        
         setUserNotifications(storedNotifications)
-        return storedNotifications;
+        return storedNotifications
     }
 
     async function markAllAsRead(){

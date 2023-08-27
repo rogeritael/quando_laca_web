@@ -29,18 +29,8 @@ interface NotificationsModalProps {
 
 export function NotificationsModal(props : NotificationsModalProps){
     // const [notifications, setNotifications] = useState()
-    const { userNotifications, isNotificationsVisible, setIsNotificationsVisible, markAllAsRead, findAllNotifications } = useContext(Context)
-    const [isLoading, setIsLoading] = useState(true)
+    const { generateNotifications, userNotifications, setUserNotifications, isNotificationsVisible, setIsNotificationsVisible, markAllAsRead, findAllNotifications } = useContext(Context)
     const modalRef = useRef<HTMLDivElement | null>(null);
-
-    useEffect(() => {
-        const fetchData = async() => {
-            const notifications = await findAllNotifications()
-            // setUserNotifications(notifications)
-        }
-        fetchData()
-        setIsLoading(false)
-    }, [])
 
     function handleCloseModal(){
         setIsNotificationsVisible(false);
@@ -48,7 +38,7 @@ export function NotificationsModal(props : NotificationsModalProps){
     }
 
     return(
-        isNotificationsVisible && !isLoading &&
+        isNotificationsVisible &&
         <NotificationsContainer ref={modalRef}>
             <span className="background" onClick={() => handleCloseModal()} />
 
@@ -59,7 +49,7 @@ export function NotificationsModal(props : NotificationsModalProps){
                     </h2>
                     <figure className="new_notifications">
                         <figure>
-                            { getUnreadQuantity(userNotifications)}+
+                            { getUnreadQuantity(userNotifications) }+
                         </figure>
                     </figure>
                 </div>
@@ -70,7 +60,7 @@ export function NotificationsModal(props : NotificationsModalProps){
                         <span className="date">
                             {formatDate(new Date(notifications.created_at))}
                         </span>
-                        <Notification key={notifications.title} image={notifications.image} title={notifications.title} description={notifications.description} isRead={notifications.isRead} /> 
+                        <Notification  image={notifications.image} title={notifications.title} description={notifications.description} isRead={notifications.isRead} /> 
                         </> 
                     ))}
 

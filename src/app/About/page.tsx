@@ -25,7 +25,7 @@ interface MediaProps {
 }
 
 export default function About(props : AboutProps){
-    const { addToList, removeFromList, gameList, setGameIdToRemoveFromList, setIsConfirmModalVisible } = useContext(Context);
+    const { addToList, findAllNotifications, gameList, setGameIdToRemoveFromList, setIsConfirmModalVisible } = useContext(Context);
     const [selectedGame, setSelectedGame] = useState<GameProps>()
     const [backgroundImage, setBackgroudImage] = useState('')
     const [isGaleryModalOpen, setIsGaleryModalOpen] = useState(false);
@@ -71,6 +71,7 @@ export default function About(props : AboutProps){
             } else {
                 addToList(selectedGame)
                 createNotification(selectedGame)
+                findAllNotifications()
                 setFlashMessage({type:'success', message: `${selectedGame.name} foi adicionado aos seus favoritos`})
             }
         }
