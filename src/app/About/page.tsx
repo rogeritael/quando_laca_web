@@ -33,6 +33,7 @@ export default function About(props : AboutProps){
     const [mediaType, setMediaType] = useState<'image'|'video'>('image')
     const [isLoading, setIsLoading] = useState(true)
     const { setFlashMessage } = useFlashMessage();
+    const { createNotification } = useContext(Context)
 
     
 
@@ -69,6 +70,7 @@ export default function About(props : AboutProps){
                 setIsConfirmModalVisible(true)
             } else {
                 addToList(selectedGame)
+                createNotification(selectedGame)
                 setFlashMessage({type:'success', message: `${selectedGame.name} foi adicionado aos seus favoritos`})
             }
         }

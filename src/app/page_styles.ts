@@ -62,6 +62,7 @@ export const PageContainer = styled.section`
                         top: 0;
                         border-radius: 50%;
                         border: 2px solid var(--bg);
+                        pointer-events: none;
                     }
 
                     .pulsing_alert_pulse {

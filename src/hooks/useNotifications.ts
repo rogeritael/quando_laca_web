@@ -21,11 +21,14 @@ interface NotificationsGroupProps {
 
 export function useNotifications(){
     const [userNotifications, setUserNotifications] = useState<NotificationProps[]>([]);
-    const [areThereUnread, setAreThereUnred] = useState(true)
+    const [areThereUnread, setAreThereUnred] = useState(false)
 
     useEffect(() => {
         const fetchData = async() => {
             await generateNotifications()
+            const notifications = await findAllNotifications()
+            // setUserNotifications(notifications)
+
         }
         fetchData()
     }, [])
@@ -37,7 +40,6 @@ export function useNotifications(){
        storedGames.map(async(game) => {
             await createNotification(game);
         })
-
     }
 
     async function createNotification(game: GameProps){
@@ -107,7 +109,8 @@ export function useNotifications(){
         
         localStorage.setItem('notifications', JSON.stringify(updatedNotifications))
         setUserNotifications(updatedNotifications)
+        setAreThereUnred(false)
     }
 
-    return { userNotifications, findAllNotifications, markAllAsRead, generateNotifications, areThereUnread, setAreThereUnred }
+    return { userNotifications, setUserNotifications, findAllNotifications, markAllAsRead, generateNotifications, areThereUnread, setAreThereUnred, createNotification }
 }

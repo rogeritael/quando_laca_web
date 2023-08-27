@@ -29,9 +29,18 @@ interface NotificationsModalProps {
 
 export function NotificationsModal(props : NotificationsModalProps){
     // const [notifications, setNotifications] = useState()
-    const { userNotifications, isNotificationsVisible, setIsNotificationsVisible, markAllAsRead, findAll } = useContext(Context)
-    const [isOpen, setIsOpen] = useState(true)
+    const { userNotifications, isNotificationsVisible, setIsNotificationsVisible, markAllAsRead, findAllNotifications } = useContext(Context)
+    const [isLoading, setIsLoading] = useState(true)
     const modalRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        const fetchData = async() => {
+            const notifications = await findAllNotifications()
+            // setUserNotifications(notifications)
+        }
+        fetchData()
+        setIsLoading(false)
+    }, [])
 
     function handleCloseModal(){
         setIsNotificationsVisible(false);
@@ -39,7 +48,7 @@ export function NotificationsModal(props : NotificationsModalProps){
     }
 
     return(
-        isNotificationsVisible &&
+        isNotificationsVisible && !isLoading &&
         <NotificationsContainer ref={modalRef}>
             <span className="background" onClick={() => handleCloseModal()} />
 
@@ -50,7 +59,7 @@ export function NotificationsModal(props : NotificationsModalProps){
                     </h2>
                     <figure className="new_notifications">
                         <figure>
-                            { getUnreadQuantity(userNotifications) }+
+                            { getUnreadQuantity(userNotifications)}+
                         </figure>
                     </figure>
                 </div>
