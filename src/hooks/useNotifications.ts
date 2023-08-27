@@ -25,14 +25,10 @@ export function useNotifications(){
     const teste = []
 
     useEffect(() => {
-
-        // const notifications = findAllNotifications()
-        
-        // generateNotifications()
-        // groupNotifications(notifications)
-        // setUserNotifications(notifications)
-        generateNotifications()
-
+        const fetchData = async() => {
+            await generateNotifications()
+        }
+        fetchData()
     }, [])
 
     async function generateNotifications(){
@@ -40,13 +36,9 @@ export function useNotifications(){
         const storedGames: GameProps[] = storedGamesJSON ? JSON.parse(storedGamesJSON) : [];
 
        storedGames.map(async(game) => {
-            const notification = await createNotification(game);
+            await createNotification(game);
         })
 
-        const updatedNotificationsJSON = localStorage.getItem('notifications')
-        const updatedNotifications: NotificationProps[] = updatedNotificationsJSON ? JSON.parse(updatedNotificationsJSON) : [];
-        setUserNotifications(updatedNotifications)
-        
     }
 
     async function createNotification(game: GameProps){
@@ -93,23 +85,31 @@ export function useNotifications(){
         const updatedNotifications = [...storedNotifications, newNotification]
 
         localStorage.setItem('notifications', JSON.stringify(updatedNotifications))
+        console.log(userNotifications)
+        setUserNotifications(prevNotifications => [...prevNotifications, newNotification]);
     }
 
-     function findAllNotifications(){
+    function findAllNotifications(){
 
         const storedNotificationsJSON = localStorage.getItem('notifications');
         const storedNotifications: NotificationProps[] = storedNotificationsJSON ? JSON.parse(storedNotificationsJSON) : [];
 
         setUserNotifications(storedNotifications)
         return storedNotifications;
-        // return notificationsMock;
     }
 
     async function markAllAsRead(){
-        const updatedNotifications = userNotifications.map((notification) => {
-            notification.isRead = true;
-        })
+        const storedNotificationsJSON = localStorage.getItem('notifications');
+        const storedNotifications: NotificationProps[] = storedNotificationsJSON ? JSON.parse(storedNotificationsJSON) : [];
+
+        const updatedNotifications = storedNotifications.map((notification) => {
+            return {...notification, isRead: true}
+        });
+
+        
+        localStorage.setItem('notifications', JSON.stringify(updatedNotifications))
+        setUserNotifications(updatedNotifications)
     }
 
-    return { userNotifications, findAllNotifications }
+    return { userNotifications, findAllNotifications, markAllAsRead, generateNotifications }
 }

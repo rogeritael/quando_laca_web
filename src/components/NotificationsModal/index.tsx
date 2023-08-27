@@ -7,6 +7,7 @@ import React, { useContext, useEffect, useState, useRef } from "react";
 import { formatDate, formatDateMinified } from "@/utils/formatDate";
 import { Context } from "@/context/UserContext";
 import { formatNotificationDate1 } from "@/utils/formatNotificationDate1";
+import { getUnreadQuantity } from "@/utils/getUnreadQuantity";
 
 interface NotificationsModalProps {
 
@@ -28,28 +29,19 @@ interface NotificationsModalProps {
 
 export function NotificationsModal(props : NotificationsModalProps){
     // const [notifications, setNotifications] = useState()
-    const { userNotifications, isNotificationsVisible, setIsNotificationsVisible } = useContext(Context)
+    const { userNotifications, isNotificationsVisible, setIsNotificationsVisible, markAllAsRead, findAll } = useContext(Context)
     const [isOpen, setIsOpen] = useState(true)
     const modalRef = useRef<HTMLDivElement | null>(null);
 
-    useEffect(() => {
-        // const handleClickOutside = (event: MouseEvent) => {
-        //     if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
-        //         setIsNotificationsVisible(false);
-        //     }
-        //   };
-      
-        //   document.addEventListener('mousedown', handleClickOutside);
-      
-        //   return () => {
-        //     document.removeEventListener('mousedown', handleClickOutside);
-        //   };
-    }, [])
+    function handleCloseModal(){
+        setIsNotificationsVisible(false);
+        markAllAsRead()
+    }
 
     return(
         isNotificationsVisible &&
         <NotificationsContainer ref={modalRef}>
-            <span className="background" onClick={() => setIsNotificationsVisible(false)} />
+            <span className="background" onClick={() => handleCloseModal()} />
 
             <div className="notification_box">
                 <div className="notifications_header">
@@ -58,7 +50,7 @@ export function NotificationsModal(props : NotificationsModalProps){
                     </h2>
                     <figure className="new_notifications">
                         <figure>
-                            4+
+                            { getUnreadQuantity(userNotifications) }+
                         </figure>
                     </figure>
                 </div>
@@ -72,11 +64,6 @@ export function NotificationsModal(props : NotificationsModalProps){
                         <Notification key={notifications.title} image={notifications.image} title={notifications.title} description={notifications.description} isRead={notifications.isRead} /> 
                         </> 
                     ))}
-                    {/* sinalizando 1 mes a 15 dias
-                    lembrando 15 dias a 7 dias
-                    avisando 3 dias a 2 dias
-                    hoje
-                    relembrando -depois que lançou  */}
 
                 </div>
             </div>
