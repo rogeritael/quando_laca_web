@@ -46,6 +46,8 @@ export const SliderContainer = styled.div<SliderProps>`
         max-width: ${props => props.maxWidth};
         overflow: hidden;
         position: relative;
+        margin-top: 20px;
+
         .rail {
             width: fit-content;
             display: flex;

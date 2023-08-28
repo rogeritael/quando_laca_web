@@ -20,6 +20,7 @@ import { TrailerModal } from '@/components/ui/TrailerModal'
 import { Context } from '@/context/UserContext'
 import { Bell } from '@/components/ui/bell'
 import { MobileHeader } from '@/components/MobileHeader'
+import { CategoryList } from '@/components/CategoryList/CategoryList'
 
 export default function Home() {
   const [popularGames, setPopularGames] = useState<GameProps[]>([])
@@ -64,6 +65,8 @@ export default function Home() {
 
         <div className="main">
           <Header />
+          <MobileHeader />
+          <CategoryList className='category_list_mobile'/>
 
           <div className="featured">
             <TrailersContainer setIsModalOpen={setIstrailerModalOpen} setTrailerUrl={setTrailerUrl}/>

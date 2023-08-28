@@ -45,9 +45,12 @@ export const PageContainer = styled.section`
             .featured {
                 margin-top: 50px;
                 display: flex;
-                /* grid-template-columns: 1fr 1fr; */
             }
         }
+    }
+
+    .category_list_mobile {
+        display: none;
     }
 
     @media (max-width: 1200px){
@@ -68,12 +71,21 @@ export const PageContainer = styled.section`
             .featured {
                 flex-direction: column;
                 
+                .popular_box {
+                    margin-top: 40px;
+
+                }
                 
             }
         }
     }
 
     @media (max-width: 800px){
+
+        .header {
+            display: none;
+        }
+
         .main_content {
             grid-template-columns:1fr;
             
@@ -81,6 +93,10 @@ export const PageContainer = styled.section`
                 display: none;
             }
     
+        }
+
+        .category_list_mobile {
+            display: flex;
         }
     }
 `;

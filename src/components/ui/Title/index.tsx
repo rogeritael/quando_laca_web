@@ -9,10 +9,11 @@ interface TitleProps {
     onNext?: () => void;
     onPrev?: () => void;
     url?: string;
+    className?: string;
 }
-export function Title({ content, controllers, disableLink, onNext, onPrev, url } : TitleProps){
+export function Title({ content, controllers, disableLink, onNext, onPrev, url, className } : TitleProps){
     return(
-        <TitleComponent>
+        <TitleComponent className={className}>
             {content}
 
             {controllers ?

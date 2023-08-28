@@ -16,11 +16,24 @@ export const TrailersContainerSection = styled.div`
     }
 
     @media (max-width: 920px){
+        .main_title {
+            border: 1px solid red;
+        }
+
         .desktop {
             display: none;
         }
         .mobile {
             display: flex;
+            margin-left: 20px;
+
+            h1 {
+                margin-left: 0;
+            }
+        }
+
+        .desktop_title {
+            display: none;
         }
     }
 `;
