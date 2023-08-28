@@ -47,14 +47,6 @@ export const PageContainer = styled.section`
         "side main";
     position: relative;
 
-    .side {
-        grid-area: side;
-        width: 80px;
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-
     .game_section {
         grid-area: main;
         position: relative;
@@ -95,6 +87,7 @@ export const PageContainer = styled.section`
 
         .title {
             font-size: 48px;
+            width: 100%;
             position: relative;
             animation: ${slideLeft} 1000ms ease-in-out;
         }
@@ -229,5 +222,36 @@ export const PageContainer = styled.section`
         }
     
         
+    }
+
+    @media (max-width: 800px){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 50px;
+        grid-template-areas:
+        "main"
+        "side";
+
+        .game_infos {
+            left: 0;
+            top: 14px;
+            padding: 0 20px;
+
+            .title {
+                font-size: 32px;
+            }
+
+            .info_list {
+                font-size: 12px;
+                border: 1px solid red;
+
+                p {
+                    width: max-content;
+                }
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
     }
 `;

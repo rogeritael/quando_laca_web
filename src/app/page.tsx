@@ -64,26 +64,30 @@ export default function Home() {
 
         <div className="main">
           <Header />
-          {/* <MobileHeader /> */}
+
           <div className="featured">
             <TrailersContainer setIsModalOpen={setIstrailerModalOpen} setTrailerUrl={setTrailerUrl}/>
             <PopularGames games={popularGames} url="/Search?term=populares"/>
           </div>
+
           <GameList title='Próximos Lançamentos' url="/Search?term=proximos_lancamentos">
             {nextReleases.map((game) => (
               <Game key={game.id} id={game.id} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
             ))}
           </GameList>
+
           <GameList title='Chegando e Breve' url="/Search?term=chegando_em_breve">
             {comingSoonGames.map((game) => (
               <Game key={game.id} id={game.id} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
             ))}
           </GameList>
+
           <GameList title='Recém Lançados' url="/Search?term=recem_lancados">
             {justReleasedGames.map((game) => (
               <Game key={game.id} id={game.id} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
             ))}
           </GameList>
+
         </div>
         
         <div className="library">

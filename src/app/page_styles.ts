@@ -10,13 +10,13 @@ export const PageContainer = styled.section`
         grid-template-areas:
         "side main main library";
 
-        aside {
+        /* aside {
             width: 80px;
             grid-area: side;
             position: fixed;
             top: 0;
             left: 0;
-        }
+        } */
 
         .library {
             grid-area: library;
@@ -44,9 +44,43 @@ export const PageContainer = styled.section`
             
             .featured {
                 margin-top: 50px;
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
+                display: flex;
+                /* grid-template-columns: 1fr 1fr; */
             }
+        }
+    }
+
+    @media (max-width: 1200px){
+        .main_content {
+            grid-template-columns: 80px 1fr;
+            grid-template-areas:
+            "side main";
+            
+            .library {
+                display: none;
+            }
+    
+        }
+    }
+
+    @media (max-width: 920px){
+        .main {
+            .featured {
+                flex-direction: column;
+                
+                
+            }
+        }
+    }
+
+    @media (max-width: 800px){
+        .main_content {
+            grid-template-columns:1fr;
+            
+            .library {
+                display: none;
+            }
+    
         }
     }
 `;
