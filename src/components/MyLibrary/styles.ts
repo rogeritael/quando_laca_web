@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const LibraryComponent = styled.div`
     display: flex;
     flex-direction: column;
+    width: 250px;
 
     h1 {
         color: #fff;
@@ -32,4 +33,5 @@ export const LibraryComponent = styled.div`
         gap: 14px;
         flex-direction: column;
     }
+
 `;

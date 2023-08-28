@@ -21,6 +21,8 @@ import { Trailer } from "@/components/ui/Trailer";
 import { Carousel } from "@/components/ui/Carousel";
 import { TrailerModal } from "@/components/ui/TrailerModal";
 import { Bell } from "@/components/ui/bell";
+import { MobileHeader } from "@/components/MobileHeader";
+import { CategoryList } from "@/components/CategoryList/CategoryList";
 
 interface AboutProps {
 
@@ -84,6 +86,8 @@ export default function Search(props : AboutProps){
 
                 <div className="main">
                     <Header />
+                    <MobileHeader />
+                    <CategoryList className="category_list_mobile" />
                     <h2 className="search_term">{searchTerm}</h2>
                     { searchResults.length > 0 && 
                         <GameList title='Resultados da pesquisa' >

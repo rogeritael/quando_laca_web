@@ -9,6 +9,7 @@ export const PopularGamesContainer = styled.div`
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     align-items: center;
+    width: 100%;
 
     //estilizando os cards dentro do container
     article {

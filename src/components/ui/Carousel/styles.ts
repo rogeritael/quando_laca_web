@@ -13,7 +13,8 @@ const entry = keyframes`
 
 export const SliderContainer = styled.div<SliderProps>`
     animation: ${entry} 1000ms ease-in-out;
-
+    max-width: calc(100vw - 94px);
+    
     .carousel_header {
         display: flex;
         align-items: center;
@@ -75,5 +76,9 @@ export const SliderContainer = styled.div<SliderProps>`
             z-index: 2;
             pointer-events: none;
         } */
+    }
+
+    @media (max-width: 800px){
+        max-width: calc(100vw - 20px);
     }
 `;

@@ -11,7 +11,7 @@ interface PopularGamesProps {
 
 export function PopularGames({ games, url, title } : PopularGamesProps){
     return(
-        <div>
+        <div style={{ width: "100%" }} className="popular_box">
             <Title content={title ? title : 'populares'} url={url} />
             <PopularGamesContainer>
                 {games.map((game, index) => index < 4 && (

@@ -29,7 +29,7 @@ export const CardContainer = styled.article<CardContainerProps>`
 
     figure {
         height: 56px;
-        width: 46px;
+        width: 66px;
         border-radius: 8px;
         overflow: hidden;
         margin-left: ${(props) => props.v2 ? '16px' : '0' };
@@ -43,6 +43,7 @@ export const CardContainer = styled.article<CardContainerProps>`
 
     .game_info {
         padding: 8px 0;
+        width: 100%;
 
         h2 {
             font-size: 14px;
@@ -70,4 +71,14 @@ export const CardContainer = styled.article<CardContainerProps>`
     &:hover {
         background-color: var(--bg-secondary-lighten);
     }
+
+    @media (max-width: 1024px){
+        max-width: 220px;
+
+        .options {
+            display: none;
+        }
+    }
+
+    
 `;
