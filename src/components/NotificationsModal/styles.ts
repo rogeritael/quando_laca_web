@@ -115,4 +115,13 @@ export const NotificationsContainer = styled.div`
         }
     }
 
+
+    @media(max-width: 425px){
+        .notification_box {
+            width: 100%;
+            height: 100%;
+            z-index: 4;
+            inset: 0;
+        }
+    }
 `

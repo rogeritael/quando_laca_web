@@ -75,4 +75,11 @@ export const NotificationContainer = styled.div`
             }
         }
     }
+
+    @media(max-width: 425px){
+        .info_container {
+            
+            width: 90%;
+        }
+    }
 `
