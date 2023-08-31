@@ -118,28 +118,29 @@ export default function About(props : AboutProps){
                         </button>
                         <Link href="/">Comprar Jogo</Link>
                     </div>
-                </div>
-                <div className="image_galery">
-                    <Carousel title="" maxWidth="800px">
+                
+                    <div className="image_galery">
+                        <Carousel title="" maxWidth="800px">
 
-                    {selectedGame.media.map((media, index) => (
-                        
-                        <figure key={index}>
-                            {media.type === 'image' ? (
-                                <Image onClick={() => handleOpenModal(index, media)} width={270} height={150} src={media.image} alt="imagem da galeria do jogo"/>
-                            ):(
-                                media.link && (
-                                <>
+                        {selectedGame.media.map((media, index) => (
+                            
+                            <figure key={index}>
+                                {media.type === 'image' ? (
                                     <Image onClick={() => handleOpenModal(index, media)} width={270} height={150} src={media.image} alt="imagem da galeria do jogo"/>
-                                    <Image className="player" src={player} alt="icone de player"/>
-                                </>
+                                ):(
+                                    media.link && (
+                                    <>
+                                        <Image onClick={() => handleOpenModal(index, media)} width={270} height={150} src={media.image} alt="imagem da galeria do jogo"/>
+                                        <Image className="player" src={player} alt="icone de player"/>
+                                    </>
+                                    )
                                 )
-                            )
-                            }
-                        </figure>
-                        
-                    ))}
-                    </Carousel>
+                                }
+                            </figure>
+                            
+                        ))}
+                        </Carousel>
+                    </div>
                 </div>
             </div>
             

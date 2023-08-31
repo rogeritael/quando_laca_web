@@ -55,7 +55,8 @@ export const PageContainer = styled.section`
     //=====================================
     .background_image {
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
+        height: 100%;
         position: relative;
 
         img {
@@ -75,11 +76,13 @@ export const PageContainer = styled.section`
 
     .game_infos {
         position: absolute;
-        top: 48px;
+        top: 0;
         left: 48px;
         padding-bottom: 400px;
-        max-height: calc(100vh - 300px);
+        height: 100vh;
         animation: ${entry} 1000ms ease-in-out;
+        width: 100%;
+        padding-top: 48px;
 
         .info_list, .description {
             margin-top: 30px;
@@ -126,7 +129,7 @@ export const PageContainer = styled.section`
 
         .buttons_container {
             position: relative;
-            margin-top: 48px;
+            margin-top: 24px;
             opacity: 0;
             animation: ${buttonEntry} 1500ms 1000ms ease-in-out forwards;
 
@@ -193,7 +196,8 @@ export const PageContainer = styled.section`
         gap: 16px;
         position: absolute;
         bottom: 24px;
-        right: 0;
+        padding-left: 40px;
+        right: 50px;
 
         figure {
             width: 270px;
@@ -226,32 +230,86 @@ export const PageContainer = styled.section`
 
     @media (max-width: 800px){
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 50px;
+        grid-template-rows: 1fr;
         grid-template-areas:
-        "main"
-        "side";
+        "main";
+        height: 100%;
+        /* "side"; */
 
-        .game_infos {
-            left: 0;
-            top: 14px;
-            padding: 0 20px;
+        
 
-            .title {
-                font-size: 32px;
+        .side {
+            display: none;
+        }
+
+        .game_section {
+            .background_image .image_mask {
+                background-color: var(--bg);
+                opacity: 0.6;
             }
 
-            .info_list {
-                font-size: 12px;
-                border: 1px solid red;
+            .game_infos {
+                left: 0;
+                top: 14px;
+                padding: 0 20px;
+                max-height: 200vh;
+
+                .description {
+                    max-width: 600px;
+                    max-height: 150px;
+                    padding-bottom: 24px;
+                    position: relative;
+                    opacity: 0;
+                    animation: ${slideUp} 1000ms 500ms ease-in-out forwards;
+                }
+
+                .info_list {
+                    flex-direction: column;
+                    gap: 14px;
+
+                    p {
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            width: 14px;
+                            height: 2px;
+                            background-color: #fff;
+                            position: absolute;
+                            left: 0;
+                            bottom: -4px;
+                        }
+                    }
+                }
+
+                .buttons_container {
+                    button {
+                        font-size: 12px;
+                        padding: 16px 24px;
+                    }
+                }
+
+                .title {
+                    font-size: 32px;
+                }
+
+                .info_list {
+                    font-size: 12px;
+
+                    p {
+                        width: max-content;
+                    }
+                }
 
                 p {
-                    width: max-content;
+                    font-size: 14px;
                 }
             }
+        }
 
-            p {
-                font-size: 14px;
-            }
+        .image_galery {
+            /* margin-top: auto; */
+            right: 0;
         }
     }
 `;
