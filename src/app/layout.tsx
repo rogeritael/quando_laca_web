@@ -14,10 +14,10 @@ import { NotificationsModal } from '@/components/NotificationsModal'
 import { useContext, useEffect } from 'react'
 import { useNotifications } from '@/hooks/useNotifications'
 
-export const metadata: Metadata = {
-  title: 'Quando Lança | Confira os principais lançamentos de jogos de 2023',
-  description: 'Fique por dentro de novos lançamentos de jogos, adicione-os a sua lista de espera e seja notificado quando o jogo for lançado',
-}
+// export const metadata: Metadata = {
+//   title: 'Quando Lança | Confira os principais lançamentos de jogos de 2023',
+//   description: 'Fique por dentro de novos lançamentos de jogos, adicione-os a sua lista de espera e seja notificado quando o jogo for lançado',
+// }
 
 
 
