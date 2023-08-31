@@ -43,4 +43,11 @@ export const ModalContainer = styled.section<ModalProps>`
     iframe {
         z-index: 2;
     }
+
+    @media(max-width: 768px){
+        iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+        }
+    }
 `

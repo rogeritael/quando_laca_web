@@ -23,8 +23,8 @@ export function TrailerModal({ videoUrl, isOpen, setIsOpen } : TrailerModalProps
             <span className="background" onClick={() => handleCloseModal()} />
             <iframe
                 ref={videoRef}
-                width="640"
-                height="360"
+                // width="640"
+                // height="360"
                 src={embedUrl}
                 title="Trailer do jogo"
                 allowFullScreen
