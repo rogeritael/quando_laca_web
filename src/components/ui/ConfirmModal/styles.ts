@@ -127,4 +127,30 @@ export const ModalContainer = styled.div<ConfirmModalProps>`
         height: 100vh;
         animation: ${fade} 200ms;
     }
+
+    @media(max-width: 924px){
+        .modal {
+            flex-direction: column;
+            height: fit-content;
+        }
+    }
+
+    @media(max-width: 600px){
+        .modal {
+            padding: 24px;
+            .text_container {
+                text-align: center;
+                h2 {
+                    font-size: 18px;
+                }
+            }
+
+            .buttons_container {
+                button {
+                    /* font-size: 12px; */
+                    padding: 12px 38px;
+                }
+            }
+        }
+    }
 `;
