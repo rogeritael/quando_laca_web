@@ -15,7 +15,6 @@ export const SideMenuContainer = styled.aside`
     width: 80px;
     grid-area: side;
     position: fixed;
-    /* top: 0; */
     left: 0;
     
     a {

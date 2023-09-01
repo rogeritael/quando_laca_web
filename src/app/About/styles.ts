@@ -47,6 +47,8 @@ export const PageContainer = styled.section`
         "side main";
     position: relative;
 
+    overflow: hidden;
+
     .game_section {
         grid-area: main;
         position: relative;
