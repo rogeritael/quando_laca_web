@@ -55,12 +55,12 @@ export function NotificationsModal(props : NotificationsModalProps){
                 </div>
                 <div className="notifications_box">
                 
-                    {userNotifications.map((notifications) => (
+                    {userNotifications.reverse().map((notifications, index) => (
                         <>
+                        <Notification  image={notifications.image} title={notifications.title} description={notifications.description} isRead={notifications.isRead} /> 
                         <span className="date">
                             {formatDate(new Date(notifications.created_at))}
                         </span>
-                        <Notification  image={notifications.image} title={notifications.title} description={notifications.description} isRead={notifications.isRead} /> 
                         </> 
                     ))}
 

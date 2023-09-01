@@ -98,7 +98,7 @@ export const NotificationsContainer = styled.div`
 
         .notifications_box {
             display: flex;
-            flex-direction: column;
+            flex-direction: column-reverse;
 
             .date {
                 padding-bottom: 24px;
