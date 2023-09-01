@@ -30,7 +30,7 @@ body {
 ::-moz-selection { background: #fff; color: var(--bg); }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -40,5 +40,13 @@ body {
 ::-webkit-scrollbar-thumb {
   /* background-color: var(--bg-secondary); */
   background-color: #fff;
+  /* background-color: transparent; */
   border-radius: 20px;
+}
+
+@media (max-width: 800px){
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  
 }
