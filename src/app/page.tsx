@@ -84,13 +84,14 @@ export default function Home() {
               <Game key={game.id} id={game.id} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
             ))}
           </GameList>
-
+          
           <GameList title='Recém Lançados' url="/Search?term=recem_lancados">
             {justReleasedGames.map((game) => (
               <Game key={game.id} id={game.id} name={game.name} image={game.image} isPopular={false} platforms={game.platforms} />
             ))}
           </GameList>
 
+          <span className="phantom_space" />
         </div>
         
         <div className="library">

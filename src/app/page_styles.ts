@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const PageContainer = styled.section`
 
-    .main_content {
+.main_content {
         height: 100vh;
         display: grid;
         grid-template-columns: 80px 1fr 1fr 300px;
@@ -45,6 +45,7 @@ export const PageContainer = styled.section`
             .featured {
                 margin-top: 50px;
                 display: flex;
+                padding-right: 20px;
             }
         }
     }
@@ -73,7 +74,6 @@ export const PageContainer = styled.section`
                 
                 .popular_box {
                     margin-top: 40px;
-
                 }
                 
             }
@@ -82,12 +82,23 @@ export const PageContainer = styled.section`
 
     @media (max-width: 800px){
 
+        
+
         .header {
             display: none;
         }
 
         .main_content {
             grid-template-columns:1fr;
+
+            .main {
+                .phantom_space {
+                    margin-top: 20px;
+                    width: 100%;
+                    height: 40px;
+                    display: inline-block;
+                }
+            }
             
             .library {
                 display: none;

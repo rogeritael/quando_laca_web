@@ -81,6 +81,6 @@ export const SliderContainer = styled.div<SliderProps>`
     }
 
     @media (max-width: 800px){
-        max-width: calc(100vw - 20px);
+        max-width: calc(100vw);
     }
 `;

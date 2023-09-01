@@ -11,6 +11,12 @@ export const SideMenuContainer = styled.aside`
     gap: 20px;
     z-index: 1;
     background-color: var(--bg);
+
+    width: 80px;
+    grid-area: side;
+    position: fixed;
+    /* top: 0; */
+    left: 0;
     
     a {
         padding: 12px;
