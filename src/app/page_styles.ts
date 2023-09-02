@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const PageContainer = styled.section`
-
+        width: 100vw;
+    border: 1px solid red;
 .main_content {
         height: 100vh;
         display: grid;
@@ -9,14 +10,6 @@ export const PageContainer = styled.section`
         grid-template-rows: 90px 1fr;
         grid-template-areas:
         "side main main library";
-
-        /* aside {
-            width: 80px;
-            grid-area: side;
-            position: fixed;
-            top: 0;
-            left: 0;
-        } */
 
         .library {
             grid-area: library;
@@ -82,14 +75,12 @@ export const PageContainer = styled.section`
 
     @media (max-width: 800px){
 
-        
-
         .header {
             display: none;
         }
 
         .main_content {
-            grid-template-columns:1fr;
+            grid-template-columns: 1fr;
 
             .main {
                 .phantom_space {

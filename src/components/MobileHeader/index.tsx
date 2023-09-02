@@ -11,7 +11,7 @@ interface MobileHeaderProps {
 export function MobileHeader(props : MobileHeaderProps){
 
     return(
-        <MobileHeaderContainer>
+        <MobileHeaderContainer className="header_mobile">
             <Logo />
             <Image className="search" src={search} alt="icone de pesquisa de jogos" />
             <Bell />
