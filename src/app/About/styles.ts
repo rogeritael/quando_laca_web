@@ -54,6 +54,18 @@ export const PageContainer = styled.section`
         position: relative;
     }
 
+    .back_page {
+        display: none;
+        color: var(--highlight);
+        margin-bottom: 14px;
+        align-items: center;
+
+        img {
+            transform: rotate(180deg);
+            margin-right: 8px;
+        }
+    }
+
     //=====================================
     .background_image {
         width: 100%;
@@ -238,7 +250,9 @@ export const PageContainer = styled.section`
         height: 100%;
         /* "side"; */
 
-        
+        .back_page {
+            display: flex;
+        }
 
         .side {
             display: none;

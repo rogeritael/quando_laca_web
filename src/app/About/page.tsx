@@ -13,6 +13,7 @@ import { isGameAlreadyAdded } from './../../utils/isGameFavorited';
 import { Carousel } from "@/components/ui/Carousel";
 import player from '@/assets/icons/player.svg'
 import { useFlashMessage } from "@/hooks/useFlashMessage";
+import backImage from '@/assets/icons/arrow_v2.svg'
 
 interface AboutProps {
 
@@ -97,7 +98,15 @@ export default function About(props : AboutProps){
                 </figure>
 
                 <div className="game_infos">
+                    
+                    
+                    <Link href={"/"} className="back_page">
+                        <Image alt="coltar para a tela inicial" src={backImage} />
+                        <p>Voltar</p>
+                    </Link>
+                    
                     <h1 className="title">{selectedGame.name}</h1>
+                    
                     <div className="info_list">
                         <p>{selectedGame.developer}</p>
                         <p className="categories">
