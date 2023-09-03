@@ -70,6 +70,16 @@ export const NotificationsContainer = styled.div`
             .title {
                 font-size: 14px;
                 font-weight: normal;
+
+                .back_icon {
+                    margin-right: 8px;
+
+                    img {
+                        transform: rotate(180deg);
+                        position: relative;
+                        top: 3px;
+                    }
+                }
             }
 
             .new_notifications {

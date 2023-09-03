@@ -59,6 +59,7 @@ export const PageContainer = styled.section`
         color: var(--highlight);
         margin-bottom: 14px;
         align-items: center;
+        animation: ${entry} 300ms;
 
         img {
             transform: rotate(180deg);
