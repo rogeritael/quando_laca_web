@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const PageContainer = styled.section`
-        width: 100vw;
-    border: 1px solid red;
-.main_content {
-        height: 100vh;
+    height: 100vh;
+    /* padding: 20px; */
+
+    .main_content {
+        min-height: 100vh;
         display: grid;
         grid-template-columns: 80px 1fr 1fr 300px;
         grid-template-rows: 90px 1fr;
@@ -20,6 +21,7 @@ export const PageContainer = styled.section`
             position: fixed;
             top: 0;
             right: 16px;
+            width: 280px;
 
             .logo_container {
                 margin-left: auto;
