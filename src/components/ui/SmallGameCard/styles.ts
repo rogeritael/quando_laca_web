@@ -24,7 +24,6 @@ export const CardContainer = styled.article<CardContainerProps>`
     max-width: ${(props) => props.v2 ? '100%' : ' 270px' };
     border-radius: 12px;
     transition: 300ms;
-    cursor: pointer;
     animation: ${entry} 1000ms ease-in-out;
 
     figure {
