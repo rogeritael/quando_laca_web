@@ -15,7 +15,7 @@ export function MobileHeader(props : MobileHeaderProps){
     const [searchTerm, setSearchTerm] = useState('')
 
     const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
-        if (event.key === "Enter") {
+        if (event.key === "Enter" || event.keyCode === 13) {
             window.location.href = `/Search?term=${searchTerm}`;
         }
     };
@@ -37,7 +37,7 @@ export function MobileHeader(props : MobileHeaderProps){
                             alt="search icon"
                             onClick={() => handleSearch()}
                         />
-                        <input type="text" placeholder="encontre um jogo.." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+                        <input type="text" placeholder="encontre um jogo.." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}  onKeyDown={(e) => handleKeyPress(e)} />
                         <span className="search_bg" onClick={() => setIsInputVisible(false)} />
                     </div>
                 )
