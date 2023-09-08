@@ -3,7 +3,7 @@ import { LibraryContainer } from "./styles";
 import { Context } from "@/context/UserContext";
 import Image from "next/image";
 import Link from "next/link";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import arrow from '@/assets/icons/arrow_v2.svg'
 import { SideMenu } from "@/components/SideMenu";
 import { Header } from "@/components/Header";
@@ -20,12 +20,21 @@ interface LibraryProps {
 
 }
 export default function Library(props : LibraryProps){
-    const { gameList, removeFromList, setGameIdToRemoveFromList, setIsConfirmModalVisible } = useContext(Context);
+    const { gameList, removeFromList, setGameIdToRemoveFromList, setIsConfirmModalVisible, generateNotifications, findAllNotifications} = useContext(Context);
 
     function handleRemoveFromList(id: string){
         setGameIdToRemoveFromList(id);
         setIsConfirmModalVisible(true)
     }
+
+    useEffect(() => {
+        const fetchData = async() => {
+            //notifications
+            await generateNotifications();
+            await findAllNotifications();
+        }
+        fetchData()
+    }, [])
 
     return(
         <LibraryContainer>

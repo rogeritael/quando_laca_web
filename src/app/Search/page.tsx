@@ -31,7 +31,7 @@ interface AboutProps {
 export default function Search(props : AboutProps){
     const [searchResults, setSearchResults] = useState<GameProps[]>([])
     const [trailerResults, setTrailerResults] = useState<TrailerProps[]>([])
-    const { searchTerm, setSearchTerm } = useContext(Context);
+    const { searchTerm, setSearchTerm, findAllNotifications, generateNotifications } = useContext(Context);
     const { findJustReleased, findPopularGames } = gamesService()
     const [isLoading, setIsLoading] = useState(true)
     
@@ -69,6 +69,10 @@ export default function Search(props : AboutProps){
                     setSearchResults(results)
                 }
             }
+
+            //notifications
+            await generateNotifications();
+            await findAllNotifications();
         }
         
         fetchData()
