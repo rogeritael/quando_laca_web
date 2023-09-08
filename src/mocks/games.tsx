@@ -24,7 +24,7 @@ export interface GameProps {
     id: string
 }
 
-const category: Category[] = [
+export const category: Category[] = [
     {
         id: '0',
         name: 'terror'

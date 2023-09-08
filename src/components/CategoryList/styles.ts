@@ -66,10 +66,12 @@ export const CategoryListContainer = styled.div`
         right: 0px;
     }
 
-    @media (max-width: 800px){
-        max-width: 100vw;
+    @media(max-width: 1200px){
         width: 100%;
+        max-width: 100vw;
+    }
 
+    @media (max-width: 800px){
         .slider .rail {
             gap: 8px;
         }

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const GameComponent = styled.article`
     max-width: 190px;
     color: #fff;
-    
+
     figure {
         width: 190px;
         height: 280px;
@@ -12,6 +12,7 @@ export const GameComponent = styled.article`
         margin-bottom: 14px;
         position: relative;
         transition: 500ms;
+        pointer-events: none;
 
         img {
             object-fit: cover;

@@ -3,8 +3,7 @@ import styled from "styled-components";
 export const CategoryComponent = styled.button`
     padding: 8px 20px;
     font-size: 0.625;
-    color: #fff;
-    border: 1px solid #fff;
+    color: var(--highlight);
     background-color: transparent;
     border-radius: 16px;
     height: fit-content;
@@ -13,7 +12,7 @@ export const CategoryComponent = styled.button`
     transition: 200ms;
     
     &:hover {
-        background-color: var(--highlight);
+        background-color: #ffffff10;
     }
 
     @media (max-width: 800px){
