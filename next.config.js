@@ -5,7 +5,7 @@ const nextConfig = {
         styledComponents: true
     },
     images: {
-        domains: ['images.igdb.com', 'youtu.be', 'i.ytimg.com'],
+        domains: ['images.igdb.com', 'youtu.be', 'i.ytimg.com', 'assetsio.reedpopcdn.com', 'cdn.akamai.steamstatic.com', 'gmedia.playstation.com', 'img.youtube.com', 'store-images.s-microsoft.com', 'image.api.playstation.com'],
     },
     
 }

@@ -1,9 +1,9 @@
 import { GameProps, category } from "../games"
 
-export const game: GameProps = {
+export const SuperMarioBrosWonder: GameProps = {
 
-    id: "",
-    name: "",
+    id: "super_mario_bros_wonder",
+    name: "Super Mario Bros. Wonder",
     description: ``,
     image: "",
     price: 100,

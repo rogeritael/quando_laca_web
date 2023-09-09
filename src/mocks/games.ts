@@ -1,5 +1,14 @@
 const trailerCover = 'https://i.ytimg.com/vi/Hyh6UqP1YPM/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGhACGAYgATgB&rs=AOn4CLCIXUOMnZXQJ_Q19t6h0uKoAF6aig'
 
+import { AlanWake2 } from './games/AlanWake2';
+import { AssassinsCreedMirage } from './games/AssassinsCreedMirage';
+import { BombRushCyberfunk } from './games/BombRushCyberfunk'
+
+import { LiesOfP } from './games/LiesOfP';
+import { LordsOfTheFallen } from './games/LordsOfTheFallen';
+import { MortalKombat1 } from './games/MortalKombat1';
+import { SpiderMan2 } from './games/SpiderMan2'
+
 interface Category {
     id: string;
     name: string;
@@ -40,6 +49,13 @@ export const category: Category[] = [
 ];
 
 export const gameList: GameProps[] = [
+    BombRushCyberfunk,
+    LiesOfP,
+    SpiderMan2,
+    AlanWake2,
+    AssassinsCreedMirage,
+    LordsOfTheFallen,
+    MortalKombat1,
     {
         id: "2#rCpbW!5Ap7",
         name: "Quake II",
@@ -353,32 +369,6 @@ export const gameList: GameProps[] = [
             { type: 'image', image: 'https://images.igdb.com/igdb/image/upload/t_original/scmlid.jpg', },
             { type: 'image', image: 'https://images.igdb.com/igdb/image/upload/t_original/ar2bhx.jpg',},
             { type: 'image', image: 'https://images.igdb.com/igdb/image/upload/t_original/ar2bhv.jpg'},
-        ],
-    },
-    {
-        id: "$s26seOcN75C",
-        name: "Lies of P",
-        image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6lxr.png",
-        releaseDate: new Date(2023, 9-1, 19),
-        developer: "Round8 Studio",
-        category: [
-            {id: category[0].id, name: category[0].name}, //Role-playing (RPG)
-        ],
-        platforms: ['Xbox One', 'PlayStation 4', 'PlayStation 5', 'PC (Microsoft Windows)', 'Xbox Series X|S'],
-        description: "Inspired by the familiar story of Pinocchio, Lies of P is an action souls-like game set in a dark Belle Époque world. Guide Pinocchio on his unrelenting journey to become human.",
-        price: 100,
-        media: [
-            { type: 'video', image: trailerCover, link: 'https://youtu.be/qKceAv6N8iE', },
-            { type: 'video', image: trailerCover, link: 'https://youtu.be/qKceAv6N8iE', },
-            { type: 'video', image: trailerCover, link: 'https://youtu.be/BID72hSKasc', },
-            { type: 'video', image: trailerCover, link: 'https://youtu.be/PKP18vFW83A', },
-            { type: 'video', image: trailerCover, link: 'https://youtu.be/7mru_M370uU', },
-            { type: 'video', image: trailerCover, link: 'https://youtu.be/6yDx7Px6yMU',},
-            { type: 'video', image: trailerCover, link: 'https://youtu.be/cK1zg_yGlOA',},
-            { type: 'image', image: 'https://images.igdb.com/igdb/image/upload/t_original/sc9oaa.jpg', },
-            { type: 'image', image: 'https://images.igdb.com/igdb/image/upload/t_original/sc9oa8.jpg',},
-            { type: 'image', image: 'https://images.igdb.com/igdb/image/upload/t_original/sc9oa9.jpg',},
-            { type: 'image', image: 'https://images.igdb.com/igdb/image/upload/t_original/sc9oab.jpg'},
         ],
     },
     {

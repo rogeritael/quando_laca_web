@@ -1,10 +1,10 @@
 import { GameProps, category } from "../games"
 
-export const game: GameProps = {
+export const FaeFarm: GameProps = {
 
-    id: "",
-    name: "",
-    description: ``,
+    id: "fae_farm",
+    name: "Fae Farm",
+    description: `Fuja para uma vida cheia de magia em Fae Farm, um RPG de simulador de fazenda para 1 a 4 jogadores. Crie, cultive e decore para expandir sua fazenda compartilhada e use feitiços para explorar a ilha encantada de Azoria!`,
     image: "",
     price: 100,
     media: [
