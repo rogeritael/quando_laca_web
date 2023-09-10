@@ -14,6 +14,8 @@ import { Carousel } from "@/components/ui/Carousel";
 import player from '@/assets/icons/player.svg'
 import { useFlashMessage } from "@/hooks/useFlashMessage";
 import backImage from '@/assets/icons/arrow_v2.svg'
+import { TrailerModal } from "@/components/ui/TrailerModal";
+import { ImageModal } from "@/components/ImageModal";
 
 interface AboutProps {
 
@@ -35,6 +37,10 @@ export default function About(props : AboutProps){
     const [isLoading, setIsLoading] = useState(true)
     const { setFlashMessage } = useFlashMessage();
     const { createNotification } = useContext(Context)
+
+    const [isTrailerModalOpen, setIstrailerModalOpen] = useState(false);
+    const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+    const [mediaUrl, setMediaUrl] = useState('');
 
     
 
@@ -79,17 +85,33 @@ export default function About(props : AboutProps){
 
     }
 
+    //excluir quando terminar de refatorar o código
     function handleOpenModal(index: number, media: MediaProps){
         setInitialIndex(index)
         setMediaType(media.type)
         setIsGaleryModalOpen(true)
     }
 
+    function handleOpenGallery(media: MediaProps){
+
+        if(media.type === 'video'){
+            media.link &&
+            setMediaUrl(media.link)
+            setIstrailerModalOpen(true)
+        } else if(media.type === 'image'){
+            // media.link &&
+            setMediaUrl(media.image)
+            setIsImageModalOpen(true)
+        }
+    }
+
     return(
         selectedGame && !isLoading && (
         <PageContainer>
-
+            <TrailerModal isOpen={isTrailerModalOpen} videoUrl={mediaUrl} setIsOpen={setIstrailerModalOpen} />
+            <ImageModal isOpen={isImageModalOpen} image={mediaUrl} setIsOpen={setIsImageModalOpen} />
             <GaleryModal mediaType={mediaType} initialIndex={initialIndex} media={selectedGame.media} isGaleryModalOpen={isGaleryModalOpen} setIsGaleryModalOpen={setIsGaleryModalOpen}/>
+            
             <SideMenu />
             <div className="game_section">
                 <figure className="background_image">
@@ -135,11 +157,11 @@ export default function About(props : AboutProps){
                             
                             <figure key={index}>
                                 {media.type === 'image' ? (
-                                    <Image onClick={() => handleOpenModal(index, media)} width={270} height={150} src={media.image} alt="imagem da galeria do jogo"/>
+                                    <Image onClick={() => handleOpenGallery(media)} width={270} height={150} src={media.image} alt="imagem da galeria do jogo" />
                                 ):(
                                     media.link && (
                                     <>
-                                        <Image onClick={() => handleOpenModal(index, media)} width={270} height={150} src={media.image} alt="imagem da galeria do jogo"/>
+                                        <Image onClick={() => handleOpenGallery(media)} width={270} height={150} src={media.image} alt="imagem da galeria do jogo"/>
                                         <Image className="player" src={player} alt="icone de player"/>
                                     </>
                                     )
