@@ -28,7 +28,7 @@ export const ModalContainer = styled.section<ModalProps>`
     inset: 0;
     display: ${props => props.isOpen ? 'grid' : 'none'};
     place-items: center;
-    z-index: 1;
+    z-index: 3;
     animation: ${fade} 200ms;
 
     .background {
@@ -41,13 +41,16 @@ export const ModalContainer = styled.section<ModalProps>`
     }
 
     iframe {
-        z-index: 2;
+        z-index: 3;
+        max-width: 60vw;
+        width: 100%;
+        aspect-ratio: 16/9;
     }
 
     @media(max-width: 768px){
         iframe {
+            max-width: 100vw;
             width: 100%;
-            aspect-ratio: 16/9;
         }
     }
 `
