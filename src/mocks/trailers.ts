@@ -6,7 +6,7 @@ import { Warhammer } from "./trailers/Warhammer";
 import { ZenlessZoneZero } from "./trailers/ZenlessZoneZero";
 
 export interface TrailerProps {
-    cover: string;
+    cover?: string;
     video_url: string;
     game_id: string;
 }
