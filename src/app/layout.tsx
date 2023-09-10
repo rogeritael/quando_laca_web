@@ -19,8 +19,6 @@ import { useNotifications } from '@/hooks/useNotifications'
 //   description: 'Fique por dentro de novos lançamentos de jogos, adicione-os a sua lista de espera e seja notificado quando o jogo for lançado',
 // }
 
-
-
 export default function RootLayout({
   children,
 }: {
