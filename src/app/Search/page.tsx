@@ -104,7 +104,7 @@ export default function Search(props : AboutProps){
                     { trailerResults.length > 0 && 
                         <Carousel maxWidth="100%" title="" >
                             {trailerResults.map((result, index) => (
-                                <Trailer animationDelay={0} videoUrl={result.video_url} setIsModalOpen={setIstrailerModalOpen} setTrailerUrl={setTrailerUrl} cover={result.cover} key={index}/>
+                                <Trailer animationDelay={0} videoUrl={result.video_url} setIsModalOpen={setIstrailerModalOpen} setTrailerUrl={setTrailerUrl} key={index}/>
                             ))}
                         </Carousel>
                     }
