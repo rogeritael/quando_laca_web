@@ -1,0 +1,29 @@
+function getInfos(){
+    var id = document.querySelector('.banner-title').innerText.replace('Edit', '').replace(':','').toLowerCase().replaceAll(' ','_')
+    var title = document.querySelector('.banner-title').innerText.replace('Edit', '')
+    var developer = document.querySelector('.banner-subsubheading').innerText
+    var platformsArray = document.querySelectorAll('.gamepage-tabs div')[5].querySelectorAll('p')[1].querySelectorAll('a')
+    var platforms = []
+    var image = document.querySelector('.gamepage-cover img').src
+    var price= 100
+
+    var category = []
+    var releaseDate = ''
+
+    //description - media
+
+    for(i=0; i < platformsArray.length;i++){
+        platforms.push(platformsArray[i].innerText)
+    }
+    
+    var infos = {
+        id: id,
+        title: title,
+        imagem: image,
+        price: price,
+        developer: developer,
+        platforms: platforms
+    }
+    console.log(infos)
+}
+getInfos()

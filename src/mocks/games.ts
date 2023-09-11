@@ -2,12 +2,19 @@ const trailerCover = 'https://i.ytimg.com/vi/Hyh6UqP1YPM/hqdefault.jpg?sqp=-oaym
 
 import { AlanWake2 } from './games/AlanWake2';
 import { AssassinsCreedMirage } from './games/AssassinsCreedMirage';
+import { BaldursGate3 } from './games/BaldursGate3';
 import { BombRushCyberfunk } from './games/BombRushCyberfunk'
+import { GoodbyeVolcanoHigh } from './games/GoodbyeVolcanoHigh';
 
 import { LiesOfP } from './games/LiesOfP';
 import { LordsOfTheFallen } from './games/LordsOfTheFallen';
+import { MetalHellsinger } from './games/MetalHellsinger';
 import { MortalKombat1 } from './games/MortalKombat1';
 import { SpiderMan2 } from './games/SpiderMan2'
+import { Starfield } from './games/Starfield';
+// import { SuicideSquadKillTheJusticeLeague } from './games/SuicideSquadKilltheJusticeLeague';
+import { Tekken8 } from './games/Tekken8';
+import { TrainSimWorld3 } from './games/TrainSimWorld3';
 
 interface Category {
     id: string;
@@ -56,6 +63,442 @@ export const gameList: GameProps[] = [
     AssassinsCreedMirage,
     LordsOfTheFallen,
     MortalKombat1,
+    GoodbyeVolcanoHigh,
+    Tekken8,
+    TrainSimWorld3,
+    BaldursGate3,
+    MetalHellsinger,
+    Starfield,
+    // SuicideSquadKillTheJusticeLeague,
+    {
+        id: "Persona5Tactica",
+        name: "Persona 5 Tactica",
+        description: `Persona 5 Tactica é um jogo de estratégia em turnos que conta com uma história inédita, a volta de personagens populares e novos aliados e inimigos. 
+
+        Após um estranho incidente, os Ladrões-Fantasma se veem em um reino bizarro onde os habitantes vivem sob opressão tirânica. Cercados por um grupo militar chamado Legionários, eles se encontram em grave perigo até que Erina, uma misteriosa revolucionária, resgata-os e oferece um acordo tentador em troca de ajuda. 
+        
+        Qual é a verdade por trás de Erina e sua proposta para os Ladrões-Fantasma? Junte-se ao grupo e lidere uma revolução de emoções nesta aventura de combate empolgante.`,
+        image: "https://store-images.s-microsoft.com/image/apps.21771.14461424539776518.be5fa828-401b-4f0c-ac86-920d7dcbfada.66d054ea-84d9-40f2-bffb-49eb5cb272c9?q=90&w=177&h=265",
+        price: 100,
+        media: [
+            {type: 'video', image: '', link: 'https://youtu.be/NBFyld5Ouc8'},
+            {type: 'image', image: 'https://gmedia.playstation.com/is/image/SIEPDC/persona-5-tactica-screenshot-02-en-09aug23?$1600px$'},
+            {type: 'image', image: 'https://gmedia.playstation.com/is/image/SIEPDC/persona-5-tactica-screenshot-05-en-09aug23?$1600px$'},
+            {type: 'image', image: 'https://gmedia.playstation.com/is/image/SIEPDC/persona-5-tactica-screenshot-03-en-09aug23?$1600px$'},
+            {type: 'image', image: 'https://gmedia.playstation.com/is/image/SIEPDC/persona-5-tactica-screenshot-10-en-09aug23?$1600px$'},
+            {type: 'image', image: 'https://gmedia.playstation.com/is/image/SIEPDC/persona-5-tactica-screenshot-08-en-09aug23?$1600px$'},
+            {type: 'image', image: 'https://gmedia.playstation.com/is/image/SIEPDC/persona-5-tactica-screenshot-09-en-09aug23?$1600px$'},
+        ],
+        developer: "ATLUS",
+        platforms: ['PS5', 'Xbox Series X/S', 'PC'],
+        releaseDate: new Date(2023, 11-1, 17),
+        category: [
+            {id: '0', name: 'Estratégia'},
+            {id: '1', name: 'RPG'},
+        ],
+    },
+    {
+        id: "CallofDutyModernWarfare3",
+        name: "Call of Duty: Modern Warfare 3",
+        description: `Call of Duty volta com uma campanha inédita, uma versão modernizada dos mapas de multijogador clássicos e uma experiência JxA com zumbis em mundo aberto.
+
+        A campanha, continuação direta do fenômeno Call of Duty: Modern Warfare II, segue o embate do capitão Price e da Força Tarefa 141 contra o criminoso de guerra ultranacionalista Vladimir Makarov, que busca estender sua influência pelo mundo. 
+        
+        No multijogador, os 16 mapas que foram lançados com Modern Warfare 2 em 2009 voltam com gráficos atualizados, novos modos e recursos de jogo inovadores.
+        
+        Em Modern Warfare Zombies, alie-se a outros esquadrões pela primeira vez e trabalhe em conjunto para sobreviver ao maior mapa do modo Zombies já visto.
+        
+        `,
+        image: "https://store-images.s-microsoft.com/image/apps.22323.13966330883349940.8613419e-9360-4964-ad0f-24ef1b486f3e.85d64fa3-7f73-4a02-a821-3adf7708a6b2?q=90&w=177&h=265",
+        price: 100,
+        media: [
+            {type: 'video', image: '', link: 'https://youtu.be/R0_dLXH9Z4I'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.38493.13966330883349940.d6f7894b-fa5c-4b05-8b45-7eec0beb64f1.b6bab6ba-4612-42ab-bb56-03b6f1bf5359'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.43274.13966330883349940.d6f7894b-fa5c-4b05-8b45-7eec0beb64f1.b1ad7540-e92a-4325-9e4a-51f233d8dd6e'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.20832.13966330883349940.d6f7894b-fa5c-4b05-8b45-7eec0beb64f1.ce79ee32-92b0-49ed-bed8-7ebee941c28f'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.40309.13966330883349940.d6f7894b-fa5c-4b05-8b45-7eec0beb64f1.5090e43d-346e-4ea5-9d16-be68b4ca2371'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.8624.13966330883349940.d6f7894b-fa5c-4b05-8b45-7eec0beb64f1.3f67966c-8dfd-45e5-a6fb-19cbf0b95db0'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.324.13966330883349940.d6f7894b-fa5c-4b05-8b45-7eec0beb64f1.9781fd3a-850c-4985-841d-7f656c15ed41'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.39381.13966330883349940.d6f7894b-fa5c-4b05-8b45-7eec0beb64f1.40b3eeee-980c-4107-890d-3b5b8d76f871'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.51498.13966330883349940.d6f7894b-fa5c-4b05-8b45-7eec0beb64f1.c90f9d57-405b-481a-878a-13f79d7e2d86'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.25324.13966330883349940.d6f7894b-fa5c-4b05-8b45-7eec0beb64f1.1132c612-c40f-4055-b769-8e49caf81e0b'},
+        ],
+        developer: "Activision",
+        platforms: ['PS4', 'PS5', 'Xbox One', 'Xbox Series X/S', 'PC'],
+        releaseDate: new Date(2023, 11-1, 2),
+        category: [
+            {id: '0', name: 'Ação'},
+            {id: '1', name: 'Tiro'},
+        ],
+    },
+    {
+        id: "banishers",
+        name: "Banishers: Ghosts of New Eden",
+        description: `New Eden, 1695. Antea Duarte e Red Mac Raith são amantes e Banishers, caçadores de fantasmas que juraram proteger os vivos da ameaça de fantasmas e espectros que se recusam a partir. No seguimento de uma última missão desastrosa, Antea é ferida fatalmente, tornando-se um dos espíritos que abomina. Nas zonas selvagens e assombradas da América do Norte, o casal procura desesperadamente por uma forma de libertar Antea da sua nova condição.
+
+        Mergulha na bela e poderosa história íntima entre dois amantes predestinados. Enquanto Banisher, entra nas vidas das comunidades de New Eden e resolve casos assombrosos num mundo místico e repleto de tradições, assolado por criaturas sobrenaturais e segredos antigos. Usa a tua inteligência ou combina os poderes espirituais de Antea com o arsenal de Red para derrotar e banir as almas que atormentam os vivos.
+        
+        Vais enfrentar decisões desafiantes que irão definir o teu caminho, impactando drasticamente a tua história e o destino dos habitantes de New Eden — quer das pessoas vivas ou das almas penadas. Até que ponto vais comprometer o teu juramento de caçar fantasmas pelo bem da tua amante, que se tornou um desses espíritos?`,
+        image: "https://store-images.s-microsoft.com/image/apps.37841.13873423350094695.ab54d22d-759b-4894-897d-66ec21b5c47a.4e00a9b6-e78b-4186-b94e-2ead1104cf05?q=90&w=177&h=265",
+        price: 100,
+        media: [
+            {type: 'video', image: '', link: ''},
+            {type: 'video', image: '', link: ''},
+            {type: 'image', image: ''},
+            {type: 'image', image: ''},
+            {type: 'image', image: ''},
+            {type: 'image', image: ''}
+        ],
+        developer: "Focus",
+        platforms: ['PS5', 'Xbox Series X/S', ''],
+        releaseDate: new Date(2023, 11-1, 7),
+        category: [
+            {id: '', name: 'Ação'},
+            {id: '', name: 'Aventura'},
+        ],
+    },
+    {
+        id: "StarOceanTheSecondStoryR",
+        name: "Star Ocean The Second Story R",
+        description: `O celebrado JRPG exclusivo do PlayStation, Star Ocean: The Second Story, celebra seu 25o aniversário com uma revisão completa e impressionante em 2.5D, fundindo os personagens em pixels 2D com ambientes 3D, como o muito elogiado Octopath Traveler II, da Square Enix.
+
+        Jogue como Claude C. Kenni, um jovem oficial da Federação transportado para um planeta místico durante uma missão de reconhecimento de rotina. Lá, ele encontra uma jovem que acredita que Claude é o herói anunciado em uma antiga profecia.
+        
+        Além da notável reformulação visual, Star Ocean The Second Story R conta com novas mecânicas de batalha, dublagem completa em inglês e japonês, a escolha da música original ou os novos arranjos do compositor Motoi Sakuraba e recursos que melhoram a experiência do jogador, como viagem rápida e três modos de dificuldade. Esta é a versão definitiva do clássico atemporal que vai agradar fãs antigos e dar as boas-vindas a novos jogadores.`,
+        image: "https://image.api.playstation.com/vulcan/ap/rnd/202305/2912/58e2ce3f6f0b5c8f8894101737ab8a68cf3cc2cbae68603d.jpg",
+        price: 100,
+        media: [
+            {type: 'video', image: '', link: 'https://youtu.be/T9j7mP9Nr9g'},
+            {type: 'image', image: 'https://gmedia.playstation.com/is/image/SIEPDC/star-ocean-the-second-story-r-screen-01-en-03jul23?$1600px$'},
+            {type: 'image', image: 'https://gmedia.playstation.com/is/image/SIEPDC/star-ocean-the-second-story-r-screen-04-en-03jul23?$1600px$'},
+            {type: 'image', image: 'https://gmedia.playstation.com/is/image/SIEPDC/star-ocean-the-second-story-r-screen-03-en-03jul23?$1600px$'},
+            {type: 'image', image: 'https://gmedia.playstation.com/is/image/SIEPDC/star-ocean-the-second-story-r-screen-02-en-03jul23?$1600px$'},
+        ],
+        developer: "Square Enix",
+        platforms: ['PS4', 'PS5', 'PC'],
+        releaseDate: new Date(2023, 11-1, 2),
+        category: [
+            {id: '', name: 'RPG'},
+        ],
+    },
+    {
+        id: "ghostrunner_2",
+        name: "Ghostrunner 2",
+        description: `Ghostrunner 2 é uma experiência de ação intensa e imersiva que aprimora a ação acelerada de Ghostrunner. Você terá que cortar seu caminho através dos inimigos enquanto tenta não sofrer dano para alcançar o seu objetivo. 
+
+        Em um futuro cyberpunk pós-apocalítico, um culto a uma violenta IA se formou dentro da Torre Dharma — o último refúgio da humanidade — após a queda do tirano anterior, o Mestre das Chaves.
+        
+        Ghostrunner 2 conta com mecânicas de morte com um golpe, uma exploração mais aprofundada do mundo além da Torre Dharma por meio de novas opções de diálogo, diversas melhorias no combate, fases não lineares com seções de motocicleta complexas e modos novos e empolgantes. 
+        
+        Ghostrunner 2 apresenta novas técnicas que permitem que você use mais a criatividade e enfrente até os encontros mais desafiadores de forma mais acessível. Porém, dependendo das técnicas usadas, os inimigos se comportarão de forma única e oferecerão um desafio novo a cada encontro.`,
+        image: "https://store-images.s-microsoft.com/image/apps.60209.14393359190152767.28742aed-5c22-46cd-a3b0-df9ec8938514.ad5e5dfc-2368-43b5-996c-240556a0a387?q=90&w=177&h=265",
+        price: 100,
+        media: [
+            {type: 'video', image: '', link: 'https://youtu.be/RL6tLbeMt2A'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.36236.13701301247073711.b2f8c64e-4c35-40a4-b811-df26dae24665.4e86caa5-3367-4b46-8bee-eabe60adf089'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.5783.14393359190152767.ee7712ec-f6b2-40db-ae87-3655a098ffd3.659236f3-de3b-4744-9702-06c7c903353f'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.45029.14393359190152767.ee7712ec-f6b2-40db-ae87-3655a098ffd3.ca41ed20-4bc6-4641-9d70-bc42f5a862f5'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.44223.14393359190152767.ee7712ec-f6b2-40db-ae87-3655a098ffd3.ed2353c8-b6af-4b2a-9d3c-1c56af346ddf'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.56166.14393359190152767.ee7712ec-f6b2-40db-ae87-3655a098ffd3.20c99cd4-bc83-408a-a541-f80cd3ef5a1c'},
+            {type: 'image', image: 'https://gmedia.playstation.com/is/image/SIEPDC/ghostrunner-2-screen-01-en-19jun23?$1600px$'},
+        ],
+        developer: "One More Level",
+        platforms: ['PS5', 'Xbox Series X/S', 'PC'],
+        releaseDate: new Date(2023, 10-1, 26),
+        category: [
+            {id: '', name: 'Ação'},
+            {id: '', name: 'Aventura'},
+        ],
+    },
+    {
+        id: "MinekosNightMarket",
+        name: "Mineko's Night Market",
+        description: `Jogue como Mineko, uma menina curiosa que acaba de chegar em sua nova casa em uma ilha com dificuldades inspirada no Japão, na base do Monte Fugu. Os locais de superstição da ilha veneram o Gato Solar, Nikko. A cidade ficou confusa quando, o que sempre foi considerado um antigo mito, começou a aparecer entre os habitantes nos últimos dias.
+
+        Descubra os segredos por trás da cidade e recupere a antiga glória desse sofrido vilarejo. Enquanto isso, faça suas atividades diárias, conclua diversas tarefas, aventure-se em missões fantásticas e construa itens peculiares para se preparar para o Mercado Noturno semanal!`,
+        image: "https://store-images.s-microsoft.com/image/apps.49605.13513466192535313.8b8ee3c5-de55-451f-bb06-0d7638fa2ca9.e3091673-7481-4f50-adcc-8bf2d33f5334?q=90&w=177&h=265",
+        price: 100,
+        media: [
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.51552.13513466192535313.8b8ee3c5-de55-451f-bb06-0d7638fa2ca9.bcde13eb-5f21-4eeb-b732-64ff20521e2d'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.29987.13513466192535313.8b8ee3c5-de55-451f-bb06-0d7638fa2ca9.5e21548f-08af-43be-8a34-7263070ff25f'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.17449.13513466192535313.8b8ee3c5-de55-451f-bb06-0d7638fa2ca9.b56af46e-5782-4977-b687-d031e90c7035'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.58578.13513466192535313.8b8ee3c5-de55-451f-bb06-0d7638fa2ca9.dc48b17e-131a-440a-8f0b-14ab8ad5eb2d'}
+        ],
+        developer: "Humble Games",
+        platforms: ['PS4', 'PS5', 'Xbox Series X/S'],
+        releaseDate: new Date(2023, 8-1, 10),
+        category: [
+            {id: '', name: 'RPG'},
+        ],
+    },
+    {
+        id: "AloneInTheDark",
+        name: "Alone in the Dark",
+        description: `Alone in the Dark é uma releitura da  atmosfera de terror de sobrevivência do revolucionário jogo homônimo de 1992.
+
+        Nos Estados Unidos dos anos 1920, Emily Hartwood contrata o detetive particular Edward Carnby para ajudá-la a encontrar o tio desaparecido. A busca leva-os até a mansão Derceto, uma casa de repouso para deficientes mentais situada no sul gótico dos Estados Unidos e que guarda um segredo sombrio. 
+        
+        Explore Derceto jogando como Edward ou Emily e descubra horrores que desafiam qualquer explicação. Você terá que desbravar as sombras, resolver quebra-cabeças nos ambientes do jogo e sobreviver a encontros com criaturas de dar frio na espinha se quiser sobreviver a esse pesadelo.`,
+        image: "https://store-images.s-microsoft.com/image/apps.61825.13970220150326028.9032ac83-611c-4133-8638-8636d620d5a3.660134bb-4145-44db-ad0c-af5b1f1d1244?q=90&w=177&h=265",
+        price: 100,
+        media: [
+            {type: 'image', image: 'https://gmedia.playstation.com/is/image/SIEPDC/alone-in-the-dark-screenshot-05-en-19oct22?$1600px$'},
+            {type: 'image', image: 'https://gmedia.playstation.com/is/image/SIEPDC/alone-in-the-dark-screenshot-02-en-19oct22?$1600px$'},
+            {type: 'image', image: 'https://gmedia.playstation.com/is/image/SIEPDC/alone-in-the-dark-screenshot-04-en-19oct22?$1600px$'},
+            {type: 'image', image: 'https://gmedia.playstation.com/is/image/SIEPDC/alone-in-the-dark-screenshot-01-en-19oct22?$1600px$'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.55798.14107808045122428.a531c592-5fb6-4aee-8a14-f5696dae743e.f87fdd4d-a2e0-4861-8b75-045aff16750d'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.22778.14107808045122428.a531c592-5fb6-4aee-8a14-f5696dae743e.c4869d97-2464-4f64-89a3-57f959f439aa'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.6178.13970220150326028.45c23b35-f912-4ba0-a634-6dead3ebe1eb.d7ad5474-9ba4-436f-8108-8d3e1dec3ccc'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.13063.13970220150326028.45c23b35-f912-4ba0-a634-6dead3ebe1eb.39c7da34-8ce8-46c7-928b-694b2b80faf4'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.40783.13970220150326028.45c23b35-f912-4ba0-a634-6dead3ebe1eb.abfad428-05d5-4b79-87ea-c11e26c6df56'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.55343.13970220150326028.45c23b35-f912-4ba0-a634-6dead3ebe1eb.1124eedc-870c-43eb-80d9-6674ac6747f9'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.52099.13970220150326028.45c23b35-f912-4ba0-a634-6dead3ebe1eb.a87b4dfe-249d-4acd-b7ad-87d938439d8b'}
+        ],
+        developer: "THQ Nordic",
+        platforms: ['PS5', 'Xbox Series X/S', 'PC'],
+        releaseDate: new Date(2024, 1-1, 16),
+        category: [
+            {id: '', name: 'Terror'},
+        ],
+    },
+    {
+        id: "(anunciado)TheLordoftheRingsReturntoMoria",
+        name: "The Lord of the Rings: Return to Moria",
+        description: ``,
+        image: "",
+        price: 100,
+        media: [
+            {type: 'video', image: '', link: ''},
+            {type: 'video', image: '', link: ''},
+            {type: 'image', image: ''},
+            {type: 'image', image: ''},
+            {type: 'image', image: ''},
+            {type: 'image', image: ''}
+        ],
+        developer: "Open Door Entertainment",
+        platforms: ['', '', ''],
+        releaseDate: new Date(2023, 8-1, 10),
+        category: [
+            {id: '', name: 'Aventura'},
+        ],
+    },
+    {
+        id: "CitiesSkylinesII",
+        name: "Cities: Skylines II",
+        description: `Se pode sonhar, você pode construir.
+
+        Erga uma cidade do chão e a transforme em uma metrópole próspera que só você é capaz de imaginar. Você nunca construiu nessa escala. Com uma simulação profunda e uma economia viva, Cities: Skylines II é a construção de mundos sem limites.
+        
+        Comece pelas fundações da sua cidade. Crie estradas a infraestrutura e sistemas que possibilitarão a vida diária. Tudo depende de você.
+        
+        Você também decidirá como sua cidade crescerá, mas planeje estrategicamente. Cada decisão tem um impacto. Você conseguirá estimular as indústrias locais e, ao mesmo tempo, usar o comércio para fortalecer a economia? O que fará bairros residenciais florescerem sem eliminar o movimento do centro? Como você atenderá às necessidades e desejos dos cidadãos sem comprometer o orçamento da cidade?
+        
+        Sua cidade nunca descansa. Como qualquer mundo vivo, que respira, ela muda com o tempo. Algumas mudanças serão lentas e graduais, enquanto outras serão repentinas e inesperadas. Assim, enquanto as estações mudam e o dia vira noite, prepare-se para agir quando a vida não correr conforme os planos.
+        
+        O jogo de construção de cidades mais detalhista e realista já criado, Cities: Skylines II leva sua criatividade e capacidade de resolver problemas a outro nível. Com gráficos de alta resolução belamente renderizados, ele também vai inspirar você a construir a cidade dos seus sonhos.`,
+        image: "https://store-images.s-microsoft.com/image/apps.63682.13615111448719096.66548dfc-09a2-496a-a15d-a31ce19ced60.6bde3697-14e0-48a1-a04f-ed93155248c5?q=90&w=177&h=265",
+        price: 100,
+        media: [
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.34304.13615111448719096.66548dfc-09a2-496a-a15d-a31ce19ced60.a5b69d3e-b9ce-4efb-9890-c57f749b9e00'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.89.13615111448719096.66548dfc-09a2-496a-a15d-a31ce19ced60.8d8ded02-6131-4469-881d-dd9cc977f325'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.10082.13615111448719096.66548dfc-09a2-496a-a15d-a31ce19ced60.79646ce1-ec40-4c84-bd94-ad32b755e9d1'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.30926.13615111448719096.66548dfc-09a2-496a-a15d-a31ce19ced60.1d8a7ab5-1b05-4aff-b82d-36834e3d2c05'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.25312.13615111448719096.66548dfc-09a2-496a-a15d-a31ce19ced60.21765b17-5079-49be-bf0c-93641a5083b8'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.46914.13615111448719096.66548dfc-09a2-496a-a15d-a31ce19ced60.20704bad-1939-4f0e-9869-d7046394729d'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.10744.13615111448719096.66548dfc-09a2-496a-a15d-a31ce19ced60.90edce9d-413c-4c8a-ac02-dd3db9bfee93'},
+        ],
+        developer: "Paradox",
+        platforms: ['PS5', 'Xbox Series X|S', 'PC'],
+        releaseDate: new Date(2023, 10-1, 24),
+        category: [
+            {id: '', name: 'Simulação'},
+        ],
+    },
+    {
+        id: "GargoylesRemastered",
+        name: "Gargoyles Remastered",
+        description: `Gargoyles Remastered é uma deslumbrante restauração do clássico de plataforma de 16 bits dos anos 90. Vivencie mais uma vez a jornada épica de Golias e os Gárgulas com melhorias nos visuais, nas animações e nos efeitos sonoros, tudo inspirado no aclamado desenho animado. O mundo dos Gárgulas vem à vida com um nível de detalhes que vai emocionar não só os fãs da animação como os amantes de jogos retrô também. Curta mecânicas clássicas autênticas ao original, mas com a inclusão de novas funcionalidades, como conquistas, a opção de rebobinar o jogo e mais!
+
+        Atrativos principais
+        • Jogue como Golias, o líder dos Gárgulas: use uma força de partir qualquer pedra, escale torres e estruturas com suas garras afiadas e plane pelo ar dominando técnicas aéreas e combate corpo a corpo numa jornada frenética para salvar o mundo da destruição.
+        • Experiência gráfica imersiva: alterne sem pausas entre gráficos inspirados no desenho ou um modo 16 bits fiel ao jogo original.
+        • A experiência oficial de Gárgulas: viva mais uma vez a história de Golias e os Gárgulas em seu embate contra o maligno Olho de Odin, com novas animações e efeitos sonoros inéditos, tudo inspirado no desenho animado Os Gárgulas.
+        • Personalize a experiência: refine o seu estilo de jogo com funcionalidades modernas, como a opção de rebobinar o jogo instantaneamente, imagem para telas modernas e conquistas!
+        • Trilha sonora remasterizada: deleite-se com a trilha sonora original, remasterizada e otimizada para uma aventura mais imersiva.`,
+        image: "https://store-images.s-microsoft.com/image/apps.37672.14021890227648603.7650c3f5-9380-472b-aed4-4c2e79fadcb2.4888a7e2-aaa4-4ccb-a58e-8c1cf67d0353?q=90&w=177&h=265",
+        price: 100,
+        media: [
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.44968.14021890227648603.7650c3f5-9380-472b-aed4-4c2e79fadcb2.a918092c-4cc8-4369-a0a2-de7f3f8f016f'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.35288.14021890227648603.7650c3f5-9380-472b-aed4-4c2e79fadcb2.bb799108-9ecc-4318-90d1-68c04c3db5a2'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.61029.14021890227648603.7650c3f5-9380-472b-aed4-4c2e79fadcb2.4016e136-ec1d-41d0-96d1-7c422ebeb257'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.9469.14021890227648603.7650c3f5-9380-472b-aed4-4c2e79fadcb2.9e3f5922-be4f-4528-935e-2af8944b89e4'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.59706.14021890227648603.7650c3f5-9380-472b-aed4-4c2e79fadcb2.fc6ec88b-04fc-4259-875b-b659663bccd0'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.32871.14021890227648603.7650c3f5-9380-472b-aed4-4c2e79fadcb2.daf8266f-caaa-4065-99b9-5625d39b093e'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.6966.14021890227648603.7650c3f5-9380-472b-aed4-4c2e79fadcb2.d1faa964-30ed-4770-8d8d-ad139f15b77e'},
+        ],
+        developer: "Disney",
+        platforms: ['PS5', 'Xbox One', 'Xbox Series X/S'],
+        releaseDate: new Date(2023, 10-1, 19),
+        category: [
+            {id: '', name: 'Ação'},
+            {id: '', name: 'Aventura'},
+            {id: '', name: 'Plataforma'},
+        ],
+    },
+    {
+        id: "ENDLESSDungeon",
+        name: "ENDLESS Dungeon",
+        description: `ENDLESS™ Dungeon é uma mistura única de roguelite, ação tática e defesa de torres que se passa no premiado universo ENDLESS™. Entre em uma estação espacial abandonada há muito tempo, solo ou com amigos, recrute uma equipe de náufragos especiais e proteja seu cristal contra levas intermináveis de monstros... ou morra, recarregue e tente novamente.`,
+        image: "https://store-images.s-microsoft.com/image/apps.46858.13846905625722373.58f8b13f-c3ae-4dab-a125-65cee4aa0536.1b77c3f4-7866-4d72-ba59-3f95dcbb3d00?q=90&w=177&h=265",
+        price: 100,
+        media: [
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.18863.13846905625722373.58f8b13f-c3ae-4dab-a125-65cee4aa0536.ff2c252c-0f26-47a1-8932-037cc3c1a62a'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.65073.13846905625722373.58f8b13f-c3ae-4dab-a125-65cee4aa0536.451482e1-bd0f-423d-8c40-4bc811ef40d8'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.17522.13846905625722373.58f8b13f-c3ae-4dab-a125-65cee4aa0536.5e10b6c7-42a5-44c5-8bb1-7e7c72fa28cc'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.52458.13846905625722373.58f8b13f-c3ae-4dab-a125-65cee4aa0536.3525755b-66ef-4087-b64f-39a1ec05d612'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.45456.13846905625722373.58f8b13f-c3ae-4dab-a125-65cee4aa0536.ca81e1a0-6854-4dce-b608-5d2200d8cd89'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.63851.13846905625722373.58f8b13f-c3ae-4dab-a125-65cee4aa0536.f1ad426d-9c3e-472f-9ee1-7b78070572b3'},
+        ],
+        developer: "Amplitude",
+        platforms: ['PC', 'PS4', 'PS5', 'Xbox One', 'Xbox Series X/S', 'Switch'],
+        releaseDate: new Date(2023, 10-1, 19),
+        category: [
+            {id: '', name: 'Ação'},
+            {id: '', name: 'Aventura'},
+        ],
+    },
+    {
+        id: "SONICSUPERSTARS",
+        name: "SONIC SUPERSTARS",
+        description: `Aventure-se pelas místicas Northstar Islands nesta releitura inédita da clássica jogabilidade de ação e plataforma em 2D. Jogue com Sonic, Tails, Knuckles e Amy, e use os novos poderes Esmeralda para realizar movimentos e ataques dinâmicos. Explore os novos e belos cenários no modo solo ou com até 3 outros jogadores e impeça que Dr. Eggman, Fang e um novo adversário misterioso convertam os animais gigantes das ilhas em Badniks antes que seja tarde demais!`,
+        image: "https://store-images.s-microsoft.com/image/apps.42049.14070850807053246.6ded2b2a-e1a4-4608-ab70-77c24c7c93a0.67c11f35-5d35-419c-b1a6-74bee245bffc?q=90&w=177&h=265",
+        price: 100,
+        media: [
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.61373.14070850807053246.6ded2b2a-e1a4-4608-ab70-77c24c7c93a0.2eb1c2cf-a994-44da-8787-1ac711007507'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.56030.14070850807053246.6ded2b2a-e1a4-4608-ab70-77c24c7c93a0.39c29c61-bb75-4488-996f-ecdaf0fbff6b'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.15706.14070850807053246.6ded2b2a-e1a4-4608-ab70-77c24c7c93a0.99756647-c7b7-4074-8e38-d7cd984019f1'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.22881.14070850807053246.6ded2b2a-e1a4-4608-ab70-77c24c7c93a0.433e44c0-2c44-439c-9500-f2a99b51b9c8'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.11925.14070850807053246.6ded2b2a-e1a4-4608-ab70-77c24c7c93a0.cb7deee2-7b49-464c-86b0-a2e930b0d20a'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.55528.14070850807053246.6ded2b2a-e1a4-4608-ab70-77c24c7c93a0.cd20c424-b0dc-4e72-a7b8-cd3a32b3bc08'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.19249.14070850807053246.6ded2b2a-e1a4-4608-ab70-77c24c7c93a0.ff42fcb0-7792-4ba3-9123-496a04934f49'},
+            {type: 'image', image: 'https://store-images.s-microsoft.com/image/apps.56063.14070850807053246.6ded2b2a-e1a4-4608-ab70-77c24c7c93a0.45497eb7-8ad5-4d25-9b3e-cd895cc12ef0'},
+        ],
+        developer: "SEGA",
+        platforms: ['PC', 'PS4', 'PS5', 'Switch', 'Xbox One', 'Xbox Series X/S'],
+        releaseDate: new Date(2023, 10-1, 16),
+        category: [
+            {id: '', name: 'Ação'},
+            {id: '', name: 'Aventura'},
+        ],
+    },
+    {
+        id: "",
+        name: "",
+        description: ``,
+        image: "",
+        price: 100,
+        media: [
+            {type: 'video', image: '', link: ''},
+            {type: 'video', image: '', link: ''},
+            {type: 'image', image: ''},
+            {type: 'image', image: ''},
+            {type: 'image', image: ''},
+            {type: 'image', image: ''}
+        ],
+        developer: "",
+        platforms: ['', '', ''],
+        releaseDate: new Date(2023, 8-1, 10),
+        category: [
+            {id: '', name: ''},
+            {id: '', name: ''},
+        ],
+    },
+    {
+        id: "",
+        name: "",
+        description: ``,
+        image: "",
+        price: 100,
+        media: [
+            {type: 'video', image: '', link: ''},
+            {type: 'video', image: '', link: ''},
+            {type: 'image', image: ''},
+            {type: 'image', image: ''},
+            {type: 'image', image: ''},
+            {type: 'image', image: ''}
+        ],
+        developer: "",
+        platforms: ['', '', ''],
+        releaseDate: new Date(2023, 8-1, 10),
+        category: [
+            {id: '', name: ''},
+            {id: '', name: ''},
+        ],
+    },
+    {
+        id: "",
+        name: "",
+        description: ``,
+        image: "",
+        price: 100,
+        media: [
+            {type: 'video', image: '', link: ''},
+            {type: 'video', image: '', link: ''},
+            {type: 'image', image: ''},
+            {type: 'image', image: ''},
+            {type: 'image', image: ''},
+            {type: 'image', image: ''}
+        ],
+        developer: "",
+        platforms: ['', '', ''],
+        releaseDate: new Date(2023, 8-1, 10),
+        category: [
+            {id: '', name: ''},
+            {id: '', name: ''},
+        ],
+    },
+    {
+        id: "",
+        name: "",
+        description: ``,
+        image: "",
+        price: 100,
+        media: [
+            {type: 'video', image: '', link: ''},
+            {type: 'video', image: '', link: ''},
+            {type: 'image', image: ''},
+            {type: 'image', image: ''},
+            {type: 'image', image: ''},
+            {type: 'image', image: ''}
+        ],
+        developer: "",
+        platforms: ['', '', ''],
+        releaseDate: new Date(2023, 8-1, 10),
+        category: [
+            {id: '', name: ''},
+            {id: '', name: ''},
+        ],
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // {
     //     id: "2#rCpbW!5Ap7",
     //     name: "Quake II",
