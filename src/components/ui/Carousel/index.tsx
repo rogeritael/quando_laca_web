@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react"
 import { SliderContainer } from "./styles"
-import { motion } from 'framer-motion'
 
 import arrow from '@/assets/icons/arrow.svg'
 import Image from "next/image"

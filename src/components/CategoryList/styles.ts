@@ -9,16 +9,21 @@ const entry = keyframes`
 export const CategoryListContainer = styled.div`
     position: relative;
     display: flex;
-    max-width: 40vw;
+    /* max-width: 40vw; */
     align-items: center;
     padding: 8px;
-    /* overflow: hidden; */
+    overflow: hidden;
     animation: ${entry} 2000ms ease-in-out;
 
     .slider {
-        max-width: 1100px;
-        /* overflow: hidden; */
+        width: 100%;
+        /* max-width: 1100px; */
+        overflow: scroll;
         margin: 0 12px;
+
+        &::-webkit-scrollbar {
+            height: 0;
+        }
 
         .rail {
             position: relative;

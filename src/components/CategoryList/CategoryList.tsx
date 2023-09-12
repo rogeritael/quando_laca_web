@@ -45,9 +45,8 @@ export function CategoryList({ className }: CategoryListProps){
             <span className="controller left-controller" onClick={() => next()}>
                 <Image src={arrow} alt="seta voltar slider" />
             </span>
-            {/* <div className="slider" ref={carouselRef}>
-                <div className="rail" style={{ transform: `translateX(${railPosition}px)`}} ref={railRef}> */}
-                <Carousel maxWidth="100%" title="">
+            <div className="slider" ref={carouselRef}>
+                <div className="rail" style={{ transform: `translateX(${railPosition}px)`}} ref={railRef}>
                     <Category label="survivor-horror" />
                     <Category label="aventura" />
                     <Category label="estratégia" />
@@ -58,9 +57,8 @@ export function CategoryList({ className }: CategoryListProps){
                     <Category label="stealth" />
                     <Category label="puzzle" />
                     <Category label="terror" />
-                </Carousel>
-                {/* </div>
-            </div> */}
+                </div>
+            </div>
             <span className="controller right-controller" onClick={() => before()}>
                 <Image src={arrow} alt="seta avançar slider" />
             </span>

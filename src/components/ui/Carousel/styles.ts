@@ -44,7 +44,7 @@ export const SliderContainer = styled.div<SliderProps>`
     .carousel {
         display: flex;
         max-width: ${props => props.maxWidth};
-        overflow-x: auto;
+        overflow-x: scroll;
         position: relative;
         margin-top: 20px;
 
