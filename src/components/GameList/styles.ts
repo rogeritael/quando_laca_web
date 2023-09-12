@@ -25,6 +25,7 @@ export const GameListContainer = styled.section`
 
         &::after {
             right: 0;
+            top: 0;
             transform: rotate(180deg);
         }
 
@@ -34,6 +35,16 @@ export const GameListContainer = styled.section`
             width: fit-content;
             gap: 14px;
             transition: 800ms;
+        }
+    }
+
+    @media(max-width: 768px){
+        .carousel {
+            position: relative;
+
+            &::before, &::after {
+                display: none;
+            }
         }
     }
 `;
