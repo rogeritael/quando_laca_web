@@ -12,12 +12,12 @@ export const CategoryListContainer = styled.div`
     max-width: 40vw;
     align-items: center;
     padding: 8px;
-    overflow: hidden;
+    /* overflow: hidden; */
     animation: ${entry} 2000ms ease-in-out;
 
     .slider {
         max-width: 1100px;
-        overflow: hidden;
+        /* overflow: hidden; */
         margin: 0 12px;
 
         .rail {

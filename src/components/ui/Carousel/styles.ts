@@ -49,8 +49,7 @@ export const SliderContainer = styled.div<SliderProps>`
         margin-top: 20px;
 
         &::-webkit-scrollbar {
-            height: 4px;
-            cursor: pointer;
+            height: 0;
         }
 
         .rail {
