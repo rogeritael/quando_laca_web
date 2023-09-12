@@ -38,9 +38,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  /* background-color: var(--bg-secondary); */
   background-color: #fff;
-  /* background-color: transparent; */
   border-radius: 20px;
 }
 

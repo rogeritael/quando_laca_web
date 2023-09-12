@@ -4,13 +4,54 @@ function getInfos(){
     var developer = document.querySelector('.banner-subsubheading').innerText
     var platformsArray = document.querySelectorAll('.gamepage-tabs div')[5].querySelectorAll('p')[1].querySelectorAll('a')
     var platforms = []
+    var month = 0
     var image = document.querySelector('.gamepage-cover img').src
     var price= 100
+    var date = document.querySelector('.banner-subheading span span').innerText.replace(',', '').split(' ')
 
     var category = []
     var releaseDate = ''
 
-    //description - media
+    switch(date[0]){
+        case 'Jan':
+            month = 0;
+            break;
+        case 'Feb':
+            month = 1;
+            break;
+        case 'Mar':
+            month = 2;
+            break;
+        case 'Apr':
+            month = 3;
+            break;
+        case 'May':
+            month = 4;
+            break;
+        case 'Jun':
+            month = 5;
+            break;
+        case 'Jul':
+            month = 6;
+            break;
+        case 'Aug':
+            month = 7;
+            break;
+        case 'Sep':
+            month = 8;
+            break;
+        case 'Oct':
+            month = 9;
+            break;
+        case 'Nov':
+            month = 10;
+            break;
+        case 'Dec':
+            month = 11;
+            break;
+    }
+
+    var releaseDate = `new Date(${date[2]}, ${month}, ${date[1]})`
 
     for(i=0; i < platformsArray.length;i++){
         platforms.push(platformsArray[i].innerText)
@@ -22,8 +63,39 @@ function getInfos(){
         imagem: image,
         price: price,
         developer: developer,
-        platforms: platforms
+        platforms: platforms,
+        releaseDate: releaseDate
     }
-    console.log(infos)
+    console.log(JSON.stringify(infos, null, 2))
 }
 getInfos()
+
+
+
+
+PLAYSTATION
+function getPlaystationInfos(){
+
+    var images = document.querySelector('.flickity-viewport').querySelectorAll('picture')
+    var medias = []
+
+    var description = document.querySelector('.txt-block__paragraph').innerText
+
+    for(i=0; i < images.length; i++){
+        var origin = images[i].querySelectorAll('source')[1].srcset.split('/')[2]
+
+        if(origin == 'gmedia.playstation.com'){
+            medias.push({type: 'image', image: images[i].querySelectorAll('source')[1].srcset})
+        } else {
+            medias.push({type: 'video', image: '', link: images[i].querySelectorAll('source')[1].srcset})
+        }
+    }
+
+    vari infos = {
+        media: medias,
+        description: description
+    }
+
+    console.log(JSON.stringify(infos, null, 2))
+}
+getPlaystationInfos()

@@ -44,9 +44,14 @@ export const SliderContainer = styled.div<SliderProps>`
     .carousel {
         display: flex;
         max-width: ${props => props.maxWidth};
-        overflow: hidden;
+        overflow-x: auto;
         position: relative;
         margin-top: 20px;
+
+        &::-webkit-scrollbar {
+            height: 4px;
+            cursor: pointer;
+        }
 
         .rail {
             width: fit-content;

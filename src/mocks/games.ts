@@ -74,7 +74,7 @@ export const gameList: GameProps[] = [
         id: "Persona5Tactica",
         name: "Persona 5 Tactica",
         description: `Persona 5 Tactica é um jogo de estratégia em turnos que conta com uma história inédita, a volta de personagens populares e novos aliados e inimigos. 
-
+        
         Após um estranho incidente, os Ladrões-Fantasma se veem em um reino bizarro onde os habitantes vivem sob opressão tirânica. Cercados por um grupo militar chamado Legionários, eles se encontram em grave perigo até que Erina, uma misteriosa revolucionária, resgata-os e oferece um acordo tentador em troca de ajuda. 
         
         Qual é a verdade por trás de Erina e sua proposta para os Ladrões-Fantasma? Junte-se ao grupo e lidere uma revolução de emoções nesta aventura de combate empolgante.`,
