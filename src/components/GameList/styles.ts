@@ -31,7 +31,7 @@ export const GameListContainer = styled.section`
             display: flex;
             padding: 16px;
             width: fit-content;
-            gap: 26px;
+            gap: 14px;
             transition: 800ms;
         }
     }

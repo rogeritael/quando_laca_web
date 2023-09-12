@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const GameComponent = styled.article`
-    max-width: 190px;
+    max-width: 150px;
     color: #fff;
 
     figure {
-        width: 190px;
-        height: 280px;
+        width: 150px;
+        height: 220px;
         border-radius: 4px;
         overflow: hidden;
         margin-bottom: 14px;
@@ -57,7 +57,7 @@ export const GameComponent = styled.article`
         }
 
         h1 {
-            font-size: 0.875;
+            font-size: 14px;
             font-weight: normal;
         }
 
@@ -73,6 +73,16 @@ export const GameComponent = styled.article`
     &:hover {
         figure::after {
             display: block;
+        }
+    }
+
+
+    @media(max-width: 768px){
+        max-width: 130px;
+
+        figure {
+            width: 130px;
+            height: 190px;
         }
     }
 `;
