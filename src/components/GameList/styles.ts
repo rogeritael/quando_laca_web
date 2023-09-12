@@ -24,7 +24,8 @@ export const GameListContainer = styled.section`
         }
 
         &::after {
-            left: 2000px;
+            right: 0;
+            transform: rotate(180deg);
         }
 
         .rail {

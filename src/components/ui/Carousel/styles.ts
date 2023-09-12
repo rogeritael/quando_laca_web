@@ -53,7 +53,7 @@ export const SliderContainer = styled.div<SliderProps>`
         }
 
         .rail {
-            width: fit-content;
+            width: max-content;
             display: flex;
             gap: 20px;
             transition: 500ms;
