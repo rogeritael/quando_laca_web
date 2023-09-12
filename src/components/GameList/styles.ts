@@ -6,7 +6,7 @@ export const GameListContainer = styled.section`
 
     .carousel {
         position: relative;
-        overflow: hidden;
+        /* overflow: hidden; */
 
         &::before, &::after {
             content: '';
