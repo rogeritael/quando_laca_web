@@ -87,4 +87,12 @@ export const SliderContainer = styled.div<SliderProps>`
     @media (max-width: 800px){
         max-width: calc(100vw);
     }
+
+    @media (max-width: 425px){
+        .controllers {
+            img {
+                display: none;
+            }
+        }
+    }
 `;

@@ -72,7 +72,7 @@ export const CardContainer = styled.article<CardContainerProps>`
     }
 
     @media (max-width: 1024px){
-        max-width: 220px;
+        max-width: 100%;
 
         .options {
             display: none;

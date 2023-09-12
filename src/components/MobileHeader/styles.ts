@@ -13,7 +13,7 @@ const slidefromTop = keyframes`
 `;
 
 export const MobileHeaderContainer = styled.header`
-    width: 100%;
+    width: 100vw;
     padding: 40px 20px 20px 20px;
     color: #fff;
     position: relative;

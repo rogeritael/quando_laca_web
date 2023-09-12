@@ -8,6 +8,7 @@ export const PopularGamesContainer = styled.div`
     height: calc(155px * 2 + 16px); //tamanho do trailer * 2 + gap entre trailers
     display: grid;
     grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     align-items: center;
     width: 100%;
 

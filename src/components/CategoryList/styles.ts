@@ -81,4 +81,13 @@ export const CategoryListContainer = styled.div`
             gap: 8px;
         }
     }
+
+    @media (max-width: 425px){
+        .controller {
+            img {
+                pointer-events: none;
+                /* display: none; */
+            }
+        }
+    }
 `;

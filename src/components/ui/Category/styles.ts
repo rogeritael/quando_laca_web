@@ -10,9 +10,10 @@ export const CategoryComponent = styled.button`
     width: max-content;
     cursor: pointer;
     transition: 200ms;
+    background-color: #ffffff10;
     
     &:hover {
-        background-color: #ffffff10;
+        background-color: #ffffff20;
     }
 
     @media (max-width: 800px){
