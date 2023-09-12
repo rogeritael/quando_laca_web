@@ -37,7 +37,7 @@ export const ModalContainer = styled.section<ModalProps>`
         position: absolute;
         inset: 0;
         background-color: var(--bg);
-        opacity: .8;
+        opacity: 1;
     }
 
     iframe {

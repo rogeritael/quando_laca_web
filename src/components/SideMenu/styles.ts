@@ -9,7 +9,7 @@ export const SideMenuContainer = styled.aside`
     align-items: center;
     justify-content: center;
     gap: 20px;
-    z-index: 1;
+    z-index: 3;
     background-color: var(--bg);
 
     width: 80px;
