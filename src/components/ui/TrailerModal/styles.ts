@@ -31,6 +31,15 @@ export const ModalContainer = styled.section<ModalProps>`
     z-index: 4;
     animation: ${fade} 200ms;
 
+    svg {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        font-size: 32px;
+        cursor: pointer;
+        stroke: 1;
+    }
+
     .background {
         width: 100%;
         height: 100%;

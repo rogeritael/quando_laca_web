@@ -56,12 +56,14 @@ export const PageContainer = styled.section`
 
     .back_page {
         display: none;
-        color: var(--highlight);
-        margin-bottom: 14px;
-        align-items: center;
+        /* color: var(--highlight); */
+        /* margin-bottom: 14px; */
+        /* align-items: center; */
         animation: ${entry} 300ms;
 
         img {
+            width: 24px;
+            height: 24px;
             transform: rotate(180deg);
             margin-right: 8px;
         }
@@ -70,9 +72,10 @@ export const PageContainer = styled.section`
     //=====================================
     .background_image {
         width: 100%;
-        min-height: 100vh;
-        height: 100%;
+        /* min-height: 100vh; */
+        height: 100vh;
         position: relative;
+        overflow: hidden;
 
         img {
             width: 100%;
@@ -98,6 +101,10 @@ export const PageContainer = styled.section`
         animation: ${entry} 1000ms ease-in-out;
         width: 100%;
         padding-top: 48px;
+
+        .developer {
+            display: none;
+        }
 
         .info_list, .description {
             margin-top: 30px;
@@ -273,6 +280,17 @@ export const PageContainer = styled.section`
                 padding: 0 20px;
                 max-height: 200vh;
 
+                .developer {
+                    text-transform: uppercase;
+                    margin: 14px 36px;
+                    display: block;
+                }
+
+                .title_container {
+                    display: flex;
+                    align-items: baseline;
+                }
+
                 .description {
                     max-width: 600px;
                     max-height: 150px;
@@ -283,17 +301,21 @@ export const PageContainer = styled.section`
                 }
 
                 .info_list {
-                    flex-direction: column;
-                    gap: 14px;
+                    /* flex-direction: column; */
+                    /* justify-content: space-between; */
 
                     p {
                         position: relative;
 
+                        &:nth-child(1){
+                            display: none;
+                        }
+
                         &::after {
                             content: '';
-                            width: 14px;
-                            height: 2px;
-                            background-color: #fff;
+                            /* width: 14px; */
+                            /* height: 2px; */
+                            /* background-color: #fff; */
                             position: absolute;
                             left: 0;
                             bottom: -4px;

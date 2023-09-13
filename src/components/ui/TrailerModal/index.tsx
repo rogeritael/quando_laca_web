@@ -1,6 +1,7 @@
 import { getVideoId } from "@/utils/getVideoId";
 import { ModalContainer } from "./styles";
 import { useEffect, useRef, useState } from 'react';
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 interface TrailerModalProps {
     videoUrl: string;
@@ -21,6 +22,7 @@ export function TrailerModal({ videoUrl, isOpen, setIsOpen } : TrailerModalProps
         isOpen &&
         <ModalContainer isOpen={isOpen}>
             <span className="background" onClick={() => handleCloseModal()} />
+            <AiOutlineCloseCircle onClick={() => setIsOpen(false)} />
             <iframe
                 ref={videoRef}
                 // width="640"

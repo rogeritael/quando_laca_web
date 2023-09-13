@@ -122,12 +122,21 @@ export default function About(props : AboutProps){
                 <div className="game_infos">
                     
                     
-                    <Link href={"/"} className="back_page">
+                    {/* <Link href={"/"} className="back_page">
                         <Image alt="coltar para a tela inicial" src={backImage} />
                         <p>Voltar</p>
-                    </Link>
+                    </Link> */}
+
+                    <p className="developer">
+                        {selectedGame.developer}
+                    </p>
+                    <div className="title_container">
+                        <Link href={"/"} className="back_page">
+                            <Image alt="coltar para a tela inicial" src={backImage} />
+                        </Link>
+                        <h1 className="title">{selectedGame.name}</h1>
+                    </div>
                     
-                    <h1 className="title">{selectedGame.name}</h1>
                     
                     <div className="info_list">
                         <p>{selectedGame.developer}</p>
