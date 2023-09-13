@@ -33,7 +33,7 @@ export function NotificationsModal(props : NotificationsModalProps){
             <div className="notification_box">
                 <div className="notifications_header">
                     <h2 className="title">
-                        <span className="back_icon" onClick={() => setIsNotificationsVisible(false)}>
+                        <span className="back_icon" onClick={() => handleCloseModal()}>
                             <Image alt="voltar para a página anterior" src={backImage} />
                         </span>
                         Minhas notificações
