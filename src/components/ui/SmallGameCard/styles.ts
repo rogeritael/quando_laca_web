@@ -25,6 +25,7 @@ export const CardContainer = styled.article<CardContainerProps>`
     border-radius: 12px;
     transition: 300ms;
     animation: ${entry} 1000ms ease-in-out;
+    cursor: pointer;
 
     figure {
         height: 56px;
