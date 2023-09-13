@@ -30,7 +30,8 @@ export const ModalContainer = styled.div<ConfirmModalProps>`
     position: relative;
     position: absolute;
     inset: 0;
-    display: ${(props) => props.isConfirmModalVisible ? 'block' : 'none'};;
+    display: ${(props) => props.isConfirmModalVisible ? 'block' : 'none'};
+    z-index: 4;
 
     .modal {
         background-color: var(--bg-secondary);
