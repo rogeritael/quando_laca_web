@@ -147,7 +147,7 @@ export default function About(props : AboutProps){
                                 'Adicionar a Lista'
                             }
                         </button>
-                        <Link href="/">Comprar Jogo</Link>
+                        {/* <Link href="/">Comprar Jogo</Link> */}
                     </div>
                 
                     <div className="image_galery">

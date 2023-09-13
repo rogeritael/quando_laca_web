@@ -115,7 +115,6 @@ export const PageContainer = styled.section`
             gap: 20px;
             position: relative;
             animation: ${slideUp} 1000ms ease-in-out;
-            /* color: var(--bg-secn); */
         }
 
         .categories {
@@ -150,8 +149,9 @@ export const PageContainer = styled.section`
 
             button, a {
                 font-size: 14px;
-                padding: 20px 45px;
-                border-radius: 6px;
+                padding: 20px 32px;
+                /* border-radius: 6px; */
+                border-radius: 42px;
                 cursor: pointer;
                 font-weight: bold;
                 background-color: transparent;
