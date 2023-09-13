@@ -226,6 +226,7 @@ export const PageContainer = styled.section`
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                background-color: var(--bg-secondary);
             }
         
             .player {
@@ -237,6 +238,7 @@ export const PageContainer = styled.section`
                 height: 32px;
                 object-fit: contain;
                 pointer-events: none;
+                background-color: transparent;
             }
         }
     

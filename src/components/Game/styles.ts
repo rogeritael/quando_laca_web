@@ -13,6 +13,7 @@ export const GameComponent = styled.article`
         position: relative;
         transition: 500ms;
         pointer-events: none;
+        background-color: var(--bg-secondary);
 
         img {
             object-fit: cover;

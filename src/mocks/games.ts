@@ -391,94 +391,94 @@ export const gameList: GameProps[] = [
             {id: '', name: 'Aventura'},
         ],
     },
-    {
-        id: "",
-        name: "",
-        description: ``,
-        image: "",
-        price: 100,
-        media: [
-            {type: 'video', image: '', link: ''},
-            {type: 'video', image: '', link: ''},
-            {type: 'image', image: ''},
-            {type: 'image', image: ''},
-            {type: 'image', image: ''},
-            {type: 'image', image: ''}
-        ],
-        developer: "",
-        platforms: ['', '', ''],
-        releaseDate: new Date(2023, 8-1, 10),
-        category: [
-            {id: '', name: ''},
-            {id: '', name: ''},
-        ],
-    },
-    {
-        id: "",
-        name: "",
-        description: ``,
-        image: "",
-        price: 100,
-        media: [
-            {type: 'video', image: '', link: ''},
-            {type: 'video', image: '', link: ''},
-            {type: 'image', image: ''},
-            {type: 'image', image: ''},
-            {type: 'image', image: ''},
-            {type: 'image', image: ''}
-        ],
-        developer: "",
-        platforms: ['', '', ''],
-        releaseDate: new Date(2023, 8-1, 10),
-        category: [
-            {id: '', name: ''},
-            {id: '', name: ''},
-        ],
-    },
-    {
-        id: "",
-        name: "",
-        description: ``,
-        image: "",
-        price: 100,
-        media: [
-            {type: 'video', image: '', link: ''},
-            {type: 'video', image: '', link: ''},
-            {type: 'image', image: ''},
-            {type: 'image', image: ''},
-            {type: 'image', image: ''},
-            {type: 'image', image: ''}
-        ],
-        developer: "",
-        platforms: ['', '', ''],
-        releaseDate: new Date(2023, 8-1, 10),
-        category: [
-            {id: '', name: ''},
-            {id: '', name: ''},
-        ],
-    },
-    {
-        id: "",
-        name: "",
-        description: ``,
-        image: "",
-        price: 100,
-        media: [
-            {type: 'video', image: '', link: ''},
-            {type: 'video', image: '', link: ''},
-            {type: 'image', image: ''},
-            {type: 'image', image: ''},
-            {type: 'image', image: ''},
-            {type: 'image', image: ''}
-        ],
-        developer: "",
-        platforms: ['', '', ''],
-        releaseDate: new Date(2023, 8-1, 10),
-        category: [
-            {id: '', name: ''},
-            {id: '', name: ''},
-        ],
-    },
+    // {
+    //     id: "",
+    //     name: "",
+    //     description: ``,
+    //     image: "",
+    //     price: 100,
+    //     media: [
+    //         {type: 'video', image: '', link: ''},
+    //         {type: 'video', image: '', link: ''},
+    //         {type: 'image', image: ''},
+    //         {type: 'image', image: ''},
+    //         {type: 'image', image: ''},
+    //         {type: 'image', image: ''}
+    //     ],
+    //     developer: "",
+    //     platforms: ['', '', ''],
+    //     releaseDate: new Date(2023, 8-1, 10),
+    //     category: [
+    //         {id: '', name: ''},
+    //         {id: '', name: ''},
+    //     ],
+    // },
+    // {
+    //     id: "",
+    //     name: "",
+    //     description: ``,
+    //     image: "",
+    //     price: 100,
+    //     media: [
+    //         {type: 'video', image: '', link: ''},
+    //         {type: 'video', image: '', link: ''},
+    //         {type: 'image', image: ''},
+    //         {type: 'image', image: ''},
+    //         {type: 'image', image: ''},
+    //         {type: 'image', image: ''}
+    //     ],
+    //     developer: "",
+    //     platforms: ['', '', ''],
+    //     releaseDate: new Date(2023, 8-1, 10),
+    //     category: [
+    //         {id: '', name: ''},
+    //         {id: '', name: ''},
+    //     ],
+    // },
+    // {
+    //     id: "",
+    //     name: "",
+    //     description: ``,
+    //     image: "",
+    //     price: 100,
+    //     media: [
+    //         {type: 'video', image: '', link: ''},
+    //         {type: 'video', image: '', link: ''},
+    //         {type: 'image', image: ''},
+    //         {type: 'image', image: ''},
+    //         {type: 'image', image: ''},
+    //         {type: 'image', image: ''}
+    //     ],
+    //     developer: "",
+    //     platforms: ['', '', ''],
+    //     releaseDate: new Date(2023, 8-1, 10),
+    //     category: [
+    //         {id: '', name: ''},
+    //         {id: '', name: ''},
+    //     ],
+    // },
+    // {
+    //     id: "",
+    //     name: "",
+    //     description: ``,
+    //     image: "",
+    //     price: 100,
+    //     media: [
+    //         {type: 'video', image: '', link: ''},
+    //         {type: 'video', image: '', link: ''},
+    //         {type: 'image', image: ''},
+    //         {type: 'image', image: ''},
+    //         {type: 'image', image: ''},
+    //         {type: 'image', image: ''}
+    //     ],
+    //     developer: "",
+    //     platforms: ['', '', ''],
+    //     releaseDate: new Date(2023, 8-1, 10),
+    //     category: [
+    //         {id: '', name: ''},
+    //         {id: '', name: ''},
+    //     ],
+    // },
 
 
 

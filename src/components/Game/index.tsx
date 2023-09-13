@@ -3,6 +3,8 @@ import { GameComponent } from "./styles";
 
 import exemplo from '@/assets/jogo_exemplo.png'
 import Link from "next/link";
+import { useState } from "react";
+import defaultImage from '@/assets/image_error.svg'
 
 interface GameProps {
     name: string;
@@ -13,11 +15,17 @@ interface GameProps {
 }
 
 export function Game({ name, image, platforms, isPopular, id } : GameProps){
+    const [imageSrc, setImageSrc] = useState<string>(image);
+
+    function handleImageError() {
+      setImageSrc(defaultImage.src);
+    };
+
     return(
         <Link href={`/About?id=${id}`}>
             <GameComponent>
                 <figure>
-                    <Image width={100} height={200} src={image} alt="capa do jogo" />
+                    <Image width={100} height={200} src={imageSrc} onError={() => handleImageError()} alt="capa do jogo" />
                 </figure>
                 <div className="about">
                     <ul>

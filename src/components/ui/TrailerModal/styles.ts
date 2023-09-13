@@ -28,7 +28,7 @@ export const ModalContainer = styled.section<ModalProps>`
     inset: 0;
     display: ${props => props.isOpen ? 'grid' : 'none'};
     place-items: center;
-    z-index: 3;
+    z-index: 4;
     animation: ${fade} 200ms;
 
     .background {

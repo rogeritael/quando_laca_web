@@ -5,7 +5,7 @@ export const ImageModalContainer = styled.section`
     height: 100vh;
     position: fixed;
     inset: 0;
-    z-index: 2;
+    z-index: 4;
     display: flex;
     align-items: center;
     
