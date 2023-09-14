@@ -30,7 +30,8 @@ interface MediaProps  {
 export interface GameProps {
     name: string;
     releaseDate: Date;
-    description: string;
+    // description: string;
+    description: string[];
     developer: string;
     price: number;
     media: MediaProps[];
@@ -56,28 +57,28 @@ export const category: Category[] = [
 ];
 
 export const gameList: GameProps[] = [
-    BombRushCyberfunk,
-    LiesOfP,
-    SpiderMan2,
-    AlanWake2,
-    AssassinsCreedMirage,
-    LordsOfTheFallen,
-    MortalKombat1,
-    GoodbyeVolcanoHigh,
-    Tekken8,
-    TrainSimWorld3,
-    BaldursGate3,
-    MetalHellsinger,
-    Starfield,
+    // BombRushCyberfunk,
+    // LiesOfP,
+    // SpiderMan2,
+    // AlanWake2,
+    // AssassinsCreedMirage,
+    // LordsOfTheFallen,
+    // MortalKombat1,
+    // GoodbyeVolcanoHigh,
+    // Tekken8,
+    // TrainSimWorld3,
+    // BaldursGate3,
+    // MetalHellsinger,
+    // Starfield,
     // SuicideSquadKillTheJusticeLeague,
     {
         id: "Persona5Tactica",
         name: "Persona 5 Tactica",
-        description: `Persona 5 Tactica é um jogo de estratégia em turnos que conta com uma história inédita, a volta de personagens populares e novos aliados e inimigos. 
-        
-        Após um estranho incidente, os Ladrões-Fantasma se veem em um reino bizarro onde os habitantes vivem sob opressão tirânica. Cercados por um grupo militar chamado Legionários, eles se encontram em grave perigo até que Erina, uma misteriosa revolucionária, resgata-os e oferece um acordo tentador em troca de ajuda. 
-        
-        Qual é a verdade por trás de Erina e sua proposta para os Ladrões-Fantasma? Junte-se ao grupo e lidere uma revolução de emoções nesta aventura de combate empolgante.`,
+        description: [
+            'Persona 5 Tactica é um jogo de estratégia em turnos que conta com uma história inédita, a volta de personagens populares e novos aliados e inimigos.',
+            'Após um estranho incidente, os Ladrões-Fantasma se veem em um reino bizarro onde os habitantes vivem sob opressão tirânica. Cercados por um grupo militar chamado Legionários, eles se encontram em grave perigo até que Erina, uma misteriosa revolucionária, resgata-os e oferece um acordo tentador em troca de ajuda.',
+            'Qual é a verdade por trás de Erina e sua proposta para os Ladrões-Fantasma? Junte-se ao grupo e lidere uma revolução de emoções nesta aventura de combate empolgante.'
+        ],
         image: "https://store-images.s-microsoft.com/image/apps.21771.14461424539776518.be5fa828-401b-4f0c-ac86-920d7dcbfada.66d054ea-84d9-40f2-bffb-49eb5cb272c9?q=90&w=177&h=265",
         price: 100,
         media: [
@@ -100,15 +101,12 @@ export const gameList: GameProps[] = [
     {
         id: "CallofDutyModernWarfare3",
         name: "Call of Duty: Modern Warfare 3",
-        description: `Call of Duty volta com uma campanha inédita, uma versão modernizada dos mapas de multijogador clássicos e uma experiência JxA com zumbis em mundo aberto.
-
-        A campanha, continuação direta do fenômeno Call of Duty: Modern Warfare II, segue o embate do capitão Price e da Força Tarefa 141 contra o criminoso de guerra ultranacionalista Vladimir Makarov, que busca estender sua influência pelo mundo. 
-        
-        No multijogador, os 16 mapas que foram lançados com Modern Warfare 2 em 2009 voltam com gráficos atualizados, novos modos e recursos de jogo inovadores.
-        
-        Em Modern Warfare Zombies, alie-se a outros esquadrões pela primeira vez e trabalhe em conjunto para sobreviver ao maior mapa do modo Zombies já visto.
-        
-        `,
+        description: [
+            'Call of Duty volta com uma campanha inédita, uma versão modernizada dos mapas de multijogador clássicos e uma experiência JxA com zumbis em mundo aberto.',
+            'A campanha, continuação direta do fenômeno Call of Duty: Modern Warfare II, segue o embate do capitão Price e da Força Tarefa 141 contra o criminoso de guerra ultranacionalista Vladimir Makarov, que busca estender sua influência pelo mundo.',
+            'No multijogador, os 16 mapas que foram lançados com Modern Warfare 2 em 2009 voltam com gráficos atualizados, novos modos e recursos de jogo inovadores.',
+            'Em Modern Warfare Zombies, alie-se a outros esquadrões pela primeira vez e trabalhe em conjunto para sobreviver ao maior mapa do modo Zombies já visto.',
+        ],
         image: "https://store-images.s-microsoft.com/image/apps.22323.13966330883349940.8613419e-9360-4964-ad0f-24ef1b486f3e.85d64fa3-7f73-4a02-a821-3adf7708a6b2?q=90&w=177&h=265",
         price: 100,
         media: [
@@ -134,11 +132,11 @@ export const gameList: GameProps[] = [
     {
         id: "banishers",
         name: "Banishers: Ghosts of New Eden",
-        description: `New Eden, 1695. Antea Duarte e Red Mac Raith são amantes e Banishers, caçadores de fantasmas que juraram proteger os vivos da ameaça de fantasmas e espectros que se recusam a partir. No seguimento de uma última missão desastrosa, Antea é ferida fatalmente, tornando-se um dos espíritos que abomina. Nas zonas selvagens e assombradas da América do Norte, o casal procura desesperadamente por uma forma de libertar Antea da sua nova condição.
-
-        Mergulha na bela e poderosa história íntima entre dois amantes predestinados. Enquanto Banisher, entra nas vidas das comunidades de New Eden e resolve casos assombrosos num mundo místico e repleto de tradições, assolado por criaturas sobrenaturais e segredos antigos. Usa a tua inteligência ou combina os poderes espirituais de Antea com o arsenal de Red para derrotar e banir as almas que atormentam os vivos.
-        
-        Vais enfrentar decisões desafiantes que irão definir o teu caminho, impactando drasticamente a tua história e o destino dos habitantes de New Eden — quer das pessoas vivas ou das almas penadas. Até que ponto vais comprometer o teu juramento de caçar fantasmas pelo bem da tua amante, que se tornou um desses espíritos?`,
+        description:[
+            'New Eden, 1695. Antea Duarte e Red Mac Raith são amantes e Banishers, caçadores de fantasmas que juraram proteger os vivos da ameaça de fantasmas e espectros que se recusam a partir. No seguimento de uma última missão desastrosa, Antea é ferida fatalmente, tornando-se um dos espíritos que abomina. Nas zonas selvagens e assombradas da América do Norte, o casal procura desesperadamente por uma forma de libertar Antea da sua nova condição.',
+            'Mergulha na bela e poderosa história íntima entre dois amantes predestinados. Enquanto Banisher, entra nas vidas das comunidades de New Eden e resolve casos assombrosos num mundo místico e repleto de tradições, assolado por criaturas sobrenaturais e segredos antigos. Usa a tua inteligência ou combina os poderes espirituais de Antea com o arsenal de Red para derrotar e banir as almas que atormentam os vivos.',
+            'Vais enfrentar decisões desafiantes que irão definir o teu caminho, impactando drasticamente a tua história e o destino dos habitantes de New Eden — quer das pessoas vivas ou das almas penadas. Até que ponto vais comprometer o teu juramento de caçar fantasmas pelo bem da tua amante, que se tornou um desses espíritos?',
+        ],
         image: "https://store-images.s-microsoft.com/image/apps.37841.13873423350094695.ab54d22d-759b-4894-897d-66ec21b5c47a.4e00a9b6-e78b-4186-b94e-2ead1104cf05?q=90&w=177&h=265",
         price: 100,
         media: [
@@ -160,11 +158,11 @@ export const gameList: GameProps[] = [
     {
         id: "StarOceanTheSecondStoryR",
         name: "Star Ocean The Second Story R",
-        description: `O celebrado JRPG exclusivo do PlayStation, Star Ocean: The Second Story, celebra seu 25o aniversário com uma revisão completa e impressionante em 2.5D, fundindo os personagens em pixels 2D com ambientes 3D, como o muito elogiado Octopath Traveler II, da Square Enix.
-
-        Jogue como Claude C. Kenni, um jovem oficial da Federação transportado para um planeta místico durante uma missão de reconhecimento de rotina. Lá, ele encontra uma jovem que acredita que Claude é o herói anunciado em uma antiga profecia.
-        
-        Além da notável reformulação visual, Star Ocean The Second Story R conta com novas mecânicas de batalha, dublagem completa em inglês e japonês, a escolha da música original ou os novos arranjos do compositor Motoi Sakuraba e recursos que melhoram a experiência do jogador, como viagem rápida e três modos de dificuldade. Esta é a versão definitiva do clássico atemporal que vai agradar fãs antigos e dar as boas-vindas a novos jogadores.`,
+        description: [
+            'O celebrado JRPG exclusivo do PlayStation, Star Ocean: The Second Story, celebra seu 25o aniversário com uma revisão completa e impressionante em 2.5D, fundindo os personagens em pixels 2D com ambientes 3D, como o muito elogiado Octopath Traveler II, da Square Enix.',
+            'Jogue como Claude C. Kenni, um jovem oficial da Federação transportado para um planeta místico durante uma missão de reconhecimento de rotina. Lá, ele encontra uma jovem que acredita que Claude é o herói anunciado em uma antiga profecia.',
+            'Além da notável reformulação visual, Star Ocean The Second Story R conta com novas mecânicas de batalha, dublagem completa em inglês e japonês, a escolha da música original ou os novos arranjos do compositor Motoi Sakuraba e recursos que melhoram a experiência do jogador, como viagem rápida e três modos de dificuldade. Esta é a versão definitiva do clássico atemporal que vai agradar fãs antigos e dar as boas-vindas a novos jogadores.',
+        ],
         image: "https://image.api.playstation.com/vulcan/ap/rnd/202305/2912/58e2ce3f6f0b5c8f8894101737ab8a68cf3cc2cbae68603d.jpg",
         price: 100,
         media: [
@@ -184,13 +182,12 @@ export const gameList: GameProps[] = [
     {
         id: "ghostrunner_2",
         name: "Ghostrunner 2",
-        description: `Ghostrunner 2 é uma experiência de ação intensa e imersiva que aprimora a ação acelerada de Ghostrunner. Você terá que cortar seu caminho através dos inimigos enquanto tenta não sofrer dano para alcançar o seu objetivo. 
-
-        Em um futuro cyberpunk pós-apocalítico, um culto a uma violenta IA se formou dentro da Torre Dharma — o último refúgio da humanidade — após a queda do tirano anterior, o Mestre das Chaves.
-        
-        Ghostrunner 2 conta com mecânicas de morte com um golpe, uma exploração mais aprofundada do mundo além da Torre Dharma por meio de novas opções de diálogo, diversas melhorias no combate, fases não lineares com seções de motocicleta complexas e modos novos e empolgantes. 
-        
-        Ghostrunner 2 apresenta novas técnicas que permitem que você use mais a criatividade e enfrente até os encontros mais desafiadores de forma mais acessível. Porém, dependendo das técnicas usadas, os inimigos se comportarão de forma única e oferecerão um desafio novo a cada encontro.`,
+        description: [
+            'Ghostrunner 2 é uma experiência de ação intensa e imersiva que aprimora a ação acelerada de Ghostrunner. Você terá que cortar seu caminho através dos inimigos enquanto tenta não sofrer dano para alcançar o seu objetivo.',
+            'Em um futuro cyberpunk pós-apocalítico, um culto a uma violenta IA se formou dentro da Torre Dharma — o último refúgio da humanidade — após a queda do tirano anterior, o Mestre das Chaves.',
+            'Ghostrunner 2 conta com mecânicas de morte com um golpe, uma exploração mais aprofundada do mundo além da Torre Dharma por meio de novas opções de diálogo, diversas melhorias no combate, fases não lineares com seções de motocicleta complexas e modos novos e empolgantes.',
+            'Ghostrunner 2 apresenta novas técnicas que permitem que você use mais a criatividade e enfrente até os encontros mais desafiadores de forma mais acessível. Porém, dependendo das técnicas usadas, os inimigos se comportarão de forma única e oferecerão um desafio novo a cada encontro.'
+        ],
         image: "https://store-images.s-microsoft.com/image/apps.60209.14393359190152767.28742aed-5c22-46cd-a3b0-df9ec8938514.ad5e5dfc-2368-43b5-996c-240556a0a387?q=90&w=177&h=265",
         price: 100,
         media: [
@@ -213,9 +210,10 @@ export const gameList: GameProps[] = [
     {
         id: "MinekosNightMarket",
         name: "Mineko's Night Market",
-        description: `Jogue como Mineko, uma menina curiosa que acaba de chegar em sua nova casa em uma ilha com dificuldades inspirada no Japão, na base do Monte Fugu. Os locais de superstição da ilha veneram o Gato Solar, Nikko. A cidade ficou confusa quando, o que sempre foi considerado um antigo mito, começou a aparecer entre os habitantes nos últimos dias.
-
-        Descubra os segredos por trás da cidade e recupere a antiga glória desse sofrido vilarejo. Enquanto isso, faça suas atividades diárias, conclua diversas tarefas, aventure-se em missões fantásticas e construa itens peculiares para se preparar para o Mercado Noturno semanal!`,
+        description:[
+            'Jogue como Mineko, uma menina curiosa que acaba de chegar em sua nova casa em uma ilha com dificuldades inspirada no Japão, na base do Monte Fugu. Os locais de superstição da ilha veneram o Gato Solar, Nikko. A cidade ficou confusa quando, o que sempre foi considerado um antigo mito, começou a aparecer entre os habitantes nos últimos dias.',
+            'Descubra os segredos por trás da cidade e recupere a antiga glória desse sofrido vilarejo. Enquanto isso, faça suas atividades diárias, conclua diversas tarefas, aventure-se em missões fantásticas e construa itens peculiares para se preparar para o Mercado Noturno semanal!'
+        ],
         image: "https://store-images.s-microsoft.com/image/apps.49605.13513466192535313.8b8ee3c5-de55-451f-bb06-0d7638fa2ca9.e3091673-7481-4f50-adcc-8bf2d33f5334?q=90&w=177&h=265",
         price: 100,
         media: [
@@ -234,11 +232,11 @@ export const gameList: GameProps[] = [
     {
         id: "AloneInTheDark",
         name: "Alone in the Dark",
-        description: `Alone in the Dark é uma releitura da  atmosfera de terror de sobrevivência do revolucionário jogo homônimo de 1992.
-
-        Nos Estados Unidos dos anos 1920, Emily Hartwood contrata o detetive particular Edward Carnby para ajudá-la a encontrar o tio desaparecido. A busca leva-os até a mansão Derceto, uma casa de repouso para deficientes mentais situada no sul gótico dos Estados Unidos e que guarda um segredo sombrio. 
-        
-        Explore Derceto jogando como Edward ou Emily e descubra horrores que desafiam qualquer explicação. Você terá que desbravar as sombras, resolver quebra-cabeças nos ambientes do jogo e sobreviver a encontros com criaturas de dar frio na espinha se quiser sobreviver a esse pesadelo.`,
+        description: [
+            'Alone in the Dark é uma releitura da  atmosfera de terror de sobrevivência do revolucionário jogo homônimo de 1992.',
+            'Nos Estados Unidos dos anos 1920, Emily Hartwood contrata o detetive particular Edward Carnby para ajudá-la a encontrar o tio desaparecido. A busca leva-os até a mansão Derceto, uma casa de repouso para deficientes mentais situada no sul gótico dos Estados Unidos e que guarda um segredo sombrio.',
+            'Explore Derceto jogando como Edward ou Emily e descubra horrores que desafiam qualquer explicação. Você terá que desbravar as sombras, resolver quebra-cabeças nos ambientes do jogo e sobreviver a encontros com criaturas de dar frio na espinha se quiser sobreviver a esse pesadelo.'
+        ],
         image: "https://store-images.s-microsoft.com/image/apps.61825.13970220150326028.9032ac83-611c-4133-8638-8636d620d5a3.660134bb-4145-44db-ad0c-af5b1f1d1244?q=90&w=177&h=265",
         price: 100,
         media: [
@@ -264,7 +262,7 @@ export const gameList: GameProps[] = [
     {
         id: "(anunciado)TheLordoftheRingsReturntoMoria",
         name: "The Lord of the Rings: Return to Moria",
-        description: ``,
+        description: [''],
         image: "",
         price: 100,
         media: [
@@ -285,17 +283,14 @@ export const gameList: GameProps[] = [
     {
         id: "CitiesSkylinesII",
         name: "Cities: Skylines II",
-        description: `Se pode sonhar, você pode construir.
-
-        Erga uma cidade do chão e a transforme em uma metrópole próspera que só você é capaz de imaginar. Você nunca construiu nessa escala. Com uma simulação profunda e uma economia viva, Cities: Skylines II é a construção de mundos sem limites.
-        
-        Comece pelas fundações da sua cidade. Crie estradas a infraestrutura e sistemas que possibilitarão a vida diária. Tudo depende de você.
-        
-        Você também decidirá como sua cidade crescerá, mas planeje estrategicamente. Cada decisão tem um impacto. Você conseguirá estimular as indústrias locais e, ao mesmo tempo, usar o comércio para fortalecer a economia? O que fará bairros residenciais florescerem sem eliminar o movimento do centro? Como você atenderá às necessidades e desejos dos cidadãos sem comprometer o orçamento da cidade?
-        
-        Sua cidade nunca descansa. Como qualquer mundo vivo, que respira, ela muda com o tempo. Algumas mudanças serão lentas e graduais, enquanto outras serão repentinas e inesperadas. Assim, enquanto as estações mudam e o dia vira noite, prepare-se para agir quando a vida não correr conforme os planos.
-        
-        O jogo de construção de cidades mais detalhista e realista já criado, Cities: Skylines II leva sua criatividade e capacidade de resolver problemas a outro nível. Com gráficos de alta resolução belamente renderizados, ele também vai inspirar você a construir a cidade dos seus sonhos.`,
+        description: [
+            'Se pode sonhar, você pode construir.',
+            'Erga uma cidade do chão e a transforme em uma metrópole próspera que só você é capaz de imaginar. Você nunca construiu nessa escala. Com uma simulação profunda e uma economia viva, Cities: Skylines II é a construção de mundos sem limites.',
+            'Comece pelas fundações da sua cidade. Crie estradas a infraestrutura e sistemas que possibilitarão a vida diária. Tudo depende de você.',
+            'Você também decidirá como sua cidade crescerá, mas planeje estrategicamente. Cada decisão tem um impacto. Você conseguirá estimular as indústrias locais e, ao mesmo tempo, usar o comércio para fortalecer a economia? O que fará bairros residenciais florescerem sem eliminar o movimento do centro? Como você atenderá às necessidades e desejos dos cidadãos sem comprometer o orçamento da cidade?',
+            'Sua cidade nunca descansa. Como qualquer mundo vivo, que respira, ela muda com o tempo. Algumas mudanças serão lentas e graduais, enquanto outras serão repentinas e inesperadas. Assim, enquanto as estações mudam e o dia vira noite, prepare-se para agir quando a vida não correr conforme os planos.',
+            'O jogo de construção de cidades mais detalhista e realista já criado, Cities: Skylines II leva sua criatividade e capacidade de resolver problemas a outro nível. Com gráficos de alta resolução belamente renderizados, ele também vai inspirar você a construir a cidade dos seus sonhos.'
+        ],
         image: "https://store-images.s-microsoft.com/image/apps.63682.13615111448719096.66548dfc-09a2-496a-a15d-a31ce19ced60.6bde3697-14e0-48a1-a04f-ed93155248c5?q=90&w=177&h=265",
         price: 100,
         media: [
@@ -317,14 +312,15 @@ export const gameList: GameProps[] = [
     {
         id: "GargoylesRemastered",
         name: "Gargoyles Remastered",
-        description: `Gargoyles Remastered é uma deslumbrante restauração do clássico de plataforma de 16 bits dos anos 90. Vivencie mais uma vez a jornada épica de Golias e os Gárgulas com melhorias nos visuais, nas animações e nos efeitos sonoros, tudo inspirado no aclamado desenho animado. O mundo dos Gárgulas vem à vida com um nível de detalhes que vai emocionar não só os fãs da animação como os amantes de jogos retrô também. Curta mecânicas clássicas autênticas ao original, mas com a inclusão de novas funcionalidades, como conquistas, a opção de rebobinar o jogo e mais!
-
-        Atrativos principais
-        • Jogue como Golias, o líder dos Gárgulas: use uma força de partir qualquer pedra, escale torres e estruturas com suas garras afiadas e plane pelo ar dominando técnicas aéreas e combate corpo a corpo numa jornada frenética para salvar o mundo da destruição.
-        • Experiência gráfica imersiva: alterne sem pausas entre gráficos inspirados no desenho ou um modo 16 bits fiel ao jogo original.
-        • A experiência oficial de Gárgulas: viva mais uma vez a história de Golias e os Gárgulas em seu embate contra o maligno Olho de Odin, com novas animações e efeitos sonoros inéditos, tudo inspirado no desenho animado Os Gárgulas.
-        • Personalize a experiência: refine o seu estilo de jogo com funcionalidades modernas, como a opção de rebobinar o jogo instantaneamente, imagem para telas modernas e conquistas!
-        • Trilha sonora remasterizada: deleite-se com a trilha sonora original, remasterizada e otimizada para uma aventura mais imersiva.`,
+        description:[
+            'Gargoyles Remastered é uma deslumbrante restauração do clássico de plataforma de 16 bits dos anos 90. Vivencie mais uma vez a jornada épica de Golias e os Gárgulas com melhorias nos visuais, nas animações e nos efeitos sonoros, tudo inspirado no aclamado desenho animado. O mundo dos Gárgulas vem à vida com um nível de detalhes que vai emocionar não só os fãs da animação como os amantes de jogos retrô também. Curta mecânicas clássicas autênticas ao original, mas com a inclusão de novas funcionalidades, como conquistas, a opção de rebobinar o jogo e mais!',
+            'Atrativos principais',
+            '• Jogue como Golias, o líder dos Gárgulas: use uma força de partir qualquer pedra, escale torres e estruturas com suas garras afiadas e plane pelo ar dominando técnicas aéreas e combate corpo a corpo numa jornada frenética para salvar o mundo da destruição.',
+            '• Experiência gráfica imersiva: alterne sem pausas entre gráficos inspirados no desenho ou um modo 16 bits fiel ao jogo original.',
+            '• A experiência oficial de Gárgulas: viva mais uma vez a história de Golias e os Gárgulas em seu embate contra o maligno Olho de Odin, com novas animações e efeitos sonoros inéditos, tudo inspirado no desenho animado Os Gárgulas.',
+            '• Personalize a experiência: refine o seu estilo de jogo com funcionalidades modernas, como a opção de rebobinar o jogo instantaneamente, imagem para telas modernas e conquistas!',
+            '• Trilha sonora remasterizada: deleite-se com a trilha sonora original, remasterizada e otimizada para uma aventura mais imersiva.'
+        ],
         image: "https://store-images.s-microsoft.com/image/apps.37672.14021890227648603.7650c3f5-9380-472b-aed4-4c2e79fadcb2.4888a7e2-aaa4-4ccb-a58e-8c1cf67d0353?q=90&w=177&h=265",
         price: 100,
         media: [
@@ -348,7 +344,11 @@ export const gameList: GameProps[] = [
     {
         id: "ENDLESSDungeon",
         name: "ENDLESS Dungeon",
-        description: `ENDLESS™ Dungeon é uma mistura única de roguelite, ação tática e defesa de torres que se passa no premiado universo ENDLESS™. Entre em uma estação espacial abandonada há muito tempo, solo ou com amigos, recrute uma equipe de náufragos especiais e proteja seu cristal contra levas intermináveis de monstros... ou morra, recarregue e tente novamente.`,
+        description:[
+            'ENDLESS™ Dungeon é uma mistura única de roguelite, ação tática e defesa de torres que se passa no premiado universo ENDLESS™.',
+            'Entre em uma estação espacial abandonada há muito tempo, solo ou com amigos, recrute uma equipe de náufragos especiais e proteja seu cristal contra levas intermináveis de monstros...',
+            'ou morra, recarregue e tente novamente.'
+        ],
         image: "https://store-images.s-microsoft.com/image/apps.46858.13846905625722373.58f8b13f-c3ae-4dab-a125-65cee4aa0536.1b77c3f4-7866-4d72-ba59-3f95dcbb3d00?q=90&w=177&h=265",
         price: 100,
         media: [
@@ -370,7 +370,11 @@ export const gameList: GameProps[] = [
     {
         id: "SONICSUPERSTARS",
         name: "SONIC SUPERSTARS",
-        description: `Aventure-se pelas místicas Northstar Islands nesta releitura inédita da clássica jogabilidade de ação e plataforma em 2D. Jogue com Sonic, Tails, Knuckles e Amy, e use os novos poderes Esmeralda para realizar movimentos e ataques dinâmicos. Explore os novos e belos cenários no modo solo ou com até 3 outros jogadores e impeça que Dr. Eggman, Fang e um novo adversário misterioso convertam os animais gigantes das ilhas em Badniks antes que seja tarde demais!`,
+        description: [
+            'Aventure-se pelas místicas Northstar Islands nesta releitura inédita da clássica jogabilidade de ação e plataforma em 2D.',
+            'Jogue com Sonic, Tails, Knuckles e Amy, e use os novos poderes Esmeralda para realizar movimentos e ataques dinâmicos.',
+            'Explore os novos e belos cenários no modo solo ou com até 3 outros jogadores e impeça que Dr. Eggman, Fang e um novo adversário misterioso convertam os animais gigantes das ilhas em Badniks antes que seja tarde demais!'
+        ],
         image: "https://store-images.s-microsoft.com/image/apps.42049.14070850807053246.6ded2b2a-e1a4-4608-ab70-77c24c7c93a0.67c11f35-5d35-419c-b1a6-74bee245bffc?q=90&w=177&h=265",
         price: 100,
         media: [

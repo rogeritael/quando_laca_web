@@ -146,6 +146,17 @@ export const PageContainer = styled.section`
             position: relative;
             opacity: 0;
             animation: ${slideUp} 1000ms 500ms ease-in-out forwards;
+
+            span {
+                display: inline-block;
+                margin-bottom: 24px;
+                font-size: 14px;
+                font-weight: 200;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
         }
 
         .buttons_container {

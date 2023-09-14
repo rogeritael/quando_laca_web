@@ -4,7 +4,8 @@ export const AssassinsCreedMirage: GameProps = {
 
     id: "assassins_creed_mirage",
     name: "Assassin's Creed Mirage",
-    description: `Experimente o lar dos Assassinos originais nesta aventura incrível em mundo aberto com foco narrativo.
+    description:
+    `Experimente o lar dos Assassinos originais nesta aventura incrível em mundo aberto com foco narrativo.
 
     Passados 15 anos após o primeiro Assassin's Creed redefinir o gênero aventura, experimente o parkour e a furtividade tradicionais da franquia como nunca antes em Assassin's Creed Mirage. 
     

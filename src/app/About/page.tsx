@@ -147,7 +147,11 @@ export default function About(props : AboutProps){
                         </p>
                         <p className="countdown">{countdown(selectedGame.releaseDate)}</p>
                     </div>
-                    <p className="description">{selectedGame.description}</p>
+                    <p className="description">
+                        {selectedGame.description.map((paragraph, index) => (
+                            <span key={index}>{paragraph}</span>
+                        ))}
+                    </p>
                     <div className="buttons_container">
                         <button onClick={() => handleSetList()}>
                             {isGameAlreadyAdded({gameId: selectedGame.id, gameList: gameList}) ?
