@@ -6,15 +6,16 @@ export const EmptyComponent = styled.figure`
     align-items: center;
     flex-direction: column;
     font-size: 14px;
-    margin-top: 24px;
+    margin-top: 48px;
 
     .icon_container {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
 
         img {
             width: 100%;
             height: 100%;
+            opacity: 0.6;
         }
     }
 
