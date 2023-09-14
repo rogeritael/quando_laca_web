@@ -19,7 +19,7 @@ export const NotificationsContainer = styled.div`
         position: absolute;
         right: 24px;
         top: 80px;
-        z-index: 1;
+        z-index: 3;
         width: 320px;
         padding: 0 14px 24px 14px;
         background-color: #11121B;
