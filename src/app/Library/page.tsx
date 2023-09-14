@@ -15,6 +15,7 @@ import { ConfirmModal } from "@/components/ui/ConfirmModal";
 import { Bell } from "@/components/ui/bell";
 import { MobileHeader } from "@/components/MobileHeader";
 import { CategoryList } from "@/components/CategoryList/CategoryList";
+import { Empty } from "@/components/ui/Empty";
 
 interface LibraryProps {
 
@@ -66,6 +67,9 @@ export default function Library(props : LibraryProps){
                             animationDelay={index == 0 ? 0 : index * 200}
                         />
                     ))}
+                    {gameList.length < 1 && (
+                        <Empty listType="games" button text />
+                    )}
                 </div>
             </div>
         </LibraryContainer>

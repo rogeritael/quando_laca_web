@@ -11,6 +11,7 @@ import { getUnreadQuantity } from "@/utils/getUnreadQuantity";
 import backImage from '@/assets/icons/arrow_v2.svg'
 import Image from "next/image";
 import Link from "next/link";
+import { Empty } from "../ui/Empty";
 
 interface NotificationsModalProps {
 
@@ -54,6 +55,9 @@ export function NotificationsModal(props : NotificationsModalProps){
                         </span>
                         </> 
                     ))}
+                    {userNotifications.length < 1 && (
+                        <Empty listType="notifications" />
+                    )}
 
                 </div>
             </div>

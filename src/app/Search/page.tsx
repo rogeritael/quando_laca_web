@@ -112,7 +112,7 @@ export default function Search(props : AboutProps){
 
                     {searchResults.length <= 0 && trailerResults.length <= 0 && (
                         // <p className="result_paragraph">Nenhum resultado encontrado :c </p>
-                        <Empty listType="search" button/>
+                        <Empty listType="games" button text />
                     )}
                     
 

@@ -8,6 +8,7 @@ import { Context } from "@/context/UserContext";
 
 //excluir
 import { gameList as games } from "@/mocks/games";
+import { Empty } from "../ui/Empty";
 
 interface MyLibraryProps {
 
@@ -22,6 +23,9 @@ export function MyLibrary(props : MyLibraryProps){
                 {gameList.map((game, index) => index < 3 && (
                     <SmallGameCard key={game.id} name={game.name} release_date={game.releaseDate} id={game.id} image={game.image} />
                 ))}
+                {gameList.length < 1 && (
+                    <Empty listType="games" />
+                )}
             </div>
             <a href="/Library">
                 <p>Ver biblioteca completa</p>
