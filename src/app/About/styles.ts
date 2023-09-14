@@ -149,12 +149,12 @@ export const PageContainer = styled.section`
 
             span {
                 display: inline-block;
-                margin-bottom: 24px;
+                padding-bottom: 24px;
                 font-size: 14px;
                 font-weight: 200;
 
                 &:last-child {
-                    margin-bottom: 0;
+                    padding-bottom: 0;
                 }
             }
         }
@@ -309,6 +309,24 @@ export const PageContainer = styled.section`
                     position: relative;
                     opacity: 0;
                     animation: ${slideUp} 1000ms 500ms ease-in-out forwards;
+                    position: relative;
+
+                    /* span {
+                        position: relative;
+                        
+                        &::after {
+                            content: '';
+                            width: 100%;
+                            height: 100%;
+                            max-height: 1600px;
+                            background-color: var(--bg-secondary);
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            opacity: 0.85;
+                            z-index: -1;
+                        }
+                    } */
                 }
 
                 .info_list {

@@ -259,27 +259,6 @@ export const gameList: GameProps[] = [
         ],
     },
     {
-        id: "(anunciado)TheLordoftheRingsReturntoMoria",
-        name: "The Lord of the Rings: Return to Moria",
-        description: [''],
-        image: "",
-        price: 100,
-        media: [
-            {type: 'video', image: '', link: ''},
-            {type: 'video', image: '', link: ''},
-            {type: 'image', image: ''},
-            {type: 'image', image: ''},
-            {type: 'image', image: ''},
-            {type: 'image', image: ''}
-        ],
-        developer: "Open Door Entertainment",
-        platforms: ['', '', ''],
-        releaseDate: new Date(2023, 8-1, 10),
-        category: [
-            {id: '', name: 'Aventura'},
-        ],
-    },
-    {
         id: "CitiesSkylinesII",
         name: "Cities: Skylines II",
         description: [
