@@ -43,7 +43,7 @@ export const ToastComponent = styled.div<ToastProps>`
     width: 100%;
     color: #fff;
     background-color: #3F3F3F;
-    position: absolute;
+    position: fixed;
     z-index: 4;
     border-radius: 4px;
     bottom: 24px;

@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const PageContainer = styled.section`
     height: 100vh;
-    /* padding: 20px; */
-
+    
     .main_content {
         min-height: 100vh;
         display: grid;

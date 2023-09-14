@@ -23,6 +23,7 @@ import { TrailerModal } from "@/components/ui/TrailerModal";
 import { Bell } from "@/components/ui/bell";
 import { MobileHeader } from "@/components/MobileHeader";
 import { CategoryList } from "@/components/CategoryList/CategoryList";
+import { Empty } from "@/components/ui/Empty";
 
 interface AboutProps {
 
@@ -92,7 +93,7 @@ export default function Search(props : AboutProps){
                     <Header />
                     <MobileHeader />
                     <CategoryList className="category_list_mobile" />
-                    <h2 className="search_term">{searchTerm}</h2>
+                    {/* <h2 className="search_term">{searchTerm}</h2> */}
                     { searchResults.length > 0 && 
                         <GameList title='Resultados da pesquisa' >
                             {searchResults.map((result) => (
@@ -110,7 +111,8 @@ export default function Search(props : AboutProps){
                     }
 
                     {searchResults.length <= 0 && trailerResults.length <= 0 && (
-                        <p className="result_paragraph">Nenhum resultado encontrado :c </p>
+                        // <p className="result_paragraph">Nenhum resultado encontrado :c </p>
+                        <Empty listType="search" button/>
                     )}
                     
 
