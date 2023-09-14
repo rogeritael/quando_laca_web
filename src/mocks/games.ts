@@ -1,20 +1,19 @@
 const trailerCover = 'https://i.ytimg.com/vi/Hyh6UqP1YPM/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGhACGAYgATgB&rs=AOn4CLCIXUOMnZXQJ_Q19t6h0uKoAF6aig'
 
-import { AlanWake2 } from './games/AlanWake2';
-import { AssassinsCreedMirage } from './games/AssassinsCreedMirage';
-import { BaldursGate3 } from './games/BaldursGate3';
-import { BombRushCyberfunk } from './games/BombRushCyberfunk'
-import { GoodbyeVolcanoHigh } from './games/GoodbyeVolcanoHigh';
+// import { AlanWake2 } from './games/AlanWake2';
+// import { AssassinsCreedMirage } from './games/AssassinsCreedMirage';
+// import { BaldursGate3 } from './games/BaldursGate3';
+// import { BombRushCyberfunk } from './games/BombRushCyberfunk'
+// import { GoodbyeVolcanoHigh } from './games/GoodbyeVolcanoHigh';
 
-import { LiesOfP } from './games/LiesOfP';
-import { LordsOfTheFallen } from './games/LordsOfTheFallen';
-import { MetalHellsinger } from './games/MetalHellsinger';
-import { MortalKombat1 } from './games/MortalKombat1';
-import { SpiderMan2 } from './games/SpiderMan2'
-import { Starfield } from './games/Starfield';
-// import { SuicideSquadKillTheJusticeLeague } from './games/SuicideSquadKilltheJusticeLeague';
-import { Tekken8 } from './games/Tekken8';
-import { TrainSimWorld3 } from './games/TrainSimWorld3';
+// import { LiesOfP } from './games/LiesOfP';
+// import { LordsOfTheFallen } from './games/LordsOfTheFallen';
+// import { MetalHellsinger } from './games/MetalHellsinger';
+// import { MortalKombat1 } from './games/MortalKombat1';
+// import { SpiderMan2 } from './games/SpiderMan2'
+// import { Starfield } from './games/Starfield';
+// import { Tekken8 } from './games/Tekken8';
+// import { TrainSimWorld3 } from './games/TrainSimWorld3';
 
 interface Category {
     id: string;
