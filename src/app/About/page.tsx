@@ -16,13 +16,14 @@ import { useFlashMessage } from "@/hooks/useFlashMessage";
 import backImage from '@/assets/icons/arrow_v2.svg'
 import { TrailerModal } from "@/components/ui/TrailerModal";
 import { ImageModal } from "@/components/ImageModal";
+import { getVideoId } from "@/utils/getVideoId";
 
 interface AboutProps {
 
 }
 
 interface MediaProps {
-    type: 'image' | 'video'
+    type: string;
     image: string;
     link?: string;
 }
@@ -33,7 +34,7 @@ export default function About(props : AboutProps){
     const [backgroundImage, setBackgroudImage] = useState('')
     const [isGaleryModalOpen, setIsGaleryModalOpen] = useState(false);
     const [initialIndex, setInitialIndex] = useState(0);
-    const [mediaType, setMediaType] = useState<'image'|'video'>('image')
+    const [mediaType, setMediaType] = useState<string>('image')
     const [isLoading, setIsLoading] = useState(true)
     const { setFlashMessage } = useFlashMessage();
     const { createNotification } = useContext(Context)
@@ -174,7 +175,7 @@ export default function About(props : AboutProps){
                                 ):(
                                     media.link && (
                                     <>
-                                        <Image onClick={() => handleOpenGallery(media)} width={270} height={150} src={media.image} alt="imagem da galeria do jogo"/>
+                                        <Image onClick={() => handleOpenGallery(media)} width={270} height={150} src={`https://img.youtube.com/vi/${getVideoId(media.link)}/hqdefault.jpg`} alt="imagem da galeria do jogo"/>
                                         <Image className="player" src={player} alt="icone de player"/>
                                     </>
                                     )

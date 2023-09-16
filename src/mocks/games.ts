@@ -1,3 +1,6 @@
+import { FinalFantasyXVI } from "./games/FinalFantasyXVI";
+import { SeaofStars } from "./games/SeaofStars";
+
 const trailerCover = 'https://i.ytimg.com/vi/Hyh6UqP1YPM/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGhACGAYgATgB&rs=AOn4CLCIXUOMnZXQJ_Q19t6h0uKoAF6aig'
 
 // import { AlanWake2 } from './games/AlanWake2';
@@ -21,7 +24,7 @@ interface Category {
 }
 
 interface MediaProps  {
-    type: 'image' | 'video';
+    type: string;
     image: string;
     link?: string;
 }
@@ -29,7 +32,6 @@ interface MediaProps  {
 export interface GameProps {
     name: string;
     releaseDate: Date;
-    // description: string;
     description: string[];
     developer: string;
     price: number;
@@ -56,7 +58,7 @@ export const category: Category[] = [
 ];
 
 export const gameList: GameProps[] = [
-    
+    SeaofStars
 ]
 
 // {

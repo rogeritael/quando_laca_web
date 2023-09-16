@@ -1,3 +1,23 @@
+function createAndDownloadTSFile(filename, content) {
+    const blob = new Blob([content], { type: 'text/typescript' });
+    const url = window.URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+
+    // Simulate a click event to trigger the download
+    const clickEvent = new MouseEvent('click', {
+        view: window,
+        bubbles: true,
+        cancelable: false,
+    });
+    a.dispatchEvent(clickEvent);
+
+    // Release the object URL resources
+    window.URL.revokeObjectURL(url);
+}
+
 function getInfos(){
     var id = document.querySelector('.banner-title').innerText.replace('Edit', '').replace(':','').toLowerCase().replaceAll(' ','_')
     var title = document.querySelector('.banner-title').innerText.replace('Edit', '')
@@ -8,8 +28,13 @@ function getInfos(){
     var image = document.querySelector('.gamepage-cover img').src
     var price= 100
     var date = document.querySelector('.banner-subheading span span').innerText.replace(',', '').split(' ')
+    let categories = document.querySelectorAll(".gamepage-tabs div")[5].querySelectorAll('p')[0].innerText.replace('Genre: ', '').trim().split(',')
+    categoryArray = []
+    
+    categories.map((category) => {
+        categoryArray.push({id: '', name: category.trim()})
+    })
 
-    var category = []
     var releaseDate = ''
 
     switch(date[0]){
@@ -59,43 +84,19 @@ function getInfos(){
     
     var infos = {
         id: id,
-        title: title,
-        imagem: image,
+        name: title,
+        image: image,
         price: price,
         developer: developer,
         platforms: platforms,
-        releaseDate: releaseDate
+        releaseDate: releaseDate,
+        category: categoryArray
     }
-    console.log(JSON.stringify(infos, null, 2))
+
+    var fileName = title.toUpperCase().replaceAll(' ', '')
+
+
+    const infosString = `export const ${fileName} = ${JSON.stringify(infos, null, 2)}`;
+    createAndDownloadTSFile(`${fileName}.ts`, infosString);
 }
 getInfos()
-
-
-
-
-PLAYSTATION
-function getPlaystationInfos(){
-
-    var images = document.querySelector('.flickity-viewport').querySelectorAll('picture')
-    var medias = []
-
-    var description = document.querySelector('.txt-block__paragraph').innerText
-
-    for(i=0; i < images.length; i++){
-        var origin = images[i].querySelectorAll('source')[1].srcset.split('/')[2]
-
-        if(origin == 'gmedia.playstation.com'){
-            medias.push({type: 'image', image: images[i].querySelectorAll('source')[1].srcset})
-        } else {
-            medias.push({type: 'video', image: '', link: images[i].querySelectorAll('source')[1].srcset})
-        }
-    }
-
-    vari infos = {
-        media: medias,
-        description: description
-    }
-
-    console.log(JSON.stringify(infos, null, 2))
-}
-getPlaystationInfos()

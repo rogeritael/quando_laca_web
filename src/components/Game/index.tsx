@@ -25,7 +25,7 @@ export function Game({ name, image, platforms, isPopular, id } : GameProps){
         <Link href={`/About?id=${id}`}>
             <GameComponent>
                 <figure>
-                    <Image width={100} height={200} src={imageSrc} onError={() => handleImageError()} alt="capa do jogo" />
+                    <Image width={500} height={500} src={imageSrc} onError={() => handleImageError()} alt="capa do jogo" />
                 </figure>
                 <div className="about">
                     <ul>

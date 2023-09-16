@@ -6,7 +6,7 @@ import { isAVideoLink } from "@/utils/isAVideoLink";
 import { getVideoId } from "@/utils/getVideoId";
 
 interface MediaProps {
-    type: 'image' | 'video';
+    type: string;
     image: string;
     link?: string;
 }
@@ -16,12 +16,12 @@ interface GaleryModalProps {
     initialIndex: number;
     isGaleryModalOpen: boolean;
     setIsGaleryModalOpen: (param: boolean) => void;
-    mediaType: 'image' | 'video';
+    mediaType: string;
 }
 
 export function GaleryModal({ media, isGaleryModalOpen, setIsGaleryModalOpen, initialIndex, mediaType } : GaleryModalProps){
     const [mainImage, setMainImage] = useState('');
-    const [type, setType] = useState<'image'|'video'>()
+    const [type, setType] = useState<string>()
     
     useEffect(() => {
         const selectedImage = media[initialIndex].link ?? media[initialIndex].image;
