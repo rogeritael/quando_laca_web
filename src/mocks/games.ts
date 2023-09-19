@@ -7,9 +7,12 @@ import { AloneintheDark } from "./games/AloneintheDark";
 import { AnimalWell } from "./games/AnimalWell";
 import { AssassinsCreedMirage } from "./games/AssassinsCreedMirage";
 import { AtLightSpeed } from "./games/AtLightSpeed";
+import { AvatarFrontiersofPandora } from "./games/AvatarFrontiersofPandora";
 import { AvatarTheLastAirbenderQuestforBalance } from "./games/AvatarTheLastAirbenderQuestforBalance";
 import { BangOnBallsChronicles } from "./games/BangOnBallsChronicles";
+import { BanishersGhostsofNewEden } from "./games/BanishersGhostsofNewEden";
 import { BattleCakes } from "./games/BattleCakes";
+import { CallofDutyModernWarfareIII } from "./games/CallofDutyModernWarfareIII";
 import { CassetteBeastsPieroftheUnknown } from "./games/CassetteBeastsPieroftheUnknown";
 import { ChaosonWheels } from "./games/ChaosonWheels";
 import { CitiesSkylinesII } from "./games/CitiesSkylinesII";
@@ -31,10 +34,12 @@ import { FateSamuraiRemnant } from "./games/Fate_SamuraiRemnant";
 import { FinalFantasyVIIRebirth } from "./games/FinalFantasyVIIRebirth";
 import { FortunesRun } from "./games/FortunesRun";
 import { ForzaMotorsport } from "./games/ForzaMotorsport";
+import { FushiginoDungeonFuurainoShiren6TogurojimaTankenRoku } from "./games/FushiginoDungeonFuurainoShiren6TogurojimaTankenRoku";
 import { GangsofSherwood } from "./games/GangsofSherwood";
 import { GargoylesRemastered } from "./games/GargoylesRemastered";
 import { GhostrunnerII } from "./games/GhostrunnerII";
 import { GranblueFantasyRelink } from "./games/GranblueFantasyRelink";
+import { GranblueFantasyVersusRising } from "./games/GranblueFantasyVersusRising";
 import { GunvoltRecordsCychronicle } from "./games/GunvoltRecordsCychronicle";
 import { HellboyWebofWyrd } from "./games/HellboyWebofWyrd";
 import { HelldiversII } from "./games/HelldiversII";
@@ -79,24 +84,29 @@ import { SongofNunuALeagueofLegendsStory } from "./games/SongofNunuALeagueofLege
 import { SonicSuperstars } from "./games/SonicSuperstars";
 import { StampedeRacingRoyale } from "./games/StampedeRacingRoyale";
 import { StarOceanTheSecondStoryR } from "./games/StarOceanTheSecondStoryR";
+import { SteamWorldBuild } from "./games/SteamWorldBuild";
 import { StraySouls } from "./games/StraySouls";
 import { StreetFighter6Year1AKI } from "./games/StreetFighter6Year1AKI";
 import { SuckIt } from "./games/SuckIt";
 import { SuicideSquadKilltheJusticeLeague } from "./games/SuicideSquadKilltheJusticeLeague";
 import { SuperAdventureHand } from "./games/SuperAdventureHand";
 import { SuperMarioBrosWonder } from "./games/SuperMarioBrosWonder";
+import { TalesofAriseBeyondtheDawn } from "./games/TalesofAriseBeyondtheDawn";
 import { TanksButNoTanks } from "./games/TanksButNoTanks";
 import { Tekken8 } from "./games/Tekken8";
 import { TheBunnyGraveyard } from "./games/TheBunnyGraveyard";
 import { TheDayBefore } from "./games/TheDayBefore";
 import { TheExpanseATelltaleSeriesEpisode5EuropasFolly } from "./games/TheExpanseATelltaleSeriesEpisode5EuropasFolly";
 import { TheGap } from "./games/TheGap";
+import { TheInvincible } from "./games/TheInvincible";
 import { TheseDoomedIsles } from "./games/TheseDoomedIsles";
 import { ThiefSimulator2 } from "./games/ThiefSimulator2";
 import { ThirstySuitors } from "./games/ThirstySuitors";
+import { TintinReporterCigarsofthePharaoh } from "./games/TintinReporterCigarsofthePharaoh";
 import { TombRaiderIIIIRemastered } from "./games/TombRaiderIIIIRemastered";
 import { TotalWarPharaoh } from "./games/TotalWarPharaoh";
 import { VampireTheMasqueradeJustice } from "./games/VampireTheMasqueradeJustice";
+import { Warhammer40000RogueTrader } from "./games/Warhammer40000RogueTrader";
 import { WarhammerVermintide2Necromancer } from "./games/WarhammerVermintide2Necromancer";
 import { Warhaven } from "./games/Warhaven";
 import { Wildmender } from "./games/Wildmender";
@@ -253,7 +263,17 @@ export const gameList: GameProps[] = [
     Tekken8,
     ThirstySuitors,
     TombRaiderIIIIRemastered,
-    VampireTheMasqueradeJustice
+    VampireTheMasqueradeJustice,
+    AvatarFrontiersofPandora,
+    BanishersGhostsofNewEden,
+    CallofDutyModernWarfareIII,
+    FushiginoDungeonFuurainoShiren6TogurojimaTankenRoku,
+    GranblueFantasyVersusRising,
+    SteamWorldBuild,
+    TalesofAriseBeyondtheDawn,
+    TheInvincible,
+    TintinReporterCigarsofthePharaoh,
+    Warhammer40000RogueTrader,
 ]
 
 

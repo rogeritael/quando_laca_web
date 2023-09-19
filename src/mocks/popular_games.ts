@@ -11,5 +11,7 @@ export const popular_games = [
     'tekken_8',
     'prince_of_persia_the_lost_crown',
     'alone_in_the_dark',
-    'alan_wake_ii'
+    'alan_wake_ii',
+    'banishers_ghosts_of_new_eden',
+    'call_of_duty_modern_warfare_iii'
 ]
