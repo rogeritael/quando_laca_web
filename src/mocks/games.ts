@@ -13,9 +13,16 @@ import { LunarLux } from "./games/LunarLux";
 import { MinekosNightMarket } from "./games/MinekosNightMarket";
 import { MomotaroDentetsuWorldChikyuuhaKiboudeMawatteru } from "./games/MomotaroDentetsuWorldChikyuuhaKiboudeMawatteru";
 import { PaleoPines } from "./games/PaleoPines";
+import { ProjectPlanetEarthVsHumanity } from "./games/ProjectPlanetEarthVsHumanity";
+import { Railgunners } from "./games/Railgunners";
+import { RelicHuntersLegend } from "./games/RelicHuntersLegend";
+import { Robodunk } from "./games/Robodunk";
 import { SilentHope } from "./games/SilentHope";
+import { SlaughterTheLostOutpost } from "./games/SlaughterTheLostOutpost";
 import { StreetFighter6Year1AKI } from "./games/StreetFighter6Year1AKI";
+import { TanksButNoTanks } from "./games/TanksButNoTanks";
 import { TheDayBefore } from "./games/TheDayBefore";
+import { TheseDoomedIsles } from "./games/TheseDoomedIsles";
 import { Wildmender } from "./games/Wildmender";
 import { WitchSpringR } from "./games/WitchSpringR";
 import { Witchfire } from "./games/Witchfire";
@@ -82,6 +89,13 @@ export const gameList: GameProps[] = [
     Witchfire,
     WitchSpringR,
     YsXNordics,
+    ProjectPlanetEarthVsHumanity,
+    Railgunners,
+    RelicHuntersLegend,
+    Robodunk,
+    SlaughterTheLostOutpost,
+    TanksButNoTanks,
+    TheseDoomedIsles,
 ]
 
 // {

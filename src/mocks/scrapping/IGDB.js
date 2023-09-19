@@ -171,7 +171,7 @@ function getInfos(){
         description: about
     }
 
-    var fileName = title.replaceAll(' ', '').replaceAll('-', '').replaceAll('.', '').replaceAll('-', '').replaceAll("'", "").replaceAll('`', '').replaceAll('!', '').replaceAll('_', '').replaceAll(':', '')
+    var fileName = title.replaceAll(' ', '').replaceAll('-', '').replaceAll('.', '').replaceAll('-', '').replaceAll("'", "").replaceAll('`', '').replaceAll('!', '').replaceAll('_', '').replaceAll(':', '').replaceAll(',', '')
 
 
     const infosString = `export const ${fileName} = ${JSON.stringify(infos, null, 2)}`;
