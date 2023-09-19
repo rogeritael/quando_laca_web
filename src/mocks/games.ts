@@ -1,7 +1,10 @@
 // const trailerCover = 'https://i.ytimg.com/vi/Hyh6UqP1YPM/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGhACGAYgATgB&rs=AOn4CLCIXUOMnZXQJ_Q19t6h0uKoAF6aig'
 
 import { Afterdream } from "./games/Afterdream";
+import { AlanWakeII } from "./games/AlanWakeII";
 import { AlaskanRoadTruckers } from "./games/AlaskanRoadTruckers";
+import { AloneintheDark } from "./games/AloneintheDark";
+import { AnimalWell } from "./games/AnimalWell";
 import { AssassinsCreedMirage } from "./games/AssassinsCreedMirage";
 import { AtLightSpeed } from "./games/AtLightSpeed";
 import { AvatarTheLastAirbenderQuestforBalance } from "./games/AvatarTheLastAirbenderQuestforBalance";
@@ -13,59 +16,87 @@ import { CitiesSkylinesII } from "./games/CitiesSkylinesII";
 import { Cocoon } from "./games/Cocoon";
 import { Cricket24 } from "./games/Cricket24";
 import { Cyberpunk2077PhantomLiberty } from "./games/Cyberpunk2077PhantomLiberty";
+import { Destiny2TheFinalShape } from "./games/Destiny2TheFinalShape";
 import { DetectivePikachuReturns } from "./games/DetectivePikachuReturns";
 import { DolphinSpiritOceanMission } from "./games/DolphinSpiritOceanMission";
 import { EASportsFC24 } from "./games/EASportsFC24";
+import { EASportsUFC5 } from "./games/EASportsUFC5";
+import { EASportsWRC } from "./games/EASportsWRC";
+import { EiyudenChronicleHundredHeroes } from "./games/EiyudenChronicleHundredHeroes";
 import { ElPasoElsewhere } from "./games/ElPasoElsewhere";
 import { EndlessDungeon } from "./games/EndlessDungeon";
 import { EscapeFromMystwoodMansion } from "./games/EscapeFromMystwoodMansion";
 import { FCMobile } from "./games/FCMobile";
 import { FateSamuraiRemnant } from "./games/Fate_SamuraiRemnant";
+import { FinalFantasyVIIRebirth } from "./games/FinalFantasyVIIRebirth";
 import { FortunesRun } from "./games/FortunesRun";
 import { ForzaMotorsport } from "./games/ForzaMotorsport";
 import { GangsofSherwood } from "./games/GangsofSherwood";
 import { GargoylesRemastered } from "./games/GargoylesRemastered";
 import { GhostrunnerII } from "./games/GhostrunnerII";
+import { GranblueFantasyRelink } from "./games/GranblueFantasyRelink";
+import { GunvoltRecordsCychronicle } from "./games/GunvoltRecordsCychronicle";
 import { HellboyWebofWyrd } from "./games/HellboyWebofWyrd";
+import { HelldiversII } from "./games/HelldiversII";
 import { HellsweeperVR } from "./games/HellsweeperVR";
+import { HopStepDance } from "./games/HopStepDance";
 import { HotWheelsUnleashed2Turbocharged } from "./games/HotWheelsUnleashed2Turbocharged";
 import { InfinityStrashDragonQuestTheAdventureofDai } from "./games/InfinityStrashDragonQuestTheAdventureofDai";
+import { Jusant } from "./games/Jusant";
 import { JustDance2024ionEdit } from "./games/JustDance2024";
 import { KingdomsofEreloth } from "./games/KingdomsofEreloth";
+import { LastRemains } from "./games/LastRemains";
 import { LordsoftheFallen } from "./games/LordsoftheFallen";
 import { LunarLux } from "./games/LunarLux";
+import { Marathon } from "./games/Marathon";
 import { MarvelsSpiderMan2 } from "./games/MarvelsSpiderMan2";
 import { MenofWarII } from "./games/MenofWarII";
 import { MinekosNightMarket } from "./games/MinekosNightMarket";
 import { MomotaroDentetsuWorldChikyuuhaKiboudeMawatteru } from "./games/MomotaroDentetsuWorldChikyuuhaKiboudeMawatteru";
 import { MoonstoneIsland } from "./games/MoonstoneIsland";
 import { MortalKombat1 } from "./games/MortalKombat1";
+import { Nightingale } from "./games/Nightingale";
 import { PaleoPines } from "./games/PaleoPines";
 import { PartyAnimals } from "./games/PartyAnimals";
 import { Payday3 } from "./games/Payday3";
+import { PennysBigBreakaway } from "./games/PennysBigBreakaway";
+import { Persona3Reload } from "./games/Persona3Reload";
 import { PhantomFury } from "./games/PhantomFury";
 import { PhantomHellcat } from "./games/PhantomHellcat";
+import { PrinceofPersiaTheLostCrown } from "./games/PrinceofPersiaTheLostCrown";
 import { ProjectPlanetEarthVsHumanity } from "./games/ProjectPlanetEarthVsHumanity";
+import { QuantumError } from "./games/QuantumError";
 import { Railgunners } from "./games/Railgunners";
 import { RearSekai } from "./games/RearSekai";
 import { RelicHuntersLegend } from "./games/RelicHuntersLegend";
 import { ResidentEvil4SeparateWays } from "./games/ResidentEvil4SeparateWays";
+import { RobocopRogueCity } from "./games/RobocopRogueCity";
 import { Robodunk } from "./games/Robodunk";
+import { ShipofTheseus } from "./games/ShipofTheseus";
 import { SilentHope } from "./games/SilentHope";
 import { SlaughterTheLostOutpost } from "./games/SlaughterTheLostOutpost";
+import { SongofNunuALeagueofLegendsStory } from "./games/SongofNunuALeagueofLegendsStory";
 import { SonicSuperstars } from "./games/SonicSuperstars";
+import { StampedeRacingRoyale } from "./games/StampedeRacingRoyale";
+import { StarOceanTheSecondStoryR } from "./games/StarOceanTheSecondStoryR";
+import { StraySouls } from "./games/StraySouls";
 import { StreetFighter6Year1AKI } from "./games/StreetFighter6Year1AKI";
 import { SuckIt } from "./games/SuckIt";
+import { SuicideSquadKilltheJusticeLeague } from "./games/SuicideSquadKilltheJusticeLeague";
 import { SuperAdventureHand } from "./games/SuperAdventureHand";
 import { SuperMarioBrosWonder } from "./games/SuperMarioBrosWonder";
 import { TanksButNoTanks } from "./games/TanksButNoTanks";
+import { Tekken8 } from "./games/Tekken8";
 import { TheBunnyGraveyard } from "./games/TheBunnyGraveyard";
 import { TheDayBefore } from "./games/TheDayBefore";
 import { TheExpanseATelltaleSeriesEpisode5EuropasFolly } from "./games/TheExpanseATelltaleSeriesEpisode5EuropasFolly";
 import { TheGap } from "./games/TheGap";
 import { TheseDoomedIsles } from "./games/TheseDoomedIsles";
 import { ThiefSimulator2 } from "./games/ThiefSimulator2";
+import { ThirstySuitors } from "./games/ThirstySuitors";
+import { TombRaiderIIIIRemastered } from "./games/TombRaiderIIIIRemastered";
 import { TotalWarPharaoh } from "./games/TotalWarPharaoh";
+import { VampireTheMasqueradeJustice } from "./games/VampireTheMasqueradeJustice";
 import { WarhammerVermintide2Necromancer } from "./games/WarhammerVermintide2Necromancer";
 import { Warhaven } from "./games/Warhaven";
 import { Wildmender } from "./games/Wildmender";
@@ -145,7 +176,6 @@ export const gameList: GameProps[] = [
     TanksButNoTanks,
     TheseDoomedIsles,
     AtLightSpeed,
-    Cyberpunk2077PhantomLiberty,
     HellsweeperVR,
     MenofWarII,
     MoonstoneIsland,
@@ -193,7 +223,39 @@ export const gameList: GameProps[] = [
     WarhammerVermintide2Necromancer,
     WoodlandTown,
     Worldless,
+    AlanWakeII,
+    AloneintheDark,
+    AnimalWell,
+    Destiny2TheFinalShape,
+    EASportsUFC5,
+    EASportsWRC,
+    EiyudenChronicleHundredHeroes,
+    FinalFantasyVIIRebirth,
+    GranblueFantasyRelink,
+    GunvoltRecordsCychronicle,
+    HelldiversII,
+    HopStepDance,
+    Jusant,
+    LastRemains,
+    Marathon,
+    Nightingale,
+    PennysBigBreakaway,
+    Persona3Reload,
+    PrinceofPersiaTheLostCrown,
+    QuantumError,
+    RobocopRogueCity,
+    ShipofTheseus,
+    SongofNunuALeagueofLegendsStory,
+    StampedeRacingRoyale,
+    StarOceanTheSecondStoryR,
+    StraySouls,
+    SuicideSquadKilltheJusticeLeague,
+    Tekken8,
+    ThirstySuitors,
+    TombRaiderIIIIRemastered,
+    VampireTheMasqueradeJustice
 ]
+
 
 // {
 //     name: "",

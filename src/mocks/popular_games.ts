@@ -1,11 +1,15 @@
 export const popular_games = [
+    'marvels_spider-man_2',
+    'resident_evil_4_separate_ways',
     `assassins_creed_mirage`,
+    'mortal_kombat_1',
     'cyberpunk_2077_phantom_liberty',
     'forza_motorsport',
     'payday_3',
     'street_fighter_6_year_1_-_a.k.i.',
-    'resident_evil_4_separate_ways',
-    'mortal_kombat_1',
-    'marvels_spider-man_2',
-    'ghostrunner_ii'
+    'ghostrunner_ii',
+    'tekken_8',
+    'prince_of_persia_the_lost_crown',
+    'alone_in_the_dark',
+    'alan_wake_ii'
 ]
