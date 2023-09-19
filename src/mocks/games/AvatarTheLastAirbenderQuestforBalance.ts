@@ -12,7 +12,7 @@ export const AvatarTheLastAirbenderQuestforBalance = {
     "Nintendo Switch",
     "Xbox Series X|S"
   ],
-  "releaseDate": "new Date(2023, 8, 22)",
+  "releaseDate": new Date(2023, 8, 22),
   "category": [
     {
       "id": "",

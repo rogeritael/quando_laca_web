@@ -12,7 +12,7 @@ export const Cocoon = {
     "Nintendo Switch",
     "Xbox Series X|S"
   ],
-  "releaseDate": "new Date(2023, 8, 29)",
+  "releaseDate": new Date(2023, 8, 29),
   "category": [
     {
       "id": "",

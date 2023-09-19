@@ -9,7 +9,7 @@ export const Worldless = {
     "PC (Microsoft Windows)",
     "Xbox Series X|S"
   ],
-  "releaseDate": "new Date(2023, 9, 04)",
+  "releaseDate": new Date(2023, 9, 4),
   "category": [
     {
       "id": "",

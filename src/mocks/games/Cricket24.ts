@@ -12,7 +12,7 @@ export const Cricket24 = {
     "Nintendo Switch",
     "Xbox Series X|S"
   ],
-  "releaseDate": "new Date(2023, 9, 05)",
+  "releaseDate": new Date(2023, 9, 5),
   "category": [
     {
       "id": "",

@@ -8,7 +8,7 @@ export const CassetteBeastsPieroftheUnknown = {
     "Indie",
     "Role-playing (RPG)"
   ],
-  "releaseDate": "new Date(2023, 9, 04)",
+  "releaseDate": new Date(2023, 9, 4),
   "category": [],
   "media": [
     {

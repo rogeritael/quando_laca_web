@@ -1,5 +1,5 @@
 export const AssassinsCreedMirage = {
-  "id": "assassin's_creed_mirage",
+  "id": "assassins_creed_mirage",
   "name": "Assassin's Creed Mirage",
   "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co57sj.png",
   "price": 100,
@@ -12,7 +12,7 @@ export const AssassinsCreedMirage = {
     "PC (Microsoft Windows)",
     "Xbox Series X|S"
   ],
-  "releaseDate": "new Date(2023, 9, 05)",
+  "releaseDate": new Date(2023, 9, 5),
   "category": [
     {
       "id": "",

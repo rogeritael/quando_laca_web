@@ -10,7 +10,7 @@ export const DolphinSpiritOceanMission = {
     "PC (Microsoft Windows)",
     "Nintendo Switch"
   ],
-  "releaseDate": "new Date(2023, 8, 28)",
+  "releaseDate": new Date(2023, 8, 28),
   "category": [
     {
       "id": "",

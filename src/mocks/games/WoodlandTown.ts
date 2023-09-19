@@ -7,7 +7,7 @@ export const WoodlandTown = {
   "platforms": [
     "PC (Microsoft Windows)"
   ],
-  "releaseDate": "new Date(2023, 8, 22)",
+  "releaseDate": new Date(2023, 8, 22),
   "category": [
     {
       "id": "",

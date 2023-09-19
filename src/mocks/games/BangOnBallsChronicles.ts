@@ -10,7 +10,7 @@ export const BangOnBallsChronicles = {
     "PC (Microsoft Windows)",
     "Nintendo Switch"
   ],
-  "releaseDate": "new Date(2023, 9, 05)",
+  "releaseDate": new Date(2023, 9, 5),
   "category": [
     {
       "id": "",

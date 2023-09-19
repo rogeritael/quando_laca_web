@@ -1,5 +1,5 @@
-export const Fate/SamuraiRemnant = {
-  "id": "fate/samurai_remnant",
+export const FateSamuraiRemnant = {
+  "id": "fatesamurai_remnant",
   "name": "Fate/Samurai Remnant",
   "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co702g.png",
   "price": 100,
@@ -10,7 +10,7 @@ export const Fate/SamuraiRemnant = {
     "PC (Microsoft Windows)",
     "Nintendo Switch"
   ],
-  "releaseDate": "new Date(2023, 8, 29)",
+  "releaseDate": new Date(2023, 8, 29),
   "category": [
     {
       "id": "",
