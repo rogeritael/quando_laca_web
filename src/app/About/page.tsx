@@ -164,7 +164,7 @@ export default function About(props : AboutProps){
                         {/* <Link href="/">Comprar Jogo</Link> */}
                     </div>
                 
-                    <div className="image_galery">
+                    {/* <div className="image_galery">
                         <Carousel title="" maxWidth="800px">
 
                         {selectedGame.media.map((media, index) => (
@@ -185,7 +185,7 @@ export default function About(props : AboutProps){
                             
                         ))}
                         </Carousel>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             
