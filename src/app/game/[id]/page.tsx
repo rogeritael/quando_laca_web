@@ -111,49 +111,23 @@ export default function Game( { params: { id } }  : PageProps){
             <GaleryModal mediaType={mediaType} initialIndex={initialIndex} media={selectedGame.media} isGaleryModalOpen={isGaleryModalOpen} setIsGaleryModalOpen={setIsGaleryModalOpen}/>
             
             <SideMenu />
+
             <div className="game_section">
-                <figure className="background_image">
-                    <span className="image_mask"/>
-                    <Image width={1200} height={1200} src={backgroundImage} alt="imagem de fundo do jogo"/>
+                <figure className="background">
+                    <span className="overlay01"/>
+                    <span className="overlay02"/>
+                    <Image width={2400} height={2400} src={backgroundImage} alt="imagem de fundo do jogo"/>
                 </figure>
 
-                <div className="game_infos">
-
-                    <p className="developer">
-                        {selectedGame.developer}
-                    </p>
-                    <div className="title_container">
-                        <Link href={"/"} className="back_page">
-                            <Image alt="coltar para a tela inicial" src={backImage} />
-                        </Link>
-                        <h1 className="title">{selectedGame.name}</h1>
-                    </div>
-                    
-                    
-                    <div className="info_list">
-                        <p>{selectedGame.developer}</p>
-                        <p className="categories">
-                            {selectedGame.category.map((category, index) => (
-                                <span key={index}>{category.name}</span>
-                            ))}
-                        </p>
-                        <p className="countdown">{countdown(selectedGame.releaseDate)}</p>
-                    </div>
-                    {/* <p className="description">
-                        {selectedGame.description.map((paragraph, index) => (
-                            <span key={index}>{paragraph}</span>
-                        ))}
-                    </p> */}
-                    <div className="buttons_container">
-                        <button onClick={() => handleSetList()}>
-                            {isGameAlreadyAdded({gameId: selectedGame.id, gameList: gameList}) ?
-                                'Remover da Lista'
-                                :
-                                'Adicionar a Lista'
-                            }
-                        </button>
-                    </div>
-                </div>
+                <section className="content">
+                    <button onClick={() => handleSetList()}>
+                        {isGameAlreadyAdded({gameId: selectedGame.id, gameList: gameList}) ?
+                            'Remover da Lista'
+                            :
+                            'Adicionar a Lista'
+                        }
+                    </button>
+                </section>
             </div>
             
         </PageContainer>
