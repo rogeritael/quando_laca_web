@@ -246,10 +246,16 @@ export const PageContainer = styled.section`
     }
 
     @media(max-width: 425px){
+
+
         .game_section {
+
+            height: 100vh;
+            z-index: 3;
+
             .content {
                 padding: 38px 24px;
-                padding-bottom: 80px;
+                padding-bottom: 38px;
 
                 .top_infos {
                     h1 {
