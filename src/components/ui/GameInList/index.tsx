@@ -34,7 +34,7 @@ export function GameInList({ name, id, image, developer, release_date, removeGam
                 <button onClick={() => removeGame(id)}>
                     <AiOutlineDelete />
                 </button>
-                <Link href={`/about?id=${id}`}>
+                <Link href={`/game/${id}`}>
                     <button>
                         Ver Mais
                     </button>

@@ -19,7 +19,7 @@ export function formatDate(date: Date){
     const month = months[date.toString().split(" ")[1]];
     const year = date.getFullYear();
 
-  const formattedDate = `${day} de ${month} de ${year}`;
+  const formattedDate = `${day} ${month} ${year}`;
   return formattedDate;
 }
 

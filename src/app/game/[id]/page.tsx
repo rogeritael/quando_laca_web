@@ -24,6 +24,7 @@ import trailer_player from '@/assets/icons/trailer_play_icon.svg'
 
 import { SiPlaystation4, SiPlaystation5 } from 'react-icons/si'
 import { BsNintendoSwitch, BsXbox, BsMicrosoft } from 'react-icons/bs'
+import { formatDate } from "@/utils/formatDate";
 
 interface PageProps {
     params: {
@@ -87,27 +88,10 @@ export default function Game( { params: { id } }  : PageProps){
                 setFlashMessage({type:'success', message: `${selectedGame.name} foi adicionado aos seus favoritos`})
             }
         }
-
     }
 
-    //excluir quando terminar de refatorar o código
-    function handleOpenModal(index: number, media: MediaProps){
-        setInitialIndex(index)
-        setMediaType(media.type)
-        setIsGaleryModalOpen(true)
-    }
-
-    function handleOpenGallery(media: MediaProps){
-
-        if(media.type === 'video'){
-            media.link &&
-            setMediaUrl(media.link)
-            setIstrailerModalOpen(true)
-        } else if(media.type === 'image'){
-            // media.link &&
-            setMediaUrl(media.image)
-            setIsImageModalOpen(true)
-        }
+    function handleOpenGallery(){
+        alert('galeria aberta')
     }
 
     return(
@@ -133,19 +117,19 @@ export default function Game( { params: { id } }  : PageProps){
 
                 <section className="content">
                     <div className="top_infos">
-                        <span className="developer">Ubisoft</span>
-                        <h1><Image src={title_reverse_arrow} alt="voltar para a página anterior" /> Assassins Creed: Mirage</h1>
+                        <span className="developer">{selectedGame.developer}</span>
+                        <h1><Image src={title_reverse_arrow} alt="voltar para a página anterior" />{selectedGame.name}</h1>
                         <div className="group_info">
                             <Category label="RPG"></Category>
-                            <p className="date">10 Jan 2024</p>
+                            <p className="date">{formatDate(selectedGame.releaseDate)}</p>
                         </div>
                     </div>
 
-                    <Image src={trailer_player} alt="player" className="player"/>
+                    <Image src={trailer_player} alt="player" className="player" onClick={() => handleOpenGallery()}/>
 
                     <div className="bottom_infos">
                         <p className="countdown_text">
-                            Lança em 24 dias
+                            {countdown(selectedGame.releaseDate)}
                         </p>
                         <div className="platforms">                            
                             <SiPlaystation4 className="playstation" />

@@ -27,7 +27,7 @@ export function SmallGameCard({ id, image, name, release_date, v2 } : SmallGameC
     }
 
     function handleRedirect(){
-        router.push(`/about?id=${id}`)
+        router.push(`/game/${id}`)
     }
 
     return(
