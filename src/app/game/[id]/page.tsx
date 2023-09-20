@@ -120,7 +120,7 @@ export default function Game( { params: { id } }  : PageProps){
                         <span className="developer">{selectedGame.developer}</span>
                         <h1><Image src={title_reverse_arrow} alt="voltar para a página anterior" />{selectedGame.name}</h1>
                         <div className="group_info">
-                            <Category label="RPG"></Category>
+                            <Category label={selectedGame.category[0].name}></Category>
                             <p className="date">{formatDate(selectedGame.releaseDate)}</p>
                         </div>
                     </div>
