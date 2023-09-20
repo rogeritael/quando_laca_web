@@ -16,12 +16,12 @@ export function MobileHeader(props : MobileHeaderProps){
 
     const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === "Enter" || event.keyCode === 13) {
-            window.location.href = `/Search?term=${searchTerm}`;
+            window.location.href = `/search?term=${searchTerm}`;
         }
     };
 
     function handleSearch(){
-        window.location.href = `/Search?term=${searchTerm}`;
+        window.location.href = `/search?term=${searchTerm}`;
     }
 
     return(

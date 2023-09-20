@@ -19,7 +19,7 @@ export function GameInList({ name, id, image, developer, release_date, removeGam
     const router = useRouter()
 
     function handleRedirect(id: string){
-        router.push(`/About?id=${id}`, { scroll: false })
+        router.push(`/about?id=${id}`, { scroll: false })
     }
 
     return(
@@ -34,7 +34,7 @@ export function GameInList({ name, id, image, developer, release_date, removeGam
                 <button onClick={() => removeGame(id)}>
                     <AiOutlineDelete />
                 </button>
-                <Link href={`/About?id=${id}`}>
+                <Link href={`/about?id=${id}`}>
                     <button>
                         Ver Mais
                     </button>

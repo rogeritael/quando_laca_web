@@ -9,7 +9,7 @@ import { gamesService } from "@/services/gameService";
 import { countdown } from "@/utils/countdown";
 import Link from "next/link";
 import { Context } from "@/context/UserContext";
-import { isGameAlreadyAdded } from '../../utils/isGameFavorited';
+import { isGameAlreadyAdded } from '../../../utils/isGameFavorited';
 import { Carousel } from "@/components/ui/Carousel";
 import player from '@/assets/icons/player.svg'
 import { useFlashMessage } from "@/hooks/useFlashMessage";
@@ -18,8 +18,10 @@ import { TrailerModal } from "@/components/ui/TrailerModal";
 import { ImageModal } from "@/components/ImageModal";
 import { getVideoId } from "@/utils/getVideoId";
 
-interface AboutProps {
-
+interface PageProps {
+    params: {
+        id: string
+    }
 }
 
 interface MediaProps {
@@ -28,7 +30,7 @@ interface MediaProps {
     link?: string;
 }
 
-export default function About(props : AboutProps){
+export default function Game( { params: { id } }  : PageProps){
     const { addToList, findAllNotifications, gameList, setGameIdToRemoveFromList, setIsConfirmModalVisible } = useContext(Context);
     const [selectedGame, setSelectedGame] = useState<GameProps>()
     const [backgroundImage, setBackgroudImage] = useState('')
@@ -48,20 +50,15 @@ export default function About(props : AboutProps){
     useEffect(() => {
 
         const fetchData = async() => {
-            const url = window.location.href;
-            const id = url.split('id=')[1];
+            const game = await gamesService().findById(id)
 
-            if(typeof id === 'string'){
-                const game = await gamesService().findById(id)
+            if(game) {
+                setSelectedGame(game)
 
-                if(game) {
-                    setSelectedGame(game)
-
-                    game.media.map((media) => (
-                        backgroundImage === '' &&
-                            media.type === 'image' && setBackgroudImage(media.image)
-                    ))
-                }
+                game.media.map((media) => (
+                    backgroundImage === '' &&
+                        media.type === 'image' && setBackgroudImage(media.image)
+                ))
             }
 
         }
@@ -121,13 +118,6 @@ export default function About(props : AboutProps){
                 </figure>
 
                 <div className="game_infos">
-                    <Link href={'/game/assassins_creed_mirage'} >Jogoo</Link>
-                    
-                    
-                    {/* <Link href={"/"} className="back_page">
-                        <Image alt="coltar para a tela inicial" src={backImage} />
-                        <p>Voltar</p>
-                    </Link> */}
 
                     <p className="developer">
                         {selectedGame.developer}
@@ -162,31 +152,7 @@ export default function About(props : AboutProps){
                                 'Adicionar a Lista'
                             }
                         </button>
-                        {/* <Link href="/">Comprar Jogo</Link> */}
                     </div>
-                
-                    {/* <div className="image_galery">
-                        <Carousel title="" maxWidth="800px">
-
-                        {selectedGame.media.map((media, index) => (
-                            
-                            <figure key={index}>
-                                {media.type === 'image' ? (
-                                    <Image onClick={() => handleOpenGallery(media)} width={270} height={150} src={media.image} alt="imagem da galeria do jogo" />
-                                ):(
-                                    media.link && (
-                                    <>
-                                        <Image onClick={() => handleOpenGallery(media)} width={270} height={150} src={`https://img.youtube.com/vi/${getVideoId(media.link)}/hqdefault.jpg`} alt="imagem da galeria do jogo"/>
-                                        <Image className="player" src={player} alt="icone de player"/>
-                                    </>
-                                    )
-                                )
-                                }
-                            </figure>
-                            
-                        ))}
-                        </Carousel>
-                    </div> */}
                 </div>
             </div>
             

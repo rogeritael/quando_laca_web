@@ -10,7 +10,7 @@ export function Category(props : CategoryProps){
     const { setSearchTerm } = useContext(Context)
 
     return(
-        <Link href={`/Search?term=${props.label}`} onClick={() => setSearchTerm(props.label)}>
+        <Link href={`/search?term=${props.label}`} onClick={() => setSearchTerm(props.label)}>
         <CategoryComponent>
             {props.label}
         </CategoryComponent>

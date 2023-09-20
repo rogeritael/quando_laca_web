@@ -15,7 +15,7 @@ export function TrailersContainer({ setTrailerUrl, setIsModalOpen } : TrailersCo
     return(
         <div style={{ width: "100%" }}>
             <TrailersContainerSection>
-                <Title content="Últimos Trailers" url="/Search?term=ultimos_trailers" className="desktop_title"/>
+                <Title content="Últimos Trailers" url="/search?term=ultimos_trailers" className="desktop_title"/>
                 <div className="desktop">
                     {trailers.map((trailer, index) => index < 4 && (
                         <Trailer animationDelay={index === 0 ? 0 : index * 200} key={index} videoUrl={trailer.video_url} setTrailerUrl={setTrailerUrl} setIsModalOpen={setIsModalOpen}  />
