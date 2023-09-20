@@ -27,6 +27,10 @@ export const AssassinsCreedMirage = {
     },
     {
       "type": "image",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/B2sAptW8SXYjuHvSsIt80/a20070d9cafaf1508f6c0e4251f99571/acm-homepage-header-img1920x1080.jpg"
+    },
+    {
+      "type": "image",
       "image": "https://i.ytimg.com/vi/dKox5i_T6XA/sddefault.jpg"
     },
     {
@@ -80,7 +84,11 @@ export const AssassinsCreedMirage = {
     {
       "type": "image",
       "image": "https://images.igdb.com/igdb/image/upload/t_720p/ar1u7i.jpg"
-    }
+    },
+    {
+      "type": "image",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/B2sAptW8SXYjuHvSsIt80/a20070d9cafaf1508f6c0e4251f99571/acm-homepage-header-img1920x1080.jpg"
+    },
   ],
   "description": [
     "In the ninth century CE, Baghdad is at its height, leading the world in science, art, innovation, and commerce. Amid its bustling urban landscape, a conflicted young orphan with a tragic past must navigate the streets to survive. In Assassin’s Creed Mirage, you are Basim, a cunning street thief with nightmarish visions, seeking answers and justice. After an act of deadly retribution, Basim flees Baghdad and joins an ancient or... Read More"

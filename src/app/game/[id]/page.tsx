@@ -18,6 +18,13 @@ import { TrailerModal } from "@/components/ui/TrailerModal";
 import { ImageModal } from "@/components/ImageModal";
 import { getVideoId } from "@/utils/getVideoId";
 
+import title_reverse_arrow from '@/assets/icons/title_reverse_arrow.svg'
+import { Category } from "@/components/ui/Category";
+import trailer_player from '@/assets/icons/trailer_play_icon.svg'
+
+import { SiPlaystation4, SiPlaystation5 } from 'react-icons/si'
+import { BsNintendoSwitch, BsXbox, BsMicrosoft } from 'react-icons/bs'
+
 interface PageProps {
     params: {
         id: string
@@ -113,20 +120,48 @@ export default function Game( { params: { id } }  : PageProps){
             <SideMenu />
 
             <div className="game_section">
+
                 <figure className="background">
                     <span className="overlay01"/>
                     <span className="overlay02"/>
                     <Image width={2400} height={2400} src={backgroundImage} alt="imagem de fundo do jogo"/>
                 </figure>
 
+                <Link href={'/'}>
+                    <Image src={title_reverse_arrow} alt="voltar para a página anterior" className="return_icon" />
+                </Link>
+
                 <section className="content">
-                    <button onClick={() => handleSetList()}>
-                        {isGameAlreadyAdded({gameId: selectedGame.id, gameList: gameList}) ?
-                            'Remover da Lista'
-                            :
-                            'Adicionar a Lista'
-                        }
-                    </button>
+                    <div className="top_infos">
+                        <span className="developer">Ubisoft</span>
+                        <h1><Image src={title_reverse_arrow} alt="voltar para a página anterior" /> Assassins Creed: Mirage</h1>
+                        <div className="group_info">
+                            <Category label="RPG"></Category>
+                            <p className="date">10 Jan 2024</p>
+                        </div>
+                    </div>
+
+                    <Image src={trailer_player} alt="player" className="player"/>
+
+                    <div className="bottom_infos">
+                        <p className="countdown_text">
+                            Lança em 24 dias
+                        </p>
+                        <div className="platforms">                            
+                            <SiPlaystation4 className="playstation" />
+                            <SiPlaystation5 className="playstation" />
+                            <BsXbox />
+                            <BsMicrosoft />
+                            <BsNintendoSwitch />
+                        </div>
+                        <button className="favoriteButton" onClick={() => handleSetList()}>
+                            {isGameAlreadyAdded({gameId: selectedGame.id, gameList: gameList}) ?
+                                'Remover da Lista'
+                                :
+                                'Adicionar a Lista'
+                            }
+                        </button>
+                    </div>
                 </section>
             </div>
             
