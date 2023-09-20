@@ -254,7 +254,7 @@ export const PageContainer = styled.section`
             z-index: 3;
 
             .content {
-                padding: 38px 24px;
+                padding: 38px 0 38px 24px;
                 padding-bottom: 78px;
 
                 .top_infos {
