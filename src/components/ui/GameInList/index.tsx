@@ -19,7 +19,7 @@ export function GameInList({ name, id, image, developer, release_date, removeGam
     const router = useRouter()
 
     function handleRedirect(id: string){
-        router.push(`/about?id=${id}`, { scroll: false })
+        router.push(`/game/${id}`, { scroll: false })
     }
 
     return(
