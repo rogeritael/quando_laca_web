@@ -255,7 +255,7 @@ export const PageContainer = styled.section`
 
             .content {
                 padding: 38px 24px;
-                padding-bottom: 38px;
+                padding-bottom: 78px;
 
                 .top_infos {
                     h1 {
