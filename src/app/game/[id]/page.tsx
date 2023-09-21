@@ -93,20 +93,16 @@ export default function Game( { params: { id } }  : PageProps){
         }
     }
 
-    function handleOpenGallery(){
-        alert('galeria aberta')
-    }
-
     return(
         selectedGame && !isLoading && (
         <PageContainer>
-            <TrailerModal isOpen={isTrailerModalOpen} videoUrl={mediaUrl} setIsOpen={setIstrailerModalOpen} />
             <ImageModal isOpen={isImageModalOpen} image={mediaUrl} setIsOpen={setIsImageModalOpen} />
             <GaleryModal mediaType={mediaType} initialIndex={initialIndex} media={selectedGame.media} isGaleryModalOpen={isGaleryModalOpen} setIsGaleryModalOpen={setIsGaleryModalOpen}/>
             
             <SideMenu />
 
             <div className="game_section">
+                <TrailerModal isOpen={isTrailerModalOpen} videoUrl={mediaUrl} setIsOpen={setIstrailerModalOpen} />
 
                 <figure className="background">
                     <span className="overlay01"/>
