@@ -22,10 +22,11 @@ const fade = keyframes`
 `
 
 export const ModalContainer = styled.section<ModalProps>`
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: fixed;
-    inset: 0;
+    right: -50%;
+    top: 25%;
     display: ${props => props.isOpen ? 'grid' : 'none'};
     place-items: center;
     z-index: 4;
@@ -41,8 +42,8 @@ export const ModalContainer = styled.section<ModalProps>`
     }
 
     .background {
-        width: 100%;
-        height: 100%;
+        width: 120%;
+        height: 120%;
         position: absolute;
         inset: 0;
         background-color: var(--bg);
@@ -64,16 +65,21 @@ export const ModalContainer = styled.section<ModalProps>`
     }
 
     @media(max-width: 425px){
+        transform: rotate(90deg);
+        transform-origin: center;
+        height: 100vw;
+        width: 100vh;
+        position: absolute;
+
         iframe {
             aspect-ratio: auto;
-            transform: rotate(90deg);
             max-width: 100vh;
-            width: 100vh;
+            width: 90vh;
             max-height: 100vw;
-            height: 100vw;
-            position: relative;
-            left: -48vw;
-            top: 1vh;
+            height: 80vw;
+            /* left: -48vw; */
+            /* top: 1vh; */
         }
     }
+    
 `
