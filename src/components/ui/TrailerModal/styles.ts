@@ -72,7 +72,8 @@ export const ModalContainer = styled.section<ModalProps>`
             max-height: 100vw;
             height: 100vw;
             position: relative;
-            left: -140px;
+            left: -48vw;
+            top: 1vh;
         }
     }
 `
