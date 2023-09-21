@@ -27,13 +27,13 @@ export function SideMenu(props : SideMenuProps){
                 case '':
                     setActiveLink('home')
                     break;
-                case 'Library':
+                case 'library':
                     setActiveLink('library')
                     break;
-                case 'Search':
+                case 'search':
                     setActiveLink('search')
                     break;
-                case 'About':
+                case 'game':
                     setActiveLink('')
                     break;
                 default:
