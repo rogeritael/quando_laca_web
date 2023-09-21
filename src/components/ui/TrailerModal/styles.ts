@@ -42,8 +42,8 @@ export const ModalContainer = styled.section<ModalProps>`
     }
 
     .background {
-        width: 120%;
-        height: 120%;
+        width: 100%;
+        height: 100%;
         position: absolute;
         inset: 0;
         background-color: var(--bg);
