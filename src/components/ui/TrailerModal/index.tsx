@@ -25,8 +25,6 @@ export function TrailerModal({ videoUrl, isOpen, setIsOpen } : TrailerModalProps
             <AiOutlineCloseCircle onClick={() => setIsOpen(false)} />
             <iframe
                 ref={videoRef}
-                // width="640"
-                // height="360"
                 src={embedUrl}
                 title="Trailer do jogo"
                 allowFullScreen

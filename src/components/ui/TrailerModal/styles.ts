@@ -62,4 +62,17 @@ export const ModalContainer = styled.section<ModalProps>`
             width: 100%;
         }
     }
+
+    @media(max-width: 425px){
+        iframe {
+            aspect-ratio: auto;
+            transform: rotate(90deg);
+            max-width: 100vh;
+            width: 100vh;
+            max-height: 100vw;
+            height: 100vw;
+            position: relative;
+            left: -140px;
+        }
+    }
 `
