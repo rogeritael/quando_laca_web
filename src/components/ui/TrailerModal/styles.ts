@@ -22,11 +22,10 @@ const fade = keyframes`
 `
 
 export const ModalContainer = styled.section<ModalProps>`
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    right: -50%;
-    top: 25%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
     display: ${props => props.isOpen ? 'grid' : 'none'};
     place-items: center;
     z-index: 4;
@@ -63,23 +62,4 @@ export const ModalContainer = styled.section<ModalProps>`
             width: 100%;
         }
     }
-
-    @media(max-width: 425px){
-        transform: rotate(90deg);
-        transform-origin: center;
-        height: 100vw;
-        width: 100vh;
-        position: absolute;
-
-        iframe {
-            aspect-ratio: auto;
-            max-width: 100vh;
-            width: 90vh;
-            max-height: 100vw;
-            height: 80vw;
-            /* left: -48vw; */
-            /* top: 1vh; */
-        }
-    }
-    
 `
