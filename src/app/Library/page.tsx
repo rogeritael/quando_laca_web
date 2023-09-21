@@ -30,7 +30,6 @@ export default function Library(props : LibraryProps){
 
     useEffect(() => {
         const fetchData = async() => {
-            //notifications
             await generateNotifications();
             await findAllNotifications();
         }

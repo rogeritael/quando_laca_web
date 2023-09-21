@@ -67,6 +67,9 @@ export default function Game( { params: { id } }  : PageProps){
                     backgroundImage === '' &&
                         media.type === 'image' && setBackgroudImage(media.image)
                 ))
+                
+                game.media[0].link &&
+                setMediaUrl(game.media[0].link)
             }
 
         }
@@ -125,7 +128,7 @@ export default function Game( { params: { id } }  : PageProps){
                         </div>
                     </div>
 
-                    <Image src={trailer_player} alt="player" className="player" onClick={() => handleOpenGallery()}/>
+                    <Image src={trailer_player} alt="player" className="player" onClick={() => setIstrailerModalOpen(true)}/>
 
                     <div className="bottom_infos">
                         <p className="countdown_text">
