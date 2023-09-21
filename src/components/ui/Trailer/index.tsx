@@ -2,6 +2,8 @@ import Image from "next/image";
 import { TrailerComponent } from "./styles";
 import player from '@/assets/icons/player.svg'
 import { getVideoId } from "@/utils/getVideoId";
+import { useRouter } from "next/navigation";
+import { trailers } from "@/mocks/trailers";
 
 interface TrailerProps {
     videoUrl: string;
@@ -12,10 +14,12 @@ interface TrailerProps {
 
 
 export function Trailer({ videoUrl, setTrailerUrl, setIsModalOpen, animationDelay } : TrailerProps){
+    const router = useRouter()
 
-    function handleClick(){
-        setTrailerUrl(videoUrl)
-        setIsModalOpen(true)
+    async function handleClick(){
+        // setTrailerUrl(videoUrl)
+        // setIsModalOpen(true)
+        router.push(`/trailers/${getVideoId(videoUrl)}`)
     }
 
     return(

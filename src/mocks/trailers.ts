@@ -19,7 +19,7 @@ import { ZenlessZoneZero } from "./trailers/ZenlessZoneZero";
 export interface TrailerProps {
     cover?: string;
     video_url: string;
-    game_id: string;
+    trailer_id: string;
 }
 
 export const trailers = [
