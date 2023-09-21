@@ -22,7 +22,7 @@ const texts = [
 interface ContentProps {
     content: string;
     link: string;
-    icon: any;
+    icon?: any;
 }
 
 export function Empty({ listType, button, text } : EmptyProps){
@@ -35,19 +35,19 @@ export function Empty({ listType, button, text } : EmptyProps){
                 await setInformations({
                     content: texts[0],
                     link: '/',
-                    icon: searchIcon
+                    // icon: searchIcon
                 })
             } else if (listType === 'notifications'){
                 await setInformations({
                     content: texts[1],
                     link: '/',
-                    icon: notificationIcon
+                    // icon: notificationIcon
                 })
             } else if(listType === 'games'){
                 await setInformations({
                     content: texts[2],
                     link: '/',
-                    icon: gameListIcon
+                    // icon: gameListIcon
                 })
             }
         }
@@ -58,9 +58,11 @@ export function Empty({ listType, button, text } : EmptyProps){
     return(
         !isLoading &&
         <EmptyComponent>
-            <figure className="icon_container">
-                <Image style={{ objectFit: "fill" }} alt="icone de pesquisa" src={informations.icon} />
-            </figure>
+            {informations.icon && (
+                <figure className="icon_container">
+                    <Image style={{ objectFit: "fill" }} alt="icone de pesquisa" src={informations.icon} />
+                </figure>
+            )}
             {text && (
                 <p className="description">
                     {informations.content}
