@@ -24,7 +24,7 @@ const fade = keyframes`
 export const ModalContainer = styled.section<ModalProps>`
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     inset: 0;
     display: ${props => props.isOpen ? 'grid' : 'none'};
     place-items: center;
