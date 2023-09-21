@@ -17,9 +17,8 @@ import { Warhammer } from "./trailers/Warhammer";
 import { ZenlessZoneZero } from "./trailers/ZenlessZoneZero";
 
 export interface TrailerProps {
-    cover?: string;
+    name: string;
     video_url: string;
-    trailer_id: string;
 }
 
 export const trailers = [

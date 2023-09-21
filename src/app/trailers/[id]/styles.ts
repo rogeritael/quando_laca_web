@@ -61,6 +61,11 @@ export const TrailersContainer = styled.section`
 
 
                 .infos {
+                    p {
+                        max-width: 200px;
+                        max-height: 100px;
+                    }
+
                     span {
                         color: var(--highlight);
                         margin-top: 8px;

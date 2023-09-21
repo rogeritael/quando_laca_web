@@ -1,7 +1,6 @@
 import { TrailerProps } from "../trailers";
 
 export const Honkai: TrailerProps = {
-    cover: '',
-    video_url: 'https://youtu.be/Pb0SMjd60uc',
-    trailer_id: '4765fenrtetbmvd'
+    name: 'Honkai: Star Rail - Trailer da data de lançamento do State of Play | Jogos de PS5',
+    video_url: 'https://youtu.be/Pb0SMjd60uc'
 }

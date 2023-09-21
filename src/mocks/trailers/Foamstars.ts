@@ -1,7 +1,6 @@
 import { TrailerProps } from "../trailers";
 
 export const Foamstars: TrailerProps = {
-    cover: '',
+    name: 'Foamstars - Trailer de anúncio da Festa da Beta Pública | Jogos de PS5',
     video_url: 'https://youtu.be/kPnbZ5CfHYA',
-    trailer_id: 'hhg8435nvcdsf'
 }
