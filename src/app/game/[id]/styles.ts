@@ -1,44 +1,5 @@
 import styled, { keyframes } from "styled-components";
 
-// const buttonEntry = keyframes`
-//     from {
-//         opacity: 0;
-//         margin-bottom: -20px;
-//     }
-//     to {
-//         filter: blur(0);
-//         opacity: 1;
-//     }
-// `
-// const entry = keyframes`
-//     from {
-//         filter: blur(2px);
-//         opacity: 0;
-//     }
-// `;
-
-const slideUp = keyframes`
-    from {
-        top: 24px;
-        opacity: 0;
-    }
-    to {
-        top: 0;
-        opacity: 1;
-    }
-`;
-
-const slideLeft = keyframes`
-    from {
-        opacity: 0;
-        left: -48px;
-    }
-    to {
-        opacity: 1;
-        left: 0;
-    }
-`;
-
 export const PageContainer = styled.section`
     color: #fff;
     display: grid;
@@ -210,6 +171,11 @@ export const PageContainer = styled.section`
         grid-template-areas:
         "main";
         height: 100%;
+
+        .side {
+            border: 1px solid red;
+            display: none;
+        }
 
         .game_section {
             .return_icon {
