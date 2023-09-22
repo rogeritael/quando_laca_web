@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TrailersContainer = styled.section`
-    padding: 40px 20px;
+    padding: 32px 20px;
     color: #fff;
 
     .header {
@@ -19,10 +19,11 @@ export const TrailersContainer = styled.section`
         }
     }
     .main_trailer {
-        margin-bottom: 60px;
+        margin-bottom: 32px;
         iframe {
             width: 100%;
             aspect-ratio: 16/9;
+            border-radius: 8px;
         }
 
         h2 {

@@ -6,11 +6,8 @@ import back_icon from '@/assets/icons/title_reverse_arrow.svg'
 import { Logo } from "@/components/ui/Logo";
 import Link from "next/link";
 import { trailers } from "@/mocks/trailers";
-import { useEffect, useRef, useState } from "react";
 import { getVideoId } from "@/utils/getVideoId";
-
-
-
+import { useRouter } from "next/navigation";
 
 interface PageProps {
     params: {
@@ -20,13 +17,16 @@ interface PageProps {
 
 export default function Trailers({ params: { id } }: PageProps){
     const embedUrl = `https://www.youtube.com/embed/${id}`;
-    const img_excluir = 'https://i.ytimg.com/vi/U4kAhlDwqAM/hqdefault.jpg?sqp=-oaymwEpCNACELwBSFryq4qpAxsIARUAAIhCGAHYAQHiAQwIGhACGAYgATgBQAE=&rs=AOn4CLDy1ZEbyiYGuy1CH4YtXLDd3g2ESQ'
+    const router = useRouter();
+
+    function backPage(){
+        router.push('/')
+    }
 
     return(
-
         <TrailersContainer>
             <div className="header">
-                <Image src={back_icon} width={200} height={200} alt="voltar para a página anterior" />
+                <Image src={back_icon} width={200} height={200} alt="voltar para a página anterior" onClick={() => backPage()} />
                 <Logo />
             </div>
             <div className="main_trailer">
@@ -35,7 +35,7 @@ export default function Trailers({ params: { id } }: PageProps){
                     title="Trailer do jogo"
                     allowFullScreen
                 ></iframe>
-                <h2>SpiderMan 2 - PS5 - Announcement Trailer 2023 </h2>
+                <h2>{trailers.find((trailer) => trailer.video_url.split('/')[trailer.video_url.split('/').length - 1] === id)?.name}</h2>
             </div>
             
             <div className="trailers_section">
