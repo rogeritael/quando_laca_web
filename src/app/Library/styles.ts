@@ -67,6 +67,10 @@ export const LibraryContainer = styled.section`
         .category_list_mobile {
             display: flex;
         }
+
+        .games_container {
+            margin-bottom: 60px;
+        }
     }
 
     @media(max-width: 425px){
