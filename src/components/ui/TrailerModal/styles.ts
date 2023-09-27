@@ -71,16 +71,21 @@ export const ModalContainer = styled.section<ModalProps>`
         gap: 8px;
         cursor: pointer;
         padding: 10px 24px;
-        /* padding-bottom: 40px; */
         background-color: var(--bg-secondary);
         border-radius: 24px;
-        bottom: 20px;
+        /* bottom: 20px; */
         font-size: 14px;
+        transition: 500ms;
+
+        svg {
+            transition: 200ms;
+            aspect-ratio: 1/1;
+        }
     }
 
     .related {
         position: fixed;
-        bottom: -100px;
+        /* bottom: -100px; */
         left: 80px;
         z-index: 7;
         width: calc(100% - 80px);
@@ -88,6 +93,7 @@ export const ModalContainer = styled.section<ModalProps>`
         padding: 10px;
         height: 140px;
         overflow-x: scroll;
+        transition: 500ms;
 
         &::-webkit-scrollbar {
             height: 4px;
@@ -107,6 +113,7 @@ export const ModalContainer = styled.section<ModalProps>`
             height: 100%;
             display: flex;
             gap: 14px;
+            
 
             .related_video {
                 height: 120px;

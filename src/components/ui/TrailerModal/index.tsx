@@ -19,9 +19,29 @@ interface TrailerModalProps {
 export function TrailerModal({ videoUrl, isOpen, setIsOpen } : TrailerModalProps){
     const embedUrl = `https://www.youtube.com/embed/${getVideoId(videoUrl)}`;
     const videoRef = useRef<HTMLIFrameElement | null>(null);
+    const [relatedProps, setRelatedProps] = useState({
+        isOpen: false,
+        controlPosition: '20px',
+        railPosition: '-100px'
+    })
 
     function handleCloseModal(){
-        setIsOpen(false)
+        
+    }
+
+    function handleToggleRelated(){
+        relatedProps.isOpen ?
+            setRelatedProps({
+                isOpen: false,
+                controlPosition: '20px',
+                railPosition: '-100px'
+            })
+        :
+            setRelatedProps({
+                isOpen: true,
+                controlPosition: '120px',
+                railPosition: '0'
+            })
     }
 
     return(
@@ -39,11 +59,11 @@ export function TrailerModal({ videoUrl, isOpen, setIsOpen } : TrailerModalProps
                 title="Trailer do jogo"
                 allowFullScreen
             ></iframe>
-            <div className="show_hide">
-                <IoIosArrowUp />
-                <p>ver mais</p>
+            <div style={{ bottom: relatedProps.controlPosition }} className="show_hide" onClick={() => handleToggleRelated()}>
+                <IoIosArrowUp style={relatedProps.isOpen && { rotate: '180deg' }} />
+                <p>{relatedProps.isOpen ? 'ver menos' : 'ver mais'}</p>
             </div>
-            <div className="related">
+            <div className="related" style={{bottom: relatedProps.railPosition}}>
                 <div className="rail">
                     <figure className="related_video" >
                         <Image height={120} width={213} alt="capa do trailer" src='https://img.youtube.com/vi/qIQ3xNqkVC4/hqdefault.jpg' />
