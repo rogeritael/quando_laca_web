@@ -22,23 +22,29 @@ export default function Trailers({ params: { id } }: PageProps){
     const embedUrl = `https://www.youtube.com/embed/${id}`;
     const router = useRouter();
     const [medias, setMedias] = useState<MediaProps[]>([])
+    const [isLoading, setIsLoading] = useState(true)
 
     function backPage(){
-        router.push('/')
+        medias.length < 1 ? router.push('/') : router.push(`/game/${window.location.href.split('game=')[1]}`)
     }
 
     useEffect(() => {
-        const url = window.location.href
-        if(url.includes('game=')){
-            const gameId = url.split('game=')[1]
-            const game = gameList.find((game) => game.id === gameId)
-            game?.media&&
-            setMedias(game?.media)
+        const fetchData = async() => {
+            const url = window.location.href
+            if(url.includes('game=')){
+                const gameId =  url.split('game=')[1]
+                const game = gameList.find((game) => game.id === gameId)
+                game?.media&&
+                setMedias(game?.media)
+            }
         }
+        fetchData()
+        setIsLoading(false)
 
     }, [])
 
     return(
+        !isLoading&&
         <TrailersContainer>
             <div className="header">
                 <Image src={back_icon} width={200} height={200} alt="voltar para a página anterior" onClick={() => backPage()} />
@@ -57,7 +63,7 @@ export default function Trailers({ params: { id } }: PageProps){
 
                 <div className="rail">
                     {medias.length > 0 && medias.map((trailer, index) => trailer.link && (
-                        <Link key={index} href={`/trailers/${getVideoId(trailer.link!)}`} className="mini_trailer">
+                        <Link key={index} href={`/trailers/${getVideoId(trailer.link!)}?game=${window.location.href.split('game=')[1]}`} className="mini_trailer">
                             <figure>
                                 <Image width={500} height={500} src={`https://i.ytimg.com/vi/${getVideoId(trailer.link!)}/hqdefault.jpg`} alt="trailer" />
                             </figure>
