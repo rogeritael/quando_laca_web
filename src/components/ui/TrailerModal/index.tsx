@@ -18,7 +18,7 @@ interface TrailerModalProps {
 }
 
 export function TrailerModal({ videoUrl, isOpen, setIsOpen, medias } : TrailerModalProps){
-    const [embedUrl, setEmbedUrl] = useState(`https://www.youtube.com/embed/${getVideoId(medias[0].link!)}`);
+    const [embedUrl, setEmbedUrl] = useState(`https://www.youtube.com/embed/${getVideoId(videoUrl)}`);
     const videoRef = useRef<HTMLIFrameElement | null>(null);
     const [relatedProps, setRelatedProps] = useState({
         isOpen: false,

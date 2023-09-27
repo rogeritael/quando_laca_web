@@ -17,6 +17,7 @@ import backImage from '@/assets/icons/arrow_v2.svg'
 import { TrailerModal } from "@/components/ui/TrailerModal";
 import { ImageModal } from "@/components/ImageModal";
 import { getVideoId } from "@/utils/getVideoId";
+import { useRouter } from 'next/navigation'
 
 import title_reverse_arrow from '@/assets/icons/title_reverse_arrow.svg'
 import { Category } from "@/components/ui/Category";
@@ -49,6 +50,7 @@ export default function Game( { params: { id } }  : PageProps){
     const [isTrailerModalOpen, setIstrailerModalOpen] = useState(false);
     const [mediaUrl, setMediaUrl] = useState('');
     const [medias, setMedias] = useState<MediaProps[]>([])
+    const router = useRouter();
 
     
 
@@ -65,8 +67,8 @@ export default function Game( { params: { id } }  : PageProps){
                         media.type === 'image' && setBackgroudImage(media.image)
                 ))
                 
-                game.media[1].link &&
-                setMediaUrl(game.media[1].link)
+                game.media[0].link &&
+                setMediaUrl(game.media[0].link)
 
                 setMedias(game.media)
             }
@@ -89,6 +91,15 @@ export default function Game( { params: { id } }  : PageProps){
                 findAllNotifications()
                 setFlashMessage({type:'success', message: `${selectedGame.name} foi adicionado aos seus favoritos`})
             }
+        }
+    }
+
+    function handleClickPlay(){
+        let screenWidth = window.screen.width;
+        if(screenWidth > 425){
+            setIstrailerModalOpen(true)
+        } else {
+            router.push(`/trailers/${getVideoId(mediaUrl)}?game=${selectedGame?.id}`)
         }
     }
 
@@ -123,7 +134,7 @@ export default function Game( { params: { id } }  : PageProps){
                         </div>
                     </div>
 
-                    <Image src={trailer_player} alt="player" className="player" onClick={() => setIstrailerModalOpen(true)}/>
+                    <Image src={trailer_player} alt="player" className="player" onClick={() => handleClickPlay()}/>
 
                     <div className="bottom_infos">
                         <p className="countdown_text">

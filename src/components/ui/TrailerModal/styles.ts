@@ -129,6 +129,13 @@ export const ModalContainer = styled.section<ModalProps>`
         }
     }
 
+    @media(max-width: 800px){
+        .related {
+            left: 0;
+            width: calc(100%);
+        }
+    }
+
     @media(max-width: 768px){
         iframe {
             max-width: 100vw;
