@@ -24,40 +24,13 @@ export const MortalKombat1 = {
       "link": "https://www.youtube.com/embed/UZ6eFEjFfJ0?controls=0&modestbranding=1&rel=0&showinfo=0&loop=0&fs=0&hl=en&iv_load_policy=3&enablejsapi=1&origin=https%3A%2F%2Fwww.igdb.com&widgetid=1"
     },
     {
-      "type": "image",
-      "image": "https://i.ytimg.com/vi/uQkWCpPohgk/sddefault.jpg"
+      "type": "video",
+      "image": "",
+      "link": "https://www.youtube.com/watch?v=7VMvB7OKnd0&ab_channel=WarnerPlay"
     },
     {
       "type": "image",
       "image": "https://i.ytimg.com/vi/_sLJ-xyjMQo/sddefault.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://i.ytimg.com/vi/eT-3vhCl6N4/sddefault.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://i.ytimg.com/vi/M39CVZt6uu0/sddefault.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://i.ytimg.com/vi/_zQB1gkU8kA/sddefault.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scmlie.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scmlid.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scmlif.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/ar2bhx.jpg"
     },
     {
       "type": "image",

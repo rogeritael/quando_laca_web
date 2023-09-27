@@ -60,7 +60,7 @@ export const ModalContainer = styled.section<ModalProps>`
         width: 100%;
         aspect-ratio: 16/9;
         position: relative;
-        top: -20px;
+        top: -44px;
     }
 
     .show_hide {
@@ -73,7 +73,6 @@ export const ModalContainer = styled.section<ModalProps>`
         padding: 10px 24px;
         background-color: var(--bg-secondary);
         border-radius: 24px;
-        /* bottom: 20px; */
         font-size: 14px;
         transition: 500ms;
 
@@ -85,7 +84,6 @@ export const ModalContainer = styled.section<ModalProps>`
 
     .related {
         position: fixed;
-        /* bottom: -100px; */
         left: 80px;
         z-index: 7;
         width: calc(100% - 80px);

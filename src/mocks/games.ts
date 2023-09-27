@@ -123,7 +123,7 @@ interface Category {
     name: string;
 }
 
-interface MediaProps  {
+export interface MediaProps  {
     type: string;
     image: string;
     link?: string;

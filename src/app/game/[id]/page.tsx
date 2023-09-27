@@ -42,16 +42,13 @@ export default function Game( { params: { id } }  : PageProps){
     const { addToList, findAllNotifications, gameList, setGameIdToRemoveFromList, setIsConfirmModalVisible } = useContext(Context);
     const [selectedGame, setSelectedGame] = useState<GameProps>()
     const [backgroundImage, setBackgroudImage] = useState('')
-    const [isGaleryModalOpen, setIsGaleryModalOpen] = useState(false);
-    const [initialIndex, setInitialIndex] = useState(0);
-    const [mediaType, setMediaType] = useState<string>('image')
     const [isLoading, setIsLoading] = useState(true)
     const { setFlashMessage } = useFlashMessage();
     const { createNotification } = useContext(Context)
 
     const [isTrailerModalOpen, setIstrailerModalOpen] = useState(false);
-    const [isImageModalOpen, setIsImageModalOpen] = useState(false);
     const [mediaUrl, setMediaUrl] = useState('');
+    const [medias, setMedias] = useState<MediaProps[]>([])
 
     
 
@@ -68,8 +65,10 @@ export default function Game( { params: { id } }  : PageProps){
                         media.type === 'image' && setBackgroudImage(media.image)
                 ))
                 
-                game.media[0].link &&
-                setMediaUrl(game.media[0].link)
+                game.media[1].link &&
+                setMediaUrl(game.media[1].link)
+
+                setMedias(game.media)
             }
 
         }
@@ -96,13 +95,13 @@ export default function Game( { params: { id } }  : PageProps){
     return(
         selectedGame && !isLoading && (
         <PageContainer>
-            <ImageModal isOpen={isImageModalOpen} image={mediaUrl} setIsOpen={setIsImageModalOpen} />
-            <GaleryModal mediaType={mediaType} initialIndex={initialIndex} media={selectedGame.media} isGaleryModalOpen={isGaleryModalOpen} setIsGaleryModalOpen={setIsGaleryModalOpen}/>
+            {/* <ImageModal isOpen={isImageModalOpen} image={mediaUrl} setIsOpen={setIsImageModalOpen} /> */}
+            {/* <GaleryModal mediaType={mediaType} initialIndex={initialIndex} media={selectedGame.media} isGaleryModalOpen={isGaleryModalOpen} setIsGaleryModalOpen={setIsGaleryModalOpen}/> */}
             
             <SideMenu />
 
             <div className="game_section">
-                <TrailerModal isOpen={isTrailerModalOpen} videoUrl={mediaUrl} setIsOpen={setIstrailerModalOpen} />
+                <TrailerModal medias={medias} isOpen={isTrailerModalOpen} videoUrl={mediaUrl} setIsOpen={setIstrailerModalOpen} />
 
                 <figure className="background">
                     <span className="overlay01"/>

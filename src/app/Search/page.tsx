@@ -93,7 +93,6 @@ export default function Search(props : AboutProps){
                     <Header />
                     <MobileHeader />
                     <CategoryList className="category_list_mobile" />
-                    {/* <h2 className="search_term">{searchTerm}</h2> */}
                     { searchResults.length > 0 && 
                         <GameList title='Resultados da pesquisa' >
                             {searchResults.map((result) => (
