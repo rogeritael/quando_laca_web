@@ -2,16 +2,22 @@
 
 import { Ascend } from "./games/Ascend";
 import { ClockTower } from "./games/ClockTower";
+import { EASportsCollegeFootball } from "./games/EASportsCollegeFootball";
 import { ExoCross } from "./games/ExoCross";
+import { Forgotlings } from "./games/Forgotlings";
+import { ForzaMotorsport } from "./games/ForzaMotorsport";
 import { HelldiversIISuperCitizenionEdit } from "./games/HelldiversIISuperCitizenionEdit";
 import { LiesofP } from "./games/LiesofP";
 import { MortalKombat1 } from "./games/MortalKombat1";
 import { MyHeroUltraRumble } from "./games/MyHeroUltraRumble";
 import { Nightingale } from "./games/Nightingale";
+import { ParcelCorps } from "./games/ParcelCorps";
 import { PennysBigBreakaway } from "./games/PennysBigBreakaway";
 import { Starfield } from "./games/Starfield";
 import { SuicideSquadKilltheJusticeLeague } from "./games/SuicideSquadKilltheJusticeLeague";
 import { UFL } from "./games/UFL";
+import { Warframe1999 } from "./games/Warframe1999";
+import { WitchHand } from "./games/WitchHand";
 
 
 interface Category {
@@ -66,6 +72,12 @@ export const gameList: GameProps[] = [
     PennysBigBreakaway,
     ClockTower,
     Ascend,
+    WitchHand,
+    Forgotlings,
+    ParcelCorps,
+    Warframe1999,
+    EASportsCollegeFootball,
+    ForzaMotorsport,
 ]
 
 
