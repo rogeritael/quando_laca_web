@@ -70,7 +70,7 @@ export function TrailerModal({ videoUrl, isOpen, setIsOpen, medias } : TrailerMo
             </div>
             <iframe
                 ref={videoRef}
-                src={`${embedUrl}?autoplay=1&mute=1&controls=0&disablekb=1&modestbranding=1&showinfo=1&rel=0&fs=0&iv_load_policy=3`}
+                src={`${embedUrl}?rel=0&autoplay=1`}
                 title="Trailer do jogo"
                 allowFullScreen
             ></iframe>
