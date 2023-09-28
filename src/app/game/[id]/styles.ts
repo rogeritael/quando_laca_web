@@ -101,6 +101,11 @@ export const PageContainer = styled.section`
                     display: flex;
                     align-items: center;
                     gap: 14px;
+
+                    .category {
+                        background-color: #12121260;
+                        color: #fff;
+                    }
                 }
             }
             .bottom_infos {

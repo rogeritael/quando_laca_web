@@ -11,7 +11,7 @@ export function Category(props : CategoryProps){
 
     return(
         <Link href={`/search?term=${props.label}`} onClick={() => setSearchTerm(props.label)}>
-        <CategoryComponent>
+        <CategoryComponent className="category">
             {props.label}
         </CategoryComponent>
         </Link>
