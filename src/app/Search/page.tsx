@@ -94,7 +94,7 @@ export default function Search(props : AboutProps){
                     <MobileHeader />
                     <CategoryList className="category_list_mobile" />
                     { searchResults.length > 0 && 
-                        <GameList title='Resultados da pesquisa' >
+                        <GameList title='Resultados da pesquisa'>
                             {searchResults.map((result) => (
                                 <Game key={result.id} id={result.id} name={result.name} image={result.image} isPopular={false} platforms={result.platforms} />
                             ))}

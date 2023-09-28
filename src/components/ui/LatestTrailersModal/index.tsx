@@ -1,15 +1,11 @@
 import { getVideoId } from "@/utils/getVideoId";
 import { ModalContainer } from "./styles";
 import { useEffect, useRef, useState } from 'react';
-import { AiOutlineCloseCircle } from "react-icons/ai";
-import { useRouter } from "next/navigation";
 import backArrow from '@/assets/icons/title_reverse_arrow.svg'
 import Image from "next/image";
 import { Logo } from "../Logo";
 import { IoIosArrowUp } from 'react-icons/io'
-import Link from "next/link";
 import { MediaProps } from "@/mocks/games";
-import { trailers } from "@/mocks/trailers";
 
 interface TrailerModalProps {
     videoUrl: string;
@@ -22,9 +18,9 @@ export function TrailerModal({ videoUrl, isOpen, setIsOpen, medias } : TrailerMo
     const [embedUrl, setEmbedUrl] = useState(`https://www.youtube.com/embed/${getVideoId(videoUrl)}`);
     const videoRef = useRef<HTMLIFrameElement | null>(null);
     const [relatedProps, setRelatedProps] = useState({
-        isOpen: true,
-        controlPosition: '120px',
-        railPosition: '0'
+        isOpen: false,
+        controlPosition: '20px',
+        railPosition: '-100px'
     })
 
     function handleCloseModal(){
@@ -50,10 +46,6 @@ export function TrailerModal({ videoUrl, isOpen, setIsOpen, medias } : TrailerMo
         setEmbedUrl(`https://www.youtube.com/embed/${getVideoId(link)}`)
     }
 
-    useEffect(() => {
-        setEmbedUrl(`https://www.youtube.com/embed/${getVideoId(videoUrl)}`)
-    }, [videoUrl])
-
     return(
         isOpen &&
         <ModalContainer isOpen={isOpen}>
@@ -75,18 +67,12 @@ export function TrailerModal({ videoUrl, isOpen, setIsOpen, medias } : TrailerMo
             </div>
             <div className="related" style={{bottom: relatedProps.railPosition}}>
                 <div className="rail">
-                    {medias ? medias.map((media, index) => (
+                    {medias && medias.map((media, index) => (
                         media.link &&
                         <figure key={index} className="related_video" onClick={() => setCurrentTrailer(media.link!)}>
                             <Image height={120} width={213} alt="capa do trailer" src={`https://img.youtube.com/vi/${getVideoId(media.link)}/mqdefault.jpg`} />
                         </figure>
-                    )) : 
-                        trailers.map((trailer, index) => (
-                            <figure key={index} className="related_video" onClick={() => setCurrentTrailer(trailer.video_url)}>
-                                <Image height={120} width={213} alt="capa do trailer" src={`https://img.youtube.com/vi/${getVideoId(trailer.video_url)}/mqdefault.jpg`} />
-                            </figure>
-                        ))
-                    }
+                    ))}
                 </div>
             </div>
         </ModalContainer>

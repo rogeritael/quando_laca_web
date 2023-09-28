@@ -4,6 +4,17 @@ interface ModalProps {
     isOpen: boolean;
 }
 
+const scale = keyframes`
+    0%{
+        opacity: 0;
+        scale: 0.8;
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+`
+
 const fade = keyframes`
     from {
         opacity: 0;
@@ -64,7 +75,6 @@ export const ModalContainer = styled.section<ModalProps>`
         border-radius: 24px;
         font-size: 14px;
         transition: 500ms;
-        color: #fff;
 
         svg {
             transition: 200ms;

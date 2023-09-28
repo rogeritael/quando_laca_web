@@ -27,7 +27,7 @@ export const trailers = [
     RE4VR,
     GhostRunner2,
     Ghostbusters,
-    FFVII,
+    // FFVII,
     TalesOfArise,
     BabySteps,
     Foamstars,
