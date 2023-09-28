@@ -47,13 +47,20 @@ export function NotificationsModal(props : NotificationsModalProps){
                 </div>
                 <div className="notifications_box">
                 
-                    {userNotifications.reverse().map((notifications, index) => (
+                    { window.innerWidth > 425 ? userNotifications.reverse().map((notifications) => (
                         <>
-                        <Notification  image={notifications.image} title={notifications.title} description={notifications.description} isRead={notifications.isRead} /> 
-                        <span className="date">
-                            {formatDate(new Date(notifications.created_at))}
-                        </span>
+                            <Notification image={notifications.image} title={notifications.title} description={notifications.description} isRead={notifications.isRead} /> 
+                            <span className="date">
+                                {formatDate(new Date(notifications.created_at))}
+                            </span>
                         </> 
+                    )) : userNotifications.map((notifications) => (
+                        <>
+                            <Notification image={notifications.image} title={notifications.title} description={notifications.description} isRead={notifications.isRead} /> 
+                            <span className="date">
+                                {formatDate(new Date(notifications.created_at))}
+                            </span>
+                        </>
                     ))}
                     {userNotifications.length < 1 && (
                         <Empty listType="notifications" />

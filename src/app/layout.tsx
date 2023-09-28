@@ -11,8 +11,6 @@ import { Toast } from '@/components/ui/Toast'
 import { ConfirmModal } from '@/components/ui/ConfirmModal'
 import { Loading } from '@/components/ui/Loading'
 import { NotificationsModal } from '@/components/NotificationsModal'
-import { useContext, useEffect } from 'react'
-import { useNotifications } from '@/hooks/useNotifications'
 
 // export const metadata: Metadata = {
 //   title: 'Quando Lança | Confira os principais lançamentos de jogos de 2023',
