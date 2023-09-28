@@ -19,7 +19,14 @@ export function Trailer({ videoUrl, setTrailerUrl, setIsModalOpen, animationDela
     async function handleClick(){
         // setTrailerUrl(videoUrl)
         // setIsModalOpen(true)
-        router.push(`/trailers/${getVideoId(videoUrl)}`)
+        let screenWidth = window.screen.width;
+        if(screenWidth > 425){
+            setTrailerUrl(videoUrl)
+            setIsModalOpen(true)
+        } else {
+            router.push(`/trailers/${getVideoId(videoUrl)}`)
+        }
+        
     }
 
     return(
