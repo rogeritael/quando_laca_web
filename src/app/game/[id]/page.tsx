@@ -63,10 +63,18 @@ export default function Game( { params: { id } }  : PageProps){
             if(game) {
                 setSelectedGame(game)
 
-                game.media.map((media) => (
-                    backgroundImage === '' &&
-                        media.type === 'image' && setBackgroudImage(media.image)
-                ))
+                //background de acordo com o tamanho da tela
+                let screenWidth = window.innerWidth;
+                const medias = game.media;
+                if(screenWidth > 425){
+                    // game.media.map((media) => (
+                    //     backgroundImage === '' &&
+                    //         media.type === 'image' && setBackgroudImage(media.image)
+                    // ))
+                    setBackgroudImage(medias[medias.length -1].image)
+                } else {
+                    setBackgroudImage(medias[medias.length -2].image)
+                }
                 
                 game.media[0].link &&
                 setMediaUrl(game.media[0].link)
