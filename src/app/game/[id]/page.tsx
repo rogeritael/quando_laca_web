@@ -26,6 +26,7 @@ import trailer_player from '@/assets/icons/trailer_play_icon.svg'
 import { SiPlaystation4, SiPlaystation5 } from 'react-icons/si'
 import { BsNintendoSwitch, BsXbox, BsMicrosoft } from 'react-icons/bs'
 import { formatDate } from "@/utils/formatDate";
+import { platform } from "os";
 
 interface PageProps {
     params: {
@@ -140,12 +141,21 @@ export default function Game( { params: { id } }  : PageProps){
                         <p className="countdown_text">
                             {countdown(selectedGame.releaseDate)}
                         </p>
-                        <div className="platforms">                            
-                            <SiPlaystation4 className="playstation" />
-                            <SiPlaystation5 className="playstation" />
-                            <BsXbox />
-                            <BsMicrosoft />
-                            <BsNintendoSwitch />
+                        <div className="platforms">
+                            {selectedGame.platforms.map((platform) => {
+                                switch(platform){
+                                    case "PlayStation 4":
+                                        return <SiPlaystation4 className="playstation" />
+                                    case "PlayStation 5":
+                                        return <SiPlaystation5 className="playstation" />
+                                    case "PC (Microsoft Windows)":
+                                        return <BsMicrosoft />
+                                    case "Nintendo Switch":
+                                        return <BsNintendoSwitch />
+                                    case "Xbox Series X|S":
+                                        return <BsXbox />
+                                }
+                            })}                         
                         </div>
                         <button className="favoriteButton" onClick={() => handleSetList()}>
                             {isGameAlreadyAdded({gameId: selectedGame.id, gameList: gameList}) ?
