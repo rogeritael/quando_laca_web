@@ -1,13 +1,13 @@
-export const Nightingale = {
-  "id": "nightingale",
-  "name": "Nightingale",
-  "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4uwl.png",
+export const Ascend = {
+  "id": "ascend",
+  "name": "Ascend",
+  "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6lut.png",
   "price": 100,
-  "developer": "Inflexion Games",
+  "developer": "Miami Avalon",
   "platforms": [
     "PC (Microsoft Windows)"
   ],
-  "releaseDate": new Date(2024, 1, 22),
+  "releaseDate": new Date(1, 0, 2024),
   "category": [
     {
       "id": "",
@@ -38,6 +38,6 @@ export const Nightingale = {
     }
   ],
   "description": [
-    "Nightingale is a shared world survival-crafting game set in a rich gaslamp Victorian fantasy setting. Players venture through portals where adventure and mystery awaits across a myriad of beautiful and increasingly-dangerous worlds."
+    "Ascend is an adventure puzzle game where a young woman must navigate to the top of a mystical mountain learning the secrets of both the past and the future to find the balance in all aspects of life."
   ]
 }

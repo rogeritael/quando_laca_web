@@ -21,39 +21,23 @@ export const PennysBigBreakaway = {
     {
       "type": "video",
       "image": "",
-      "link": "https://www.youtube.com/embed/TLD-iCWDjOg?controls=0&modestbranding=1&rel=0&showinfo=0&loop=0&fs=0&hl=en&iv_load_policy=3&enablejsapi=1&origin=https%3A%2F%2Fwww.igdb.com&widgetid=1"
+      "link": ""
     },
     {
       "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scn3ef.jpg"
+      "image": ""
     },
     {
       "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scn3eg.jpg"
+      "image": ""
     },
     {
       "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scn3eh.jpg"
+      "image": ""
     },
     {
       "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scn3ei.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scn3ej.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scn3ek.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scn3el.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/ar2dfg.jpg"
+      "image": ""
     }
   ],
   "description": [

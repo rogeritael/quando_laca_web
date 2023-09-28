@@ -20,51 +20,23 @@ export const SuicideSquadKilltheJusticeLeague = {
     {
       "type": "video",
       "image": "",
-      "link": "https://www.youtube.com/embed/V1p7nWylfNs?controls=0&modestbranding=1&rel=0&showinfo=0&loop=0&fs=0&hl=en&iv_load_policy=3&enablejsapi=1&origin=https%3A%2F%2Fwww.igdb.com&widgetid=1"
+      "link": ""
     },
     {
       "type": "image",
-      "image": "https://i.ytimg.com/vi/J9vFB65-U_c/sddefault.jpg"
+      "image": ""
     },
     {
       "type": "image",
-      "image": "https://i.ytimg.com/vi/72RyZMzcIB0/sddefault.jpg"
+      "image": ""
     },
     {
       "type": "image",
-      "image": "https://i.ytimg.com/vi/FlwgE8YrDqg/sddefault.jpg"
+      "image": ""
     },
     {
       "type": "image",
-      "image": "https://i.ytimg.com/vi/zBczhEOp-m0/sddefault.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/sc8i56.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/sc8i57.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/sc8i58.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/sc8i5b.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/sc8i5a.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/sc8i59.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/ar16nr.jpg"
+      "image": ""
     }
   ],
   "description": [

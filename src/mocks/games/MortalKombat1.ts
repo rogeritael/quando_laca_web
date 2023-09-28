@@ -21,20 +21,23 @@ export const MortalKombat1 = {
     {
       "type": "video",
       "image": "",
-      "link": "https://www.youtube.com/embed/UZ6eFEjFfJ0?controls=0&modestbranding=1&rel=0&showinfo=0&loop=0&fs=0&hl=en&iv_load_policy=3&enablejsapi=1&origin=https%3A%2F%2Fwww.igdb.com&widgetid=1"
-    },
-    {
-      "type": "video",
-      "image": "",
-      "link": "https://www.youtube.com/watch?v=7VMvB7OKnd0&ab_channel=WarnerPlay"
+      "link": ""
     },
     {
       "type": "image",
-      "image": "https://i.ytimg.com/vi/_sLJ-xyjMQo/sddefault.jpg"
+      "image": ""
     },
     {
       "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/ar2bhv.jpg"
+      "image": ""
+    },
+    {
+      "type": "image",
+      "image": ""
+    },
+    {
+      "type": "image",
+      "image": ""
     }
   ],
   "description": [
