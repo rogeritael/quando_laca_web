@@ -50,7 +50,7 @@ export function gamesService(){
     async function findComingSoon(){
         const today = new Date();
         const futureDate = new Date();
-        futureDate.setDate(today.getDate() + 60); // Adiciona 60 dias à data atual
+        futureDate.setDate(today.getDate() + 30); // Adiciona 60 dias à data atual
     
         const upcomingGames = games.filter(game => game.releaseDate >= today && game.releaseDate <= futureDate);
 
@@ -61,7 +61,7 @@ export function gamesService(){
     async function findJustReleased(){
         const today = new Date();
         const pastDate = new Date();
-        pastDate.setDate(today.getDate() - 60); // retira 60 dias à data atual
+        pastDate.setDate(today.getDate() - 30); // retira 60 dias à data atual
     
         const justReleasedGames = games.filter(game => game.releaseDate <= today && game.releaseDate >= pastDate);
 
