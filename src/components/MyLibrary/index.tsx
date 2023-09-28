@@ -24,7 +24,7 @@ export function MyLibrary(props : MyLibraryProps){
                     <SmallGameCard key={game.id} name={game.name} release_date={game.releaseDate} id={game.id} image={game.image} />
                 ))}
                 {gameList.length < 1 && (
-                    <Empty listType="games" />
+                    <Empty listType="games" text />
                 )}
             </div>
             <a href="/library">

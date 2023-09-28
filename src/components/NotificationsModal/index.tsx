@@ -63,7 +63,7 @@ export function NotificationsModal(props : NotificationsModalProps){
                         </>
                     ))}
                     {userNotifications.length < 1 && (
-                        <Empty listType="notifications" />
+                        <Empty listType="notifications" text />
                     )}
 
                 </div>

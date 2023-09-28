@@ -15,8 +15,8 @@ interface EmptyProps {
 
 const texts = [
     'Desculpe, não encontramos nenhum jogo correspondente à sua pesquisa.',
-    'Não há notificações disponíveis no momento. Adicione jogos a sua lista para receber novas atualizações.',
-    'Sua lista de jogos favoritos está vazia no momento! Explore novos jogos para receber atualizações.'
+    'Não há notificações disponíveis no momento.',
+    'Sua lista de jogos favoritos está vazia!'
 ]
 
 interface ContentProps {

@@ -24,17 +24,13 @@ export const EmptyComponent = styled.figure`
         text-align: center;
         margin: 14px;
         margin-bottom: 24px;
+        font-weight: 300;
     }
 
     .button {
-        height: 40px;
-        width: 160px;
-        display: grid;
-        place-content: center;
-        font-size: 14px;
-        background-color: var(--highlight);
+        font-size: 12px;
+        border-bottom: 1px solid #fff;
         color: #fff;
-        border-radius: 24px;
-        line-height: 40px;
+        font-weight: 200;
     }
 `
