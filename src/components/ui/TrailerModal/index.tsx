@@ -14,7 +14,7 @@ interface TrailerModalProps {
     videoUrl: string;
     isOpen: boolean;
     setIsOpen: (param: boolean) => void;
-    medias: MediaProps[]
+    medias?: MediaProps[]
 }
 
 export function TrailerModal({ videoUrl, isOpen, setIsOpen, medias } : TrailerModalProps){
@@ -70,7 +70,7 @@ export function TrailerModal({ videoUrl, isOpen, setIsOpen, medias } : TrailerMo
             </div>
             <div className="related" style={{bottom: relatedProps.railPosition}}>
                 <div className="rail">
-                    {medias.map((media, index) => (
+                    {medias && medias.map((media, index) => (
                         media.link &&
                         <figure key={index} className="related_video" onClick={() => setCurrentTrailer(media.link!)}>
                             <Image height={120} width={213} alt="capa do trailer" src={`https://img.youtube.com/vi/${getVideoId(media.link)}/mqdefault.jpg`} />
