@@ -52,8 +52,6 @@ export const PageContainer = styled.section`
 
         }
 
-
-
         .content {
             position: absolute;
             width: 100%;
@@ -118,6 +116,7 @@ export const PageContainer = styled.section`
                     display: flex;
                     gap: 24px;
                     align-items: center;
+                    height: 64px;
 
                     svg {
                         width: 100%;
