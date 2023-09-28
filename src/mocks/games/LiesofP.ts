@@ -23,15 +23,30 @@ export const LiesofP = {
     {
       "type": "video",
       "image": "",
-      "link": ""
+      "link": "https://youtu.be/BxH1-ji-Nzg"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/NH_mJFOQJzE"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/yT7ra55z9p8"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/TYr1x25Z1Ak"
     },
     {
       "type": "image",
-      "image": ""
+      "image": "https://image.api.playstation.com/vulcan/ap/rnd/202305/2308/d468cc0c5e578ea5ba4e246aa9be258c4137a025b408214c.png"
     },
     {
       "type": "image",
-      "image": ""
+      "image": "https://assets.xboxservices.com/assets/6f/c8/6fc87e5f-632d-4ece-9f0a-d21138cd418c.jpg?n=Lies-of-P_GLP-Page-Hero-1084_1920x1080_02.jpg"
     }
   ],
   "description": [

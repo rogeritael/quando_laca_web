@@ -19,23 +19,35 @@ export const Starfield = {
     {
       "type": "video",
       "image": "",
-      "link": ""
+      "link": "https://youtu.be/JUobbpHERh8"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/pYqyVpCV-3c"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/N7Mrqi-0XsI"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/kfYEiTdsyas"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/Ek3I6_9c58E"
     },
     {
       "type": "image",
-      "image": ""
+      "image": "https://images.ctfassets.net/rporu91m20dc/44a6Xc8Cj0mXWHVGk65Ebm/0b5a06267ad6a8d7ca84f13a5c1a3710/Starfield_JourneySpace_Wallpaper_5654x2763-01.jpg?q=70&fm=webp"
     },
     {
       "type": "image",
-      "image": ""
-    },
-    {
-      "type": "image",
-      "image": ""
-    },
-    {
-      "type": "image",
-      "image": ""
+      "image": "https://images.ctfassets.net/rporu91m20dc/44a6Xc8Cj0mXWHVGk65Ebm/0b5a06267ad6a8d7ca84f13a5c1a3710/Starfield_JourneySpace_Wallpaper_5654x2763-01.jpg?q=70&fm=webp"
     }
   ],
   "description": [

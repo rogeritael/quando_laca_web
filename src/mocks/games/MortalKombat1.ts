@@ -21,23 +21,35 @@ export const MortalKombat1 = {
     {
       "type": "video",
       "image": "",
-      "link": ""
+      "link": "https://youtu.be/7VMvB7OKnd0"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/Ue1Yo-3QnRc"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/roi4YCd87hA"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/4B96xblujYE"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/MYa7L4jp11E"
     },
     {
       "type": "image",
-      "image": ""
+      "image": "https://sm.ign.com/ign_br/screenshot/default/mk-1-capa_puv2.jpg"
     },
     {
       "type": "image",
-      "image": ""
-    },
-    {
-      "type": "image",
-      "image": ""
-    },
-    {
-      "type": "image",
-      "image": ""
+      "image": "https://sm.ign.com/ign_br/screenshot/default/mk-1-capa_puv2.jpg"
     }
   ],
   "description": [

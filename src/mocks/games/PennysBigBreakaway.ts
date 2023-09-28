@@ -21,23 +21,20 @@ export const PennysBigBreakaway = {
     {
       "type": "video",
       "image": "",
-      "link": ""
+      "link": "https://youtu.be/oBigeYDiqm0"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/1hAgpRYM2M8"
     },
     {
       "type": "image",
-      "image": ""
+      "image": "https://images.ctfassets.net/wn7ipiv9ue5v/w2JppVH7xXVxsjnyAxdM2/ff18b1ffec5e470aba6d1dae73bd414d/PYO_D2C_BoxArt_600x850.jpg"
     },
     {
       "type": "image",
-      "image": ""
-    },
-    {
-      "type": "image",
-      "image": ""
-    },
-    {
-      "type": "image",
-      "image": ""
+      "image": "https://images.nintendolife.com/b230ce8c623f4/pennys-big-breakaway-1.large.jpg"
     }
   ],
   "description": [

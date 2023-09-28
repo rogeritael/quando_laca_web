@@ -19,23 +19,20 @@ export const ForzaMotorsport = {
     {
       "type": "video",
       "image": "",
-      "link": ""
+      "link": "https://youtu.be/WtuBLc3cU-o"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://www.youtube.com/watch?v=em4gv1Ietko&ab_channel=Xbox"
     },
     {
       "type": "image",
-      "image": ""
+      "image": "https://assetsio.reedpopcdn.com/forza-site_YUBsE7d_dN9sqks.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"
     },
     {
       "type": "image",
-      "image": ""
-    },
-    {
-      "type": "image",
-      "image": ""
-    },
-    {
-      "type": "image",
-      "image": ""
+      "image": "https://assetsio.reedpopcdn.com/forza-site_YUBsE7d_dN9sqks.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"
     }
   ],
   "description": [

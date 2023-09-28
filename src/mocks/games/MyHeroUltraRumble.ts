@@ -21,23 +21,25 @@ export const MyHeroUltraRumble = {
     {
       "type": "video",
       "image": "",
-      "link": ""
+      "link": "https://youtu.be/t4E7dNlTFiA"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/6hxZCQtpJ9w"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/FYeOMM2pzYI"
     },
     {
       "type": "image",
-      "image": ""
+      "image": "https://static.bandainamcoent.eu/high/my-hero-academia/my-hero-ultra-rumble/00-page-setup/MHUR-new-header-mobile.jpg"
     },
     {
       "type": "image",
-      "image": ""
-    },
-    {
-      "type": "image",
-      "image": ""
-    },
-    {
-      "type": "image",
-      "image": ""
+      "image": "https://static.bandainamcoent.eu/high/my-hero-academia/my-hero-ultra-rumble/00-page-setup/MHUR-new-header-mobile.jpg"
     }
   ],
   "description": [

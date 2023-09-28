@@ -1,6 +1,5 @@
 // const trailerCover = 'https://i.ytimg.com/vi/Hyh6UqP1YPM/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGhACGAYgATgB&rs=AOn4CLCIXUOMnZXQJ_Q19t6h0uKoAF6aig'
 
-import { Ascend } from "./games/Ascend";
 import { ClockTower } from "./games/ClockTower";
 import { EASportsCollegeFootball } from "./games/EASportsCollegeFootball";
 import { ExoCross } from "./games/ExoCross";
@@ -71,7 +70,6 @@ export const gameList: GameProps[] = [
     Nightingale,
     PennysBigBreakaway,
     ClockTower,
-    Ascend,
     WitchHand,
     Forgotlings,
     ParcelCorps,

@@ -18,23 +18,25 @@ export const Nightingale = {
     {
       "type": "video",
       "image": "",
-      "link": ""
+      "link": "https://youtu.be/_zjAZ2dmxr8"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/wVzai6zZM6A"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/ZGeQT_OSrWk"
     },
     {
       "type": "image",
-      "image": ""
+      "image": "https://www.gamereactor.pt/media/43/improbableinflexiongames_3664343b.jpg"
     },
     {
       "type": "image",
-      "image": ""
-    },
-    {
-      "type": "image",
-      "image": ""
-    },
-    {
-      "type": "image",
-      "image": ""
+      "image": "https://www.consolecreatures.com/wp-content/uploads/2023/08/nightingalegamescom.webp"
     }
   ],
   "description": [

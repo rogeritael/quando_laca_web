@@ -1,6 +1,6 @@
 export const HelldiversIISuperCitizenionEdit = {
   "id": "helldivers_ii_super_citizen_ionedit",
-  "name": "Helldivers II: Super Citizen ionEdit",
+  "name": "Helldivers II: Super Citizen Edition",
   "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co74bh.png",
   "price": 100,
   "developer": "Arrowhead Game Studios",
@@ -19,15 +19,25 @@ export const HelldiversIISuperCitizenionEdit = {
     {
       "type": "video",
       "image": "",
-      "link": ""
+      "link": "https://youtu.be/B9VdtdWRcZs"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/lUaaT_k9Nv8"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/d68AA0EW4tQ"
     },
     {
       "type": "image",
-      "image": ""
+      "image": "https://metroamericas.com/wp-content/uploads/2023/09/Se-anuncia-la-salida-de-Helldivers-2-videojuego-multijugador-para-PlayStation-5-y-PC_650e53f903ed0.jpg"
     },
     {
       "type": "image",
-      "image": ""
+      "image": "https://metroamericas.com/wp-content/uploads/2023/09/Se-anuncia-la-salida-de-Helldivers-2-videojuego-multijugador-para-PlayStation-5-y-PC_650e53f903ed0.jpg"
     },
   ],
   "description": [
