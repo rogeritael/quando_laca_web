@@ -26,6 +26,7 @@ export function TrailerModal({ videoUrl, isOpen, setIsOpen, medias } : TrailerMo
         controlPosition: '120px',
         railPosition: '0'
     })
+    const [currentPage, setCurrentPage] = useState('')
 
     function handleCloseModal(){
         
@@ -52,12 +53,16 @@ export function TrailerModal({ videoUrl, isOpen, setIsOpen, medias } : TrailerMo
 
     useEffect(() => {
         setEmbedUrl(`https://www.youtube.com/embed/${getVideoId(videoUrl)}`)
+
+        const url = window.location.href.split('/')[window.location.href.split('/').length - 1].split('?')[0]
+
+        setCurrentPage(url)
     }, [videoUrl])
 
     return(
         isOpen &&
-        <ModalContainer isOpen={isOpen}>
-            <span className="background" onClick={() => handleCloseModal()} />
+        <ModalContainer page={currentPage} isOpen={isOpen}>
+            <span className="background" onClick={() => setIsOpen(false)} />
             <div className="header">
                 <Image alt="voltar" src={backArrow} onClick={() => setIsOpen(false)} />
                 <Logo />

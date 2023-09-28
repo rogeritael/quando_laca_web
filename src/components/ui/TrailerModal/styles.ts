@@ -1,7 +1,8 @@
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 interface ModalProps {
     isOpen: boolean;
+    page: string;
 }
 
 const fade = keyframes`
@@ -119,6 +120,20 @@ export const ModalContainer = styled.section<ModalProps>`
         }
     }
 
+    ${props => props.page == '' && css`
+        .related {
+            left: 0;
+            width: calc(100%);
+        }
+    `}
+
+    ${props => props.page == 'search' && css`
+        .related {
+            left: 0;
+            width: calc(100%);
+        }
+    `}
+
     @media(max-width: 800px){
         .related {
             left: 0;
@@ -132,4 +147,6 @@ export const ModalContainer = styled.section<ModalProps>`
             width: 100%;
         }
     }
+    
+    
 `
