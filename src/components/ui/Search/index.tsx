@@ -15,7 +15,7 @@ export function Search(props : SearchProps){
 
     const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === "Enter") {
-          window.location.href = `/Search?term=${searchTerm}`;
+          window.location.href = `/search?term=${searchTerm}`;
         }
       };
     
