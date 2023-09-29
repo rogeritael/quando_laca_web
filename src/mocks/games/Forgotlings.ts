@@ -8,7 +8,7 @@ export const Forgotlings = {
     "PC (Microsoft Windows)",
     "Nintendo Switch"
   ],
-  "releaseDate": new Date(2024, 0, 1), //SEM DATA
+  "releaseDate": new Date(2024, 0, undefined), //SEM DATA
   "category": [
     {
       "id": "",

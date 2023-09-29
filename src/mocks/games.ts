@@ -1,7 +1,6 @@
 // const trailerCover = 'https://i.ytimg.com/vi/Hyh6UqP1YPM/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGhACGAYgATgB&rs=AOn4CLCIXUOMnZXQJ_Q19t6h0uKoAF6aig'
 
 import { ClockTower } from "./games/ClockTower";
-import { EASportsCollegeFootball } from "./games/EASportsCollegeFootball";
 import { ExoCross } from "./games/ExoCross";
 import { Forgotlings } from "./games/Forgotlings";
 import { ForzaMotorsport } from "./games/ForzaMotorsport";
@@ -74,7 +73,6 @@ export const gameList: GameProps[] = [
     Forgotlings,
     ParcelCorps,
     Warframe1999,
-    EASportsCollegeFootball,
     ForzaMotorsport,
 ]
 

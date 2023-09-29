@@ -20,23 +20,30 @@ export const SuicideSquadKilltheJusticeLeague = {
     {
       "type": "video",
       "image": "",
-      "link": ""
+      "link": "https://youtu.be/zBczhEOp-m0"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/uZDGjS5vpIk"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/KRKZ1ewc9f0"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/2EVFYstVuVk"
     },
     {
       "type": "image",
-      "image": ""
+      "image": "https://wallpapercg.com/download/harley-quinn-3840x2160-10741.jpg"
     },
     {
       "type": "image",
-      "image": ""
-    },
-    {
-      "type": "image",
-      "image": ""
-    },
-    {
-      "type": "image",
-      "image": ""
+      "image": "https://wallpapercg.com/media/ts_2x/10699.webp"
     }
   ],
   "description": [

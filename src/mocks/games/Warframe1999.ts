@@ -15,23 +15,25 @@ export const Warframe1999 = {
     {
       "type": "video",
       "image": "",
-      "link": ""
+      "link": "https://youtu.be/n7-tpPXV9WQ"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/EZEevs_RSPw"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/rcKSbrCPFDo"
     },
     {
       "type": "image",
-      "image": ""
+      "image": "https://www.pcgamesn.com/wp-content/sites/pcgamesn/2023/08/warframe-tennocon-2023-550x309.jpg"
     },
     {
       "type": "image",
-      "image": ""
-    },
-    {
-      "type": "image",
-      "image": ""
-    },
-    {
-      "type": "image",
-      "image": ""
+      "image": "https://warframe-web-assets.nyc3.cdn.digitaloceanspaces.com/uploads/e39085c20bcf759a3546ba4156ca348a.png"
     }
   ],
   "description": [

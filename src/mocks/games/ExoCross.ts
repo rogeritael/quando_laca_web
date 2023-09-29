@@ -11,7 +11,7 @@ export const ExoCross = {
     "PC (Microsoft Windows)",
     "Xbox Series X|S"
   ],
-  "releaseDate": new Date(2023, 11, 11), //SEM DATA
+  "releaseDate": new Date(2023, 11, undefined), //SEM DATA
   "category": [
     {
       "id": "",
