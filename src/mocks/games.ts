@@ -1,5 +1,7 @@
 // const trailerCover = 'https://i.ytimg.com/vi/Hyh6UqP1YPM/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGhACGAYgATgB&rs=AOn4CLCIXUOMnZXQJ_Q19t6h0uKoAF6aig'
 
+import { AlanWakeII } from "./games/AlanWakeII";
+import { AssassinsCreedMirage } from "./games/AssassinsCreedMirage";
 import { ClockTower } from "./games/ClockTower";
 import { ExoCross } from "./games/ExoCross";
 import { Forgotlings } from "./games/Forgotlings";
@@ -74,6 +76,8 @@ export const gameList: GameProps[] = [
     ParcelCorps,
     Warframe1999,
     ForzaMotorsport,
+    AlanWakeII,
+    AssassinsCreedMirage,
 ]
 
 
