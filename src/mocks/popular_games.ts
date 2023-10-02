@@ -13,5 +13,6 @@ export const popular_games = [
     'alone_in_the_dark',
     'alan_wake_ii',
     'banishers_ghosts_of_new_eden',
-    'call_of_duty_modern_warfare_iii'
+    'call_of_duty_modern_warfare_iii',
+    'starfield'
 ]
