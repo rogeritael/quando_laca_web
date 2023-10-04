@@ -2,8 +2,8 @@
 import Image from "next/image";
 import { SearchComponent } from "./styles";
 import SearchIcon from "@/assets/icons/Search.png";
-import { useEffect, useRef, useState } from "react";
-import Router from "next/router";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 
 interface SearchProps {
@@ -12,10 +12,11 @@ interface SearchProps {
 
 export function Search(props : SearchProps){
     const [searchTerm, setSearchTerm] = useState('')
+    const router = useRouter()
 
     const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === "Enter") {
-          window.location.href = `/search?term=${searchTerm}`;
+          router.push(`/Search?term=${searchTerm}`);
         }
       };
     

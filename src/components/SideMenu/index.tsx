@@ -53,10 +53,10 @@ export function SideMenu(props : SideMenuProps){
             <Link href="/" className={activeLink === 'home' ? 'active' : ''}>
                 <Image src={categoryIcon} alt="ver todos os jogos" />
             </Link>
-            <Link href="/library" className={activeLink === 'library' ? 'active' : ''}>
+            <Link href="/Library" className={activeLink === 'library' ? 'active' : ''}>
                 <Image src={favoritedIcon} alt="ver todos os jogos" />
             </Link>
-            <Link href="/search?term=populares" className={activeLink === 'search' ? 'active' : ''}>
+            <Link href="/Search?term=populares" className={activeLink === 'search' ? 'active' : ''}>
                 <Image src={searchIcon} alt="ver todos os jogos" />
             </Link>
         </SideMenuContainer>

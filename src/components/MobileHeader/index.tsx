@@ -21,7 +21,7 @@ export function MobileHeader(props : MobileHeaderProps){
     };
 
     function handleSearch(){
-        window.location.href = `/search?term=${searchTerm}`;
+        window.location.href = `/Search?term=${searchTerm}`;
     }
 
     return(
