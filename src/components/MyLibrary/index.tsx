@@ -27,7 +27,7 @@ export function MyLibrary(props : MyLibraryProps){
                     <Empty listType="games" text />
                 )}
             </div>
-            <a href="/library">
+            <a href="/Library">
                 <p>Ver biblioteca completa</p>
                 <Image src={arrow} alt="seta ver todos os jogos adicionados aos favoritos" />
             </a>
