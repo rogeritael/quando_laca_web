@@ -2,19 +2,32 @@
 
 import { AlanWakeII } from "./games/AlanWakeII";
 import { AssassinsCreedMirage } from "./games/AssassinsCreedMirage";
+import { AvatarFrontiersofPandora } from "./games/AvatarFrontiersofPandora";
+import { BlasphemousII } from "./games/BlasphemousII";
+import { CallofDutyModernWarfareIII } from "./games/CallofDutyModernWarfareIII";
 import { ClockTower } from "./games/ClockTower";
+import { CounterStrike2 } from "./games/CounterStrike2";
+import { Cyberpunk2077PhantomLiberty } from "./games/Cyberpunk2077PhantomLiberty";
 import { ExoCross } from "./games/ExoCross";
 import { Forgotlings } from "./games/Forgotlings";
 import { ForzaMotorsport } from "./games/ForzaMotorsport";
+import { GhostrunnerII } from "./games/GhostrunnerII";
 import { HelldiversIISuperCitizenionEdit } from "./games/HelldiversIISuperCitizenionEdit";
+import { JustDance2024ionEdit } from "./games/JustDance2024ionEdit";
 import { LiesofP } from "./games/LiesofP";
 import { MortalKombat1 } from "./games/MortalKombat1";
 import { MyHeroUltraRumble } from "./games/MyHeroUltraRumble";
 import { Nightingale } from "./games/Nightingale";
+import { OxenfreeIILostSignals } from "./games/OxenfreeIILostSignals";
 import { ParcelCorps } from "./games/ParcelCorps";
+import { PartyAnimals } from "./games/PartyAnimals";
+import { Payday3 } from "./games/Payday3";
 import { PennysBigBreakaway } from "./games/PennysBigBreakaway";
+import { RobocopRogueCity } from "./games/RobocopRogueCity";
 import { Starfield } from "./games/Starfield";
 import { SuicideSquadKilltheJusticeLeague } from "./games/SuicideSquadKilltheJusticeLeague";
+import { Tekken8 } from "./games/Tekken8";
+import { TheDayBefore } from "./games/TheDayBefore";
 import { UFL } from "./games/UFL";
 import { Warframe1999 } from "./games/Warframe1999";
 import { WitchHand } from "./games/WitchHand";
@@ -60,6 +73,20 @@ export const category: Category[] = [
 ];
 
 export const gameList: GameProps[] = [
+    BlasphemousII,
+    CounterStrike2,
+    OxenfreeIILostSignals,
+    PartyAnimals,
+    TheDayBefore,
+    AvatarFrontiersofPandora,
+    CallofDutyModernWarfareIII,
+    Cyberpunk2077PhantomLiberty,
+    GhostrunnerII,
+    JustDance2024ionEdit,
+    RobocopRogueCity,
+    Tekken8,
+    
+    Payday3,
     ExoCross,
     UFL,
     Starfield,
