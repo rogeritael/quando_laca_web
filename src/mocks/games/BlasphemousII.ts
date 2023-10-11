@@ -21,43 +21,35 @@ export const BlasphemousII = {
     {
       "type": "video",
       "image": "",
-      "link": "https://www.youtube.com/embed/sXAajmfuUeo?controls=0&modestbranding=1&rel=0&showinfo=0&loop=0&fs=0&hl=en&iv_load_policy=3&enablejsapi=1&origin=https%3A%2F%2Fwww.igdb.com&widgetid=1"
+      "link": "https://youtu.be/TUo0CJuZrRg"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/1gDFdV_UnMk"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/9N_wPU58y7o"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/KocHGYfyvvY"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/82Ea8xljfqc"
     },
     {
       "type": "image",
-      "image": "https://i.ytimg.com/vi/CZ7V4RLC4Nw/sddefault.jpg"
+      "image": "https://culturedvultures.com/wp-content/uploads/2023/08/image_2023-08-16_133737726-1170x763.jpg"
     },
     {
       "type": "image",
-      "image": "https://i.ytimg.com/vi/1gDFdV_UnMk/sddefault.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scm6q9.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scm6qa.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scm6qb.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scm6qc.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scm6q7.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scm6q8.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/ar2a2q.jpg"
+      "image": "https://culturedvultures.com/wp-content/uploads/2023/08/image_2023-08-16_133737726-1170x763.jpg"
     }
   ],
   "description": [
