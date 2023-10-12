@@ -11,7 +11,7 @@ export const EndlessDungeon = {
     "Nintendo Switch",
     "Xbox Series X|S"
   ],
-  "releaseDate": "new Date(2023, 9, 19)",
+  "releaseDate": new Date(2023, 9, 19),
   "category": [
     {
       "id": "",
@@ -22,51 +22,30 @@ export const EndlessDungeon = {
     {
       "type": "video",
       "image": "",
-      "link": "https://www.youtube.com/embed/PU7l8nfiP1A?controls=0&modestbranding=1&rel=0&showinfo=0&loop=0&fs=0&hl=en&iv_load_policy=3&enablejsapi=1&origin=https%3A%2F%2Fwww.igdb.com&widgetid=1"
+      "link": "https://youtu.be/v5eICM8zhEU"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/nYyFLcholLI"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/OkUSqqgRops"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/ER3dOPx0ZH0"
     },
     {
       "type": "image",
-      "image": "https://i.ytimg.com/vi/P_sI2v7dGwo/sddefault.jpg"
+      "image": "https://assetsio.reedpopcdn.com/amplitude-unveils-dungeon-of-the-endless-spiritual-successor-endless-dungeon-1607635426969.jpg?width=1200&height=600&fit=crop&enable=upscale&auto=webp"
     },
     {
       "type": "image",
-      "image": "https://i.ytimg.com/vi/ER3dOPx0ZH0/sddefault.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://i.ytimg.com/vi/ledLIVvhSV0/sddefault.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://i.ytimg.com/vi/v5eICM8zhEU/sddefault.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/sc8v2q.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/sc8v2r.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/sc8v2s.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/sc8v2t.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/sc8v2u.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/sc8v2v.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/ar1r1k.jpg"
+      "image": "https://assetsio.reedpopcdn.com/amplitude-unveils-dungeon-of-the-endless-spiritual-successor-endless-dungeon-1607635426969.jpg?width=1200&height=600&fit=crop&enable=upscale&auto=webp"
     }
   ],
   "description": [

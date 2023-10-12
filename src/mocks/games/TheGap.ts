@@ -10,7 +10,7 @@ export const TheGap = {
     "PC (Microsoft Windows)",
     "Xbox Series X|S"
   ],
-  "releaseDate": "new Date(2023, 9, 19)",
+  "releaseDate": new Date(2023, 9, 19),
   "category": [
     {
       "id": "",
@@ -21,67 +21,20 @@ export const TheGap = {
     {
       "type": "video",
       "image": "",
-      "link": "https://www.youtube.com/embed/J3OUb6tGCwE?controls=0&modestbranding=1&rel=0&showinfo=0&loop=0&fs=0&hl=en&iv_load_policy=3&enablejsapi=1&origin=https%3A%2F%2Fwww.igdb.com&widgetid=1"
+      "link": "https://youtu.be/5sZxMVLIl60"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/rm21gOWfqkc"
     },
     {
       "type": "image",
-      "image": "https://i.ytimg.com/vi/q2RbXeS-Cd0/sddefault.jpg"
+      "image": "https://relocker.ru/wp-content/uploads/2023/08/30641c1403095bed99a68da68db63b4a186b89a84ed24ffe.jpg"
     },
     {
       "type": "image",
-      "image": "https://i.ytimg.com/vi/wwmHUupHSMY/sddefault.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://i.ytimg.com/vi/xcylve_bwVc/sddefault.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scabe4.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scabdy.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scabe7.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scabea.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scabee.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scabeg.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scabeh.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scabei.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scabec.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scabe2.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scabef.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/arn9s.jpg"
+      "image": "https://relocker.ru/wp-content/uploads/2023/08/30641c1403095bed99a68da68db63b4a186b89a84ed24ffe.jpg"
     }
   ],
   "description": [

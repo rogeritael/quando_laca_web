@@ -12,7 +12,7 @@ export const AgathaChristieMurderontheOrientExpress = {
     "Nintendo Switch",
     "Xbox Series X|S"
   ],
-  "releaseDate": "new Date(2023, 9, 19)",
+  "releaseDate": new Date(2023, 9, 19),
   "category": [
     {
       "id": "",
@@ -23,35 +23,15 @@ export const AgathaChristieMurderontheOrientExpress = {
     {
       "type": "video",
       "image": "",
-      "link": "https://www.youtube.com/embed/_favxAKTnCw?controls=0&modestbranding=1&rel=0&showinfo=0&loop=0&fs=0&hl=en&iv_load_policy=3&enablejsapi=1&origin=https%3A%2F%2Fwww.igdb.com&widgetid=1"
+      "link": "https://youtu.be/9KpjBqnDvV4"
     },
     {
       "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scmow5.jpg"
+      "image": "https://i0.wp.com/www.microids.com/wp-content/uploads/2023/06/murder-orient-express-banner-keyart-1280%C3%97720.png?fit=1280%2C720&ssl=1"
     },
     {
       "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scmow7.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scmow9.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scmowb.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scmowd.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/ar2bt1.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/ar2h5y.jpg"
+      "image": "https://i0.wp.com/www.microids.com/wp-content/uploads/2023/06/murder-orient-express-banner-keyart-1280%C3%97720.png?fit=1280%2C720&ssl=1"
     }
   ],
   "description": [

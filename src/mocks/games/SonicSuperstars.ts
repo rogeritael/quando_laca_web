@@ -12,7 +12,7 @@ export const SonicSuperstars = {
     "Nintendo Switch",
     "Xbox Series X|S"
   ],
-  "releaseDate": "new Date(2023, 9, 17)",
+  "releaseDate": new Date(2023, 9, 17),
   "category": [
     {
       "id": "",
@@ -23,55 +23,30 @@ export const SonicSuperstars = {
     {
       "type": "video",
       "image": "",
-      "link": "https://www.youtube.com/embed/j3g-62NNoUs?controls=0&modestbranding=1&rel=0&showinfo=0&loop=0&fs=0&hl=en&iv_load_policy=3&enablejsapi=1&origin=https%3A%2F%2Fwww.igdb.com&widgetid=1"
+      "link": "https://youtu.be/bFugyBh_ck4"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/Bf3KDOeBTk0"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/1DrnSgXHviI"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/j3g-62NNoUs"
     },
     {
       "type": "image",
-      "image": "https://i.ytimg.com/vi/0il5KpfzvCU/sddefault.jpg"
+      "image": "https://meups.com.br/wp-content/uploads/2023/07/sonic-superstars-1.jpg"
     },
     {
       "type": "image",
-      "image": "https://i.ytimg.com/vi/tmIZm8wrqqo/sddefault.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://i.ytimg.com/vi/ZsjOv-_6Fkg/sddefault.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scmval.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scmvam.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scmvao.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scmvar.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scmvan.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scmvap.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scmvaq.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scmvak.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/ar2dfa.jpg"
+      "image": "https://meups.com.br/wp-content/uploads/2023/07/sonic-superstars-1.jpg"
     }
   ],
   "description": [

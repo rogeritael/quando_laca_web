@@ -12,7 +12,7 @@ export const HellboyWebofWyrd = {
     "Nintendo Switch",
     "Xbox Series X|S"
   ],
-  "releaseDate": "new Date(2023, 9, 18)",
+  "releaseDate": new Date(2023, 9, 18),
   "category": [
     {
       "id": "",
@@ -23,43 +23,30 @@ export const HellboyWebofWyrd = {
     {
       "type": "video",
       "image": "",
-      "link": "https://www.youtube.com/embed/MUeagrk-ZQk?controls=0&modestbranding=1&rel=0&showinfo=0&loop=0&fs=0&hl=en&iv_load_policy=3&enablejsapi=1&origin=https%3A%2F%2Fwww.igdb.com&widgetid=1"
+      "link": "https://youtu.be/6fIGb14txog"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/d9sKAKAWcpw"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/nlwSl-jCNMM"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/uSGxhb0R-4A"
     },
     {
       "type": "image",
-      "image": "https://i.ytimg.com/vi/LA2k-j51bqQ/sddefault.jpg"
+      "image": "https://global-uploads.webflow.com/60c12e8d8588991ab4ce682e/6390d09c90af3074d34683bd_Hellboy_Key_Art_1920x1080_v2.png"
     },
     {
       "type": "image",
-      "image": "https://i.ytimg.com/vi/nlwSl-jCNMM/sddefault.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://i.ytimg.com/vi/h0mrrZqSSB0/sddefault.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scka7l.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scka7m.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scka7n.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scka7o.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scka7k.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/ar21rq.jpg"
+      "image": "https://global-uploads.webflow.com/60c12e8d8588991ab4ce682e/6390d09c90af3074d34683bd_Hellboy_Key_Art_1920x1080_v2.png"
     }
   ],
   "description": [

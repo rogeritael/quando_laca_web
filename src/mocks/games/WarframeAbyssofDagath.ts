@@ -9,7 +9,7 @@ export const WarframeAbyssofDagath = {
     "Role-playing (RPG)",
     "Shooter"
   ],
-  "releaseDate": "new Date(2023, 9, 18)",
+  "releaseDate": new Date(2023, 9, 18),
   "category": [],
   "media": [],
   "description": [

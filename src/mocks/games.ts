@@ -1,5 +1,6 @@
 // const trailerCover = 'https://i.ytimg.com/vi/Hyh6UqP1YPM/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGhACGAYgATgB&rs=AOn4CLCIXUOMnZXQJ_Q19t6h0uKoAF6aig'
 
+import { AgathaChristieMurderontheOrientExpress } from "./games/AgathaChristieMurderontheOrientExpress";
 import { AlanWakeII } from "./games/AlanWakeII";
 import { AssassinsCreedMirage } from "./games/AssassinsCreedMirage";
 import { AvatarFrontiersofPandora } from "./games/AvatarFrontiersofPandora";
@@ -8,13 +9,17 @@ import { CallofDutyModernWarfareIII } from "./games/CallofDutyModernWarfareIII";
 import { ClockTower } from "./games/ClockTower";
 import { CounterStrike2 } from "./games/CounterStrike2";
 import { Cyberpunk2077PhantomLiberty } from "./games/Cyberpunk2077PhantomLiberty";
+import { EndlessDungeon } from "./games/EndlessDungeon";
 import { ExoCross } from "./games/ExoCross";
 import { Forgotlings } from "./games/Forgotlings";
 import { ForzaMotorsport } from "./games/ForzaMotorsport";
+import { GangsofSherwood } from "./games/GangsofSherwood";
 import { GhostrunnerII } from "./games/GhostrunnerII";
+import { HellboyWebofWyrd } from "./games/HellboyWebofWyrd";
 import { HelldiversIISuperCitizenionEdit } from "./games/HelldiversIISuperCitizenionEdit";
 import { JustDance2024ionEdit } from "./games/JustDance2024ionEdit";
 import { LiesofP } from "./games/LiesofP";
+import { LordsoftheFallen } from "./games/LordsoftheFallen";
 import { MortalKombat1 } from "./games/MortalKombat1";
 import { MyHeroUltraRumble } from "./games/MyHeroUltraRumble";
 import { Nightingale } from "./games/Nightingale";
@@ -24,13 +29,16 @@ import { PartyAnimals } from "./games/PartyAnimals";
 import { Payday3 } from "./games/Payday3";
 import { PennysBigBreakaway } from "./games/PennysBigBreakaway";
 import { RobocopRogueCity } from "./games/RobocopRogueCity";
+import { SonicSuperstars } from "./games/SonicSuperstars";
 import { Starfield } from "./games/Starfield";
 import { SuicideSquadKilltheJusticeLeague } from "./games/SuicideSquadKilltheJusticeLeague";
 import { Tekken8 } from "./games/Tekken8";
 import { TheDayBefore } from "./games/TheDayBefore";
+import { TheGap } from "./games/TheGap";
 import { UFL } from "./games/UFL";
 import { Warframe1999 } from "./games/Warframe1999";
 import { WitchHand } from "./games/WitchHand";
+import { WizardwithaGun } from "./games/WizardwithaGun";
 
 
 interface Category {
@@ -73,6 +81,15 @@ export const category: Category[] = [
 ];
 
 export const gameList: GameProps[] = [
+    AgathaChristieMurderontheOrientExpress,
+    EndlessDungeon,
+    GangsofSherwood,
+    HellboyWebofWyrd,
+    LordsoftheFallen,
+    SonicSuperstars,
+    TheGap,
+    WizardwithaGun,
+
     BlasphemousII,
     CounterStrike2,
     OxenfreeIILostSignals,
@@ -85,7 +102,6 @@ export const gameList: GameProps[] = [
     JustDance2024ionEdit,
     RobocopRogueCity,
     Tekken8,
-    
     Payday3,
     ExoCross,
     UFL,

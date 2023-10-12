@@ -10,7 +10,7 @@ export const WizardwithaGun = {
     "Nintendo Switch",
     "Xbox Series X|S"
   ],
-  "releaseDate": "new Date(2023, 9, 17)",
+  "releaseDate": new Date(2023, 9, 17),
   "category": [
     {
       "id": "",
@@ -21,35 +21,30 @@ export const WizardwithaGun = {
     {
       "type": "video",
       "image": "",
-      "link": "https://www.youtube.com/embed/ldtX4d5qanA?controls=0&modestbranding=1&rel=0&showinfo=0&loop=0&fs=0&hl=en&iv_load_policy=3&enablejsapi=1&origin=https%3A%2F%2Fwww.igdb.com&widgetid=1"
+      "link": "https://youtu.be/ldtX4d5qanA"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/P93ntHIFGSw"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/ugLknrgjcD4"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/RzshfRa9NLA"
     },
     {
       "type": "image",
-      "image": "https://i.ytimg.com/vi/Iv59qzObjSA/sddefault.jpg"
+      "image": "https://eu-images.contentstack.com/v3/assets/blt95b381df7c12c15d/blt094d90bb10d605aa/64513a71e0c52048d184a523/wizardwithagun.jpg?quality=80&format=webply&width=828"
     },
     {
       "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scagwf.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scagwg.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scagwe.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scagwh.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/scagwi.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/aruim.jpg"
+      "image": "https://eu-images.contentstack.com/v3/assets/blt95b381df7c12c15d/blt094d90bb10d605aa/64513a71e0c52048d184a523/wizardwithagun.jpg?quality=80&format=webply&width=828"
     }
   ],
   "description": [

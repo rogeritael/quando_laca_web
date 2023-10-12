@@ -9,7 +9,7 @@ export const GangsofSherwood = {
     "PC (Microsoft Windows)",
     "Xbox Series X|S"
   ],
-  "releaseDate": "new Date(2023, 9, 19)",
+  "releaseDate": new Date(2023, 9, 19),
   "category": [
     {
       "id": "",
@@ -20,47 +20,30 @@ export const GangsofSherwood = {
     {
       "type": "video",
       "image": "",
-      "link": "https://www.youtube.com/embed/rqE-C48Yrss?controls=0&modestbranding=1&rel=0&showinfo=0&loop=0&fs=0&hl=en&iv_load_policy=3&enablejsapi=1&origin=https%3A%2F%2Fwww.igdb.com&widgetid=1"
+      "link": "https://youtu.be/h72xFJWiUhY"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/HsxPf_xM3YE"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/G3_V-kMAo_g"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://youtu.be/0El-scBhaiY"
     },
     {
       "type": "image",
-      "image": "https://i.ytimg.com/vi/8a5xd3zuaqQ/sddefault.jpg"
+      "image": "https://store-images.s-microsoft.com/image/apps.64281.13761728067386436.69b4d1dd-b1b8-4beb-9bfd-2eb14285cbfd.2b00076a-a150-4255-85b4-10576f644e2c?mode=scale&q=90&h=720&w=1280&background=%23FFFFFF"
     },
     {
       "type": "image",
-      "image": "https://i.ytimg.com/vi/JOaZrYVcs8A/sddefault.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://i.ytimg.com/vi/dtWsrBf0iM0/sddefault.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/schthd.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/schthe.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/schthf.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/schthg.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/schthh.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/schthc.jpg"
-    },
-    {
-      "type": "image",
-      "image": "https://images.igdb.com/igdb/image/upload/t_720p/ar1q0o.jpg"
+      "image": "https://store-images.s-microsoft.com/image/apps.64281.13761728067386436.69b4d1dd-b1b8-4beb-9bfd-2eb14285cbfd.2b00076a-a150-4255-85b4-10576f644e2c?mode=scale&q=90&h=720&w=1280&background=%23FFFFFF"
     }
   ],
   "description": [
