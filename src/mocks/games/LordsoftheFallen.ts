@@ -35,11 +35,6 @@ export const LordsoftheFallen = {
     {
       "type": "video",
       "image": "",
-      "link": "https://youtu.be/-mhNKIZL4Bc"
-    },
-    {
-      "type": "video",
-      "image": "",
       "link": "https://youtu.be/25OrEKfal0U"
     },
     {

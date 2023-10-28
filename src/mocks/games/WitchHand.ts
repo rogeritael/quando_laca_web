@@ -7,7 +7,7 @@ export const WitchHand = {
   "platforms": [
     "PC (Microsoft Windows)"
   ],
-  "releaseDate": new Date(2024, 0, 1), //SEM DATA
+  "releaseDate": new Date(0, 0, undefined), //SEM DATA
   "category": [
     {
       "id": "",
@@ -18,23 +18,15 @@ export const WitchHand = {
     {
       "type": "video",
       "image": "",
-      "link": ""
+      "link": "https://www.youtube.com/watch?v=ffXEgPkq3_I&ab_channel=JonNielsen"
     },
     {
       "type": "image",
-      "image": ""
+      "image": "https://cdn.akamai.steamstatic.com/steam/apps/2420880/capsule_616x353.jpg?t=1696708217"
     },
     {
       "type": "image",
-      "image": ""
-    },
-    {
-      "type": "image",
-      "image": ""
-    },
-    {
-      "type": "image",
-      "image": ""
+      "image": "https://cdn.akamai.steamstatic.com/steam/apps/2420880/capsule_616x353.jpg?t=1696708217"
     }
   ],
   "description": [

@@ -31,16 +31,6 @@ export const HellboyWebofWyrd = {
       "link": "https://youtu.be/d9sKAKAWcpw"
     },
     {
-      "type": "video",
-      "image": "",
-      "link": "https://youtu.be/nlwSl-jCNMM"
-    },
-    {
-      "type": "video",
-      "image": "",
-      "link": "https://youtu.be/uSGxhb0R-4A"
-    },
-    {
       "type": "image",
       "image": "https://global-uploads.webflow.com/60c12e8d8588991ab4ce682e/6390d09c90af3074d34683bd_Hellboy_Key_Art_1920x1080_v2.png"
     },

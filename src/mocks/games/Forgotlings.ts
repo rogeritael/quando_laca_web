@@ -8,7 +8,7 @@ export const Forgotlings = {
     "PC (Microsoft Windows)",
     "Nintendo Switch"
   ],
-  "releaseDate": new Date(2024, 0, undefined), //SEM DATA
+  "releaseDate": new Date(0, 0, undefined), //SEM DATA
   "category": [
     {
       "id": "",
@@ -19,23 +19,20 @@ export const Forgotlings = {
     {
       "type": "video",
       "image": "",
-      "link": ""
+      "link": "https://www.youtube.com/watch?v=q8zNylsHOEo&pp=ygUMZm9yZ290b2xpbmdz&ab_channel=GameTrailers"
+    },
+    {
+      "type": "video",
+      "image": "",
+      "link": "https://www.youtube.com/watch?v=rnfGJlFC8Fo&ab_channel=ThroughlineGames"
     },
     {
       "type": "image",
-      "image": ""
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2059570/capsule_616x353.jpg?t=1691394969"
     },
     {
       "type": "image",
-      "image": ""
-    },
-    {
-      "type": "image",
-      "image": ""
-    },
-    {
-      "type": "image",
-      "image": ""
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2059570/capsule_616x353.jpg?t=1691394969"
     }
   ],
   "description": [

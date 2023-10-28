@@ -26,11 +26,6 @@ export const MortalKombat1 = {
     {
       "type": "video",
       "image": "",
-      "link": "https://youtu.be/Ue1Yo-3QnRc"
-    },
-    {
-      "type": "video",
-      "image": "",
       "link": "https://youtu.be/roi4YCd87hA"
     },
     {

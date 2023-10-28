@@ -7,7 +7,7 @@ export const CounterStrike2 = {
   "platforms": [
     "PC (Microsoft Windows)"
   ],
-  "releaseDate": new Date(2023, 2, 22),
+  "releaseDate": new Date(2023, 8, 27),
   "category": [
     {
       "id": "",

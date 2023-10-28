@@ -23,11 +23,6 @@ export const LiesofP = {
     {
       "type": "video",
       "image": "",
-      "link": "https://youtu.be/BxH1-ji-Nzg"
-    },
-    {
-      "type": "video",
-      "image": "",
       "link": "https://youtu.be/NH_mJFOQJzE"
     },
     {

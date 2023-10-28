@@ -28,16 +28,6 @@ export const GangsofSherwood = {
       "link": "https://youtu.be/HsxPf_xM3YE"
     },
     {
-      "type": "video",
-      "image": "",
-      "link": "https://youtu.be/G3_V-kMAo_g"
-    },
-    {
-      "type": "video",
-      "image": "",
-      "link": "https://youtu.be/0El-scBhaiY"
-    },
-    {
       "type": "image",
       "image": "https://store-images.s-microsoft.com/image/apps.64281.13761728067386436.69b4d1dd-b1b8-4beb-9bfd-2eb14285cbfd.2b00076a-a150-4255-85b4-10576f644e2c?mode=scale&q=90&h=720&w=1280&background=%23FFFFFF"
     },

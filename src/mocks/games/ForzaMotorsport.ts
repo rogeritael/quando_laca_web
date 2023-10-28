@@ -19,11 +19,6 @@ export const ForzaMotorsport = {
     {
       "type": "video",
       "image": "",
-      "link": "https://youtu.be/WtuBLc3cU-o"
-    },
-    {
-      "type": "video",
-      "image": "",
       "link": "https://www.youtube.com/watch?v=em4gv1Ietko&ab_channel=Xbox"
     },
     {

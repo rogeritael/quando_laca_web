@@ -1,6 +1,6 @@
 export const JustDance2024ionEdit = {
-  "id": "just_dance_2024_ionedit",
-  "name": "Just Dance 2024 ionEdit",
+  "id": "just_dance_2024_edition",
+  "name": "Just Dance 2024 Edition",
   "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6mad.png",
   "price": 100,
   "developer": "Ubisoft Montpellier",
@@ -21,16 +21,6 @@ export const JustDance2024ionEdit = {
       "type": "video",
       "image": "",
       "link": "https://youtu.be/NXwlBoLjEJo"
-    },
-    {
-      "type": "video",
-      "image": "",
-      "link": "https://youtu.be/NBHFpyjm4-4"
-    },
-    {
-      "type": "video",
-      "image": "",
-      "link": "https://youtu.be/UlWHBU-p2IU"
     },
     {
       "type": "video",

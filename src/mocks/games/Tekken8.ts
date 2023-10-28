@@ -25,11 +25,6 @@ export const Tekken8 = {
     {
       "type": "video",
       "image": "",
-      "link": "https://youtu.be/-l3AY19cn0M"
-    },
-    {
-      "type": "video",
-      "image": "",
       "link": "https://youtu.be/551hCMK0Qqo"
     },
     {

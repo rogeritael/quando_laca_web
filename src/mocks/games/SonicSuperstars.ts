@@ -36,11 +36,6 @@ export const SonicSuperstars = {
       "link": "https://youtu.be/1DrnSgXHviI"
     },
     {
-      "type": "video",
-      "image": "",
-      "link": "https://youtu.be/j3g-62NNoUs"
-    },
-    {
       "type": "image",
       "image": "https://meups.com.br/wp-content/uploads/2023/07/sonic-superstars-1.jpg"
     },

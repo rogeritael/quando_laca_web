@@ -20,11 +20,6 @@ export const SuicideSquadKilltheJusticeLeague = {
     {
       "type": "video",
       "image": "",
-      "link": "https://youtu.be/zBczhEOp-m0"
-    },
-    {
-      "type": "video",
-      "image": "",
       "link": "https://youtu.be/uZDGjS5vpIk"
     },
     {

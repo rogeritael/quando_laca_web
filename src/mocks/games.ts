@@ -10,7 +10,6 @@ import { ClockTower } from "./games/ClockTower";
 import { CounterStrike2 } from "./games/CounterStrike2";
 import { Cyberpunk2077PhantomLiberty } from "./games/Cyberpunk2077PhantomLiberty";
 import { EndlessDungeon } from "./games/EndlessDungeon";
-import { ExoCross } from "./games/ExoCross";
 import { Forgotlings } from "./games/Forgotlings";
 import { ForzaMotorsport } from "./games/ForzaMotorsport";
 import { GangsofSherwood } from "./games/GangsofSherwood";
@@ -103,7 +102,6 @@ export const gameList: GameProps[] = [
     RobocopRogueCity,
     Tekken8,
     Payday3,
-    ExoCross,
     UFL,
     Starfield,
     MortalKombat1,
@@ -113,11 +111,11 @@ export const gameList: GameProps[] = [
     HelldiversIISuperCitizenionEdit,
     Nightingale,
     PennysBigBreakaway,
-    ClockTower,
-    WitchHand,
-    Forgotlings,
-    ParcelCorps,
-    Warframe1999,
+    ClockTower, //sem data
+    WitchHand, //sem data
+    Forgotlings, //sem data
+    ParcelCorps, //sem data
+    Warframe1999, //data ainda nao anunciada
     ForzaMotorsport,
     AlanWakeII,
     AssassinsCreedMirage,

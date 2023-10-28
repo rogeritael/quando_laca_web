@@ -43,11 +43,6 @@ export const TheDayBefore = {
       "link": "https://youtu.be/DMXWKpZH7pw"
     },
     {
-      "type": "video",
-      "image": "",
-      "link": "https://youtu.be/vleg0-JspcY"
-    },
-    {
       "type": "image",
       "image": "https://sm.ign.com/ign_br/screenshot/default/the-day-before_272g.jpg"
     },

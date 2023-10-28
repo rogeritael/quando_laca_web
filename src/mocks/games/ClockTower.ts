@@ -9,7 +9,7 @@ export const ClockTower = {
     "Point-and-click",
     "Puzzle"
   ],
-  "releaseDate": new Date(1, 0, 2024), // sem data
+  "releaseDate": new Date(0, 0, undefined), // sem data
   "category": [{
     "id": "",
     "name": "Puzzle"

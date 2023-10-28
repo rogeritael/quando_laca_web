@@ -9,14 +9,12 @@ export const Warframe1999 = {
     "Role-playing (RPG)",
     "Shooter"
   ],
-  "releaseDate": new Date(2024, 0, undefined),
-  "category": [],
+  "releaseDate": new Date(0, 0, undefined),
+  "category": [{
+    "id": "",
+    "name": "Aventura"
+  }],
   "media": [
-    {
-      "type": "video",
-      "image": "",
-      "link": "https://youtu.be/n7-tpPXV9WQ"
-    },
     {
       "type": "video",
       "image": "",

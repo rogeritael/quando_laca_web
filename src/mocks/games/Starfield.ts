@@ -24,16 +24,6 @@ export const Starfield = {
     {
       "type": "video",
       "image": "",
-      "link": "https://youtu.be/pYqyVpCV-3c"
-    },
-    {
-      "type": "video",
-      "image": "",
-      "link": "https://youtu.be/N7Mrqi-0XsI"
-    },
-    {
-      "type": "video",
-      "image": "",
       "link": "https://youtu.be/kfYEiTdsyas"
     },
     {
